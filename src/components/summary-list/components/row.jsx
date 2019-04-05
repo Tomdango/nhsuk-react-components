@@ -1,8 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Row = ({ children }) => {
-  return <div className="nhsuk-grid-row">{children}</div>;
+const Row = ({ rowKey, action, children, visuallyHiddenText }) => {
+  return (
+    <div className="nhsuk-summary-list__row">
+      <dt class="nhsuk-summary-list__key">{rowKey}</dt>
+      <dd class="nhsuk-summary-list__value">{children}</dd>
+      {action ? (
+        <dd class="nhsuk-summary-list__actions">
+          <a href={action.href}>
+            {action.text}
+            <span class="nhsuk-u-visually-hidden">
+              {' '}
+              {action.visuallyHiddenText}
+            </span>
+          </a>
+        </dd>
+      ) : null}
+    </div>
+  );
 };
 
 const Column = ({ children, width }) => (

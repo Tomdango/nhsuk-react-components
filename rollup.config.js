@@ -5,6 +5,8 @@ import postcss from 'rollup-plugin-postcss';
 import resolve from 'rollup-plugin-node-resolve';
 import url from 'rollup-plugin-url';
 import svgr from '@svgr/rollup';
+import copy from 'rollup-plugin-copy';
+import cleaner from 'rollup-plugin-cleaner';
 
 import pkg from './package.json';
 
@@ -23,6 +25,9 @@ export default {
     }
   ],
   plugins: [
+    cleaner({
+      targets: ['./dist/*', './lib/*']
+    }),
     external(),
     postcss({
       modules: true
@@ -32,6 +37,10 @@ export default {
     babel({
       exclude: 'node_modules/**',
       plugins: ['external-helpers']
+    }),
+    copy({
+      'src/styles/': 'lib/styles/',
+      verbose: true
     }),
     resolve({ extensions: ['.mjs', '.js', '.json', '.node', '.jsx'] }),
     commonjs()

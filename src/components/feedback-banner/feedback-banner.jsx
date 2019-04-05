@@ -77,7 +77,7 @@ class FeedbackBanner extends React.Component {
         } ${jsInView ? 'js-inview' : ''}`}
         id={id}
       >
-        <Container fluid>
+        <Container>
           <Row>
             <Row.Column width="full">
               <div className="nhsuk-feedback-banner__content">

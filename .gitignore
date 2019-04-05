@@ -9,6 +9,7 @@ build
 dist
 lib
 .rpt2_cache
+storybook-static
 
 # misc
 .DS_Store
