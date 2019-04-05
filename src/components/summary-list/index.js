@@ -1,3 +1,3 @@
-import SummaryList from './summary-list.jsx';
+import SummaryList from './summary-list';
 
 export default SummaryList;

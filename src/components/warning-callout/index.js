@@ -1,3 +1,3 @@
-import WarningCallout from './warning-callout.jsx';
+import WarningCallout from './warning-callout';
 
 export default WarningCallout;

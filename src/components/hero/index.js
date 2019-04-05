@@ -1,3 +1,3 @@
-import Hero from './hero.jsx';
+import Hero from './hero';
 
 export default Hero;

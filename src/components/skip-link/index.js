@@ -1,3 +1,3 @@
-import SkipLink from './skip-link.jsx';
+import SkipLink from './skip-link';
 
 export default SkipLink;

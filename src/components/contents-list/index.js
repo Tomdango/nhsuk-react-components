@@ -1,3 +1,3 @@
-import ContentsList from './contents-list.jsx';
+import ContentsList from './contents-list';
 
 export default ContentsList;

@@ -1,3 +1,3 @@
-import ReviewDate from './review-date.jsx';
+import ReviewDate from './review-date';
 
 export default ReviewDate;

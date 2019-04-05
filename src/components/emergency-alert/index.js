@@ -1,3 +1,3 @@
-import EmergencyAlert from './emergency-alert.jsx';
+import EmergencyAlert from './emergency-alert';
 
 export default EmergencyAlert;

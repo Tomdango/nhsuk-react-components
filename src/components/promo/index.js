@@ -1,3 +1,3 @@
-import Promo from './promo.jsx';
+import Promo from './promo';
 
 export default Promo;

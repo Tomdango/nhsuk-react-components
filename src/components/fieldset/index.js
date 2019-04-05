@@ -1,3 +1,3 @@
-import Fieldset from './fieldset.jsx';
+import Fieldset from './fieldset';
 
 export default Fieldset;

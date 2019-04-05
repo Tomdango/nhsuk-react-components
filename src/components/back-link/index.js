@@ -1,3 +1,3 @@
-import BackLink from './back-link.jsx';
+import BackLink from './back-link';
 
 export default BackLink;

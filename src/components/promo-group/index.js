@@ -1,3 +1,3 @@
-import PromoGroup from './promo-group.jsx';
+import PromoGroup from './promo-group';
 
 export default PromoGroup;

@@ -1,4 +1,4 @@
-import Form from './form-wrapper.jsx';
+import Form from './form-wrapper';
 import Checkboxes from './components/checkboxes';
 import DateInput from './components/date-input';
 import Input from './components/input';

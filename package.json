@@ -14,10 +14,9 @@
   "scripts": {
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "build": "rollup -c",
+    "build": "rollup -c && yarn babel src/components/ --out-dir lib/",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
-    "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
@@ -27,6 +26,7 @@
   },
   "devDependencies": {
     "@svgr/rollup": "^2.4.1",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.5",
     "babel-plugin-external-helpers": "^6.22.0",
@@ -56,6 +56,6 @@
   },
   "files": [
     "dist",
-    "src"
+    "lib"
   ]
 }

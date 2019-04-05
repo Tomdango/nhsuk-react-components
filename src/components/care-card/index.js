@@ -1,3 +1,3 @@
-import CareCard from './care-card.jsx';
+import CareCard from './care-card';
 
 export default CareCard;

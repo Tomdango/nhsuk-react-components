@@ -1,3 +1,3 @@
-import FeedbackBanner from './feedback-banner.jsx';
+import FeedbackBanner from './feedback-banner';
 
 export default FeedbackBanner;

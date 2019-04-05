@@ -1,3 +1,3 @@
-import ErrorSummary from './error-summary.jsx';
+import ErrorSummary from './error-summary';
 
 export default ErrorSummary;

@@ -1,4 +1,4 @@
-import Container from './container.jsx';
-import Row from './row.jsx';
+import Container from './container';
+import Row from './row';
 
 export { Container, Row };

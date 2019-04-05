@@ -1,3 +1,3 @@
-import SingleListPanel from './single-list-panel.jsx';
+import SingleListPanel from './single-list-panel';
 
 export default SingleListPanel;

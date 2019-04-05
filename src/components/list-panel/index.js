@@ -1,3 +1,3 @@
-import ListPanel from './list-panel.jsx';
+import ListPanel from './list-panel';
 
 export default ListPanel;
