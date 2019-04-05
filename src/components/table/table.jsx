@@ -19,7 +19,7 @@ const Table = ({ caption, children }) => (
       ) : null}
       {children}
     </table>
-  </div>;
+  </div>
 );
 
 Table.Header = TableHeader;
