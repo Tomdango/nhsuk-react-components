@@ -1,3 +1,3 @@
-import DateInput from './date-input';
+import DateInput from './date-input.jsx';
 
 export default DateInput;

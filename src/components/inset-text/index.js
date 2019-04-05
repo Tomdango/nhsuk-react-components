@@ -1,3 +1,3 @@
-import InsetText from './inset-text';
+import InsetText from './inset-text.jsx';
 
 export default InsetText;

@@ -1,3 +1,3 @@
-import Panel from './panel';
+import Panel from './panel.jsx';
 
 export default Panel;

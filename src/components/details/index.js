@@ -1,3 +1,3 @@
-import Details from './details';
+import Details from './details.jsx';
 
 export default Details;

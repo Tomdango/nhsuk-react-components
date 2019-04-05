@@ -1,3 +1,3 @@
-import DoDontList from './do-dont-list';
+import DoDontList from './do-dont-list.jsx';
 
 export default DoDontList;

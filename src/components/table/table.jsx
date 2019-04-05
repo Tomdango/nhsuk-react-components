@@ -1,8 +1,8 @@
 import React from 'react';
 // import './_table.scss';
-import TableHeader from './components/table-header';
-import TableBody from './components/table-body';
-import TableRow from './components/table-row';
+import TableHeader from './components/table-header.jsx';
+import TableBody from './components/table-body.jsx';
+import TableRow from './components/table-row.jsx';
 
 const TablePanel = ({ heading, children }) => (
   <div className="nhsuk-table__panel-with-heading-tab">

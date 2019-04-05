@@ -1,7 +1,7 @@
 import React from 'react';
 // import './_header.scss';
-import HeaderSearch from './components/header-search';
-import NHSHeaderLogo from './components/header-logo';
+import HeaderSearch from './components/header-search.jsx';
+import NHSHeaderLogo from './components/header-logo.jsx';
 
 class Header extends React.Component {
   constructor(props) {

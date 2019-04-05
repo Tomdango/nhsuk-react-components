@@ -1,3 +1,3 @@
-import Textarea from './textarea';
+import Textarea from './textarea.jsx';
 
 export default Textarea;

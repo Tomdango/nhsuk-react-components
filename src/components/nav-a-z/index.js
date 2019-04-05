@@ -1,3 +1,3 @@
-import NavAZ from './nav-a-z';
+import NavAZ from './nav-a-z.jsx';
 
 export default NavAZ;

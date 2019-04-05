@@ -1,3 +1,3 @@
-import ActionLink from './action-link';
+import ActionLink from './action-link.jsx';
 
 export default ActionLink;

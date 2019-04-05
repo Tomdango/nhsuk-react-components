@@ -1,3 +1,3 @@
-import Hint from './hint';
+import Hint from './hint.jsx';
 
 export default Hint;

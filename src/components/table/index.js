@@ -1,3 +1,3 @@
-import Table from './table';
+import Table from './table.jsx';
 
 export default Table;
