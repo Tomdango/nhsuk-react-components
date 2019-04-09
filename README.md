@@ -2,7 +2,13 @@
 
 > NHS.UK Frontend components ported to React
 
-[![NPM](https://img.shields.io/npm/v/nhsuk-react-components.svg)](https://www.npmjs.com/package/nhsuk-react-components) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/nhsuk-react-components.svg)](https://www.npmjs.com/package/nhsuk-react-components) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) ![Bundle Size](https://img.shields.io/bundlephobia/min/nhsuk-react-components.svg)
+
+## Notes
+
+This package is developed by NHS Digital, but it is not from the NHS.UK redesign team. Some things may differ between the standard NHS.UK frontend library and this library, however we will try our best to keep this package maintained and up-to-date.
+
+This package is still under development, so there may be breaking changes in minor and patch version updates. As of the `1.0.0` release, only major updates will make breaking changes.
 
 ## Install
 
@@ -37,4 +43,5 @@ class Example extends Component {
 ## License
 
 MIT © [Thomas Judd-Cooper](https://github.com/Tomdango)
-MIT © NHS.UK styles and components ported from [NHS.UK frontend](https://www.npmjs.com/package/nhsuk-frontend).
+
+NHS.UK styles and components ported from MIT © [NHS.UK frontend](https://www.npmjs.com/package/nhsuk-frontend).

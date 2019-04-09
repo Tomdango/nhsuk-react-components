@@ -9,6 +9,4 @@ ReadingWidth.propTypes = {
   children: node.isRequired
 };
 
-ReadingWidth.defaultProps = {
-  children: ''
-};
+export default ReadingWidth;

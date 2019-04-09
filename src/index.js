@@ -17,10 +17,10 @@ export {
   Checkboxes,
   DateInput,
   Input,
+  InputBlock,
   Radios,
   Select,
-  Textarea,
-  InputBlock
+  Textarea
 } from './components/form';
 export { default as Header } from './components/header';
 export { default as Hero } from './components/hero';
@@ -56,4 +56,5 @@ export { default as SingleListPanel } from './components/single-list-panel';
 export { default as SkipLink } from './components/skip-link';
 export { default as SummaryList } from './components/summary-list';
 export { default as Table } from './components/table';
+export { default as Typography } from './components/typography';
 export { default as WarningCallout } from './components/warning-callout';

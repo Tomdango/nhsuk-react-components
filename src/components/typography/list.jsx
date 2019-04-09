@@ -32,3 +32,5 @@ List.defaultProps = {
   className: '',
   style: {}
 };
+
+export default List;
