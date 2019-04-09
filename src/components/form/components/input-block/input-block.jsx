@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import stylePropType from 'react-style-proptype';
 import Hint from '../../../hint';
 import Heading from '../../../typography/heading';
 import ErrorMessage from '../../../error-message';
@@ -9,6 +11,7 @@ const Input = ({
   hint,
   error,
   className,
+  style,
   width,
   id,
   name,
@@ -23,16 +26,41 @@ const Input = ({
     <input
       className={`nhsuk-input nhsuk-input--block ${
         error ? 'nhsuk-input--error' : null
-      } ${width ? `nhsuk-input--width-${width}` : null}`}
+      } ${width ? `nhsuk-input--width-${width}` : null} ${className}`}
       id={id || name}
       name={`${name}-hint`}
       type="text"
+      style={style}
       onChange={_handleInput}
       aria-describedby={`${name}-hint`}
       autoComplete={autoComplete}
     />
   </div>
 );
+
+Input.propTypes = {
+  hint: PropTypes.string,
+  error: PropTypes.string,
+  className: PropTypes.string,
+  width: PropTypes.number,
+  id: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  _handleInput: PropTypes.func.isRequired,
+  autoComplete: PropTypes.string,
+  title: PropTypes.string,
+  style: stylePropType
+};
+
+Input.defaultProps = {
+  hint: '',
+  error: '',
+  className: '',
+  width: NaN,
+  id: '',
+  autoComplete: '',
+  title: '',
+  style: {}
+};
 
 const InputBlock = ({
   valueCallback,
@@ -58,6 +86,22 @@ const InputBlock = ({
       {modifiedChildren}
     </div>
   );
+};
+
+InputBlock.propTypes = {
+  valueCallback: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
+  title: PropTypes.string,
+  titleSize: PropTypes.string,
+  className: PropTypes.string,
+  style: stylePropType
+};
+
+InputBlock.defaultProps = {
+  title: '',
+  titleSize: 'm',
+  className: '',
+  style: {}
 };
 
 InputBlock.Input = Input;
