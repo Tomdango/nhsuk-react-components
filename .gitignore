@@ -3,6 +3,7 @@
 
 # dependencies
 node_modules
+.vscode
 
 # builds
 build
@@ -11,6 +12,7 @@ lib
 .rpt2_cache
 storybook-static
 coverage
+report
 
 # misc
 .DS_Store
