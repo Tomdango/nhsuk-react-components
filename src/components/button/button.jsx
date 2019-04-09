@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import './_button.scss';
+import stylePropType from 'react-style-proptype';
 
 const Button = props => {
   const {
@@ -12,17 +12,22 @@ const Button = props => {
     type,
     name,
     value,
-    disabled
+    disabled,
+    className,
+    style,
+    onClick
   } = props;
   if (href) {
     /* If a href prop is supplied, render the button as a styled link */
     return (
       <a
+        style={style}
         role={role}
         href={href}
+        onClick={onClick}
         className={`nhsuk-button ${
           secondary ? 'nhsuk-button--secondary' : ''
-        } ${reverse ? 'nhsuk-button--reverse' : ''}`}
+        } ${reverse ? 'nhsuk-button--reverse' : ''} ${className}`}
         disabled={disabled}
       >
         {children}
@@ -33,11 +38,12 @@ const Button = props => {
     // https://github.com/yannickcr/eslint-plugin-react/issues/1555
     // eslint-disable-next-line react/button-has-type
     <button
-      {...props}
       className={`nhsuk-button ${secondary ? 'nhsuk-button--secondary' : ''} ${
         reverse ? 'nhsuk-button--reverse' : ''
-      }`}
+      } ${className}`}
+      style={style}
       name={name}
+      onClick={onClick}
       value={value}
       type={type}
       disabled={disabled}
@@ -56,7 +62,10 @@ Button.propTypes = {
   role: PropTypes.string,
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   name: PropTypes.string,
-  value: PropTypes.string
+  value: PropTypes.string,
+  className: PropTypes.string,
+  style: stylePropType,
+  onClick: PropTypes.func
 };
 
 Button.defaultProps = {
@@ -67,7 +76,10 @@ Button.defaultProps = {
   role: 'button',
   type: 'button',
   name: '',
-  value: ''
+  value: '',
+  className: '',
+  style: {},
+  onClick: () => {}
 };
 
 export default Button;

@@ -1,0 +1,10 @@
+{
+  "linters": {
+    "*.{js,scss,jsx}": [
+      "eslint",
+      "cross-env CI=1 react-scripts test --env=jsdom",
+      "git add"
+    ]
+  },
+  "ignore": ["**/dist/*.js", "**/coverage/", "**/*.test.js", "**/lib/*.js"]
+}

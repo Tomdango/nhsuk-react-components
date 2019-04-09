@@ -1,3 +1,9 @@
 {
-  "presets": ["react", "stage-0", ["env", { "modules": false }]]
+  "presets": ["react", "stage-0", ["env", { "modules": false }]],
+  "plugins": [
+    [
+      "transform-react-remove-prop-types",
+      { "removeImport": true, "additionalLibraries": ["react-style-proptype"] }
+    ]
+  ]
 }

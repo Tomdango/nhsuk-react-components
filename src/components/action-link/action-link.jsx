@@ -1,24 +1,26 @@
 import React from 'react';
-import { oneOfType, string, bool, node } from 'prop-types';
+import PropTypes from 'prop-types';
+import stylePropType from 'react-style-proptype';
+import { ArrowRightCircle } from '../icons';
 
-const ActionLink = ({ children, href, openInNewWindow, className }) => {
+const ActionLink = ({
+  children,
+  href,
+  openInNewWindow,
+  onClick,
+  className,
+  style
+}) => {
   return (
-    <div className={`nhsuk-action-link ${className}`}>
+    <div className={`nhsuk-action-link ${className}`} style={style}>
       <a
         className="nhsuk-action-link__link"
-        target={openInNewWindow ? '_blank' : null}
-        rel={openInNewWindow ? 'noreferrer noopener' : null}
+        target={openInNewWindow ? '_blank' : ''}
+        onClick={onClick}
+        rel={openInNewWindow ? 'noreferrer noopener' : ''}
         href={href}
       >
-        <svg
-          className="nhsuk-icon nhsuk-icon__arrow-right-circle"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z" />
-        </svg>
+        <ArrowRightCircle />
         <span className="nhsuk-action-link__text">{children}</span>
       </a>
     </div>
@@ -28,14 +30,18 @@ const ActionLink = ({ children, href, openInNewWindow, className }) => {
 ActionLink.defaultProps = {
   href: '#',
   openInNewWindow: false,
-  className: ''
+  className: '',
+  onClick: () => {},
+  style: {}
 };
 
 ActionLink.propTypes = {
-  children: oneOfType([string, node]).isRequired,
-  className: string,
-  href: string,
-  openInNewWindow: bool
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+  onClick: PropTypes.oneOfType([PropTypes.func, PropTypes.bool]),
+  className: PropTypes.string,
+  href: PropTypes.string,
+  openInNewWindow: PropTypes.bool,
+  style: stylePropType
 };
 
 export default ActionLink;

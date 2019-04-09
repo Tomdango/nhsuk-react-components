@@ -19,15 +19,31 @@ export {
   Input,
   Radios,
   Select,
-  Textarea
+  Textarea,
+  InputBlock
 } from './components/form';
 export { default as Header } from './components/header';
 export { default as Hero } from './components/hero';
 export { default as Hint } from './components/hint';
+export {
+  ArrowLeft,
+  ArrowRight,
+  ArrowRightCircle,
+  ChevronLeft,
+  ChevronRight,
+  Close,
+  Cross,
+  SmallEmdash,
+  Emdash,
+  Minus,
+  Plus,
+  Search,
+  Tick
+} from './components/icons';
 export { default as Image } from './components/image';
 export { default as InsetText } from './components/inset-text';
 export { default as Label } from './components/label';
-export { Container, Row } from './components/layout';
+export { Container, Row, MainWrapper } from './components/layout';
 export { default as ListPanel } from './components/list-panel';
 export { default as NavAZ } from './components/nav-a-z';
 export { default as Pagination } from './components/pagination';

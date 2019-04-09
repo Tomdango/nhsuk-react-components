@@ -1,0 +1,541 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button matches the snapshot as a button 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Button
+    className=""
+    disabled={false}
+    href=""
+    name=""
+    onClick={[Function]}
+    reverse={false}
+    role="button"
+    secondary={false}
+    style={Object {}}
+    type="button"
+    value=""
+>
+    Primary
+</Button>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Primary",
+      "className": "nhsuk-button   ",
+      "disabled": false,
+      "name": "",
+      "onClick": [Function],
+      "style": Object {},
+      "type": "button",
+      "value": "",
+    },
+    "ref": null,
+    "rendered": "Primary",
+    "type": "button",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Primary",
+        "className": "nhsuk-button   ",
+        "disabled": false,
+        "name": "",
+        "onClick": [Function],
+        "style": Object {},
+        "type": "button",
+        "value": "",
+      },
+      "ref": null,
+      "rendered": "Primary",
+      "type": "button",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Button matches the snapshot as a button 2`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Button
+    className=""
+    disabled={false}
+    href=""
+    name=""
+    onClick={[Function]}
+    reverse={false}
+    role="button"
+    secondary={true}
+    style={Object {}}
+    type="button"
+    value=""
+>
+    Secondary
+</Button>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Secondary",
+      "className": "nhsuk-button nhsuk-button--secondary  ",
+      "disabled": false,
+      "name": "",
+      "onClick": [Function],
+      "style": Object {},
+      "type": "button",
+      "value": "",
+    },
+    "ref": null,
+    "rendered": "Secondary",
+    "type": "button",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Secondary",
+        "className": "nhsuk-button nhsuk-button--secondary  ",
+        "disabled": false,
+        "name": "",
+        "onClick": [Function],
+        "style": Object {},
+        "type": "button",
+        "value": "",
+      },
+      "ref": null,
+      "rendered": "Secondary",
+      "type": "button",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Button matches the snapshot as a button 3`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Button
+    className=""
+    disabled={false}
+    href=""
+    name=""
+    onClick={[Function]}
+    reverse={true}
+    role="button"
+    secondary={false}
+    style={Object {}}
+    type="button"
+    value=""
+>
+    Reverse
+</Button>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Reverse",
+      "className": "nhsuk-button  nhsuk-button--reverse ",
+      "disabled": false,
+      "name": "",
+      "onClick": [Function],
+      "style": Object {},
+      "type": "button",
+      "value": "",
+    },
+    "ref": null,
+    "rendered": "Reverse",
+    "type": "button",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Reverse",
+        "className": "nhsuk-button  nhsuk-button--reverse ",
+        "disabled": false,
+        "name": "",
+        "onClick": [Function],
+        "style": Object {},
+        "type": "button",
+        "value": "",
+      },
+      "ref": null,
+      "rendered": "Reverse",
+      "type": "button",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Button matches the snapshot as a link 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Button
+    className=""
+    disabled={false}
+    href="/"
+    name=""
+    onClick={[Function]}
+    reverse={false}
+    role="button"
+    secondary={false}
+    style={Object {}}
+    type="button"
+    value=""
+>
+    Primary
+</Button>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Primary",
+      "className": "nhsuk-button   ",
+      "disabled": false,
+      "href": "/",
+      "onClick": [Function],
+      "role": "button",
+      "style": Object {},
+    },
+    "ref": null,
+    "rendered": "Primary",
+    "type": "a",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Primary",
+        "className": "nhsuk-button   ",
+        "disabled": false,
+        "href": "/",
+        "onClick": [Function],
+        "role": "button",
+        "style": Object {},
+      },
+      "ref": null,
+      "rendered": "Primary",
+      "type": "a",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Button matches the snapshot as a link 2`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Button
+    className=""
+    disabled={false}
+    href="/"
+    name=""
+    onClick={[Function]}
+    reverse={false}
+    role="button"
+    secondary={true}
+    style={Object {}}
+    type="button"
+    value=""
+>
+    Secondary
+</Button>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Secondary",
+      "className": "nhsuk-button nhsuk-button--secondary  ",
+      "disabled": false,
+      "href": "/",
+      "onClick": [Function],
+      "role": "button",
+      "style": Object {},
+    },
+    "ref": null,
+    "rendered": "Secondary",
+    "type": "a",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Secondary",
+        "className": "nhsuk-button nhsuk-button--secondary  ",
+        "disabled": false,
+        "href": "/",
+        "onClick": [Function],
+        "role": "button",
+        "style": Object {},
+      },
+      "ref": null,
+      "rendered": "Secondary",
+      "type": "a",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Button matches the snapshot as a link 3`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Button
+    className=""
+    disabled={false}
+    href="/"
+    name=""
+    onClick={[Function]}
+    reverse={true}
+    role="button"
+    secondary={false}
+    style={Object {}}
+    type="button"
+    value=""
+>
+    Reverse
+</Button>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Reverse",
+      "className": "nhsuk-button  nhsuk-button--reverse ",
+      "disabled": false,
+      "href": "/",
+      "onClick": [Function],
+      "role": "button",
+      "style": Object {},
+    },
+    "ref": null,
+    "rendered": "Reverse",
+    "type": "a",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Reverse",
+        "className": "nhsuk-button  nhsuk-button--reverse ",
+        "disabled": false,
+        "href": "/",
+        "onClick": [Function],
+        "role": "button",
+        "style": Object {},
+      },
+      "ref": null,
+      "rendered": "Reverse",
+      "type": "a",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

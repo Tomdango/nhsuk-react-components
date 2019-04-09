@@ -1,0 +1,1991 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CareCard matches snapshot 1`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <CareCard
+    disableHiddenText={false}
+    heading="TestHeading"
+    type="non-urgent"
+>
+    Content
+</CareCard>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": "Content",
+      "disableHiddenText": false,
+      "heading": "TestHeading",
+      "type": "non-urgent",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="nhsuk-care-card nhsuk-care-card--non-urgent"
+>
+        <div
+                class="nhsuk-care-card__heading-container"
+        >
+                <h3
+                        class="nhsuk-care-card__heading"
+                >
+                        <span>
+                                <span
+                                        class="nhsuk-u-visually-hidden"
+                                >
+                                        Non-urgent advice: 
+                                </span>
+                                TestHeading
+                        </span>
+                </h3>
+                <span
+                        class="nhsuk-care-card__arrow"
+                        aria-hidden="true"
+                />
+        </div>
+        <div
+                class="nhsuk-care-card__content"
+        >
+                Content
+        </div>
+</div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="nhsuk-care-card__heading-container"
+>
+            <h3
+                        className="nhsuk-care-card__heading"
+            >
+                        <span>
+                                    <span
+                                                className="nhsuk-u-visually-hidden"
+                                    >
+                                                Non-urgent advice: 
+                                    </span>
+                                    TestHeading
+                        </span>
+            </h3>
+            <span
+                        aria-hidden="true"
+                        className="nhsuk-care-card__arrow"
+            />
+</div>,
+          <div
+            className="nhsuk-care-card__content"
+>
+            Content
+</div>,
+        ],
+        "className": "nhsuk-care-card nhsuk-care-card--non-urgent",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <div
+            class="nhsuk-care-card__heading-container"
+>
+            <h3
+                        class="nhsuk-care-card__heading"
+            >
+                        <span>
+                                    <span
+                                                class="nhsuk-u-visually-hidden"
+                                    >
+                                                Non-urgent advice: 
+                                    </span>
+                                    TestHeading
+                        </span>
+            </h3>
+            <span
+                        class="nhsuk-care-card__arrow"
+                        aria-hidden="true"
+            />
+</div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3
+                className="nhsuk-care-card__heading"
+>
+                <span>
+                                <span
+                                                className="nhsuk-u-visually-hidden"
+                                >
+                                                Non-urgent advice: 
+                                </span>
+                                TestHeading
+                </span>
+</h3>,
+              <span
+                aria-hidden="true"
+                className="nhsuk-care-card__arrow"
+/>,
+            ],
+            "className": "nhsuk-care-card__heading-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <h3
+                class="nhsuk-care-card__heading"
+>
+                <span>
+                                <span
+                                                class="nhsuk-u-visually-hidden"
+                                >
+                                                Non-urgent advice: 
+                                </span>
+                                TestHeading
+                </span>
+</h3>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <span>
+                  <span
+                                    className="nhsuk-u-visually-hidden"
+                  >
+                                    Non-urgent advice: 
+                  </span>
+                  TestHeading
+</span>,
+                "className": "nhsuk-care-card__heading",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <span>
+                    <span
+                                        class="nhsuk-u-visually-hidden"
+                    >
+                                        Non-urgent advice: 
+                    </span>
+                    TestHeading
+</span>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <span
+                        className="nhsuk-u-visually-hidden"
+>
+                        Non-urgent advice: 
+</span>,
+                      "TestHeading",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": <span
+                        class="nhsuk-u-visually-hidden"
+>
+                        Non-urgent advice: 
+</span>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Non-urgent advice: ",
+                        "className": "nhsuk-u-visually-hidden",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "Non-urgent advice: ",
+                      ],
+                      "type": "span",
+                    },
+                    "TestHeading",
+                  ],
+                  "type": "span",
+                },
+              ],
+              "type": "h3",
+            },
+            Object {
+              "instance": <span
+                class="nhsuk-care-card__arrow"
+                aria-hidden="true"
+/>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-hidden": "true",
+                "className": "nhsuk-care-card__arrow",
+              },
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": <div
+            class="nhsuk-care-card__content"
+>
+            Content
+</div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Content",
+            "className": "nhsuk-care-card__content",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Content",
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": "Content",
+        "disableHiddenText": false,
+        "heading": "TestHeading",
+        "type": "non-urgent",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="nhsuk-care-card nhsuk-care-card--non-urgent"
+>
+          <div
+                    class="nhsuk-care-card__heading-container"
+          >
+                    <h3
+                              class="nhsuk-care-card__heading"
+                    >
+                              <span>
+                                        <span
+                                                  class="nhsuk-u-visually-hidden"
+                                        >
+                                                  Non-urgent advice: 
+                                        </span>
+                                        TestHeading
+                              </span>
+                    </h3>
+                    <span
+                              class="nhsuk-care-card__arrow"
+                              aria-hidden="true"
+                    />
+          </div>
+          <div
+                    class="nhsuk-care-card__content"
+          >
+                    Content
+          </div>
+</div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="nhsuk-care-card__heading-container"
+>
+              <h3
+                            className="nhsuk-care-card__heading"
+              >
+                            <span>
+                                          <span
+                                                        className="nhsuk-u-visually-hidden"
+                                          >
+                                                        Non-urgent advice: 
+                                          </span>
+                                          TestHeading
+                            </span>
+              </h3>
+              <span
+                            aria-hidden="true"
+                            className="nhsuk-care-card__arrow"
+              />
+</div>,
+            <div
+              className="nhsuk-care-card__content"
+>
+              Content
+</div>,
+          ],
+          "className": "nhsuk-care-card nhsuk-care-card--non-urgent",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <div
+              class="nhsuk-care-card__heading-container"
+>
+              <h3
+                            class="nhsuk-care-card__heading"
+              >
+                            <span>
+                                          <span
+                                                        class="nhsuk-u-visually-hidden"
+                                          >
+                                                        Non-urgent advice: 
+                                          </span>
+                                          TestHeading
+                            </span>
+              </h3>
+              <span
+                            class="nhsuk-care-card__arrow"
+                            aria-hidden="true"
+              />
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="nhsuk-care-card__heading"
+>
+                  <span>
+                                    <span
+                                                      className="nhsuk-u-visually-hidden"
+                                    >
+                                                      Non-urgent advice: 
+                                    </span>
+                                    TestHeading
+                  </span>
+</h3>,
+                <span
+                  aria-hidden="true"
+                  className="nhsuk-care-card__arrow"
+/>,
+              ],
+              "className": "nhsuk-care-card__heading-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <h3
+                  class="nhsuk-care-card__heading"
+>
+                  <span>
+                                    <span
+                                                      class="nhsuk-u-visually-hidden"
+                                    >
+                                                      Non-urgent advice: 
+                                    </span>
+                                    TestHeading
+                  </span>
+</h3>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <span>
+                    <span
+                                        className="nhsuk-u-visually-hidden"
+                    >
+                                        Non-urgent advice: 
+                    </span>
+                    TestHeading
+</span>,
+                  "className": "nhsuk-care-card__heading",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <span>
+                      <span
+                                            class="nhsuk-u-visually-hidden"
+                      >
+                                            Non-urgent advice: 
+                      </span>
+                      TestHeading
+</span>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <span
+                          className="nhsuk-u-visually-hidden"
+>
+                          Non-urgent advice: 
+</span>,
+                        "TestHeading",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": <span
+                          class="nhsuk-u-visually-hidden"
+>
+                          Non-urgent advice: 
+</span>,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Non-urgent advice: ",
+                          "className": "nhsuk-u-visually-hidden",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Non-urgent advice: ",
+                        ],
+                        "type": "span",
+                      },
+                      "TestHeading",
+                    ],
+                    "type": "span",
+                  },
+                ],
+                "type": "h3",
+              },
+              Object {
+                "instance": <span
+                  class="nhsuk-care-card__arrow"
+                  aria-hidden="true"
+/>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "aria-hidden": "true",
+                  "className": "nhsuk-care-card__arrow",
+                },
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": <div
+              class="nhsuk-care-card__content"
+>
+              Content
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Content",
+              "className": "nhsuk-care-card__content",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Content",
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CareCard matches snapshot 2`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <CareCard
+    disableHiddenText={false}
+    heading="TestHeading"
+    type="urgent"
+>
+    Content
+</CareCard>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": "Content",
+      "disableHiddenText": false,
+      "heading": "TestHeading",
+      "type": "urgent",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="nhsuk-care-card nhsuk-care-card--urgent"
+>
+        <div
+                class="nhsuk-care-card__heading-container"
+        >
+                <h3
+                        class="nhsuk-care-card__heading"
+                >
+                        <span>
+                                <span
+                                        class="nhsuk-u-visually-hidden"
+                                >
+                                        Urgent advice: 
+                                </span>
+                                TestHeading
+                        </span>
+                </h3>
+                <span
+                        class="nhsuk-care-card__arrow"
+                        aria-hidden="true"
+                />
+        </div>
+        <div
+                class="nhsuk-care-card__content"
+        >
+                Content
+        </div>
+</div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="nhsuk-care-card__heading-container"
+>
+            <h3
+                        className="nhsuk-care-card__heading"
+            >
+                        <span>
+                                    <span
+                                                className="nhsuk-u-visually-hidden"
+                                    >
+                                                Urgent advice: 
+                                    </span>
+                                    TestHeading
+                        </span>
+            </h3>
+            <span
+                        aria-hidden="true"
+                        className="nhsuk-care-card__arrow"
+            />
+</div>,
+          <div
+            className="nhsuk-care-card__content"
+>
+            Content
+</div>,
+        ],
+        "className": "nhsuk-care-card nhsuk-care-card--urgent",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <div
+            class="nhsuk-care-card__heading-container"
+>
+            <h3
+                        class="nhsuk-care-card__heading"
+            >
+                        <span>
+                                    <span
+                                                class="nhsuk-u-visually-hidden"
+                                    >
+                                                Urgent advice: 
+                                    </span>
+                                    TestHeading
+                        </span>
+            </h3>
+            <span
+                        class="nhsuk-care-card__arrow"
+                        aria-hidden="true"
+            />
+</div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3
+                className="nhsuk-care-card__heading"
+>
+                <span>
+                                <span
+                                                className="nhsuk-u-visually-hidden"
+                                >
+                                                Urgent advice: 
+                                </span>
+                                TestHeading
+                </span>
+</h3>,
+              <span
+                aria-hidden="true"
+                className="nhsuk-care-card__arrow"
+/>,
+            ],
+            "className": "nhsuk-care-card__heading-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <h3
+                class="nhsuk-care-card__heading"
+>
+                <span>
+                                <span
+                                                class="nhsuk-u-visually-hidden"
+                                >
+                                                Urgent advice: 
+                                </span>
+                                TestHeading
+                </span>
+</h3>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <span>
+                  <span
+                                    className="nhsuk-u-visually-hidden"
+                  >
+                                    Urgent advice: 
+                  </span>
+                  TestHeading
+</span>,
+                "className": "nhsuk-care-card__heading",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <span>
+                    <span
+                                        class="nhsuk-u-visually-hidden"
+                    >
+                                        Urgent advice: 
+                    </span>
+                    TestHeading
+</span>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <span
+                        className="nhsuk-u-visually-hidden"
+>
+                        Urgent advice: 
+</span>,
+                      "TestHeading",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": <span
+                        class="nhsuk-u-visually-hidden"
+>
+                        Urgent advice: 
+</span>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Urgent advice: ",
+                        "className": "nhsuk-u-visually-hidden",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "Urgent advice: ",
+                      ],
+                      "type": "span",
+                    },
+                    "TestHeading",
+                  ],
+                  "type": "span",
+                },
+              ],
+              "type": "h3",
+            },
+            Object {
+              "instance": <span
+                class="nhsuk-care-card__arrow"
+                aria-hidden="true"
+/>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-hidden": "true",
+                "className": "nhsuk-care-card__arrow",
+              },
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": <div
+            class="nhsuk-care-card__content"
+>
+            Content
+</div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Content",
+            "className": "nhsuk-care-card__content",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Content",
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": "Content",
+        "disableHiddenText": false,
+        "heading": "TestHeading",
+        "type": "urgent",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="nhsuk-care-card nhsuk-care-card--urgent"
+>
+          <div
+                    class="nhsuk-care-card__heading-container"
+          >
+                    <h3
+                              class="nhsuk-care-card__heading"
+                    >
+                              <span>
+                                        <span
+                                                  class="nhsuk-u-visually-hidden"
+                                        >
+                                                  Urgent advice: 
+                                        </span>
+                                        TestHeading
+                              </span>
+                    </h3>
+                    <span
+                              class="nhsuk-care-card__arrow"
+                              aria-hidden="true"
+                    />
+          </div>
+          <div
+                    class="nhsuk-care-card__content"
+          >
+                    Content
+          </div>
+</div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="nhsuk-care-card__heading-container"
+>
+              <h3
+                            className="nhsuk-care-card__heading"
+              >
+                            <span>
+                                          <span
+                                                        className="nhsuk-u-visually-hidden"
+                                          >
+                                                        Urgent advice: 
+                                          </span>
+                                          TestHeading
+                            </span>
+              </h3>
+              <span
+                            aria-hidden="true"
+                            className="nhsuk-care-card__arrow"
+              />
+</div>,
+            <div
+              className="nhsuk-care-card__content"
+>
+              Content
+</div>,
+          ],
+          "className": "nhsuk-care-card nhsuk-care-card--urgent",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <div
+              class="nhsuk-care-card__heading-container"
+>
+              <h3
+                            class="nhsuk-care-card__heading"
+              >
+                            <span>
+                                          <span
+                                                        class="nhsuk-u-visually-hidden"
+                                          >
+                                                        Urgent advice: 
+                                          </span>
+                                          TestHeading
+                            </span>
+              </h3>
+              <span
+                            class="nhsuk-care-card__arrow"
+                            aria-hidden="true"
+              />
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="nhsuk-care-card__heading"
+>
+                  <span>
+                                    <span
+                                                      className="nhsuk-u-visually-hidden"
+                                    >
+                                                      Urgent advice: 
+                                    </span>
+                                    TestHeading
+                  </span>
+</h3>,
+                <span
+                  aria-hidden="true"
+                  className="nhsuk-care-card__arrow"
+/>,
+              ],
+              "className": "nhsuk-care-card__heading-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <h3
+                  class="nhsuk-care-card__heading"
+>
+                  <span>
+                                    <span
+                                                      class="nhsuk-u-visually-hidden"
+                                    >
+                                                      Urgent advice: 
+                                    </span>
+                                    TestHeading
+                  </span>
+</h3>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <span>
+                    <span
+                                        className="nhsuk-u-visually-hidden"
+                    >
+                                        Urgent advice: 
+                    </span>
+                    TestHeading
+</span>,
+                  "className": "nhsuk-care-card__heading",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <span>
+                      <span
+                                            class="nhsuk-u-visually-hidden"
+                      >
+                                            Urgent advice: 
+                      </span>
+                      TestHeading
+</span>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <span
+                          className="nhsuk-u-visually-hidden"
+>
+                          Urgent advice: 
+</span>,
+                        "TestHeading",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": <span
+                          class="nhsuk-u-visually-hidden"
+>
+                          Urgent advice: 
+</span>,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Urgent advice: ",
+                          "className": "nhsuk-u-visually-hidden",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Urgent advice: ",
+                        ],
+                        "type": "span",
+                      },
+                      "TestHeading",
+                    ],
+                    "type": "span",
+                  },
+                ],
+                "type": "h3",
+              },
+              Object {
+                "instance": <span
+                  class="nhsuk-care-card__arrow"
+                  aria-hidden="true"
+/>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "aria-hidden": "true",
+                  "className": "nhsuk-care-card__arrow",
+                },
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": <div
+              class="nhsuk-care-card__content"
+>
+              Content
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Content",
+              "className": "nhsuk-care-card__content",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Content",
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CareCard matches snapshot 3`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <CareCard
+    disableHiddenText={false}
+    heading="TestHeading"
+    type="immediate"
+>
+    Content
+</CareCard>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": "Content",
+      "disableHiddenText": false,
+      "heading": "TestHeading",
+      "type": "immediate",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="nhsuk-care-card nhsuk-care-card--immediate"
+>
+        <div
+                class="nhsuk-care-card__heading-container"
+        >
+                <h3
+                        class="nhsuk-care-card__heading"
+                >
+                        <span>
+                                <span
+                                        class="nhsuk-u-visually-hidden"
+                                >
+                                        Immediate action required: 
+                                </span>
+                                TestHeading
+                        </span>
+                </h3>
+                <span
+                        class="nhsuk-care-card__arrow"
+                        aria-hidden="true"
+                />
+        </div>
+        <div
+                class="nhsuk-care-card__content"
+        >
+                Content
+        </div>
+</div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="nhsuk-care-card__heading-container"
+>
+            <h3
+                        className="nhsuk-care-card__heading"
+            >
+                        <span>
+                                    <span
+                                                className="nhsuk-u-visually-hidden"
+                                    >
+                                                Immediate action required: 
+                                    </span>
+                                    TestHeading
+                        </span>
+            </h3>
+            <span
+                        aria-hidden="true"
+                        className="nhsuk-care-card__arrow"
+            />
+</div>,
+          <div
+            className="nhsuk-care-card__content"
+>
+            Content
+</div>,
+        ],
+        "className": "nhsuk-care-card nhsuk-care-card--immediate",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <div
+            class="nhsuk-care-card__heading-container"
+>
+            <h3
+                        class="nhsuk-care-card__heading"
+            >
+                        <span>
+                                    <span
+                                                class="nhsuk-u-visually-hidden"
+                                    >
+                                                Immediate action required: 
+                                    </span>
+                                    TestHeading
+                        </span>
+            </h3>
+            <span
+                        class="nhsuk-care-card__arrow"
+                        aria-hidden="true"
+            />
+</div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3
+                className="nhsuk-care-card__heading"
+>
+                <span>
+                                <span
+                                                className="nhsuk-u-visually-hidden"
+                                >
+                                                Immediate action required: 
+                                </span>
+                                TestHeading
+                </span>
+</h3>,
+              <span
+                aria-hidden="true"
+                className="nhsuk-care-card__arrow"
+/>,
+            ],
+            "className": "nhsuk-care-card__heading-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <h3
+                class="nhsuk-care-card__heading"
+>
+                <span>
+                                <span
+                                                class="nhsuk-u-visually-hidden"
+                                >
+                                                Immediate action required: 
+                                </span>
+                                TestHeading
+                </span>
+</h3>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <span>
+                  <span
+                                    className="nhsuk-u-visually-hidden"
+                  >
+                                    Immediate action required: 
+                  </span>
+                  TestHeading
+</span>,
+                "className": "nhsuk-care-card__heading",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <span>
+                    <span
+                                        class="nhsuk-u-visually-hidden"
+                    >
+                                        Immediate action required: 
+                    </span>
+                    TestHeading
+</span>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <span
+                        className="nhsuk-u-visually-hidden"
+>
+                        Immediate action required: 
+</span>,
+                      "TestHeading",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": <span
+                        class="nhsuk-u-visually-hidden"
+>
+                        Immediate action required: 
+</span>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Immediate action required: ",
+                        "className": "nhsuk-u-visually-hidden",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "Immediate action required: ",
+                      ],
+                      "type": "span",
+                    },
+                    "TestHeading",
+                  ],
+                  "type": "span",
+                },
+              ],
+              "type": "h3",
+            },
+            Object {
+              "instance": <span
+                class="nhsuk-care-card__arrow"
+                aria-hidden="true"
+/>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-hidden": "true",
+                "className": "nhsuk-care-card__arrow",
+              },
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": <div
+            class="nhsuk-care-card__content"
+>
+            Content
+</div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Content",
+            "className": "nhsuk-care-card__content",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Content",
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": "Content",
+        "disableHiddenText": false,
+        "heading": "TestHeading",
+        "type": "immediate",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="nhsuk-care-card nhsuk-care-card--immediate"
+>
+          <div
+                    class="nhsuk-care-card__heading-container"
+          >
+                    <h3
+                              class="nhsuk-care-card__heading"
+                    >
+                              <span>
+                                        <span
+                                                  class="nhsuk-u-visually-hidden"
+                                        >
+                                                  Immediate action required: 
+                                        </span>
+                                        TestHeading
+                              </span>
+                    </h3>
+                    <span
+                              class="nhsuk-care-card__arrow"
+                              aria-hidden="true"
+                    />
+          </div>
+          <div
+                    class="nhsuk-care-card__content"
+          >
+                    Content
+          </div>
+</div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="nhsuk-care-card__heading-container"
+>
+              <h3
+                            className="nhsuk-care-card__heading"
+              >
+                            <span>
+                                          <span
+                                                        className="nhsuk-u-visually-hidden"
+                                          >
+                                                        Immediate action required: 
+                                          </span>
+                                          TestHeading
+                            </span>
+              </h3>
+              <span
+                            aria-hidden="true"
+                            className="nhsuk-care-card__arrow"
+              />
+</div>,
+            <div
+              className="nhsuk-care-card__content"
+>
+              Content
+</div>,
+          ],
+          "className": "nhsuk-care-card nhsuk-care-card--immediate",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <div
+              class="nhsuk-care-card__heading-container"
+>
+              <h3
+                            class="nhsuk-care-card__heading"
+              >
+                            <span>
+                                          <span
+                                                        class="nhsuk-u-visually-hidden"
+                                          >
+                                                        Immediate action required: 
+                                          </span>
+                                          TestHeading
+                            </span>
+              </h3>
+              <span
+                            class="nhsuk-care-card__arrow"
+                            aria-hidden="true"
+              />
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="nhsuk-care-card__heading"
+>
+                  <span>
+                                    <span
+                                                      className="nhsuk-u-visually-hidden"
+                                    >
+                                                      Immediate action required: 
+                                    </span>
+                                    TestHeading
+                  </span>
+</h3>,
+                <span
+                  aria-hidden="true"
+                  className="nhsuk-care-card__arrow"
+/>,
+              ],
+              "className": "nhsuk-care-card__heading-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <h3
+                  class="nhsuk-care-card__heading"
+>
+                  <span>
+                                    <span
+                                                      class="nhsuk-u-visually-hidden"
+                                    >
+                                                      Immediate action required: 
+                                    </span>
+                                    TestHeading
+                  </span>
+</h3>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <span>
+                    <span
+                                        className="nhsuk-u-visually-hidden"
+                    >
+                                        Immediate action required: 
+                    </span>
+                    TestHeading
+</span>,
+                  "className": "nhsuk-care-card__heading",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <span>
+                      <span
+                                            class="nhsuk-u-visually-hidden"
+                      >
+                                            Immediate action required: 
+                      </span>
+                      TestHeading
+</span>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <span
+                          className="nhsuk-u-visually-hidden"
+>
+                          Immediate action required: 
+</span>,
+                        "TestHeading",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": <span
+                          class="nhsuk-u-visually-hidden"
+>
+                          Immediate action required: 
+</span>,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Immediate action required: ",
+                          "className": "nhsuk-u-visually-hidden",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Immediate action required: ",
+                        ],
+                        "type": "span",
+                      },
+                      "TestHeading",
+                    ],
+                    "type": "span",
+                  },
+                ],
+                "type": "h3",
+              },
+              Object {
+                "instance": <span
+                  class="nhsuk-care-card__arrow"
+                  aria-hidden="true"
+/>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "aria-hidden": "true",
+                  "className": "nhsuk-care-card__arrow",
+                },
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": <div
+              class="nhsuk-care-card__content"
+>
+              Content
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Content",
+              "className": "nhsuk-care-card__content",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Content",
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CareCard matches snapshot 4`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <CareCard
+    disableHiddenText={true}
+    heading="TestHeading"
+    type="immediate"
+>
+    Content
+</CareCard>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": "Content",
+      "disableHiddenText": true,
+      "heading": "TestHeading",
+      "type": "immediate",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="nhsuk-care-card nhsuk-care-card--immediate"
+>
+        <div
+                class="nhsuk-care-card__heading-container"
+        >
+                <h3
+                        class="nhsuk-care-card__heading"
+                >
+                        <span>
+                                TestHeading
+                        </span>
+                </h3>
+                <span
+                        class="nhsuk-care-card__arrow"
+                        aria-hidden="true"
+                />
+        </div>
+        <div
+                class="nhsuk-care-card__content"
+        >
+                Content
+        </div>
+</div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="nhsuk-care-card__heading-container"
+>
+            <h3
+                        className="nhsuk-care-card__heading"
+            >
+                        <span>
+                                    TestHeading
+                        </span>
+            </h3>
+            <span
+                        aria-hidden="true"
+                        className="nhsuk-care-card__arrow"
+            />
+</div>,
+          <div
+            className="nhsuk-care-card__content"
+>
+            Content
+</div>,
+        ],
+        "className": "nhsuk-care-card nhsuk-care-card--immediate",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <div
+            class="nhsuk-care-card__heading-container"
+>
+            <h3
+                        class="nhsuk-care-card__heading"
+            >
+                        <span>
+                                    TestHeading
+                        </span>
+            </h3>
+            <span
+                        class="nhsuk-care-card__arrow"
+                        aria-hidden="true"
+            />
+</div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3
+                className="nhsuk-care-card__heading"
+>
+                <span>
+                                TestHeading
+                </span>
+</h3>,
+              <span
+                aria-hidden="true"
+                className="nhsuk-care-card__arrow"
+/>,
+            ],
+            "className": "nhsuk-care-card__heading-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <h3
+                class="nhsuk-care-card__heading"
+>
+                <span>
+                                TestHeading
+                </span>
+</h3>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <span>
+                  TestHeading
+</span>,
+                "className": "nhsuk-care-card__heading",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <span>
+                    TestHeading
+</span>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      null,
+                      "TestHeading",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "TestHeading",
+                  ],
+                  "type": "span",
+                },
+              ],
+              "type": "h3",
+            },
+            Object {
+              "instance": <span
+                class="nhsuk-care-card__arrow"
+                aria-hidden="true"
+/>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-hidden": "true",
+                "className": "nhsuk-care-card__arrow",
+              },
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": <div
+            class="nhsuk-care-card__content"
+>
+            Content
+</div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Content",
+            "className": "nhsuk-care-card__content",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Content",
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": "Content",
+        "disableHiddenText": true,
+        "heading": "TestHeading",
+        "type": "immediate",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="nhsuk-care-card nhsuk-care-card--immediate"
+>
+          <div
+                    class="nhsuk-care-card__heading-container"
+          >
+                    <h3
+                              class="nhsuk-care-card__heading"
+                    >
+                              <span>
+                                        TestHeading
+                              </span>
+                    </h3>
+                    <span
+                              class="nhsuk-care-card__arrow"
+                              aria-hidden="true"
+                    />
+          </div>
+          <div
+                    class="nhsuk-care-card__content"
+          >
+                    Content
+          </div>
+</div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="nhsuk-care-card__heading-container"
+>
+              <h3
+                            className="nhsuk-care-card__heading"
+              >
+                            <span>
+                                          TestHeading
+                            </span>
+              </h3>
+              <span
+                            aria-hidden="true"
+                            className="nhsuk-care-card__arrow"
+              />
+</div>,
+            <div
+              className="nhsuk-care-card__content"
+>
+              Content
+</div>,
+          ],
+          "className": "nhsuk-care-card nhsuk-care-card--immediate",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <div
+              class="nhsuk-care-card__heading-container"
+>
+              <h3
+                            class="nhsuk-care-card__heading"
+              >
+                            <span>
+                                          TestHeading
+                            </span>
+              </h3>
+              <span
+                            class="nhsuk-care-card__arrow"
+                            aria-hidden="true"
+              />
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="nhsuk-care-card__heading"
+>
+                  <span>
+                                    TestHeading
+                  </span>
+</h3>,
+                <span
+                  aria-hidden="true"
+                  className="nhsuk-care-card__arrow"
+/>,
+              ],
+              "className": "nhsuk-care-card__heading-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <h3
+                  class="nhsuk-care-card__heading"
+>
+                  <span>
+                                    TestHeading
+                  </span>
+</h3>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <span>
+                    TestHeading
+</span>,
+                  "className": "nhsuk-care-card__heading",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <span>
+                      TestHeading
+</span>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        null,
+                        "TestHeading",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "TestHeading",
+                    ],
+                    "type": "span",
+                  },
+                ],
+                "type": "h3",
+              },
+              Object {
+                "instance": <span
+                  class="nhsuk-care-card__arrow"
+                  aria-hidden="true"
+/>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "aria-hidden": "true",
+                  "className": "nhsuk-care-card__arrow",
+                },
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": <div
+              class="nhsuk-care-card__content"
+>
+              Content
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Content",
+              "className": "nhsuk-care-card__content",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Content",
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

@@ -2,43 +2,36 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Footer, FeedbackBanner } from '../src';
 
-const Links = [
-  {
-    URL: '#',
-    label: 'NHS sites'
-  },
-  {
-    URL: 'https://www.nhs.uk/about-us',
-    label: 'About us'
-  },
-  {
-    URL: 'https://www.nhs.uk/contact-us/',
-    label: 'Contact us'
-  },
-  {
-    URL: 'https://www.nhs.uk/about-us/sitemap/',
-    label: 'Sitemap'
-  },
-  {
-    URL: 'https://www.nhs.uk/our-policies/',
-    label: 'Our policies'
-  }
-];
-
 storiesOf('Feedback Banner', module)
   .add('Standard', () => (
     <FeedbackBanner
       title="Help us make the NHS website better"
-      content="Your feedback helps us improve the NHS website."
-    />
+      label="Answer the survey"
+    >
+      Your feedback helps us improve the NHS website.
+    </FeedbackBanner>
   ))
   .add('With Footer', () => (
     <div>
       <div style={{ height: '120vh' }} />
-      <FeedbackBanner
-        title="Help us make the NHS website better"
-        content="Your feedback helps us improve the NHS website."
-      />
-      <Footer links={Links} />
+      <FeedbackBanner title="Help us make the NHS website better">
+        Your feedback helps us improve the NHS website.
+      </FeedbackBanner>
+      <Footer>
+        <Footer.Link href="https://www.nhs.uk/Pages/nhs-sites.aspx">
+          NHS sites
+        </Footer.Link>
+        <Footer.Link href="https://www.nhs.uk/about-us">About us</Footer.Link>
+        <Footer.Link href="https://www.nhs.uk/contact-us/">
+          Contact us
+        </Footer.Link>
+        <Footer.Link href="https://www.nhs.uk/about-us/sitemap/">
+          Sitemap
+        </Footer.Link>
+        <Footer.Link href="https://www.nhs.uk/our-policies/">
+          Our policies
+        </Footer.Link>
+        <Footer.Copyright>&copy; Crown copyright</Footer.Copyright>
+      </Footer>
     </div>
   ));

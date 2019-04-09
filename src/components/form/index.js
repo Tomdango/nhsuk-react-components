@@ -5,5 +5,15 @@ import Input from './components/input';
 import Radios from './components/radios';
 import Select from './components/select';
 import Textarea from './components/textarea';
+import InputBlock from './components/input-block';
 
-export { Form, Checkboxes, DateInput, Input, Radios, Select, Textarea };
+export {
+  Form,
+  Checkboxes,
+  DateInput,
+  Input,
+  Radios,
+  Select,
+  Textarea,
+  InputBlock
+};

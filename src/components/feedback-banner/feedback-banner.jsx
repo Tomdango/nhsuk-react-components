@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import './_feedback-banner.scss';
 import { Container, Row } from '../layout';
 
 const isScrolledIntoView = element => {
@@ -8,7 +7,6 @@ const isScrolledIntoView = element => {
   const elemTop = rect.top;
   const elemBottom = rect.bottom;
   const isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-
   return isVisible;
 };
 
@@ -21,7 +19,6 @@ class FeedbackBanner extends React.Component {
     };
     this.toggleBanner = this.toggleBanner.bind(this);
     this.unstickBanner = this.unstickBanner.bind(this);
-    this.bannerRef = React.createRef();
     this.timer = false;
   }
 
@@ -29,7 +26,7 @@ class FeedbackBanner extends React.Component {
     const { timeout } = this.props;
     setTimeout(() => {
       this.toggleBanner(true);
-    }, timeout || 3000);
+    }, timeout);
     window.addEventListener('scroll', this.unstickBanner);
   }
 
@@ -67,11 +64,18 @@ class FeedbackBanner extends React.Component {
   }
 
   render() {
-    const { title, content, label, href, id } = this.props;
+    const {
+      title,
+      children,
+      label,
+      href,
+      id,
+      onClick,
+      visuallyHiddenText
+    } = this.props;
     const { shown, jsInView } = this.state;
     return (
       <div
-        ref={this.bannerRef}
         className={`nhsuk-feedback-banner ${
           shown ? 'nhsuk-feedback-banner__shown' : ''
         } ${jsInView ? 'js-inview' : ''}`}
@@ -81,13 +85,15 @@ class FeedbackBanner extends React.Component {
           <Row>
             <Row.Column width="full">
               <div className="nhsuk-feedback-banner__content">
-                <h2 className="nhsuk-feedback-banner__heading">
-                  {title || ''}
-                </h2>
+                <h2 className="nhsuk-feedback-banner__heading">{title}</h2>
                 <p className="nhsuk-feedback-banner__message">
-                  {`${content} `}
+                  {children}
                   {label ? (
-                    <a href={href || '#'} className="nhsuk-u-nowrap">
+                    <a
+                      href={href}
+                      onClick={onClick}
+                      className="nhsuk-u-nowrap nhsuk-feedback-banner__label"
+                    >
                       {label}
                     </a>
                   ) : null}
@@ -100,8 +106,7 @@ class FeedbackBanner extends React.Component {
                 >
                   Close
                   <span className="nhsuk-u-visually-hidden">
-                    {' '}
-                    feedback invite
+                    {visuallyHiddenText}
                   </span>
                 </button>
               </div>
@@ -114,10 +119,23 @@ class FeedbackBanner extends React.Component {
 }
 
 FeedbackBanner.propTypes = {
-  id: PropTypes.string
+  id: PropTypes.string,
+  timeout: PropTypes.number,
+  title: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  label: PropTypes.node,
+  href: PropTypes.string,
+  onClick: PropTypes.func,
+  visuallyHiddenText: PropTypes.string
 };
 
 FeedbackBanner.defaultProps = {
-  id: 'nhsuk-feedback-banner'
+  id: 'nhsuk-feedback-banner',
+  timeout: 0,
+  title: '',
+  label: '',
+  href: '#',
+  onClick: () => {},
+  visuallyHiddenText: ' feedback invite'
 };
 export default FeedbackBanner;

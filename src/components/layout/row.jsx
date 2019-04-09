@@ -5,8 +5,14 @@ const Row = ({ children }) => {
   return <div className="nhsuk-grid-row">{children}</div>;
 };
 
-const Column = ({ children, width }) => (
-  <div className={`nhsuk-grid-column-${width}`}>{children}</div>
+const Column = ({ children, width, tabletWidth, forceLayout }) => (
+  <div
+    className={`nhsuk-grid-column-${width} ${
+      forceLayout ? `nhsuk-u-${width}` : ''
+    } ${tabletWidth ? `nhsuk-u-${width}-tablet` : null}`}
+  >
+    {children}
+  </div>
 );
 
 Row.propTypes = {
@@ -26,11 +32,15 @@ Column.propTypes = {
     'one-third',
     'one-quarter'
   ]).isRequired,
-  children: PropTypes.node
+  children: PropTypes.node,
+  forceLayout: PropTypes.bool,
+  tabletWidth: PropTypes.string
 };
 
 Column.defaultProps = {
-  children: null
+  children: null,
+  forceLayout: false,
+  tabletWidth: ''
 };
 
 Row.Column = Column;

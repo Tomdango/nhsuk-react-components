@@ -1,10 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Fieldset from '../../../fieldset';
 import Hint from '../../../hint';
 import ErrorMessage from '../../../error-message';
-// import './_textarea.scss';
 
 class Textarea extends React.Component {
+  constructor(props) {
+    super(props);
+    this.onChange = this.onChange.bind(this);
+  }
+
+  componentDidMount() {
+    const { name, valueCallback } = this.props;
+    valueCallback(name, '');
+  }
+
+  onChange(event) {
+    const { name, valueCallback } = this.props;
+    valueCallback(name, event.target.value);
+  }
+
   render() {
     const {
       describedBy,
@@ -12,8 +27,12 @@ class Textarea extends React.Component {
       title,
       hint,
       autoComplete,
-      error
+      error,
+      rows,
+      name,
+      id
     } = this.props;
+
     return (
       <Fieldset
         describedBy={describedBy}
@@ -24,14 +43,40 @@ class Textarea extends React.Component {
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
         <textarea
           className="nhsuk-textarea"
-          id="textarea-with-autocomplete-attribute"
-          name="address"
-          rows="5"
+          id={name || id}
+          onChange={this.onChange}
+          name={name}
+          rows={rows}
           autoComplete={autoComplete}
         />
       </Fieldset>
     );
   }
 }
+
+Textarea.propTypes = {
+  describedBy: PropTypes.string,
+  asPageHeading: PropTypes.bool,
+  title: PropTypes.string,
+  hint: PropTypes.string,
+  autoComplete: PropTypes.string,
+  error: PropTypes.string,
+  rows: PropTypes.number,
+  name: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  valueCallback: PropTypes.func
+};
+
+Textarea.defaultProps = {
+  describedBy: '',
+  asPageHeading: false,
+  title: '',
+  hint: '',
+  autoComplete: '',
+  error: '',
+  rows: 5,
+  id: '',
+  valueCallback: () => {}
+};
 
 export default Textarea;
