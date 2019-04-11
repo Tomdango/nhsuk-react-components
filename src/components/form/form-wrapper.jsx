@@ -45,24 +45,28 @@ class Form extends React.Component {
     const { formData } = this.state;
     let errorInChild = false;
     const modifiedChildren = React.Children.map(children, child => {
-      if (child.props.error) {
-        errorInChild = true;
-      }
-      const formElements = [
-        'Checkboxes',
-        'DateInput',
-        'Input',
-        'InputBlock',
-        'Radios',
-        'Select',
-        'Textarea'
-      ];
-      if (formElements.includes(child.type.name)) {
-        return React.cloneElement(child, {
-          valueCallback: this.valueCallback,
-          style: { ...child.props.style, marginBottom: elementMargin },
-          registerInitialValue: this.registerInitialValue
-        });
+      const { props } = child;
+      if (props) {
+        if (props.error) {
+          errorInChild = true;
+        }
+        const formElements = [
+          'Checkboxes',
+          'DateInput',
+          'Input',
+          'InputBlock',
+          'Radios',
+          'Select',
+          'Textarea'
+        ];
+        if (formElements.includes(child.type.name)) {
+          return React.cloneElement(child, {
+            valueCallback: this.valueCallback,
+            style: { ...child.props.style, marginBottom: elementMargin },
+            registerInitialValue: this.registerInitialValue
+          });
+        }
+        return child;
       }
       return child;
     });

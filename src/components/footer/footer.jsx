@@ -57,18 +57,19 @@ const Footer = ({
   linksVisuallyHiddenText
 }) => {
   const linksFromChildren = [];
-  const childrenWithLinksRemoved = React.Children.map(children, child => {
+  const childrenWithLinksRemoved = React.Children.forEach(children, child => {
     if (child.type === Link) {
       linksFromChildren.push(child);
       return null;
     }
     return child;
   });
+
   return (
     <footer role={role}>
       <div className={`nhsuk-footer ${className}`} style={style} id={id}>
         <div className="nhsuk-width-container">
-          {linksFromChildren ? (
+          {linksFromChildren.length !== 0 ? (
             <div>
               <h2 className="nhsuk-u-visually-hidden">
                 {linksVisuallyHiddenText}
