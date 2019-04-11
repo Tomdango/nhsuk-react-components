@@ -2,6 +2,7 @@
 
 > NHS.UK Frontend components ported to React
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0649089cbf634a6b933f44303980d6ba)](https://app.codacy.com/app/Tomdango/nhsuk-react-components?utm_source=github.com&utm_medium=referral&utm_content=Tomdango/nhsuk-react-components&utm_campaign=Badge_Grade_Dashboard)
 [![NPM](https://img.shields.io/npm/v/nhsuk-react-components.svg)](https://www.npmjs.com/package/nhsuk-react-components) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) ![Bundle Size](https://img.shields.io/bundlephobia/min/nhsuk-react-components.svg)
 
 ## Notes
