@@ -1,0 +1,2004 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmergencyAlert all matches snapshot 1`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <EmergencyAlert
+    className=""
+    id="nhsuk-global-alert"
+    style={Object {}}
+>
+    <Title
+        className=""
+        style={Object {}}
+        visuallyHiddenText="Alert: "
+    >
+        National Flu Outbreak
+    </Title>
+    <Message
+        className=""
+        style={Object {}}
+    >
+        There has been a national flu outbreak.
+        <Link
+            className=""
+            href="https://www.nhs.uk"
+            onClick={[Function]}
+            style={Object {}}
+        >
+            How does it affect me
+        </Link>
+    </Message>
+    <LastUpdated
+        className=""
+        style={Object {}}
+    >
+        Updated 23 mins ago
+    </LastUpdated>
+</EmergencyAlert>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Title
+          className=""
+          style={Object {}}
+          visuallyHiddenText="Alert: "
+>
+          National Flu Outbreak
+</Title>,
+        <Message
+          className=""
+          style={Object {}}
+>
+          There has been a national flu outbreak.
+          <Link
+                    className=""
+                    href="https://www.nhs.uk"
+                    onClick={[Function]}
+                    style={Object {}}
+          >
+                    How does it affect me
+          </Link>
+</Message>,
+        <LastUpdated
+          className=""
+          style={Object {}}
+>
+          Updated 23 mins ago
+</LastUpdated>,
+      ],
+      "className": "",
+      "id": "nhsuk-global-alert",
+      "style": Object {},
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="nhsuk-global-alert "
+        id="nhsuk-global-alert"
+>
+        <div
+                class="nhsuk-width-container "
+        >
+                <div
+                        class="nhsuk-grid-row"
+                >
+                        <div
+                                class="nhsuk-grid-column-undefined  null"
+                        >
+                                <div
+                                        class="nhsuk-global-alert__content"
+                                >
+                                        <h2
+                                                class="nhsuk-global-alert__heading "
+                                        >
+                                                <span
+                                                        class="nhsuk-u-visually-hidden"
+                                                >
+                                                        Alert: 
+                                                </span>
+                                                National Flu Outbreak
+                                        </h2>
+                                        <p
+                                                class="nhsuk-global-alert__message "
+                                        >
+                                                There has been a national flu outbreak.
+                                                <a
+                                                        class="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override "
+                                                        href="https://www.nhs.uk"
+                                                >
+                                                        How does it affect me
+                                                </a>
+                                        </p>
+                                        <p
+                                                class="nhsuk-global-alert__updated "
+                                        >
+                                                Updated 23 mins ago
+                                        </p>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <Container
+          className=""
+          fluid={false}
+          style={Object {}}
+>
+          <Row>
+                    <Column
+                              forceLayout={false}
+                              size="full"
+                              tabletWidth=""
+                    >
+                              <div
+                                        className="nhsuk-global-alert__content"
+                              >
+                                        <Title
+                                                  className=""
+                                                  style={Object {}}
+                                                  visuallyHiddenText="Alert: "
+                                        >
+                                                  National Flu Outbreak
+                                        </Title>
+                                        <Message
+                                                  className=""
+                                                  style={Object {}}
+                                        >
+                                                  There has been a national flu outbreak.
+                                                  <Link
+                                                            className=""
+                                                            href="https://www.nhs.uk"
+                                                            onClick={[Function]}
+                                                            style={Object {}}
+                                                  >
+                                                            How does it affect me
+                                                  </Link>
+                                        </Message>
+                                        <LastUpdated
+                                                  className=""
+                                                  style={Object {}}
+                                        >
+                                                  Updated 23 mins ago
+                                        </LastUpdated>
+                              </div>
+                    </Column>
+          </Row>
+</Container>,
+        "className": "nhsuk-global-alert ",
+        "id": "nhsuk-global-alert",
+        "style": Object {},
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <Row>
+              <Column
+                            forceLayout={false}
+                            size="full"
+                            tabletWidth=""
+              >
+                            <div
+                                          className="nhsuk-global-alert__content"
+                            >
+                                          <Title
+                                                        className=""
+                                                        style={Object {}}
+                                                        visuallyHiddenText="Alert: "
+                                          >
+                                                        National Flu Outbreak
+                                          </Title>
+                                          <Message
+                                                        className=""
+                                                        style={Object {}}
+                                          >
+                                                        There has been a national flu outbreak.
+                                                        <Link
+                                                                      className=""
+                                                                      href="https://www.nhs.uk"
+                                                                      onClick={[Function]}
+                                                                      style={Object {}}
+                                                        >
+                                                                      How does it affect me
+                                                        </Link>
+                                          </Message>
+                                          <LastUpdated
+                                                        className=""
+                                                        style={Object {}}
+                                          >
+                                                        Updated 23 mins ago
+                                          </LastUpdated>
+                            </div>
+              </Column>
+</Row>,
+            "className": "",
+            "fluid": false,
+            "style": Object {},
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": <div
+              class="nhsuk-width-container "
+>
+              <div
+                            class="nhsuk-grid-row"
+              >
+                            <div
+                                          class="nhsuk-grid-column-undefined  null"
+                            >
+                                          <div
+                                                        class="nhsuk-global-alert__content"
+                                          >
+                                                        <h2
+                                                                      class="nhsuk-global-alert__heading "
+                                                        >
+                                                                      <span
+                                                                                    class="nhsuk-u-visually-hidden"
+                                                                      >
+                                                                                    Alert: 
+                                                                      </span>
+                                                                      National Flu Outbreak
+                                                        </h2>
+                                                        <p
+                                                                      class="nhsuk-global-alert__message "
+                                                        >
+                                                                      There has been a national flu outbreak.
+                                                                      <a
+                                                                                    class="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override "
+                                                                                    href="https://www.nhs.uk"
+                                                                      >
+                                                                                    How does it affect me
+                                                                      </a>
+                                                        </p>
+                                                        <p
+                                                                      class="nhsuk-global-alert__updated "
+                                                        >
+                                                                      Updated 23 mins ago
+                                                        </p>
+                                          </div>
+                            </div>
+              </div>
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Row>
+                <Column
+                                forceLayout={false}
+                                size="full"
+                                tabletWidth=""
+                >
+                                <div
+                                                className="nhsuk-global-alert__content"
+                                >
+                                                <Title
+                                                                className=""
+                                                                style={Object {}}
+                                                                visuallyHiddenText="Alert: "
+                                                >
+                                                                National Flu Outbreak
+                                                </Title>
+                                                <Message
+                                                                className=""
+                                                                style={Object {}}
+                                                >
+                                                                There has been a national flu outbreak.
+                                                                <Link
+                                                                                className=""
+                                                                                href="https://www.nhs.uk"
+                                                                                onClick={[Function]}
+                                                                                style={Object {}}
+                                                                >
+                                                                                How does it affect me
+                                                                </Link>
+                                                </Message>
+                                                <LastUpdated
+                                                                className=""
+                                                                style={Object {}}
+                                                >
+                                                                Updated 23 mins ago
+                                                </LastUpdated>
+                                </div>
+                </Column>
+</Row>,
+              "className": "nhsuk-width-container ",
+              "style": Object {},
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <Column
+                    forceLayout={false}
+                    size="full"
+                    tabletWidth=""
+>
+                    <div
+                                        className="nhsuk-global-alert__content"
+                    >
+                                        <Title
+                                                            className=""
+                                                            style={Object {}}
+                                                            visuallyHiddenText="Alert: "
+                                        >
+                                                            National Flu Outbreak
+                                        </Title>
+                                        <Message
+                                                            className=""
+                                                            style={Object {}}
+                                        >
+                                                            There has been a national flu outbreak.
+                                                            <Link
+                                                                                className=""
+                                                                                href="https://www.nhs.uk"
+                                                                                onClick={[Function]}
+                                                                                style={Object {}}
+                                                            >
+                                                                                How does it affect me
+                                                            </Link>
+                                        </Message>
+                                        <LastUpdated
+                                                            className=""
+                                                            style={Object {}}
+                                        >
+                                                            Updated 23 mins ago
+                                        </LastUpdated>
+                    </div>
+</Column>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": <div
+                    class="nhsuk-grid-row"
+>
+                    <div
+                                        class="nhsuk-grid-column-undefined  null"
+                    >
+                                        <div
+                                                            class="nhsuk-global-alert__content"
+                                        >
+                                                            <h2
+                                                                                class="nhsuk-global-alert__heading "
+                                                            >
+                                                                                <span
+                                                                                                    class="nhsuk-u-visually-hidden"
+                                                                                >
+                                                                                                    Alert: 
+                                                                                </span>
+                                                                                National Flu Outbreak
+                                                            </h2>
+                                                            <p
+                                                                                class="nhsuk-global-alert__message "
+                                                            >
+                                                                                There has been a national flu outbreak.
+                                                                                <a
+                                                                                                    class="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override "
+                                                                                                    href="https://www.nhs.uk"
+                                                                                >
+                                                                                                    How does it affect me
+                                                                                </a>
+                                                            </p>
+                                                            <p
+                                                                                class="nhsuk-global-alert__updated "
+                                                            >
+                                                                                Updated 23 mins ago
+                                                            </p>
+                                        </div>
+                    </div>
+</div>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <Column
+                      forceLayout={false}
+                      size="full"
+                      tabletWidth=""
+>
+                      <div
+                                            className="nhsuk-global-alert__content"
+                      >
+                                            <Title
+                                                                  className=""
+                                                                  style={Object {}}
+                                                                  visuallyHiddenText="Alert: "
+                                            >
+                                                                  National Flu Outbreak
+                                            </Title>
+                                            <Message
+                                                                  className=""
+                                                                  style={Object {}}
+                                            >
+                                                                  There has been a national flu outbreak.
+                                                                  <Link
+                                                                                        className=""
+                                                                                        href="https://www.nhs.uk"
+                                                                                        onClick={[Function]}
+                                                                                        style={Object {}}
+                                                                  >
+                                                                                        How does it affect me
+                                                                  </Link>
+                                            </Message>
+                                            <LastUpdated
+                                                                  className=""
+                                                                  style={Object {}}
+                                            >
+                                                                  Updated 23 mins ago
+                                            </LastUpdated>
+                      </div>
+</Column>,
+                    "className": "nhsuk-grid-row",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "children": <div
+                          className="nhsuk-global-alert__content"
+>
+                          <Title
+                                                    className=""
+                                                    style={Object {}}
+                                                    visuallyHiddenText="Alert: "
+                          >
+                                                    National Flu Outbreak
+                          </Title>
+                          <Message
+                                                    className=""
+                                                    style={Object {}}
+                          >
+                                                    There has been a national flu outbreak.
+                                                    <Link
+                                                                              className=""
+                                                                              href="https://www.nhs.uk"
+                                                                              onClick={[Function]}
+                                                                              style={Object {}}
+                                                    >
+                                                                              How does it affect me
+                                                    </Link>
+                          </Message>
+                          <LastUpdated
+                                                    className=""
+                                                    style={Object {}}
+                          >
+                                                    Updated 23 mins ago
+                          </LastUpdated>
+</div>,
+                        "forceLayout": false,
+                        "size": "full",
+                        "tabletWidth": "",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": <div
+                          class="nhsuk-grid-column-undefined  null"
+>
+                          <div
+                                                    class="nhsuk-global-alert__content"
+                          >
+                                                    <h2
+                                                                              class="nhsuk-global-alert__heading "
+                                                    >
+                                                                              <span
+                                                                                                        class="nhsuk-u-visually-hidden"
+                                                                              >
+                                                                                                        Alert: 
+                                                                              </span>
+                                                                              National Flu Outbreak
+                                                    </h2>
+                                                    <p
+                                                                              class="nhsuk-global-alert__message "
+                                                    >
+                                                                              There has been a national flu outbreak.
+                                                                              <a
+                                                                                                        class="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override "
+                                                                                                        href="https://www.nhs.uk"
+                                                                              >
+                                                                                                        How does it affect me
+                                                                              </a>
+                                                    </p>
+                                                    <p
+                                                                              class="nhsuk-global-alert__updated "
+                                                    >
+                                                                              Updated 23 mins ago
+                                                    </p>
+                          </div>
+</div>,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <div
+                            className="nhsuk-global-alert__content"
+>
+                            <Title
+                                                        className=""
+                                                        style={Object {}}
+                                                        visuallyHiddenText="Alert: "
+                            >
+                                                        National Flu Outbreak
+                            </Title>
+                            <Message
+                                                        className=""
+                                                        style={Object {}}
+                            >
+                                                        There has been a national flu outbreak.
+                                                        <Link
+                                                                                    className=""
+                                                                                    href="https://www.nhs.uk"
+                                                                                    onClick={[Function]}
+                                                                                    style={Object {}}
+                                                        >
+                                                                                    How does it affect me
+                                                        </Link>
+                            </Message>
+                            <LastUpdated
+                                                        className=""
+                                                        style={Object {}}
+                            >
+                                                        Updated 23 mins ago
+                            </LastUpdated>
+</div>,
+                          "className": "nhsuk-grid-column-undefined  null",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": <div
+                              class="nhsuk-global-alert__content"
+>
+                              <h2
+                                                            class="nhsuk-global-alert__heading "
+                              >
+                                                            <span
+                                                                                          class="nhsuk-u-visually-hidden"
+                                                            >
+                                                                                          Alert: 
+                                                            </span>
+                                                            National Flu Outbreak
+                              </h2>
+                              <p
+                                                            class="nhsuk-global-alert__message "
+                              >
+                                                            There has been a national flu outbreak.
+                                                            <a
+                                                                                          class="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override "
+                                                                                          href="https://www.nhs.uk"
+                                                            >
+                                                                                          How does it affect me
+                                                            </a>
+                              </p>
+                              <p
+                                                            class="nhsuk-global-alert__updated "
+                              >
+                                                            Updated 23 mins ago
+                              </p>
+</div>,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": Array [
+                                <Title
+                                  className=""
+                                  style={Object {}}
+                                  visuallyHiddenText="Alert: "
+>
+                                  National Flu Outbreak
+</Title>,
+                                <Message
+                                  className=""
+                                  style={Object {}}
+>
+                                  There has been a national flu outbreak.
+                                  <Link
+                                                                    className=""
+                                                                    href="https://www.nhs.uk"
+                                                                    onClick={[Function]}
+                                                                    style={Object {}}
+                                  >
+                                                                    How does it affect me
+                                  </Link>
+</Message>,
+                                <LastUpdated
+                                  className=""
+                                  style={Object {}}
+>
+                                  Updated 23 mins ago
+</LastUpdated>,
+                              ],
+                              "className": "nhsuk-global-alert__content",
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "function",
+                                "props": Object {
+                                  "children": "National Flu Outbreak",
+                                  "className": "",
+                                  "style": Object {},
+                                  "visuallyHiddenText": "Alert: ",
+                                },
+                                "ref": null,
+                                "rendered": Object {
+                                  "instance": <h2
+                                    class="nhsuk-global-alert__heading "
+>
+                                    <span
+                                                                        class="nhsuk-u-visually-hidden"
+                                    >
+                                                                        Alert: 
+                                    </span>
+                                    National Flu Outbreak
+</h2>,
+                                  "key": undefined,
+                                  "nodeType": "host",
+                                  "props": Object {
+                                    "children": Array [
+                                      <span
+                                        className="nhsuk-u-visually-hidden"
+>
+                                        Alert: 
+</span>,
+                                      "National Flu Outbreak",
+                                    ],
+                                    "className": "nhsuk-global-alert__heading ",
+                                    "style": Object {},
+                                  },
+                                  "ref": null,
+                                  "rendered": Array [
+                                    Object {
+                                      "instance": <span
+                                        class="nhsuk-u-visually-hidden"
+>
+                                        Alert: 
+</span>,
+                                      "key": undefined,
+                                      "nodeType": "host",
+                                      "props": Object {
+                                        "children": "Alert: ",
+                                        "className": "nhsuk-u-visually-hidden",
+                                      },
+                                      "ref": null,
+                                      "rendered": Array [
+                                        "Alert: ",
+                                      ],
+                                      "type": "span",
+                                    },
+                                    "National Flu Outbreak",
+                                  ],
+                                  "type": "h2",
+                                },
+                                "type": [Function],
+                              },
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "function",
+                                "props": Object {
+                                  "children": Array [
+                                    "There has been a national flu outbreak.",
+                                    <Link
+                                      className=""
+                                      href="https://www.nhs.uk"
+                                      onClick={[Function]}
+                                      style={Object {}}
+>
+                                      How does it affect me
+</Link>,
+                                  ],
+                                  "className": "",
+                                  "style": Object {},
+                                },
+                                "ref": null,
+                                "rendered": Object {
+                                  "instance": <p
+                                    class="nhsuk-global-alert__message "
+>
+                                    There has been a national flu outbreak.
+                                    <a
+                                                                        class="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override "
+                                                                        href="https://www.nhs.uk"
+                                    >
+                                                                        How does it affect me
+                                    </a>
+</p>,
+                                  "key": undefined,
+                                  "nodeType": "host",
+                                  "props": Object {
+                                    "children": Array [
+                                      "There has been a national flu outbreak.",
+                                      <Link
+                                        className=""
+                                        href="https://www.nhs.uk"
+                                        onClick={[Function]}
+                                        style={Object {}}
+>
+                                        How does it affect me
+</Link>,
+                                    ],
+                                    "className": "nhsuk-global-alert__message ",
+                                    "style": Object {},
+                                  },
+                                  "ref": null,
+                                  "rendered": Array [
+                                    "There has been a national flu outbreak.",
+                                    Object {
+                                      "instance": null,
+                                      "key": undefined,
+                                      "nodeType": "function",
+                                      "props": Object {
+                                        "children": "How does it affect me",
+                                        "className": "",
+                                        "href": "https://www.nhs.uk",
+                                        "onClick": [Function],
+                                        "style": Object {},
+                                      },
+                                      "ref": null,
+                                      "rendered": Object {
+                                        "instance": <a
+                                          class="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override "
+                                          href="https://www.nhs.uk"
+>
+                                          How does it affect me
+</a>,
+                                        "key": undefined,
+                                        "nodeType": "host",
+                                        "props": Object {
+                                          "children": "How does it affect me",
+                                          "className": "nhsuk-u-nowrap nhsuk-global-alert-link__margin-override ",
+                                          "href": "https://www.nhs.uk",
+                                          "onClick": [Function],
+                                          "style": Object {},
+                                        },
+                                        "ref": null,
+                                        "rendered": Array [
+                                          "How does it affect me",
+                                        ],
+                                        "type": "a",
+                                      },
+                                      "type": [Function],
+                                    },
+                                  ],
+                                  "type": "p",
+                                },
+                                "type": [Function],
+                              },
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "function",
+                                "props": Object {
+                                  "children": "Updated 23 mins ago",
+                                  "className": "",
+                                  "style": Object {},
+                                },
+                                "ref": null,
+                                "rendered": Object {
+                                  "instance": <p
+                                    class="nhsuk-global-alert__updated "
+>
+                                    Updated 23 mins ago
+</p>,
+                                  "key": undefined,
+                                  "nodeType": "host",
+                                  "props": Object {
+                                    "children": "Updated 23 mins ago",
+                                    "className": "nhsuk-global-alert__updated ",
+                                    "style": Object {},
+                                  },
+                                  "ref": null,
+                                  "rendered": Array [
+                                    "Updated 23 mins ago",
+                                  ],
+                                  "type": "p",
+                                },
+                                "type": [Function],
+                              },
+                            ],
+                            "type": "div",
+                          },
+                        ],
+                        "type": "div",
+                      },
+                      "type": [Function],
+                    },
+                  ],
+                  "type": "div",
+                },
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Title
+            className=""
+            style={Object {}}
+            visuallyHiddenText="Alert: "
+>
+            National Flu Outbreak
+</Title>,
+          <Message
+            className=""
+            style={Object {}}
+>
+            There has been a national flu outbreak.
+            <Link
+                        className=""
+                        href="https://www.nhs.uk"
+                        onClick={[Function]}
+                        style={Object {}}
+            >
+                        How does it affect me
+            </Link>
+</Message>,
+          <LastUpdated
+            className=""
+            style={Object {}}
+>
+            Updated 23 mins ago
+</LastUpdated>,
+        ],
+        "className": "",
+        "id": "nhsuk-global-alert",
+        "style": Object {},
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="nhsuk-global-alert "
+          id="nhsuk-global-alert"
+>
+          <div
+                    class="nhsuk-width-container "
+          >
+                    <div
+                              class="nhsuk-grid-row"
+                    >
+                              <div
+                                        class="nhsuk-grid-column-undefined  null"
+                              >
+                                        <div
+                                                  class="nhsuk-global-alert__content"
+                                        >
+                                                  <h2
+                                                            class="nhsuk-global-alert__heading "
+                                                  >
+                                                            <span
+                                                                      class="nhsuk-u-visually-hidden"
+                                                            >
+                                                                      Alert: 
+                                                            </span>
+                                                            National Flu Outbreak
+                                                  </h2>
+                                                  <p
+                                                            class="nhsuk-global-alert__message "
+                                                  >
+                                                            There has been a national flu outbreak.
+                                                            <a
+                                                                      class="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override "
+                                                                      href="https://www.nhs.uk"
+                                                            >
+                                                                      How does it affect me
+                                                            </a>
+                                                  </p>
+                                                  <p
+                                                            class="nhsuk-global-alert__updated "
+                                                  >
+                                                            Updated 23 mins ago
+                                                  </p>
+                                        </div>
+                              </div>
+                    </div>
+          </div>
+</div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Container
+            className=""
+            fluid={false}
+            style={Object {}}
+>
+            <Row>
+                        <Column
+                                    forceLayout={false}
+                                    size="full"
+                                    tabletWidth=""
+                        >
+                                    <div
+                                                className="nhsuk-global-alert__content"
+                                    >
+                                                <Title
+                                                            className=""
+                                                            style={Object {}}
+                                                            visuallyHiddenText="Alert: "
+                                                >
+                                                            National Flu Outbreak
+                                                </Title>
+                                                <Message
+                                                            className=""
+                                                            style={Object {}}
+                                                >
+                                                            There has been a national flu outbreak.
+                                                            <Link
+                                                                        className=""
+                                                                        href="https://www.nhs.uk"
+                                                                        onClick={[Function]}
+                                                                        style={Object {}}
+                                                            >
+                                                                        How does it affect me
+                                                            </Link>
+                                                </Message>
+                                                <LastUpdated
+                                                            className=""
+                                                            style={Object {}}
+                                                >
+                                                            Updated 23 mins ago
+                                                </LastUpdated>
+                                    </div>
+                        </Column>
+            </Row>
+</Container>,
+          "className": "nhsuk-global-alert ",
+          "id": "nhsuk-global-alert",
+          "style": Object {},
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": <Row>
+                <Column
+                                forceLayout={false}
+                                size="full"
+                                tabletWidth=""
+                >
+                                <div
+                                                className="nhsuk-global-alert__content"
+                                >
+                                                <Title
+                                                                className=""
+                                                                style={Object {}}
+                                                                visuallyHiddenText="Alert: "
+                                                >
+                                                                National Flu Outbreak
+                                                </Title>
+                                                <Message
+                                                                className=""
+                                                                style={Object {}}
+                                                >
+                                                                There has been a national flu outbreak.
+                                                                <Link
+                                                                                className=""
+                                                                                href="https://www.nhs.uk"
+                                                                                onClick={[Function]}
+                                                                                style={Object {}}
+                                                                >
+                                                                                How does it affect me
+                                                                </Link>
+                                                </Message>
+                                                <LastUpdated
+                                                                className=""
+                                                                style={Object {}}
+                                                >
+                                                                Updated 23 mins ago
+                                                </LastUpdated>
+                                </div>
+                </Column>
+</Row>,
+              "className": "",
+              "fluid": false,
+              "style": Object {},
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": <div
+                class="nhsuk-width-container "
+>
+                <div
+                                class="nhsuk-grid-row"
+                >
+                                <div
+                                                class="nhsuk-grid-column-undefined  null"
+                                >
+                                                <div
+                                                                class="nhsuk-global-alert__content"
+                                                >
+                                                                <h2
+                                                                                class="nhsuk-global-alert__heading "
+                                                                >
+                                                                                <span
+                                                                                                class="nhsuk-u-visually-hidden"
+                                                                                >
+                                                                                                Alert: 
+                                                                                </span>
+                                                                                National Flu Outbreak
+                                                                </h2>
+                                                                <p
+                                                                                class="nhsuk-global-alert__message "
+                                                                >
+                                                                                There has been a national flu outbreak.
+                                                                                <a
+                                                                                                class="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override "
+                                                                                                href="https://www.nhs.uk"
+                                                                                >
+                                                                                                How does it affect me
+                                                                                </a>
+                                                                </p>
+                                                                <p
+                                                                                class="nhsuk-global-alert__updated "
+                                                                >
+                                                                                Updated 23 mins ago
+                                                                </p>
+                                                </div>
+                                </div>
+                </div>
+</div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Row>
+                  <Column
+                                    forceLayout={false}
+                                    size="full"
+                                    tabletWidth=""
+                  >
+                                    <div
+                                                      className="nhsuk-global-alert__content"
+                                    >
+                                                      <Title
+                                                                        className=""
+                                                                        style={Object {}}
+                                                                        visuallyHiddenText="Alert: "
+                                                      >
+                                                                        National Flu Outbreak
+                                                      </Title>
+                                                      <Message
+                                                                        className=""
+                                                                        style={Object {}}
+                                                      >
+                                                                        There has been a national flu outbreak.
+                                                                        <Link
+                                                                                          className=""
+                                                                                          href="https://www.nhs.uk"
+                                                                                          onClick={[Function]}
+                                                                                          style={Object {}}
+                                                                        >
+                                                                                          How does it affect me
+                                                                        </Link>
+                                                      </Message>
+                                                      <LastUpdated
+                                                                        className=""
+                                                                        style={Object {}}
+                                                      >
+                                                                        Updated 23 mins ago
+                                                      </LastUpdated>
+                                    </div>
+                  </Column>
+</Row>,
+                "className": "nhsuk-width-container ",
+                "style": Object {},
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": <Column
+                      forceLayout={false}
+                      size="full"
+                      tabletWidth=""
+>
+                      <div
+                                            className="nhsuk-global-alert__content"
+                      >
+                                            <Title
+                                                                  className=""
+                                                                  style={Object {}}
+                                                                  visuallyHiddenText="Alert: "
+                                            >
+                                                                  National Flu Outbreak
+                                            </Title>
+                                            <Message
+                                                                  className=""
+                                                                  style={Object {}}
+                                            >
+                                                                  There has been a national flu outbreak.
+                                                                  <Link
+                                                                                        className=""
+                                                                                        href="https://www.nhs.uk"
+                                                                                        onClick={[Function]}
+                                                                                        style={Object {}}
+                                                                  >
+                                                                                        How does it affect me
+                                                                  </Link>
+                                            </Message>
+                                            <LastUpdated
+                                                                  className=""
+                                                                  style={Object {}}
+                                            >
+                                                                  Updated 23 mins ago
+                                            </LastUpdated>
+                      </div>
+</Column>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": <div
+                      class="nhsuk-grid-row"
+>
+                      <div
+                                            class="nhsuk-grid-column-undefined  null"
+                      >
+                                            <div
+                                                                  class="nhsuk-global-alert__content"
+                                            >
+                                                                  <h2
+                                                                                        class="nhsuk-global-alert__heading "
+                                                                  >
+                                                                                        <span
+                                                                                                              class="nhsuk-u-visually-hidden"
+                                                                                        >
+                                                                                                              Alert: 
+                                                                                        </span>
+                                                                                        National Flu Outbreak
+                                                                  </h2>
+                                                                  <p
+                                                                                        class="nhsuk-global-alert__message "
+                                                                  >
+                                                                                        There has been a national flu outbreak.
+                                                                                        <a
+                                                                                                              class="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override "
+                                                                                                              href="https://www.nhs.uk"
+                                                                                        >
+                                                                                                              How does it affect me
+                                                                                        </a>
+                                                                  </p>
+                                                                  <p
+                                                                                        class="nhsuk-global-alert__updated "
+                                                                  >
+                                                                                        Updated 23 mins ago
+                                                                  </p>
+                                            </div>
+                      </div>
+</div>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <Column
+                        forceLayout={false}
+                        size="full"
+                        tabletWidth=""
+>
+                        <div
+                                                className="nhsuk-global-alert__content"
+                        >
+                                                <Title
+                                                                        className=""
+                                                                        style={Object {}}
+                                                                        visuallyHiddenText="Alert: "
+                                                >
+                                                                        National Flu Outbreak
+                                                </Title>
+                                                <Message
+                                                                        className=""
+                                                                        style={Object {}}
+                                                >
+                                                                        There has been a national flu outbreak.
+                                                                        <Link
+                                                                                                className=""
+                                                                                                href="https://www.nhs.uk"
+                                                                                                onClick={[Function]}
+                                                                                                style={Object {}}
+                                                                        >
+                                                                                                How does it affect me
+                                                                        </Link>
+                                                </Message>
+                                                <LastUpdated
+                                                                        className=""
+                                                                        style={Object {}}
+                                                >
+                                                                        Updated 23 mins ago
+                                                </LastUpdated>
+                        </div>
+</Column>,
+                      "className": "nhsuk-grid-row",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "children": <div
+                            className="nhsuk-global-alert__content"
+>
+                            <Title
+                                                        className=""
+                                                        style={Object {}}
+                                                        visuallyHiddenText="Alert: "
+                            >
+                                                        National Flu Outbreak
+                            </Title>
+                            <Message
+                                                        className=""
+                                                        style={Object {}}
+                            >
+                                                        There has been a national flu outbreak.
+                                                        <Link
+                                                                                    className=""
+                                                                                    href="https://www.nhs.uk"
+                                                                                    onClick={[Function]}
+                                                                                    style={Object {}}
+                                                        >
+                                                                                    How does it affect me
+                                                        </Link>
+                            </Message>
+                            <LastUpdated
+                                                        className=""
+                                                        style={Object {}}
+                            >
+                                                        Updated 23 mins ago
+                            </LastUpdated>
+</div>,
+                          "forceLayout": false,
+                          "size": "full",
+                          "tabletWidth": "",
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": <div
+                            class="nhsuk-grid-column-undefined  null"
+>
+                            <div
+                                                        class="nhsuk-global-alert__content"
+                            >
+                                                        <h2
+                                                                                    class="nhsuk-global-alert__heading "
+                                                        >
+                                                                                    <span
+                                                                                                                class="nhsuk-u-visually-hidden"
+                                                                                    >
+                                                                                                                Alert: 
+                                                                                    </span>
+                                                                                    National Flu Outbreak
+                                                        </h2>
+                                                        <p
+                                                                                    class="nhsuk-global-alert__message "
+                                                        >
+                                                                                    There has been a national flu outbreak.
+                                                                                    <a
+                                                                                                                class="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override "
+                                                                                                                href="https://www.nhs.uk"
+                                                                                    >
+                                                                                                                How does it affect me
+                                                                                    </a>
+                                                        </p>
+                                                        <p
+                                                                                    class="nhsuk-global-alert__updated "
+                                                        >
+                                                                                    Updated 23 mins ago
+                                                        </p>
+                            </div>
+</div>,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": <div
+                              className="nhsuk-global-alert__content"
+>
+                              <Title
+                                                            className=""
+                                                            style={Object {}}
+                                                            visuallyHiddenText="Alert: "
+                              >
+                                                            National Flu Outbreak
+                              </Title>
+                              <Message
+                                                            className=""
+                                                            style={Object {}}
+                              >
+                                                            There has been a national flu outbreak.
+                                                            <Link
+                                                                                          className=""
+                                                                                          href="https://www.nhs.uk"
+                                                                                          onClick={[Function]}
+                                                                                          style={Object {}}
+                                                            >
+                                                                                          How does it affect me
+                                                            </Link>
+                              </Message>
+                              <LastUpdated
+                                                            className=""
+                                                            style={Object {}}
+                              >
+                                                            Updated 23 mins ago
+                              </LastUpdated>
+</div>,
+                            "className": "nhsuk-grid-column-undefined  null",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": <div
+                                class="nhsuk-global-alert__content"
+>
+                                <h2
+                                                                class="nhsuk-global-alert__heading "
+                                >
+                                                                <span
+                                                                                                class="nhsuk-u-visually-hidden"
+                                                                >
+                                                                                                Alert: 
+                                                                </span>
+                                                                National Flu Outbreak
+                                </h2>
+                                <p
+                                                                class="nhsuk-global-alert__message "
+                                >
+                                                                There has been a national flu outbreak.
+                                                                <a
+                                                                                                class="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override "
+                                                                                                href="https://www.nhs.uk"
+                                                                >
+                                                                                                How does it affect me
+                                                                </a>
+                                </p>
+                                <p
+                                                                class="nhsuk-global-alert__updated "
+                                >
+                                                                Updated 23 mins ago
+                                </p>
+</div>,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": Array [
+                                  <Title
+                                    className=""
+                                    style={Object {}}
+                                    visuallyHiddenText="Alert: "
+>
+                                    National Flu Outbreak
+</Title>,
+                                  <Message
+                                    className=""
+                                    style={Object {}}
+>
+                                    There has been a national flu outbreak.
+                                    <Link
+                                                                        className=""
+                                                                        href="https://www.nhs.uk"
+                                                                        onClick={[Function]}
+                                                                        style={Object {}}
+                                    >
+                                                                        How does it affect me
+                                    </Link>
+</Message>,
+                                  <LastUpdated
+                                    className=""
+                                    style={Object {}}
+>
+                                    Updated 23 mins ago
+</LastUpdated>,
+                                ],
+                                "className": "nhsuk-global-alert__content",
+                              },
+                              "ref": null,
+                              "rendered": Array [
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "function",
+                                  "props": Object {
+                                    "children": "National Flu Outbreak",
+                                    "className": "",
+                                    "style": Object {},
+                                    "visuallyHiddenText": "Alert: ",
+                                  },
+                                  "ref": null,
+                                  "rendered": Object {
+                                    "instance": <h2
+                                      class="nhsuk-global-alert__heading "
+>
+                                      <span
+                                                                            class="nhsuk-u-visually-hidden"
+                                      >
+                                                                            Alert: 
+                                      </span>
+                                      National Flu Outbreak
+</h2>,
+                                    "key": undefined,
+                                    "nodeType": "host",
+                                    "props": Object {
+                                      "children": Array [
+                                        <span
+                                          className="nhsuk-u-visually-hidden"
+>
+                                          Alert: 
+</span>,
+                                        "National Flu Outbreak",
+                                      ],
+                                      "className": "nhsuk-global-alert__heading ",
+                                      "style": Object {},
+                                    },
+                                    "ref": null,
+                                    "rendered": Array [
+                                      Object {
+                                        "instance": <span
+                                          class="nhsuk-u-visually-hidden"
+>
+                                          Alert: 
+</span>,
+                                        "key": undefined,
+                                        "nodeType": "host",
+                                        "props": Object {
+                                          "children": "Alert: ",
+                                          "className": "nhsuk-u-visually-hidden",
+                                        },
+                                        "ref": null,
+                                        "rendered": Array [
+                                          "Alert: ",
+                                        ],
+                                        "type": "span",
+                                      },
+                                      "National Flu Outbreak",
+                                    ],
+                                    "type": "h2",
+                                  },
+                                  "type": [Function],
+                                },
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "function",
+                                  "props": Object {
+                                    "children": Array [
+                                      "There has been a national flu outbreak.",
+                                      <Link
+                                        className=""
+                                        href="https://www.nhs.uk"
+                                        onClick={[Function]}
+                                        style={Object {}}
+>
+                                        How does it affect me
+</Link>,
+                                    ],
+                                    "className": "",
+                                    "style": Object {},
+                                  },
+                                  "ref": null,
+                                  "rendered": Object {
+                                    "instance": <p
+                                      class="nhsuk-global-alert__message "
+>
+                                      There has been a national flu outbreak.
+                                      <a
+                                                                            class="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override "
+                                                                            href="https://www.nhs.uk"
+                                      >
+                                                                            How does it affect me
+                                      </a>
+</p>,
+                                    "key": undefined,
+                                    "nodeType": "host",
+                                    "props": Object {
+                                      "children": Array [
+                                        "There has been a national flu outbreak.",
+                                        <Link
+                                          className=""
+                                          href="https://www.nhs.uk"
+                                          onClick={[Function]}
+                                          style={Object {}}
+>
+                                          How does it affect me
+</Link>,
+                                      ],
+                                      "className": "nhsuk-global-alert__message ",
+                                      "style": Object {},
+                                    },
+                                    "ref": null,
+                                    "rendered": Array [
+                                      "There has been a national flu outbreak.",
+                                      Object {
+                                        "instance": null,
+                                        "key": undefined,
+                                        "nodeType": "function",
+                                        "props": Object {
+                                          "children": "How does it affect me",
+                                          "className": "",
+                                          "href": "https://www.nhs.uk",
+                                          "onClick": [Function],
+                                          "style": Object {},
+                                        },
+                                        "ref": null,
+                                        "rendered": Object {
+                                          "instance": <a
+                                            class="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override "
+                                            href="https://www.nhs.uk"
+>
+                                            How does it affect me
+</a>,
+                                          "key": undefined,
+                                          "nodeType": "host",
+                                          "props": Object {
+                                            "children": "How does it affect me",
+                                            "className": "nhsuk-u-nowrap nhsuk-global-alert-link__margin-override ",
+                                            "href": "https://www.nhs.uk",
+                                            "onClick": [Function],
+                                            "style": Object {},
+                                          },
+                                          "ref": null,
+                                          "rendered": Array [
+                                            "How does it affect me",
+                                          ],
+                                          "type": "a",
+                                        },
+                                        "type": [Function],
+                                      },
+                                    ],
+                                    "type": "p",
+                                  },
+                                  "type": [Function],
+                                },
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "function",
+                                  "props": Object {
+                                    "children": "Updated 23 mins ago",
+                                    "className": "",
+                                    "style": Object {},
+                                  },
+                                  "ref": null,
+                                  "rendered": Object {
+                                    "instance": <p
+                                      class="nhsuk-global-alert__updated "
+>
+                                      Updated 23 mins ago
+</p>,
+                                    "key": undefined,
+                                    "nodeType": "host",
+                                    "props": Object {
+                                      "children": "Updated 23 mins ago",
+                                      "className": "nhsuk-global-alert__updated ",
+                                      "style": Object {},
+                                    },
+                                    "ref": null,
+                                    "rendered": Array [
+                                      "Updated 23 mins ago",
+                                    ],
+                                    "type": "p",
+                                  },
+                                  "type": [Function],
+                                },
+                              ],
+                              "type": "div",
+                            },
+                          ],
+                          "type": "div",
+                        },
+                        "type": [Function],
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`EmergencyAlert last updated matches snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <LastUpdated
+    className=""
+    style={Object {}}
+>
+    Updated 23 mins ago
+</LastUpdated>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Updated 23 mins ago",
+      "className": "nhsuk-global-alert__updated ",
+      "style": Object {},
+    },
+    "ref": null,
+    "rendered": "Updated 23 mins ago",
+    "type": "p",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Updated 23 mins ago",
+        "className": "nhsuk-global-alert__updated ",
+        "style": Object {},
+      },
+      "ref": null,
+      "rendered": "Updated 23 mins ago",
+      "type": "p",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`EmergencyAlert link matches snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Link
+    className=""
+    href="#"
+    onClick={[Function]}
+    style={Object {}}
+>
+    Link
+</Link>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Link",
+      "className": "nhsuk-u-nowrap nhsuk-global-alert-link__margin-override ",
+      "href": "#",
+      "onClick": [Function],
+      "style": Object {},
+    },
+    "ref": null,
+    "rendered": "Link",
+    "type": "a",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Link",
+        "className": "nhsuk-u-nowrap nhsuk-global-alert-link__margin-override ",
+        "href": "#",
+        "onClick": [Function],
+        "style": Object {},
+      },
+      "ref": null,
+      "rendered": "Link",
+      "type": "a",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`EmergencyAlert message matches snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Message
+    className=""
+    style={Object {}}
+>
+    Message
+</Message>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Message",
+      "className": "nhsuk-global-alert__message ",
+      "style": Object {},
+    },
+    "ref": null,
+    "rendered": "Message",
+    "type": "p",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Message",
+        "className": "nhsuk-global-alert__message ",
+        "style": Object {},
+      },
+      "ref": null,
+      "rendered": "Message",
+      "type": "p",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`EmergencyAlert title matches snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Title
+    className=""
+    style={Object {}}
+    visuallyHiddenText="Alert: "
+>
+    Title
+</Title>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <span
+          className="nhsuk-u-visually-hidden"
+>
+          Alert: 
+</span>,
+        "Title",
+      ],
+      "className": "nhsuk-global-alert__heading ",
+      "style": Object {},
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Alert: ",
+          "className": "nhsuk-u-visually-hidden",
+        },
+        "ref": null,
+        "rendered": "Alert: ",
+        "type": "span",
+      },
+      "Title",
+    ],
+    "type": "h2",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <span
+            className="nhsuk-u-visually-hidden"
+>
+            Alert: 
+</span>,
+          "Title",
+        ],
+        "className": "nhsuk-global-alert__heading ",
+        "style": Object {},
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Alert: ",
+            "className": "nhsuk-u-visually-hidden",
+          },
+          "ref": null,
+          "rendered": "Alert: ",
+          "type": "span",
+        },
+        "Title",
+      ],
+      "type": "h2",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

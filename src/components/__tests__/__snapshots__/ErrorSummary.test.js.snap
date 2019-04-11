@@ -1,0 +1,1752 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorSummary all matches snapshot 1`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <ErrorSummary
+    ariaLabelledBy="error-summary-title"
+    className=""
+    dataModule="error-summary"
+    description="Optional description of the errors and how to correct them"
+    role="alert"
+    style={Object {}}
+    title="This is a problem"
+>
+    <ErrorItem
+        className=""
+        href="#example-error-1"
+        onClick={[Function]}
+        style={Object {}}
+    >
+        Link to error with explanation
+    </ErrorItem>
+    <ErrorItem
+        className=""
+        href="#example-error-2"
+        onClick={[Function]}
+        style={Object {}}
+    >
+        Link to error with explanation
+    </ErrorItem>
+</ErrorSummary>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "ariaLabelledBy": "error-summary-title",
+      "children": Array [
+        <ErrorItem
+          className=""
+          href="#example-error-1"
+          onClick={[Function]}
+          style={Object {}}
+>
+          Link to error with explanation
+</ErrorItem>,
+        <ErrorItem
+          className=""
+          href="#example-error-2"
+          onClick={[Function]}
+          style={Object {}}
+>
+          Link to error with explanation
+</ErrorItem>,
+      ],
+      "className": "",
+      "dataModule": "error-summary",
+      "description": "Optional description of the errors and how to correct them",
+      "role": "alert",
+      "style": Object {},
+      "title": "This is a problem",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="nhsuk-error-summary "
+        aria-labelledby="error-summary-title"
+        role="alert"
+        tabindex="-1"
+        data-module="error-summary"
+>
+        <h2
+                class="nhsuk-error-summary__title"
+        >
+                This is a problem
+        </h2>
+        <div
+                class="nhsuk-error-summary__body"
+        >
+                <p>
+                        Optional description of the errors and how to correct them
+                </p>
+                <ul
+                        class="nhsuk-list nhsuk-error-summary__list"
+                >
+                        <li
+                                class=""
+                        >
+                                <a
+                                        href="#example-error-1"
+                                >
+                                        Link to error with explanation
+                                </a>
+                        </li>
+                        <li
+                                class=""
+                        >
+                                <a
+                                        href="#example-error-2"
+                                >
+                                        Link to error with explanation
+                                </a>
+                        </li>
+                </ul>
+        </div>
+</div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "aria-labelledby": "error-summary-title",
+        "children": Array [
+          <h2
+            className="nhsuk-error-summary__title"
+>
+            This is a problem
+</h2>,
+          <div
+            className="nhsuk-error-summary__body"
+>
+            <p>
+                        Optional description of the errors and how to correct them
+            </p>
+            <ul
+                        className="nhsuk-list nhsuk-error-summary__list"
+            >
+                        <ErrorItem
+                                    className=""
+                                    href="#example-error-1"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                        >
+                                    Link to error with explanation
+                        </ErrorItem>
+                        <ErrorItem
+                                    className=""
+                                    href="#example-error-2"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                        >
+                                    Link to error with explanation
+                        </ErrorItem>
+            </ul>
+</div>,
+        ],
+        "className": "nhsuk-error-summary ",
+        "data-module": "error-summary",
+        "role": "alert",
+        "style": Object {},
+        "tabIndex": "-1",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <h2
+            class="nhsuk-error-summary__title"
+>
+            This is a problem
+</h2>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "This is a problem",
+            "className": "nhsuk-error-summary__title",
+          },
+          "ref": null,
+          "rendered": Array [
+            "This is a problem",
+          ],
+          "type": "h2",
+        },
+        Object {
+          "instance": <div
+            class="nhsuk-error-summary__body"
+>
+            <p>
+                        Optional description of the errors and how to correct them
+            </p>
+            <ul
+                        class="nhsuk-list nhsuk-error-summary__list"
+            >
+                        <li
+                                    class=""
+                        >
+                                    <a
+                                                href="#example-error-1"
+                                    >
+                                                Link to error with explanation
+                                    </a>
+                        </li>
+                        <li
+                                    class=""
+                        >
+                                    <a
+                                                href="#example-error-2"
+                                    >
+                                                Link to error with explanation
+                                    </a>
+                        </li>
+            </ul>
+</div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                Optional description of the errors and how to correct them
+</p>,
+              <ul
+                className="nhsuk-list nhsuk-error-summary__list"
+>
+                <ErrorItem
+                                className=""
+                                href="#example-error-1"
+                                onClick={[Function]}
+                                style={Object {}}
+                >
+                                Link to error with explanation
+                </ErrorItem>
+                <ErrorItem
+                                className=""
+                                href="#example-error-2"
+                                onClick={[Function]}
+                                style={Object {}}
+                >
+                                Link to error with explanation
+                </ErrorItem>
+</ul>,
+            ],
+            "className": "nhsuk-error-summary__body",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <p>
+                Optional description of the errors and how to correct them
+</p>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Optional description of the errors and how to correct them",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Optional description of the errors and how to correct them",
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": <ul
+                class="nhsuk-list nhsuk-error-summary__list"
+>
+                <li
+                                class=""
+                >
+                                <a
+                                                href="#example-error-1"
+                                >
+                                                Link to error with explanation
+                                </a>
+                </li>
+                <li
+                                class=""
+                >
+                                <a
+                                                href="#example-error-2"
+                                >
+                                                Link to error with explanation
+                                </a>
+                </li>
+</ul>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <ErrorItem
+                    className=""
+                    href="#example-error-1"
+                    onClick={[Function]}
+                    style={Object {}}
+>
+                    Link to error with explanation
+</ErrorItem>,
+                  <ErrorItem
+                    className=""
+                    href="#example-error-2"
+                    onClick={[Function]}
+                    style={Object {}}
+>
+                    Link to error with explanation
+</ErrorItem>,
+                ],
+                "className": "nhsuk-list nhsuk-error-summary__list",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Link to error with explanation",
+                    "className": "",
+                    "href": "#example-error-1",
+                    "onClick": [Function],
+                    "style": Object {},
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": <li
+                      class=""
+>
+                      <a
+                                            href="#example-error-1"
+                      >
+                                            Link to error with explanation
+                      </a>
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        href="#example-error-1"
+                        onClick={[Function]}
+>
+                        Link to error with explanation
+</a>,
+                      "className": "",
+                      "style": Object {},
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": <a
+                          href="#example-error-1"
+>
+                          Link to error with explanation
+</a>,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Link to error with explanation",
+                          "href": "#example-error-1",
+                          "onClick": [Function],
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Link to error with explanation",
+                        ],
+                        "type": "a",
+                      },
+                    ],
+                    "type": "li",
+                  },
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Link to error with explanation",
+                    "className": "",
+                    "href": "#example-error-2",
+                    "onClick": [Function],
+                    "style": Object {},
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": <li
+                      class=""
+>
+                      <a
+                                            href="#example-error-2"
+                      >
+                                            Link to error with explanation
+                      </a>
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        href="#example-error-2"
+                        onClick={[Function]}
+>
+                        Link to error with explanation
+</a>,
+                      "className": "",
+                      "style": Object {},
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": <a
+                          href="#example-error-2"
+>
+                          Link to error with explanation
+</a>,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Link to error with explanation",
+                          "href": "#example-error-2",
+                          "onClick": [Function],
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Link to error with explanation",
+                        ],
+                        "type": "a",
+                      },
+                    ],
+                    "type": "li",
+                  },
+                  "type": [Function],
+                },
+              ],
+              "type": "ul",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "ariaLabelledBy": "error-summary-title",
+        "children": Array [
+          <ErrorItem
+            className=""
+            href="#example-error-1"
+            onClick={[Function]}
+            style={Object {}}
+>
+            Link to error with explanation
+</ErrorItem>,
+          <ErrorItem
+            className=""
+            href="#example-error-2"
+            onClick={[Function]}
+            style={Object {}}
+>
+            Link to error with explanation
+</ErrorItem>,
+        ],
+        "className": "",
+        "dataModule": "error-summary",
+        "description": "Optional description of the errors and how to correct them",
+        "role": "alert",
+        "style": Object {},
+        "title": "This is a problem",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="nhsuk-error-summary "
+          aria-labelledby="error-summary-title"
+          role="alert"
+          tabindex="-1"
+          data-module="error-summary"
+>
+          <h2
+                    class="nhsuk-error-summary__title"
+          >
+                    This is a problem
+          </h2>
+          <div
+                    class="nhsuk-error-summary__body"
+          >
+                    <p>
+                              Optional description of the errors and how to correct them
+                    </p>
+                    <ul
+                              class="nhsuk-list nhsuk-error-summary__list"
+                    >
+                              <li
+                                        class=""
+                              >
+                                        <a
+                                                  href="#example-error-1"
+                                        >
+                                                  Link to error with explanation
+                                        </a>
+                              </li>
+                              <li
+                                        class=""
+                              >
+                                        <a
+                                                  href="#example-error-2"
+                                        >
+                                                  Link to error with explanation
+                                        </a>
+                              </li>
+                    </ul>
+          </div>
+</div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "aria-labelledby": "error-summary-title",
+          "children": Array [
+            <h2
+              className="nhsuk-error-summary__title"
+>
+              This is a problem
+</h2>,
+            <div
+              className="nhsuk-error-summary__body"
+>
+              <p>
+                            Optional description of the errors and how to correct them
+              </p>
+              <ul
+                            className="nhsuk-list nhsuk-error-summary__list"
+              >
+                            <ErrorItem
+                                          className=""
+                                          href="#example-error-1"
+                                          onClick={[Function]}
+                                          style={Object {}}
+                            >
+                                          Link to error with explanation
+                            </ErrorItem>
+                            <ErrorItem
+                                          className=""
+                                          href="#example-error-2"
+                                          onClick={[Function]}
+                                          style={Object {}}
+                            >
+                                          Link to error with explanation
+                            </ErrorItem>
+              </ul>
+</div>,
+          ],
+          "className": "nhsuk-error-summary ",
+          "data-module": "error-summary",
+          "role": "alert",
+          "style": Object {},
+          "tabIndex": "-1",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <h2
+              class="nhsuk-error-summary__title"
+>
+              This is a problem
+</h2>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "This is a problem",
+              "className": "nhsuk-error-summary__title",
+            },
+            "ref": null,
+            "rendered": Array [
+              "This is a problem",
+            ],
+            "type": "h2",
+          },
+          Object {
+            "instance": <div
+              class="nhsuk-error-summary__body"
+>
+              <p>
+                            Optional description of the errors and how to correct them
+              </p>
+              <ul
+                            class="nhsuk-list nhsuk-error-summary__list"
+              >
+                            <li
+                                          class=""
+                            >
+                                          <a
+                                                        href="#example-error-1"
+                                          >
+                                                        Link to error with explanation
+                                          </a>
+                            </li>
+                            <li
+                                          class=""
+                            >
+                                          <a
+                                                        href="#example-error-2"
+                                          >
+                                                        Link to error with explanation
+                                          </a>
+                            </li>
+              </ul>
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Optional description of the errors and how to correct them
+</p>,
+                <ul
+                  className="nhsuk-list nhsuk-error-summary__list"
+>
+                  <ErrorItem
+                                    className=""
+                                    href="#example-error-1"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                  >
+                                    Link to error with explanation
+                  </ErrorItem>
+                  <ErrorItem
+                                    className=""
+                                    href="#example-error-2"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                  >
+                                    Link to error with explanation
+                  </ErrorItem>
+</ul>,
+              ],
+              "className": "nhsuk-error-summary__body",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <p>
+                  Optional description of the errors and how to correct them
+</p>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Optional description of the errors and how to correct them",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Optional description of the errors and how to correct them",
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": <ul
+                  class="nhsuk-list nhsuk-error-summary__list"
+>
+                  <li
+                                    class=""
+                  >
+                                    <a
+                                                      href="#example-error-1"
+                                    >
+                                                      Link to error with explanation
+                                    </a>
+                  </li>
+                  <li
+                                    class=""
+                  >
+                                    <a
+                                                      href="#example-error-2"
+                                    >
+                                                      Link to error with explanation
+                                    </a>
+                  </li>
+</ul>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <ErrorItem
+                      className=""
+                      href="#example-error-1"
+                      onClick={[Function]}
+                      style={Object {}}
+>
+                      Link to error with explanation
+</ErrorItem>,
+                    <ErrorItem
+                      className=""
+                      href="#example-error-2"
+                      onClick={[Function]}
+                      style={Object {}}
+>
+                      Link to error with explanation
+</ErrorItem>,
+                  ],
+                  "className": "nhsuk-list nhsuk-error-summary__list",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "Link to error with explanation",
+                      "className": "",
+                      "href": "#example-error-1",
+                      "onClick": [Function],
+                      "style": Object {},
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": <li
+                        class=""
+>
+                        <a
+                                                href="#example-error-1"
+                        >
+                                                Link to error with explanation
+                        </a>
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <a
+                          href="#example-error-1"
+                          onClick={[Function]}
+>
+                          Link to error with explanation
+</a>,
+                        "className": "",
+                        "style": Object {},
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": <a
+                            href="#example-error-1"
+>
+                            Link to error with explanation
+</a>,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Link to error with explanation",
+                            "href": "#example-error-1",
+                            "onClick": [Function],
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            "Link to error with explanation",
+                          ],
+                          "type": "a",
+                        },
+                      ],
+                      "type": "li",
+                    },
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "Link to error with explanation",
+                      "className": "",
+                      "href": "#example-error-2",
+                      "onClick": [Function],
+                      "style": Object {},
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": <li
+                        class=""
+>
+                        <a
+                                                href="#example-error-2"
+                        >
+                                                Link to error with explanation
+                        </a>
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <a
+                          href="#example-error-2"
+                          onClick={[Function]}
+>
+                          Link to error with explanation
+</a>,
+                        "className": "",
+                        "style": Object {},
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": <a
+                            href="#example-error-2"
+>
+                            Link to error with explanation
+</a>,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Link to error with explanation",
+                            "href": "#example-error-2",
+                            "onClick": [Function],
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            "Link to error with explanation",
+                          ],
+                          "type": "a",
+                        },
+                      ],
+                      "type": "li",
+                    },
+                    "type": [Function],
+                  },
+                ],
+                "type": "ul",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`ErrorSummary doesn't render description or title when not provided 1`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <ErrorSummary
+    ariaLabelledBy="error-summary-title"
+    className=""
+    dataModule="error-summary"
+    description=""
+    role="alert"
+    style={Object {}}
+>
+    <ErrorItem
+        className=""
+        href="#example-error-1"
+        onClick={[Function]}
+        style={Object {}}
+    >
+        Link to error with explanation
+    </ErrorItem>
+    <ErrorItem
+        className=""
+        href="#example-error-2"
+        onClick={[Function]}
+        style={Object {}}
+    >
+        Link to error with explanation
+    </ErrorItem>
+</ErrorSummary>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "ariaLabelledBy": "error-summary-title",
+      "children": Array [
+        <ErrorItem
+          className=""
+          href="#example-error-1"
+          onClick={[Function]}
+          style={Object {}}
+>
+          Link to error with explanation
+</ErrorItem>,
+        <ErrorItem
+          className=""
+          href="#example-error-2"
+          onClick={[Function]}
+          style={Object {}}
+>
+          Link to error with explanation
+</ErrorItem>,
+      ],
+      "className": "",
+      "dataModule": "error-summary",
+      "description": "",
+      "role": "alert",
+      "style": Object {},
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="nhsuk-error-summary "
+        aria-labelledby="error-summary-title"
+        role="alert"
+        tabindex="-1"
+        data-module="error-summary"
+>
+        <h2
+                class="nhsuk-error-summary__title"
+        />
+        <div
+                class="nhsuk-error-summary__body"
+        >
+                <ul
+                        class="nhsuk-list nhsuk-error-summary__list"
+                >
+                        <li
+                                class=""
+                        >
+                                <a
+                                        href="#example-error-1"
+                                >
+                                        Link to error with explanation
+                                </a>
+                        </li>
+                        <li
+                                class=""
+                        >
+                                <a
+                                        href="#example-error-2"
+                                >
+                                        Link to error with explanation
+                                </a>
+                        </li>
+                </ul>
+        </div>
+</div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "aria-labelledby": "error-summary-title",
+        "children": Array [
+          <h2
+            className="nhsuk-error-summary__title"
+/>,
+          <div
+            className="nhsuk-error-summary__body"
+>
+            <ul
+                        className="nhsuk-list nhsuk-error-summary__list"
+            >
+                        <ErrorItem
+                                    className=""
+                                    href="#example-error-1"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                        >
+                                    Link to error with explanation
+                        </ErrorItem>
+                        <ErrorItem
+                                    className=""
+                                    href="#example-error-2"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                        >
+                                    Link to error with explanation
+                        </ErrorItem>
+            </ul>
+</div>,
+        ],
+        "className": "nhsuk-error-summary ",
+        "data-module": "error-summary",
+        "role": "alert",
+        "style": Object {},
+        "tabIndex": "-1",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <h2
+            class="nhsuk-error-summary__title"
+/>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "nhsuk-error-summary__title",
+          },
+          "ref": null,
+          "rendered": Array [
+            undefined,
+          ],
+          "type": "h2",
+        },
+        Object {
+          "instance": <div
+            class="nhsuk-error-summary__body"
+>
+            <ul
+                        class="nhsuk-list nhsuk-error-summary__list"
+            >
+                        <li
+                                    class=""
+                        >
+                                    <a
+                                                href="#example-error-1"
+                                    >
+                                                Link to error with explanation
+                                    </a>
+                        </li>
+                        <li
+                                    class=""
+                        >
+                                    <a
+                                                href="#example-error-2"
+                                    >
+                                                Link to error with explanation
+                                    </a>
+                        </li>
+            </ul>
+</div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              null,
+              <ul
+                className="nhsuk-list nhsuk-error-summary__list"
+>
+                <ErrorItem
+                                className=""
+                                href="#example-error-1"
+                                onClick={[Function]}
+                                style={Object {}}
+                >
+                                Link to error with explanation
+                </ErrorItem>
+                <ErrorItem
+                                className=""
+                                href="#example-error-2"
+                                onClick={[Function]}
+                                style={Object {}}
+                >
+                                Link to error with explanation
+                </ErrorItem>
+</ul>,
+            ],
+            "className": "nhsuk-error-summary__body",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <ul
+                class="nhsuk-list nhsuk-error-summary__list"
+>
+                <li
+                                class=""
+                >
+                                <a
+                                                href="#example-error-1"
+                                >
+                                                Link to error with explanation
+                                </a>
+                </li>
+                <li
+                                class=""
+                >
+                                <a
+                                                href="#example-error-2"
+                                >
+                                                Link to error with explanation
+                                </a>
+                </li>
+</ul>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <ErrorItem
+                    className=""
+                    href="#example-error-1"
+                    onClick={[Function]}
+                    style={Object {}}
+>
+                    Link to error with explanation
+</ErrorItem>,
+                  <ErrorItem
+                    className=""
+                    href="#example-error-2"
+                    onClick={[Function]}
+                    style={Object {}}
+>
+                    Link to error with explanation
+</ErrorItem>,
+                ],
+                "className": "nhsuk-list nhsuk-error-summary__list",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Link to error with explanation",
+                    "className": "",
+                    "href": "#example-error-1",
+                    "onClick": [Function],
+                    "style": Object {},
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": <li
+                      class=""
+>
+                      <a
+                                            href="#example-error-1"
+                      >
+                                            Link to error with explanation
+                      </a>
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        href="#example-error-1"
+                        onClick={[Function]}
+>
+                        Link to error with explanation
+</a>,
+                      "className": "",
+                      "style": Object {},
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": <a
+                          href="#example-error-1"
+>
+                          Link to error with explanation
+</a>,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Link to error with explanation",
+                          "href": "#example-error-1",
+                          "onClick": [Function],
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Link to error with explanation",
+                        ],
+                        "type": "a",
+                      },
+                    ],
+                    "type": "li",
+                  },
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Link to error with explanation",
+                    "className": "",
+                    "href": "#example-error-2",
+                    "onClick": [Function],
+                    "style": Object {},
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": <li
+                      class=""
+>
+                      <a
+                                            href="#example-error-2"
+                      >
+                                            Link to error with explanation
+                      </a>
+</li>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        href="#example-error-2"
+                        onClick={[Function]}
+>
+                        Link to error with explanation
+</a>,
+                      "className": "",
+                      "style": Object {},
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": <a
+                          href="#example-error-2"
+>
+                          Link to error with explanation
+</a>,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Link to error with explanation",
+                          "href": "#example-error-2",
+                          "onClick": [Function],
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Link to error with explanation",
+                        ],
+                        "type": "a",
+                      },
+                    ],
+                    "type": "li",
+                  },
+                  "type": [Function],
+                },
+              ],
+              "type": "ul",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "ariaLabelledBy": "error-summary-title",
+        "children": Array [
+          <ErrorItem
+            className=""
+            href="#example-error-1"
+            onClick={[Function]}
+            style={Object {}}
+>
+            Link to error with explanation
+</ErrorItem>,
+          <ErrorItem
+            className=""
+            href="#example-error-2"
+            onClick={[Function]}
+            style={Object {}}
+>
+            Link to error with explanation
+</ErrorItem>,
+        ],
+        "className": "",
+        "dataModule": "error-summary",
+        "description": "",
+        "role": "alert",
+        "style": Object {},
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="nhsuk-error-summary "
+          aria-labelledby="error-summary-title"
+          role="alert"
+          tabindex="-1"
+          data-module="error-summary"
+>
+          <h2
+                    class="nhsuk-error-summary__title"
+          />
+          <div
+                    class="nhsuk-error-summary__body"
+          >
+                    <ul
+                              class="nhsuk-list nhsuk-error-summary__list"
+                    >
+                              <li
+                                        class=""
+                              >
+                                        <a
+                                                  href="#example-error-1"
+                                        >
+                                                  Link to error with explanation
+                                        </a>
+                              </li>
+                              <li
+                                        class=""
+                              >
+                                        <a
+                                                  href="#example-error-2"
+                                        >
+                                                  Link to error with explanation
+                                        </a>
+                              </li>
+                    </ul>
+          </div>
+</div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "aria-labelledby": "error-summary-title",
+          "children": Array [
+            <h2
+              className="nhsuk-error-summary__title"
+/>,
+            <div
+              className="nhsuk-error-summary__body"
+>
+              <ul
+                            className="nhsuk-list nhsuk-error-summary__list"
+              >
+                            <ErrorItem
+                                          className=""
+                                          href="#example-error-1"
+                                          onClick={[Function]}
+                                          style={Object {}}
+                            >
+                                          Link to error with explanation
+                            </ErrorItem>
+                            <ErrorItem
+                                          className=""
+                                          href="#example-error-2"
+                                          onClick={[Function]}
+                                          style={Object {}}
+                            >
+                                          Link to error with explanation
+                            </ErrorItem>
+              </ul>
+</div>,
+          ],
+          "className": "nhsuk-error-summary ",
+          "data-module": "error-summary",
+          "role": "alert",
+          "style": Object {},
+          "tabIndex": "-1",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <h2
+              class="nhsuk-error-summary__title"
+/>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "nhsuk-error-summary__title",
+            },
+            "ref": null,
+            "rendered": Array [
+              undefined,
+            ],
+            "type": "h2",
+          },
+          Object {
+            "instance": <div
+              class="nhsuk-error-summary__body"
+>
+              <ul
+                            class="nhsuk-list nhsuk-error-summary__list"
+              >
+                            <li
+                                          class=""
+                            >
+                                          <a
+                                                        href="#example-error-1"
+                                          >
+                                                        Link to error with explanation
+                                          </a>
+                            </li>
+                            <li
+                                          class=""
+                            >
+                                          <a
+                                                        href="#example-error-2"
+                                          >
+                                                        Link to error with explanation
+                                          </a>
+                            </li>
+              </ul>
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                null,
+                <ul
+                  className="nhsuk-list nhsuk-error-summary__list"
+>
+                  <ErrorItem
+                                    className=""
+                                    href="#example-error-1"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                  >
+                                    Link to error with explanation
+                  </ErrorItem>
+                  <ErrorItem
+                                    className=""
+                                    href="#example-error-2"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                  >
+                                    Link to error with explanation
+                  </ErrorItem>
+</ul>,
+              ],
+              "className": "nhsuk-error-summary__body",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <ul
+                  class="nhsuk-list nhsuk-error-summary__list"
+>
+                  <li
+                                    class=""
+                  >
+                                    <a
+                                                      href="#example-error-1"
+                                    >
+                                                      Link to error with explanation
+                                    </a>
+                  </li>
+                  <li
+                                    class=""
+                  >
+                                    <a
+                                                      href="#example-error-2"
+                                    >
+                                                      Link to error with explanation
+                                    </a>
+                  </li>
+</ul>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <ErrorItem
+                      className=""
+                      href="#example-error-1"
+                      onClick={[Function]}
+                      style={Object {}}
+>
+                      Link to error with explanation
+</ErrorItem>,
+                    <ErrorItem
+                      className=""
+                      href="#example-error-2"
+                      onClick={[Function]}
+                      style={Object {}}
+>
+                      Link to error with explanation
+</ErrorItem>,
+                  ],
+                  "className": "nhsuk-list nhsuk-error-summary__list",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "Link to error with explanation",
+                      "className": "",
+                      "href": "#example-error-1",
+                      "onClick": [Function],
+                      "style": Object {},
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": <li
+                        class=""
+>
+                        <a
+                                                href="#example-error-1"
+                        >
+                                                Link to error with explanation
+                        </a>
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <a
+                          href="#example-error-1"
+                          onClick={[Function]}
+>
+                          Link to error with explanation
+</a>,
+                        "className": "",
+                        "style": Object {},
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": <a
+                            href="#example-error-1"
+>
+                            Link to error with explanation
+</a>,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Link to error with explanation",
+                            "href": "#example-error-1",
+                            "onClick": [Function],
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            "Link to error with explanation",
+                          ],
+                          "type": "a",
+                        },
+                      ],
+                      "type": "li",
+                    },
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "Link to error with explanation",
+                      "className": "",
+                      "href": "#example-error-2",
+                      "onClick": [Function],
+                      "style": Object {},
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": <li
+                        class=""
+>
+                        <a
+                                                href="#example-error-2"
+                        >
+                                                Link to error with explanation
+                        </a>
+</li>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <a
+                          href="#example-error-2"
+                          onClick={[Function]}
+>
+                          Link to error with explanation
+</a>,
+                        "className": "",
+                        "style": Object {},
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": <a
+                            href="#example-error-2"
+>
+                            Link to error with explanation
+</a>,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Link to error with explanation",
+                            "href": "#example-error-2",
+                            "onClick": [Function],
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            "Link to error with explanation",
+                          ],
+                          "type": "a",
+                        },
+                      ],
+                      "type": "li",
+                    },
+                    "type": [Function],
+                  },
+                ],
+                "type": "ul",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`ErrorSummary item matches snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ErrorItem
+    className=""
+    href="#"
+    onClick={[Function]}
+    style={Object {}}
+>
+    Error item
+</ErrorItem>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <a
+        href="#"
+        onClick={[Function]}
+>
+        Error item
+</a>,
+      "className": "",
+      "style": Object {},
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Error item",
+        "href": "#",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": "Error item",
+      "type": "a",
+    },
+    "type": "li",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <a
+          href="#"
+          onClick={[Function]}
+>
+          Error item
+</a>,
+        "className": "",
+        "style": Object {},
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Error item",
+          "href": "#",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Error item",
+        "type": "a",
+      },
+      "type": "li",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
