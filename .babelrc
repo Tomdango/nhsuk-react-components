@@ -1,5 +1,5 @@
 {
-  "presets": ["react", "stage-0", ["env", { "modules": false }]],
+  "presets": ["@babel/preset-env", "@babel/react"],
   "plugins": [
     [
       "transform-react-remove-prop-types",
