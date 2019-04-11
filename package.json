@@ -15,10 +15,11 @@
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "lint": "eslint",
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "deploy-storybook": "yarn build-storybook & storybook-to-ghpages -e storybook-static",
+    "build-storybook": "build-storybook -c .storybook -o storybook-static -s ./.storybook/public/",
+    "storybook": "start-storybook -p 9001 -c .storybook -s .storybook/public",
     "build": "rollup -c && yarn babel src/ --out-dir lib/",
-    "prepare": "yarn run build",
-    "precommit": "yarn lint-staged -c .lintstagedrc"
+    "prepare": "yarn run build"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
@@ -35,6 +36,7 @@
     "@storybook/addon-storysource": "^5.0.6",
     "@storybook/core": "^5.0.6",
     "@storybook/react": "^5.0.6",
+    "@storybook/storybook-deployer": "^2.8.1",
     "@storybook/theming": "^5.0.6",
     "@svgr/rollup": "^2.4.1",
     "babel-cli": "^6.26.0",
@@ -74,6 +76,8 @@
     "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-url": "^1.4.0",
     "sass-loader": "^7.1.0",
+    "sinon": "^7.3.1",
+    "storybook-readme": "^5.0.2",
     "webpack": "^4.0.0"
   },
   "dependencies": {

@@ -2,7 +2,7 @@
 
 > NHS.UK Frontend components ported to React
 
-[![NPM](https://img.shields.io/npm/v/nhsuk-react-components.svg)](https://www.npmjs.com/package/nhsuk-react-components) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) ![Bundle Size](https://img.shields.io/bundlephobia/min/nhsuk-react-components.svg)
+[![NPM](https://img.shields.io/npm/v/nhsuk-react-components.svg)](https://www.npmjs.com/package/nhsuk-react-components) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Bundle Size](https://img.shields.io/bundlephobia/min/nhsuk-react-components.svg)](https://bundlephobia.com/result?p=nhsuk-react-components)
 
 ## Notes
 
