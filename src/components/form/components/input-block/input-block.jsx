@@ -7,36 +7,46 @@ import ErrorMessage from '../../../error-message';
 import Label from '../../../label';
 import './_input-block.scss';
 
-const Input = ({
-  hint,
-  error,
-  className,
-  style,
-  width,
-  id,
-  name,
-  _handleInput,
-  autoComplete,
-  title
-}) => (
-  <div>
-    {title ? <Label>{title}</Label> : null}
-    {hint ? <Hint>{hint}</Hint> : null}
-    {error ? <ErrorMessage>{error}</ErrorMessage> : null}
-    <input
-      className={`nhsuk-input nhsuk-input--block ${
-        error ? 'nhsuk-input--error' : null
-      } ${width ? `nhsuk-input--width-${width}` : null} ${className}`}
-      id={id || name}
-      name={`${name}-hint`}
-      type="text"
-      style={style}
-      onChange={_handleInput}
-      aria-describedby={`${name}-hint`}
-      autoComplete={autoComplete}
-    />
-  </div>
-);
+class Input extends React.Component {
+  componentDidMount() {
+    const { name, registerInitialValue } = this.props;
+    registerInitialValue(name, '');
+  }
+
+  render() {
+    const {
+      hint,
+      error,
+      className,
+      style,
+      width,
+      id,
+      name,
+      _handleInput,
+      autoComplete,
+      title
+    } = this.props;
+    return (
+      <div>
+        {title ? <Label>{title}</Label> : null}
+        {hint ? <Hint>{hint}</Hint> : null}
+        {error ? <ErrorMessage>{error}</ErrorMessage> : null}
+        <input
+          className={`nhsuk-input nhsuk-input--block ${
+            error ? 'nhsuk-input--error' : null
+          } ${width ? `nhsuk-input--width-${width}` : null} ${className}`}
+          id={id || name}
+          name={`${name}-hint`}
+          type="text"
+          style={style}
+          onChange={_handleInput}
+          aria-describedby={`${name}-hint`}
+          autoComplete={autoComplete}
+        />
+      </div>
+    );
+  }
+}
 
 Input.propTypes = {
   hint: PropTypes.string,
@@ -45,10 +55,11 @@ Input.propTypes = {
   width: PropTypes.number,
   id: PropTypes.string,
   name: PropTypes.string.isRequired,
-  _handleInput: PropTypes.func.isRequired,
+  _handleInput: PropTypes.func,
   autoComplete: PropTypes.string,
   title: PropTypes.string,
-  style: stylePropType
+  style: stylePropType,
+  registerInitialValue: PropTypes.func
 };
 
 Input.defaultProps = {
@@ -59,7 +70,9 @@ Input.defaultProps = {
   id: '',
   autoComplete: '',
   title: '',
-  style: {}
+  style: {},
+  registerInitialValue: () => {},
+  _handleInput: () => {}
 };
 
 const InputBlock = ({
@@ -68,14 +81,16 @@ const InputBlock = ({
   title,
   titleSize,
   className,
-  style
+  style,
+  registerInitialValue
 }) => {
   const modifiedChildren = React.Children.map(children, child => {
     if (child.type === Input) {
       return React.cloneElement(child, {
         _handleInput: e => {
           valueCallback(child.props.name, e.target.value);
-        }
+        },
+        registerInitialValue
       });
     }
     return child;
@@ -89,19 +104,22 @@ const InputBlock = ({
 };
 
 InputBlock.propTypes = {
-  valueCallback: PropTypes.func.isRequired,
+  valueCallback: PropTypes.func,
   children: PropTypes.node.isRequired,
   title: PropTypes.string,
   titleSize: PropTypes.string,
   className: PropTypes.string,
-  style: stylePropType
+  style: stylePropType,
+  registerInitialValue: PropTypes.func
 };
 
 InputBlock.defaultProps = {
   title: '',
   titleSize: 'm',
   className: '',
-  style: {}
+  style: {},
+  valueCallback: () => {},
+  registerInitialValue: () => {}
 };
 
 InputBlock.Input = Input;

@@ -14,6 +14,11 @@ class Input extends React.Component {
     this.handleInput = this.handleInput.bind(this);
   }
 
+  componentDidMount() {
+    const { name, registerInitialValue } = this.props;
+    registerInitialValue(name, '');
+  }
+
   handleInput(event) {
     this.setState({ input: event.target.value }, () => {
       const { valueCallback, name } = this.props;
@@ -67,7 +72,7 @@ Input.propTypes = {
   describedBy: PropTypes.string,
   title: PropTypes.string,
   id: PropTypes.string,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   asPageHeading: PropTypes.bool,
   autocomplete: PropTypes.string,
   hint: PropTypes.string,
@@ -75,10 +80,12 @@ Input.propTypes = {
   width: PropTypes.number,
   valueCallback: PropTypes.func,
   className: PropTypes.string,
-  style: stylePropType
+  style: stylePropType,
+  registerInitialValue: PropTypes.func
 };
 
 Input.defaultProps = {
+  name: '',
   describedBy: '',
   title: '',
   id: '',
@@ -89,7 +96,8 @@ Input.defaultProps = {
   width: undefined,
   valueCallback: () => {},
   className: '',
-  style: {}
+  style: {},
+  registerInitialValue: () => {}
 };
 
 export default Input;

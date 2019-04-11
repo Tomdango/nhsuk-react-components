@@ -194,8 +194,8 @@ class DateInput extends React.Component {
   }
 
   componentDidMount() {
-    const { valueCallback, name } = this.props;
-    valueCallback(name, this.state);
+    const { registerInitialValue, name } = this.props;
+    registerInitialValue(name, this.state);
   }
 
   registerComponent(name, ref) {
@@ -318,13 +318,14 @@ DateInput.propTypes = {
   name: PropTypes.string.isRequired,
   required: PropTypes.bool,
   autoFocus: PropTypes.bool,
-  valueCallback: PropTypes.func.isRequired,
+  valueCallback: PropTypes.func,
   children: PropTypes.node,
   id: PropTypes.string,
   error: PropTypes.string,
   hint: PropTypes.string,
   className: PropTypes.string,
-  style: stylePropType
+  style: stylePropType,
+  registerInitialValue: PropTypes.func
 };
 
 DateInput.defaultProps = {
@@ -338,7 +339,9 @@ DateInput.defaultProps = {
   error: '',
   hint: '',
   className: '',
-  style: {}
+  style: {},
+  registerInitialValue: () => {},
+  valueCallback: () => {}
 };
 
 DateInput.Day = Day;

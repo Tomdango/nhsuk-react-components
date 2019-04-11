@@ -11,8 +11,8 @@ class Textarea extends React.Component {
   }
 
   componentDidMount() {
-    const { name, valueCallback } = this.props;
-    valueCallback(name, '');
+    const { name, registerInitialValue } = this.props;
+    registerInitialValue(name, '');
   }
 
   onChange(event) {
@@ -64,7 +64,8 @@ Textarea.propTypes = {
   rows: PropTypes.number,
   name: PropTypes.string.isRequired,
   id: PropTypes.string,
-  valueCallback: PropTypes.func
+  valueCallback: PropTypes.func,
+  registerInitialValue: PropTypes.func
 };
 
 Textarea.defaultProps = {
@@ -76,7 +77,8 @@ Textarea.defaultProps = {
   error: '',
   rows: 5,
   id: '',
-  valueCallback: () => {}
+  valueCallback: () => {},
+  registerInitialValue: () => {}
 };
 
 export default Textarea;

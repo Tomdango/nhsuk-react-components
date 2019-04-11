@@ -16,9 +16,10 @@ const Message = ({ children, className, style }) => (
   </p>
 );
 
-const Link = ({ href, children, className, style }) => (
+const Link = ({ href, children, onClick, className, style }) => (
   <a
     className={`nhsuk-u-nowrap nhsuk-global-alert-link__margin-override ${className}`}
+    onClick={onClick}
     style={style}
     href={href}
   >
@@ -87,12 +88,14 @@ Link.propTypes = {
   href: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  style: stylePropType
+  style: stylePropType,
+  onClick: PropTypes.func
 };
 
 Link.defaultProps = {
   className: '',
-  style: {}
+  style: {},
+  onClick: () => {}
 };
 
 LastUpdated.propTypes = {

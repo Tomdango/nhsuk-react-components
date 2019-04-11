@@ -6,6 +6,7 @@ import { action } from '@storybook/addon-actions';
 import { ActionLink } from '../src';
 import './storybook.scss';
 
+const clickAction = action('clicked');
 storiesOf('Action Link', module)
   .addDecorator(centered)
   .add('Action Link', () => (
@@ -21,7 +22,7 @@ storiesOf('Action Link', module)
       openInNewWindow={boolean('Open in new window', false)}
       onClick={e => {
         e.preventDefault();
-        action('clicked');
+        clickAction(e);
       }}
     >
       {text('Link Text', 'Find a minor injuries unit')}

@@ -11,11 +11,21 @@ class Form extends React.Component {
       formData: {}
     };
     this.valueCallback = this.valueCallback.bind(this);
+    this.registerInitialValue = this.registerInitialValue.bind(this);
+  }
+
+  registerInitialValue(key, value) {
+    this.setState(previousState => {
+      const previousFormData = previousState.formData;
+      return { formData: { ...previousFormData, [key]: value } };
+    });
   }
 
   valueCallback(key, value) {
+    const { onChange } = this.props;
     this.setState(previousState => {
       const previousFormData = previousState.formData;
+      onChange({ formData: { ...previousFormData, [key]: value } });
       return { formData: { ...previousFormData, [key]: value } };
     });
   }
@@ -50,7 +60,8 @@ class Form extends React.Component {
       if (formElements.includes(child.type.name)) {
         return React.cloneElement(child, {
           valueCallback: this.valueCallback,
-          style: { ...child.props.style, marginBottom: elementMargin }
+          style: { ...child.props.style, marginBottom: elementMargin },
+          registerInitialValue: this.registerInitialValue
         });
       }
       return child;
@@ -82,7 +93,8 @@ Form.propTypes = {
   onSubmit: PropTypes.func,
   className: PropTypes.string,
   style: stylePropType,
-  elementMargin: PropTypes.number
+  elementMargin: PropTypes.number,
+  onChange: PropTypes.func
 };
 
 Form.defaultProps = {
@@ -91,7 +103,8 @@ Form.defaultProps = {
   className: '',
   style: {},
   elementMargin: 0,
-  onSubmit: () => {}
+  onSubmit: () => {},
+  onChange: () => {}
 };
 
 export default Form;

@@ -15,7 +15,7 @@ const Body = ({ size, children, className, style }) => {
   );
 };
 Body.propTypes = {
-  size: oneOf('s', 'm', 'l'),
+  size: oneOf(['s', 'm', 'l']),
   children: node.isRequired,
   style: stylePropType,
   className: string

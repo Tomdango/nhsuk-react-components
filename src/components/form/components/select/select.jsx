@@ -31,12 +31,12 @@ class Select extends React.Component {
   }
 
   componentDidMount() {
-    const { children, valueCallback, name } = this.props;
-    valueCallback(name, '');
+    const { children, registerInitialValue, name } = this.props;
+    registerInitialValue(name, '');
     React.Children.forEach(children, child => {
       if (child.props.selected) {
         this.setState({ value: child.props.value });
-        valueCallback(name, String(child.props.value));
+        registerInitialValue(name, String(child.props.value));
       }
     });
   }
@@ -97,7 +97,8 @@ Select.propTypes = {
   id: PropTypes.string,
   valueCallback: PropTypes.func,
   className: PropTypes.string,
-  style: stylePropType
+  style: stylePropType,
+  registerInitialValue: PropTypes.func
 };
 
 Select.defaultProps = {
@@ -109,7 +110,8 @@ Select.defaultProps = {
   id: '',
   valueCallback: () => {},
   className: '',
-  style: {}
+  style: {},
+  registerInitialValue: () => {}
 };
 
 Select.Item = Item;

@@ -2,45 +2,55 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Header } from '../src';
 
-const navItems = [
-  {
-    url: 'https://www.nhs.uk/conditions',
-    label: 'Health A-Z'
-  },
-  {
-    url: 'https://www.nhs.uk/live-well/',
-    label: 'Live Well'
-  },
-  {
-    url: 'https://www.nhs.uk/conditions/social-care-and-support/',
-    label: 'Care and support'
-  },
-  {
-    url: 'https://www.nhs.uk/news/',
-    label: 'Health news'
-  },
-  {
-    url: 'https://www.nhs.uk/service-search',
-    label: 'Services near you'
-  }
-];
-
 storiesOf('Header', module)
   .add('Standard', () => (
     <div style={{ width: '100%', marginBottom: '80vh' }}>
       <Header
         withNavigation
         withSearch
-        navItems={navItems}
         // eslint-disable-next-line no-alert
         onSearch={string => window.alert(`Search: ${string}`)}
         searchAriaLabel="Search the NHS Website"
-      />
+      >
+        <Header.Link href="/" mobileOnly>
+          Home
+        </Header.Link>
+        <Header.Link href="https://www.nhs.uk/conditions">
+          Health A-Z
+        </Header.Link>
+        <Header.Link href="https://www.nhs.uk/live-well/">
+          Live Well
+        </Header.Link>
+        <Header.Link href="https://www.nhs.uk/conditions/social-care-and-support/">
+          Care and support
+        </Header.Link>
+        <Header.Link href="https://www.nhs.uk/news/">Health news</Header.Link>
+        <Header.Link href="https://www.nhs.uk/service-search">
+          Services near you
+        </Header.Link>
+      </Header>
     </div>
   ))
   .add('With Navigation', () => (
     <div style={{ marginBottom: '80vh' }}>
-      <Header withNavigation navItems={navItems} />
+      <Header withNavigation>
+        <Header.Link href="/" mobileOnly>
+          Home
+        </Header.Link>
+        <Header.Link href="https://www.nhs.uk/conditions">
+          Health A-Z
+        </Header.Link>
+        <Header.Link href="https://www.nhs.uk/live-well/">
+          Live Well
+        </Header.Link>
+        <Header.Link href="https://www.nhs.uk/conditions/social-care-and-support/">
+          Care and support
+        </Header.Link>
+        <Header.Link href="https://www.nhs.uk/news/">Health news</Header.Link>
+        <Header.Link href="https://www.nhs.uk/service-search">
+          Services near you
+        </Header.Link>
+      </Header>
     </div>
   ))
   .add('With Search', () => (
@@ -82,7 +92,7 @@ storiesOf('Header', module)
       />
     </div>
   ))
-  .add('With Logo (Transactional) with a long service name', () => (
+  .add('With Logo (Transactional) with search', () => (
     <div style={{ marginBottom: '80vh' }}>
       <Header
         transactional

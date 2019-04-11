@@ -1,7 +1,84 @@
 import React from 'react';
-// import './_header.scss';
+import PropTypes from 'prop-types';
+import stylePropType from 'react-style-proptype';
 import HeaderSearch from './components/header-search';
 import NHSHeaderLogo from './components/header-logo';
+
+const Link = ({ href, children, onClick, mobileOnly, className, style }) => (
+  <li
+    style={style}
+    className={`nhsuk-header__navigation-item ${
+      mobileOnly ? 'nhsuk-header__navigation-item--for-mobile' : ''
+    } ${className}`}
+  >
+    <a className="nhsuk-header__navigation-link" onClick={onClick} href={href}>
+      {children}
+      <svg
+        className="nhsuk-icon nhsuk-icon__chevron-right"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z" />
+      </svg>
+    </a>
+  </li>
+);
+
+Link.propTypes = {
+  href: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
+  mobileOnly: PropTypes.bool,
+  className: PropTypes.string,
+  style: stylePropType
+};
+
+Link.defaultProps = {
+  href: '#',
+  onClick: () => {},
+  mobileOnly: false,
+  className: '',
+  style: {}
+};
+
+const HomeLink = ({ href, children, onClick }) => (
+  <li className="nhsuk-header__navigation-item">
+    <a className="nhsuk-header__navigation-link" onClick={onClick} href={href}>
+      {children}
+      <svg
+        className="nhsuk-icon nhsuk-icon__chevron-right"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z" />
+      </svg>
+    </a>
+  </li>
+);
+
+HomeLink.propTypes = {
+  href: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func
+};
+
+HomeLink.defaultProps = {
+  href: '#',
+  onClick: () => {}
+};
+
+Link.propTypes = {
+  href: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func
+};
+
+Link.defaultProps = {
+  href: '#',
+  onClick: () => {}
+};
 
 class Header extends React.Component {
   constructor(props) {
@@ -29,34 +106,7 @@ class Header extends React.Component {
 
   handleSearch(searchString) {
     const { onSearch } = this.props;
-    if (onSearch) {
-      onSearch(searchString);
-    }
-  }
-
-  renderNavItems() {
-    const { navItems } = this.props;
-    if (!navItems) {
-      return null;
-    }
-    return navItems.reduce((renderedItems, item) => {
-      renderedItems.push(
-        <li className="nhsuk-header__navigation-item">
-          <a className="nhsuk-header__navigation-link" href={item.url || '#'}>
-            {item.label}
-            <svg
-              className="nhsuk-icon nhsuk-icon__chevron-right"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z" />
-            </svg>
-          </a>
-        </li>
-      );
-      return renderedItems;
-    }, []);
+    onSearch(searchString);
   }
 
   render() {
@@ -68,7 +118,8 @@ class Header extends React.Component {
       transactional,
       serviceName,
       serviceNameUrl,
-      longServiceName
+      longServiceName,
+      children
     } = this.props;
     return (
       <header
@@ -152,27 +203,13 @@ class Header extends React.Component {
                 <span className="nhsuk-u-visually-hidden">Close menu</span>
               </button>
             </p>
-            <ul className="nhsuk-header__navigation-list">
-              <li className="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
-                <a className="nhsuk-header__navigation-link" href="/">
-                  Home
-                  <svg
-                    className="nhsuk-icon nhsuk-icon__chevron-right"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z" />
-                  </svg>
-                </a>
-              </li>
-              {this.renderNavItems()}
-            </ul>
+            <ul className="nhsuk-header__navigation-list">{children}</ul>
           </nav>
         ) : null}
       </header>
     );
   }
 }
+Header.Link = Link;
 
 export default Header;

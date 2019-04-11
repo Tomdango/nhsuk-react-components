@@ -38,7 +38,7 @@ Radio.propTypes = {
   disabled: PropTypes.bool,
   hint: PropTypes.string,
   id: PropTypes.string,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   value: PropTypes.string.isRequired,
   _onClick: PropTypes.func,
   className: PropTypes.string,
@@ -49,6 +49,7 @@ Radio.defaultProps = {
   disabled: false,
   hint: '',
   id: '',
+  name: '',
   _onClick: () => {},
   className: '',
   style: {}
@@ -70,8 +71,8 @@ class Radios extends React.Component {
   }
 
   componentDidMount() {
-    const { valueCallback, name } = this.props;
-    valueCallback(name, '');
+    const { registerInitialValue, name } = this.props;
+    registerInitialValue(name, '');
   }
 
   onClick(event) {
@@ -138,7 +139,8 @@ Radios.propTypes = {
   inline: PropTypes.bool,
   valueCallback: PropTypes.func,
   className: PropTypes.string,
-  style: stylePropType
+  style: stylePropType,
+  registerInitialValue: PropTypes.func
 };
 
 Radios.defaultProps = {
@@ -150,7 +152,8 @@ Radios.defaultProps = {
   inline: false,
   valueCallback: () => {},
   className: '',
-  style: {}
+  style: {},
+  registerInitialValue: () => {}
 };
 
 Radios.Radio = Radio;

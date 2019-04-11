@@ -25,17 +25,20 @@ const Box = ({ children, name, _id, value, hint, disabled, _onClick }) => (
 
 Box.propTypes = {
   children: PropTypes.node.isRequired,
-  name: PropTypes.string.isRequired,
-  _id: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  _id: PropTypes.string,
   value: PropTypes.string.isRequired,
-  _onClick: PropTypes.func.isRequired,
+  _onClick: PropTypes.func,
   hint: PropTypes.string,
   disabled: PropTypes.bool
 };
 
 Box.defaultProps = {
   hint: '',
-  disabled: false
+  disabled: false,
+  name: '',
+  _id: '',
+  _onClick: () => {}
 };
 
 class Checkboxes extends React.Component {
@@ -45,6 +48,11 @@ class Checkboxes extends React.Component {
       currentValue: []
     };
     this.onClick = this.onClick.bind(this);
+  }
+
+  componentDidMount() {
+    const { name, registerInitialValue } = this.props;
+    registerInitialValue(name, []);
   }
 
   onClick(event) {
@@ -114,7 +122,8 @@ Checkboxes.propTypes = {
   style: stylePropType,
   valueCallback: PropTypes.func,
   error: PropTypes.string,
-  hint: PropTypes.string
+  hint: PropTypes.string,
+  registerInitialValue: PropTypes.func
 };
 
 Checkboxes.defaultProps = {
@@ -125,7 +134,8 @@ Checkboxes.defaultProps = {
   style: {},
   valueCallback: () => {},
   error: '',
-  hint: ''
+  hint: '',
+  registerInitialValue: () => {}
 };
 
 Checkboxes.Box = Box;
