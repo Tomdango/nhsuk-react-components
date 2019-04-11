@@ -3,20 +3,6 @@ import { mount } from 'enzyme';
 import { DateInput } from '../form';
 
 describe('DateInput', () => {
-  it('matches snapshot for all components', () => {
-    const singleMount = mount(<DateInput name="dateInput" />);
-    const dayMount = mount(<DateInput.Day />);
-    const monthMount = mount(<DateInput.Month />);
-    const yearMount = mount(<DateInput.Year />);
-    expect(singleMount).toMatchSnapshot();
-    expect(dayMount).toMatchSnapshot();
-    expect(monthMount).toMatchSnapshot();
-    expect(yearMount).toMatchSnapshot();
-    singleMount.unmount();
-    dayMount.unmount();
-    monthMount.unmount();
-    yearMount.unmount();
-  });
   it('injects props', () => {
     const multiMount = mount(
       <DateInput name="dateInput">
