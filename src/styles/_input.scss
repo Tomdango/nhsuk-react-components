@@ -1,2 +1,5 @@
 @import '../../node_modules/nhsuk-frontend/packages/core/all.scss';
 @import '../../node_modules/nhsuk-frontend/packages/components/input/input';
+.nhsuk-input--block {
+  margin-bottom: 5px;
+}

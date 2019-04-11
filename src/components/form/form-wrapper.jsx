@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
-import './_form.scss';
 import Heading from '../typography/heading';
 
 class Form extends React.Component {

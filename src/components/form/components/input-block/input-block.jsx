@@ -5,7 +5,6 @@ import Hint from '../../../hint';
 import Heading from '../../../typography/heading';
 import ErrorMessage from '../../../error-message';
 import Label from '../../../label';
-import './_input-block.scss';
 
 class Input extends React.Component {
   componentDidMount() {
