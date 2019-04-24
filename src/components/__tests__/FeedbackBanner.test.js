@@ -53,6 +53,7 @@ describe('FeedbackBanner', () => {
     expect(wrapper.instance().timer).not.toBe(false);
     setTimeout(() => {
       expect(wrapper.state()).toEqual({ jsInView: true, shown: true });
+      wrapper.unmount();
       done();
     }, 600);
   });
@@ -85,6 +86,7 @@ describe('FeedbackBanner', () => {
       shown: false,
       jsInView: false
     });
+    wrapper.unmount();
   });
   it('clears timeout', () => {
     const wrapper = mount(
@@ -103,6 +105,7 @@ describe('FeedbackBanner', () => {
     wrapper.instance().unstickBanner({ useMockFooter: true });
     const secondTimer = wrapper.instance().timer;
     expect(secondTimer).not.toBe(initialTimer);
+    wrapper.unmount();
   });
   it('sets jsInView state', done => {
     const wrapper = mount(

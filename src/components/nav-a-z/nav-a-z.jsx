@@ -44,7 +44,7 @@ const NavAZ = ({
     renderedItems = alphabet.map(item => {
       if (!excludedItems.includes(item)) {
         return (
-          <li className="nhsuk-nav-a-z__item">
+          <li className="nhsuk-nav-a-z__item" key={item}>
             <li className="nhsuk-nav-a-z__item">
               {disabledItems.includes(item) ? (
                 <span className="nhsuk-nav-a-z__link--disabled">{item}</span>
@@ -63,7 +63,7 @@ const NavAZ = ({
     renderedItems = items.map(item => {
       if (typeof item === 'string' || typeof item === 'number') {
         return (
-          <li className="nhsuk-nav-a-z__item">
+          <li className="nhsuk-nav-a-z__item" key={item}>
             <li className="nhsuk-nav-a-z__item">
               <a className="nhsuk-nav-a-z__link" href={`#${item}`}>
                 {item}
@@ -74,7 +74,7 @@ const NavAZ = ({
       }
       if (typeof item === 'object') {
         return (
-          <li className="nhsuk-nav-a-z__item">
+          <li className="nhsuk-nav-a-z__item" key={item}>
             {item.disable ? (
               <span className="nhsuk-nav-a-z__link--disabled">
                 {item.label}

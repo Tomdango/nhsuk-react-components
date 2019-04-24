@@ -12,6 +12,7 @@ exports[`NavAZ matches snapshot 1`] = `
   >
     <li
       className="nhsuk-nav-a-z__item"
+      key="A"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -26,6 +27,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="B"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -40,6 +42,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="C"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -54,6 +57,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="D"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -68,6 +72,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="E"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -82,6 +87,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="F"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -96,6 +102,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="G"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -110,6 +117,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="H"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -124,6 +132,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="I"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -138,6 +147,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="J"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -152,6 +162,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="K"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -166,6 +177,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="L"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -180,6 +192,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="M"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -194,6 +207,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="N"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -208,6 +222,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="O"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -222,6 +237,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="P"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -236,6 +252,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="Q"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -250,6 +267,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="R"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -264,6 +282,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="S"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -278,6 +297,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="T"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -292,6 +312,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="U"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -306,6 +327,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="V"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -320,6 +342,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="W"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -334,6 +357,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="X"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -348,6 +372,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="Y"
     >
       <li
         className="nhsuk-nav-a-z__item"
@@ -362,6 +387,7 @@ exports[`NavAZ matches snapshot 1`] = `
     </li>
     <li
       className="nhsuk-nav-a-z__item"
+      key="Z"
     >
       <li
         className="nhsuk-nav-a-z__item"
