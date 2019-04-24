@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class PromoGroup extends Component {
+class PromoGroup extends React.Component {
   constructor(props) {
     super(props);
     this.getColumnSize = this.getColumnSize.bind(this);

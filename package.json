@@ -22,8 +22,7 @@
     "build-storybook": "build-storybook -c .storybook -o storybook-static -s ./.storybook/public/",
     "storybook": "start-storybook -p 9001 -c .storybook -s .storybook/public",
     "build": "cross-env BABEL_ENV=build rollup -c && yarn babel src/ --out-dir lib/ --config-file ./babelrc.build.js --source-maps",
-    "prepare": "yarn run build",
-    "test-coverage": "jest --coverage && cat ./coverage/lcov.info | codacy-coverage --token 4b10a153ff1249de8ea6bc7ea01b4459"
+    "prepare": "yarn run build"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",

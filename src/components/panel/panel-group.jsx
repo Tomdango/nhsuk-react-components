@@ -1,5 +1,5 @@
 import React from 'react';
-import Panel from ".";
+import PropTypes from 'prop-types';
 
 class PanelGroup extends React.Component {
   constructor(props) {
@@ -41,6 +41,8 @@ class PanelGroup extends React.Component {
   }
 }
 
-PanelGroup.Panel = Panel;
+PanelGroup.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
 export default PanelGroup;
