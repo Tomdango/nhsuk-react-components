@@ -4,17 +4,20 @@ import { Hero } from '../src';
 
 storiesOf('Hero', module)
   .add('With heading and content', () => (
-    <Hero
-      heading="We're here for you"
-      content="Helping you take control of your health and wellbeing."
-    />
+    <Hero>
+      <Hero.Heading>We're here for you</Hero.Heading>
+      <Hero.Content>
+        Helping you take control of your health and wellbeing.
+      </Hero.Content>
+    </Hero>
   ))
   .add('With image, heading and content', () => (
-    <Hero
-      heading="We're here for you"
-      imageURL="https://www.nhs.uk/static/nhsuk_shared/img/homepage/hero-2.jpg"
-      content="Helping you take control of your health and wellbeing."
-    />
+    <Hero imageURL="https://www.nhs.uk/static/nhsuk_shared/img/homepage/hero-2.jpg">
+      <Hero.Heading>We're here for you</Hero.Heading>
+      <Hero.Content>
+        Helping you take control of your health and wellbeing.
+      </Hero.Content>
+    </Hero>
   ))
   .add('With image only', () => (
     <Hero imageURL="https://www.nhs.uk/static/nhsuk_shared/img/homepage/hero-2.jpg" />

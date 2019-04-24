@@ -1,9 +1,184 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CareCard matches snapshot 1`] = `ReactWrapper {}`;
+exports[`CareCard matches snapshot 1`] = `
+<CareCard
+  disableHiddenText={false}
+  heading="TestHeading"
+  type="non-urgent"
+>
+  <div
+    className="nhsuk-care-card nhsuk-care-card--non-urgent"
+  >
+    <div
+      className="nhsuk-care-card__heading-container"
+    >
+      <h3
+        className="nhsuk-care-card__heading"
+      >
+        <span>
+          <span
+            className="nhsuk-u-visually-hidden"
+          >
+            Non-urgent advice: 
+          </span>
+          TestHeading
+        </span>
+      </h3>
+      <span
+        aria-hidden="true"
+        className="nhsuk-care-card__arrow"
+      />
+    </div>
+    <div
+      className="nhsuk-care-card__content"
+    >
+      Content
+    </div>
+  </div>
+</CareCard>
+`;
 
-exports[`CareCard matches snapshot 2`] = `ReactWrapper {}`;
+exports[`CareCard matches snapshot 2`] = `
+<CareCard
+  disableHiddenText={false}
+  heading="TestHeading"
+  type="urgent"
+>
+  <div
+    className="nhsuk-care-card nhsuk-care-card--urgent"
+  >
+    <div
+      className="nhsuk-care-card__heading-container"
+    >
+      <h3
+        className="nhsuk-care-card__heading"
+      >
+        <span>
+          <span
+            className="nhsuk-u-visually-hidden"
+          >
+            Urgent advice: 
+          </span>
+          TestHeading
+        </span>
+      </h3>
+      <span
+        aria-hidden="true"
+        className="nhsuk-care-card__arrow"
+      />
+    </div>
+    <div
+      className="nhsuk-care-card__content"
+    >
+      Content
+    </div>
+  </div>
+</CareCard>
+`;
 
-exports[`CareCard matches snapshot 3`] = `ReactWrapper {}`;
+exports[`CareCard matches snapshot 3`] = `
+<CareCard
+  disableHiddenText={false}
+  heading="TestHeading"
+  type="immediate"
+>
+  <div
+    className="nhsuk-care-card nhsuk-care-card--immediate"
+  >
+    <div
+      className="nhsuk-care-card__heading-container"
+    >
+      <h3
+        className="nhsuk-care-card__heading"
+      >
+        <span>
+          <span
+            className="nhsuk-u-visually-hidden"
+          >
+            Immediate action required: 
+          </span>
+          TestHeading
+        </span>
+      </h3>
+      <span
+        aria-hidden="true"
+        className="nhsuk-care-card__arrow"
+      />
+    </div>
+    <div
+      className="nhsuk-care-card__content"
+    >
+      Content
+    </div>
+  </div>
+</CareCard>
+`;
 
-exports[`CareCard matches snapshot 4`] = `ReactWrapper {}`;
+exports[`CareCard matches snapshot 4`] = `
+<CareCard
+  disableHiddenText={false}
+  heading="TestHeading"
+  type="incorrect"
+>
+  <div
+    className="nhsuk-care-card nhsuk-care-card--incorrect"
+  >
+    <div
+      className="nhsuk-care-card__heading-container"
+    >
+      <h3
+        className="nhsuk-care-card__heading"
+      >
+        <span>
+          <span
+            className="nhsuk-u-visually-hidden"
+          />
+          TestHeading
+        </span>
+      </h3>
+      <span
+        aria-hidden="true"
+        className="nhsuk-care-card__arrow"
+      />
+    </div>
+    <div
+      className="nhsuk-care-card__content"
+    >
+      Content
+    </div>
+  </div>
+</CareCard>
+`;
+
+exports[`CareCard matches snapshot 5`] = `
+<CareCard
+  disableHiddenText={true}
+  heading="TestHeading"
+  type="immediate"
+>
+  <div
+    className="nhsuk-care-card nhsuk-care-card--immediate"
+  >
+    <div
+      className="nhsuk-care-card__heading-container"
+    >
+      <h3
+        className="nhsuk-care-card__heading"
+      >
+        <span>
+          TestHeading
+        </span>
+      </h3>
+      <span
+        aria-hidden="true"
+        className="nhsuk-care-card__arrow"
+      />
+    </div>
+    <div
+      className="nhsuk-care-card__content"
+    >
+      Content
+    </div>
+  </div>
+</CareCard>
+`;

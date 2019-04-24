@@ -1,5 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Breadcrumbs item matches snapshot 1`] = `ReactWrapper {}`;
+exports[`Breadcrumbs item matches snapshot 1`] = `
+<Item
+  className=""
+  href="#"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <li
+    className="nhsuk-breadcrumb__item "
+    style={Object {}}
+  >
+    <a
+      className="nhsuk-breadcrumb__link"
+      href="#"
+      onClick={[Function]}
+    >
+      Item
+    </a>
+  </li>
+</Item>
+`;
 
-exports[`Breadcrumbs matches snapshot 1`] = `ReactWrapper {}`;
+exports[`Breadcrumbs matches snapshot 1`] = `
+<Breadcrumbs
+  ariaLabel="Breadcrumbs"
+  className=""
+  style={Object {}}
+>
+  <nav
+    aria-label="Breadcrumbs"
+    className="nhsuk-breadcrumb "
+    style={Object {}}
+  >
+    <div
+      className="nhsuk-width-container"
+    >
+      <ol
+        className="nhsuk-breadcrumb__list"
+      >
+        <Item
+          className=""
+          href="#"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          <li
+            className="nhsuk-breadcrumb__item "
+            style={Object {}}
+          >
+            <a
+              className="nhsuk-breadcrumb__link"
+              href="#"
+              onClick={[Function]}
+            >
+              Test
+            </a>
+          </li>
+        </Item>
+      </ol>
+    </div>
+  </nav>
+</Breadcrumbs>
+`;

@@ -1,3 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FormWrapper matches snapshot 1`] = `ShallowWrapper {}`;
+exports[`FormWrapper matches snapshot 1`] = `
+<form
+  action=""
+  method="GET"
+  onSubmit={[Function]}
+>
+  <div
+    className="nhsuk-form-group null "
+    style={Object {}}
+  >
+    Child
+  </div>
+</form>
+`;

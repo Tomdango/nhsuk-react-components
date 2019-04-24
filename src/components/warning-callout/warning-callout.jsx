@@ -4,7 +4,9 @@ import stylePropType from 'react-style-proptype';
 
 const WarningCallout = ({ heading, children, className, style }) => (
   <div className={`nhsuk-warning-callout ${className}`} style={style}>
-    <h3 className="nhsuk-warning-callout__label">{heading}</h3>
+    {heading ? (
+      <h3 className="nhsuk-warning-callout__label">{heading}</h3>
+    ) : null}
     {children}
   </div>
 );

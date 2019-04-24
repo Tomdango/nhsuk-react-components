@@ -1,3 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FeedbackBanner matches snapshot 1`] = `ReactWrapper {}`;
+exports[`FeedbackBanner matches snapshot 1`] = `
+<FeedbackBanner
+  href="#"
+  id="nhsuk-feedback-banner"
+  label="Answer the survey"
+  onClick={[Function]}
+  timeout={0}
+  title="Help us make the NHS website better"
+  visuallyHiddenText=" feedback invite"
+>
+  <div
+    className="nhsuk-feedback-banner  "
+    id="nhsuk-feedback-banner"
+  >
+    <Container
+      className=""
+      fluid={false}
+      style={Object {}}
+    >
+      <div
+        className="nhsuk-width-container "
+        style={Object {}}
+      >
+        <Row>
+          <div
+            className="nhsuk-grid-row"
+          >
+            <Column
+              forceLayout={false}
+              tabletWidth=""
+              width="full"
+            >
+              <div
+                className="nhsuk-grid-column-full  "
+              >
+                <div
+                  className="nhsuk-feedback-banner__content"
+                >
+                  <h2
+                    className="nhsuk-feedback-banner__heading"
+                  >
+                    Help us make the NHS website better
+                  </h2>
+                  <p
+                    className="nhsuk-feedback-banner__message"
+                  >
+                    Your feedback helps us improve the NHS website.
+                    <a
+                      className="nhsuk-u-nowrap nhsuk-feedback-banner__label"
+                      href="#"
+                      onClick={[Function]}
+                    >
+                      Answer the survey
+                    </a>
+                  </p>
+                  <button
+                    className="nhsuk-feedback-banner__close"
+                    id="nhsuk-feedback-banner-close"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Close
+                    <span
+                      className="nhsuk-u-visually-hidden"
+                    >
+                       feedback invite
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </Column>
+          </div>
+        </Row>
+      </div>
+    </Container>
+  </div>
+</FeedbackBanner>
+`;

@@ -32,8 +32,8 @@ class Input extends React.Component {
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
         <input
           className={`nhsuk-input nhsuk-input--block ${
-            error ? 'nhsuk-input--error' : null
-          } ${width ? `nhsuk-input--width-${width}` : null} ${className}`}
+            error ? 'nhsuk-input--error' : ''
+          } ${width ? `nhsuk-input--width-${width}` : ''} ${className}`}
           id={id || name}
           name={`${name}-hint`}
           type="text"

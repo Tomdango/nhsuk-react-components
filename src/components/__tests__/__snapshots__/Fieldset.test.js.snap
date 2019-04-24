@@ -1,3 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Fieldset matches snapshot 1`] = `ShallowWrapper {}`;
+exports[`Fieldset matches snapshot 1`] = `
+<fieldset
+  aria-describedby=""
+  className="nhsuk-fieldset "
+  style={Object {}}
+>
+  <legend
+    className="nhsuk-fieldset__legend "
+  />
+  Test
+</fieldset>
+`;

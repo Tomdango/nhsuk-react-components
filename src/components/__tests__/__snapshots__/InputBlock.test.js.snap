@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputBlock Input matches snapshot 1`] = `
+<div>
+  <input
+    aria-describedby="thing-hint"
+    autoComplete=""
+    className="nhsuk-input nhsuk-input--block   "
+    id="thing"
+    name="thing-hint"
+    onChange={[Function]}
+    style={Object {}}
+    type="text"
+  />
+</div>
+`;
+
+exports[`InputBlock matches snapshot 1`] = `
+<div
+  className=""
+  style={Object {}}
+>
+  Child
+</div>
+`;

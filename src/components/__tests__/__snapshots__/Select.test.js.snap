@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select matches snapshot 1`] = `
+<Fieldset
+  asPageHeading={false}
+  className=""
+  describedBy=""
+  style={Object {}}
+  title=""
+>
+  <select
+    className="nhsuk-select "
+    onChange={[Function]}
+    value=""
+  />
+</Fieldset>
+`;

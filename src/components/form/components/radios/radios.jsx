@@ -118,9 +118,7 @@ class Radios extends React.Component {
       >
         {hint ? <Hint>{hint}</Hint> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
-        <div
-          className={`nhsuk-radios ${inline ? 'nhsuk-radios--inline' : null}`}
-        >
+        <div className={`nhsuk-radios ${inline ? 'nhsuk-radios--inline' : ''}`}>
           {children}
         </div>
       </Fieldset>

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WarningCallout matches snapshot 1`] = `
+<div
+  className="nhsuk-warning-callout "
+  style={Object {}}
+>
+  <h3
+    className="nhsuk-warning-callout__label"
+  >
+    title
+  </h3>
+  Child
+</div>
+`;

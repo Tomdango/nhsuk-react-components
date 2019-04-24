@@ -48,7 +48,13 @@ describe('Checkboxes', () => {
         Option
       </Checkboxes.Box>
     );
+    const fullMountForAnonFunc = mount(
+      <Checkboxes.Box name="checkboxes" _id="id" value="option" hint="hint">
+        Option
+      </Checkboxes.Box>
+    );
     fullMount.find('input').simulate('click');
+    fullMountForAnonFunc.find('input').simulate('click');
     sinon.assert.called(onClick);
     fullMount.unmount();
   });
@@ -73,10 +79,17 @@ describe('Checkboxes', () => {
         <Checkboxes.Box value="box2">Box2</Checkboxes.Box>
       </Checkboxes>
     );
+    const fullMountForAnonFunc = mount(
+      <Checkboxes name="name">
+        <Checkboxes.Box value="box">Box</Checkboxes.Box>
+        <Checkboxes.Box value="box2">Box2</Checkboxes.Box>
+      </Checkboxes>
+    );
     expect(fullMount.state()).toEqual({ currentValue: [] });
     sinon.assert.calledOnce(props.registerInitialValue);
     sinon.assert.notCalled(props.valueCallback);
     fullMount.find('#name-1').simulate('click');
+    fullMountForAnonFunc.find('#name-1').simulate('click');
     sinon.assert.calledOnce(props.valueCallback);
     expect(fullMount.state()).toEqual({ currentValue: ['box'] });
     fullMount.find('#name-2').simulate('click');

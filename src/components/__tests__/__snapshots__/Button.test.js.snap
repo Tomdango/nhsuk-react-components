@@ -1,13 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button matches the snapshot as a button 1`] = `ShallowWrapper {}`;
+exports[`Button matches the snapshot as a button 1`] = `
+<button
+  className="nhsuk-button   "
+  disabled={false}
+  name=""
+  onClick={[Function]}
+  style={Object {}}
+  type="button"
+  value=""
+>
+  Primary
+</button>
+`;
 
-exports[`Button matches the snapshot as a button 2`] = `ShallowWrapper {}`;
+exports[`Button matches the snapshot as a button 2`] = `
+<button
+  className="nhsuk-button nhsuk-button--secondary  "
+  disabled={false}
+  name=""
+  onClick={[Function]}
+  style={Object {}}
+  type="button"
+  value=""
+>
+  Secondary
+</button>
+`;
 
-exports[`Button matches the snapshot as a button 3`] = `ShallowWrapper {}`;
+exports[`Button matches the snapshot as a button 3`] = `
+<button
+  className="nhsuk-button  nhsuk-button--reverse "
+  disabled={false}
+  name=""
+  onClick={[Function]}
+  style={Object {}}
+  type="button"
+  value=""
+>
+  Reverse
+</button>
+`;
 
-exports[`Button matches the snapshot as a link 1`] = `ShallowWrapper {}`;
+exports[`Button matches the snapshot as a link 1`] = `
+<a
+  className="nhsuk-button   "
+  disabled={false}
+  href="/"
+  onClick={[Function]}
+  role="button"
+  style={Object {}}
+>
+  Primary
+</a>
+`;
 
-exports[`Button matches the snapshot as a link 2`] = `ShallowWrapper {}`;
+exports[`Button matches the snapshot as a link 2`] = `
+<a
+  className="nhsuk-button nhsuk-button--secondary  "
+  disabled={false}
+  href="/"
+  onClick={[Function]}
+  role="button"
+  style={Object {}}
+>
+  Secondary
+</a>
+`;
 
-exports[`Button matches the snapshot as a link 3`] = `ShallowWrapper {}`;
+exports[`Button matches the snapshot as a link 3`] = `
+<a
+  className="nhsuk-button  nhsuk-button--reverse "
+  disabled={false}
+  href="/"
+  onClick={[Function]}
+  role="button"
+  style={Object {}}
+>
+  Reverse
+</a>
+`;

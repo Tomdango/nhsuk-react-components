@@ -1,7 +1,7 @@
 import React from 'react';
-import Promo from '../promo';
+import Panel from ".";
 
-class PromoGroup extends React.Component {
+class PanelGroup extends React.Component {
   constructor(props) {
     super(props);
     this.getColumnSize = this.getColumnSize.bind(this);
@@ -20,7 +20,7 @@ class PromoGroup extends React.Component {
       case 4:
         return 'nhsuk-grid-column-one-quarter';
       default:
-        return null;
+        return '';
     }
   }
 
@@ -28,19 +28,19 @@ class PromoGroup extends React.Component {
     const { children } = this.props;
     const columnSize = this.getColumnSize();
     return React.Children.map(children, child => (
-      <div className={`${columnSize} nhsuk-promo-group__item`}>{child}</div>
+      <div className={`${columnSize} nhsuk-panel-group__item`}>{child}</div>
     ));
   }
 
   render() {
     return (
-      <div className="nhsuk-grid-row nhsuk-promo-group">
+      <div className="nhsuk-grid-row nhsuk-panel-group">
         {this.wrapChildren()}
       </div>
     );
   }
 }
 
-PromoGroup.Promo = Promo;
+PanelGroup.Panel = Panel;
 
-export default PromoGroup;
+export default PanelGroup;

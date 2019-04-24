@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input matches snapshot 1`] = `
+<Fieldset
+  asPageHeading={false}
+  className=""
+  describedBy=""
+  style={Object {}}
+  title=""
+>
+  <input
+    aria-describedby="-hint"
+    autoComplete=""
+    className="nhsuk-input  "
+    id=""
+    name="-hint"
+    onChange={[Function]}
+    type="text"
+  />
+</Fieldset>
+`;

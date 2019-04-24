@@ -1,11 +1,144 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EmergencyAlert all matches snapshot 1`] = `ReactWrapper {}`;
+exports[`EmergencyAlert all matches snapshot 1`] = `
+<EmergencyAlert
+  className=""
+  id="nhsuk-global-alert"
+  style={Object {}}
+>
+  <div
+    className="nhsuk-global-alert "
+    id="nhsuk-global-alert"
+    style={Object {}}
+  >
+    <Container
+      className=""
+      fluid={false}
+      style={Object {}}
+    >
+      <div
+        className="nhsuk-width-container "
+        style={Object {}}
+      >
+        <Row>
+          <div
+            className="nhsuk-grid-row"
+          >
+            <Column
+              forceLayout={false}
+              size="full"
+              tabletWidth=""
+            >
+              <div
+                className="nhsuk-grid-column-undefined  "
+              >
+                <div
+                  className="nhsuk-global-alert__content"
+                >
+                  <Title
+                    className=""
+                    style={Object {}}
+                    visuallyHiddenText="Alert: "
+                  >
+                    <h2
+                      className="nhsuk-global-alert__heading "
+                      style={Object {}}
+                    >
+                      <span
+                        className="nhsuk-u-visually-hidden"
+                      >
+                        Alert: 
+                      </span>
+                      National Flu Outbreak
+                    </h2>
+                  </Title>
+                  <Message
+                    className=""
+                    style={Object {}}
+                  >
+                    <p
+                      className="nhsuk-global-alert__message "
+                      style={Object {}}
+                    >
+                      There has been a national flu outbreak.
+                      <Link
+                        className=""
+                        href="https://www.nhs.uk"
+                        onClick={[Function]}
+                        style={Object {}}
+                      >
+                        <a
+                          className="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override "
+                          href="https://www.nhs.uk"
+                          onClick={[Function]}
+                          style={Object {}}
+                        >
+                          How does it affect me
+                        </a>
+                      </Link>
+                    </p>
+                  </Message>
+                  <LastUpdated
+                    className=""
+                    style={Object {}}
+                  >
+                    <p
+                      className="nhsuk-global-alert__updated "
+                      style={Object {}}
+                    >
+                      Updated 23 mins ago
+                    </p>
+                  </LastUpdated>
+                </div>
+              </div>
+            </Column>
+          </div>
+        </Row>
+      </div>
+    </Container>
+  </div>
+</EmergencyAlert>
+`;
 
-exports[`EmergencyAlert last updated matches snapshot 1`] = `ShallowWrapper {}`;
+exports[`EmergencyAlert last updated matches snapshot 1`] = `
+<p
+  className="nhsuk-global-alert__updated "
+  style={Object {}}
+>
+  Updated 23 mins ago
+</p>
+`;
 
-exports[`EmergencyAlert link matches snapshot 1`] = `ShallowWrapper {}`;
+exports[`EmergencyAlert link matches snapshot 1`] = `
+<a
+  className="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override "
+  href="#"
+  onClick={[Function]}
+  style={Object {}}
+>
+  Link
+</a>
+`;
 
-exports[`EmergencyAlert message matches snapshot 1`] = `ShallowWrapper {}`;
+exports[`EmergencyAlert message matches snapshot 1`] = `
+<p
+  className="nhsuk-global-alert__message "
+  style={Object {}}
+>
+  Message
+</p>
+`;
 
-exports[`EmergencyAlert title matches snapshot 1`] = `ShallowWrapper {}`;
+exports[`EmergencyAlert title matches snapshot 1`] = `
+<h2
+  className="nhsuk-global-alert__heading "
+  style={Object {}}
+>
+  <span
+    className="nhsuk-u-visually-hidden"
+  >
+    Alert: 
+  </span>
+  Title
+</h2>
+`;

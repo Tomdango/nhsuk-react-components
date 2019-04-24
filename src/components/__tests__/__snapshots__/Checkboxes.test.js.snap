@@ -1,7 +1,133 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Checkboxes box matches snapshot 1`] = `ShallowWrapper {}`;
+exports[`Checkboxes box matches snapshot 1`] = `
+<div
+  className="nhsuk-checkboxes__item"
+>
+  <input
+    className="nhsuk-checkboxes__input"
+    disabled={false}
+    id="id"
+    name="checkboxes"
+    onClick={[Function]}
+    type="checkbox"
+    value="option"
+  />
+  <label
+    className="nhsuk-label nhsuk-checkboxes__label"
+    htmlFor="id"
+  >
+    Option
+  </label>
+</div>
+`;
 
-exports[`Checkboxes returns other children normally 1`] = `ReactWrapper {}`;
+exports[`Checkboxes returns other children normally 1`] = `
+<Checkboxes
+  asPageHeading={false}
+  className=""
+  describedBy=""
+  error=""
+  hint=""
+  name="name"
+  registerInitialValue={[Function]}
+  style={Object {}}
+  title=""
+  valueCallback={[Function]}
+>
+  <div
+    className="nhsuk-checkboxes "
+    style={Object {}}
+  >
+    <Fieldset
+      asPageHeading={false}
+      className=""
+      describedBy=""
+      style={Object {}}
+      title=""
+    >
+      <fieldset
+        aria-describedby=""
+        className="nhsuk-fieldset "
+        style={Object {}}
+      >
+        <legend
+          className="nhsuk-fieldset__legend "
+        />
+        <p
+          key=".0"
+        >
+          Hello
+        </p>
+      </fieldset>
+    </Fieldset>
+  </div>
+</Checkboxes>
+`;
 
-exports[`Checkboxes wrapper matches snapshot 1`] = `ReactWrapper {}`;
+exports[`Checkboxes wrapper matches snapshot 1`] = `
+<Checkboxes
+  asPageHeading={false}
+  className=""
+  describedBy=""
+  error=""
+  hint=""
+  name="name"
+  registerInitialValue={[Function]}
+  style={Object {}}
+  title=""
+  valueCallback={[Function]}
+>
+  <div
+    className="nhsuk-checkboxes "
+    style={Object {}}
+  >
+    <Fieldset
+      asPageHeading={false}
+      className=""
+      describedBy=""
+      style={Object {}}
+      title=""
+    >
+      <fieldset
+        aria-describedby=""
+        className="nhsuk-fieldset "
+        style={Object {}}
+      >
+        <legend
+          className="nhsuk-fieldset__legend "
+        />
+        <Box
+          _id="name-1"
+          _onClick={[Function]}
+          disabled={false}
+          hint=""
+          key=".0"
+          name="name"
+          value="box"
+        >
+          <div
+            className="nhsuk-checkboxes__item"
+          >
+            <input
+              className="nhsuk-checkboxes__input"
+              disabled={false}
+              id="name-1"
+              name="name"
+              onClick={[Function]}
+              type="checkbox"
+              value="box"
+            />
+            <label
+              className="nhsuk-label nhsuk-checkboxes__label"
+              htmlFor="name-1"
+            >
+              Box
+            </label>
+          </div>
+        </Box>
+      </fieldset>
+    </Fieldset>
+  </div>
+</Checkboxes>
+`;

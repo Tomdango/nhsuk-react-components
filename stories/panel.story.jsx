@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
-import { Panel, PanelGroup } from '../src';
+import { Panel } from '../src';
 
 storiesOf('Panel', module)
   .addDecorator(centered)
@@ -33,7 +33,7 @@ storiesOf('Panel', module)
   ))
   .add('Panel Group', () => (
     <div>
-      <PanelGroup>
+      <Panel.Group>
         <Panel>
           <h3>Live well</h3>
           <p>
@@ -48,8 +48,8 @@ storiesOf('Panel', module)
             balanced diet
           </p>
         </Panel>
-      </PanelGroup>
-      <PanelGroup>
+      </Panel.Group>
+      <Panel.Group>
         <Panel>
           <h3>Excercise</h3>
           <p>
@@ -64,6 +64,6 @@ storiesOf('Panel', module)
             making you tired
           </p>
         </Panel>
-      </PanelGroup>
+      </Panel.Group>
     </div>
   ));

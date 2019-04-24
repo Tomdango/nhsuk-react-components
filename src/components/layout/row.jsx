@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Row = ({ children }) => {
-  return <div className="nhsuk-grid-row">{children}</div>;
-};
+const Row = ({ children }) => <div className="nhsuk-grid-row">{children}</div>;
 
 const Column = ({ children, width, tabletWidth, forceLayout }) => (
   <div
     className={`nhsuk-grid-column-${width} ${
       forceLayout ? `nhsuk-u-${width}` : ''
-    } ${tabletWidth ? `nhsuk-u-${width}-tablet` : null}`}
+    } ${tabletWidth ? `nhsuk-u-${tabletWidth}-tablet` : ''}`}
   >
     {children}
   </div>
@@ -34,7 +32,15 @@ Column.propTypes = {
   ]).isRequired,
   children: PropTypes.node,
   forceLayout: PropTypes.bool,
-  tabletWidth: PropTypes.string
+  tabletWidth: PropTypes.oneOf([
+    '',
+    'full',
+    'three-quarters',
+    'one-half',
+    'two-thirds',
+    'one-third',
+    'one-quarter'
+  ])
 };
 
 Column.defaultProps = {

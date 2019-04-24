@@ -226,4 +226,21 @@ describe('FormWrapper', () => {
     ).toBeTruthy();
     shallowMount.unmount();
   });
+  it('handles onSubmit', () => {
+    const onChange = jest.fn();
+    const onSubmit = jest.fn();
+    const wrapper = shallow(
+      <Form onChange={onChange} onSubmit={onSubmit}>
+        Elements
+      </Form>
+    );
+    const wrapperForAnonFunc = shallow(<Form>Elements</Form>);
+    wrapper.instance().valueCallback('key', 'value');
+    wrapperForAnonFunc.instance().valueCallback('key', 'value');
+    expect(onChange).toHaveBeenCalled();
+    expect(wrapper.state()).toEqual({ formData: { key: 'value' } });
+    wrapper.find('form').simulate('submit');
+    wrapperForAnonFunc.find('form').simulate('submit');
+    expect(onSubmit).toHaveBeenCalled();
+  });
 });

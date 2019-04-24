@@ -4,7 +4,7 @@ import stylePropType from 'react-style-proptype';
 
 const TableHeader = ({ rows, className, style }) => {
   const tableRows = rows.map(row => (
-    <th className="nhsuk-table__header" scope="col">
+    <th className="nhsuk-table__header" scope="col" key={row}>
       {row}
     </th>
   ));

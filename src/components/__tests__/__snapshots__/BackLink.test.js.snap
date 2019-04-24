@@ -1,3 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BackLink matches snapshot 1`] = `ShallowWrapper {}`;
+exports[`BackLink matches snapshot 1`] = `
+<div
+  className="nhsuk-back-link "
+  style={Object {}}
+>
+  <a
+    className="nhsuk-back-link__link"
+    href="#"
+    onClick={false}
+  >
+    <ChevronLeft
+      className=""
+      height={32}
+      width={32}
+    />
+  </a>
+</div>
+`;

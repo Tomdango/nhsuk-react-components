@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListPanel Item matches snapshot 1`] = `
+<li
+  className="nhsuk-list-panel__item "
+  style={Object {}}
+>
+  <a
+    className="nhsuk-list-panel__link"
+    href="#"
+  >
+    Text
+  </a>
+</li>
+`;
+
+exports[`ListPanel ListPanel matches snapshot 1`] = `
+<ol
+  className="nhsuk-list"
+>
+  Child
+</ol>
+`;
+
+exports[`ListPanel Panel matches snapshot 1`] = `
+<div
+  className="nhsuk-list-panel "
+  style={Object {}}
+>
+  <h2
+    className="nhsuk-list-panel__label"
+    id=""
+  >
+    Label
+  </h2>
+  <ul
+    className="nhsuk-list-panel__list nhsuk-list-panel__list--with-label"
+  >
+    Child
+  </ul>
+</div>
+`;

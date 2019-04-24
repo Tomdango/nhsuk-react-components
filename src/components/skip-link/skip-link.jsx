@@ -1,5 +1,6 @@
 import React from 'react';
-// import './_skip-link.scss';
+import PropTypes from 'prop-types';
+import stylePropType from 'react-style-proptype';
 
 /*
  * Skip link
@@ -11,18 +12,20 @@ import React from 'react';
  * then removes it when focus is off it.
  */
 
-export default class SkipLink extends React.Component {
+class SkipLink extends React.Component {
   constructor() {
     super();
     this.skipLinkRef = React.createRef();
     this.handleSkipLink = this.handleSkipLink.bind(this);
     this.addFocus = this.addFocus.bind(this);
     this.removeFocus = this.removeFocus.bind(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
   }
 
   componentDidMount() {
-    const [headingElement] = document.getElementsByTagName('H1');
-    this.headingElement = headingElement;
+    const { testHeadingElement } = this.props;
+    const [headingElement] = document.getElementsByTagName('h1');
+    this.headingElement = testHeadingElement || headingElement;
     if (this.headingElement) {
       this.headingElement.addEventListener('blur', e => {
         e.preventDefault();
@@ -61,16 +64,35 @@ export default class SkipLink extends React.Component {
   }
 
   render() {
-    const { href, text } = this.props;
+    const { href, children, className, style } = this.props;
     return (
       <a
         ref={this.skipLinkRef}
         onClick={this.handleSkipLink}
-        className="nhsuk-skip-link"
-        href={href || '#maincontent'}
+        className={`nhsuk-skip-link ${className}`}
+        style={style}
+        href={href}
       >
-        {text || 'Skip to main content'}
+        {children}
       </a>
     );
   }
 }
+
+SkipLink.propTypes = {
+  href: PropTypes.string,
+  children: PropTypes.string,
+  className: PropTypes.string,
+  style: stylePropType,
+  testHeadingElement: PropTypes.oneOf([PropTypes.node, PropTypes.bool])
+};
+
+SkipLink.defaultProps = {
+  children: 'Skip to main content',
+  href: '#maincontent',
+  className: '',
+  style: {},
+  testHeadingElement: false
+};
+
+export default SkipLink;

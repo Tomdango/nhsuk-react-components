@@ -57,7 +57,14 @@ describe('EmergencyAlert', () => {
     const shallowMount = shallow(
       <EmergencyAlert.Link onClick={onClick}>Link</EmergencyAlert.Link>
     );
+    const shallowMountForAnonFunc = shallow(
+      <EmergencyAlert.Link>Link</EmergencyAlert.Link>
+    );
+
     shallowMount
+      .find('.nhsuk-global-alert-link__margin-override')
+      .simulate('click');
+    shallowMountForAnonFunc
       .find('.nhsuk-global-alert-link__margin-override')
       .simulate('click');
     sinon.assert.called(onClick);

@@ -1,18 +1,18 @@
 import React from 'react';
-// import './_pagination.scss';
+import PropTypes from 'prop-types';
 
 const Pagination = ({ previousUrl, previousPage, nextUrl, nextPage }) => (
   <nav className="nhsuk-pagination" role="navigation" aria-label="Pagination">
     <ul className="nhsuk-list nhsuk-pagination__list">
-      {previousUrl || previousPage ? (
+      {previousUrl !== '#' || previousPage ? (
         <li className="nhsuk-pagination-item--previous">
           <a
             className="nhsuk-pagination__link nhsuk-pagination__link--prev"
-            href={previousUrl || '#'}
+            href={previousUrl}
           >
             <span className="nhsuk-pagination__title">Previous</span>
             <span className="nhsuk-u-visually-hidden">:</span>
-            <span className="nhsuk-pagination__page">{previousPage || ''}</span>
+            <span className="nhsuk-pagination__page">{previousPage}</span>
             <svg
               className="nhsuk-icon nhsuk-icon__arrow-left"
               xmlns="http://www.w3.org/2000/svg"
@@ -24,15 +24,15 @@ const Pagination = ({ previousUrl, previousPage, nextUrl, nextPage }) => (
           </a>
         </li>
       ) : null}
-      {nextUrl || nextPage ? (
+      {nextPage || nextUrl !== '#' ? (
         <li className="nhsuk-pagination-item--next">
           <a
             className="nhsuk-pagination__link nhsuk-pagination__link--next"
-            href={nextUrl || '#'}
+            href={nextUrl}
           >
             <span className="nhsuk-pagination__title">Next</span>
             <span className="nhsuk-u-visually-hidden">:</span>
-            <span className="nhsuk-pagination__page">{nextPage || ''}</span>
+            <span className="nhsuk-pagination__page">{nextPage}</span>
             <svg
               className="nhsuk-icon nhsuk-icon__arrow-right"
               xmlns="http://www.w3.org/2000/svg"
@@ -48,4 +48,16 @@ const Pagination = ({ previousUrl, previousPage, nextUrl, nextPage }) => (
   </nav>
 );
 
+Pagination.propTypes = {
+  nextUrl: PropTypes.string,
+  previousUrl: PropTypes.string,
+  previousPage: PropTypes.string,
+  nextPage: PropTypes.string
+};
+Pagination.defaultProps = {
+  nextUrl: '#',
+  previousUrl: '#',
+  previousPage: '',
+  nextPage: ''
+};
 export default Pagination;

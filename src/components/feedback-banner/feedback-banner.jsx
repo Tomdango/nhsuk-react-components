@@ -10,6 +10,11 @@ const isScrolledIntoView = element => {
   return isVisible;
 };
 
+const mockFooter = {
+  getBoundingClientRect: () => {
+    return { top: 10, bottom: 20 };
+  }
+};
 class FeedbackBanner extends React.Component {
   constructor(props) {
     super(props);
@@ -43,23 +48,36 @@ class FeedbackBanner extends React.Component {
     }
   }
 
-  unstickBanner() {
-    let didScroll = false;
-    const footer = document.querySelector('#nhsuk-footer');
+  unstickBanner(
+    testVars = {
+      useMockFooter: false,
+      forceScrolledIntoView: undefined,
+      forceDidScroll: undefined
+    }
+  ) {
+    const { forceDidScroll, useMockFooter, forceScrolledIntoView } = testVars;
+    let didScroll = forceDidScroll === undefined ? false : forceDidScroll;
+    const footer = useMockFooter
+      ? mockFooter
+      : document.querySelector('#nhsuk-footer');
     if (footer) {
       if (this.timer) {
         clearTimeout(this.timer);
       }
       this.timer = setInterval(() => {
         if (didScroll) {
-          if (isScrolledIntoView(footer)) {
+          const inView =
+            forceScrolledIntoView === undefined
+              ? isScrolledIntoView(footer)
+              : forceScrolledIntoView;
+          if (inView) {
             this.setState({ jsInView: true });
           } else {
             this.setState({ jsInView: false });
           }
         }
       }, 500);
-      didScroll = true;
+      didScroll = forceDidScroll === undefined ? true : forceDidScroll;
     }
   }
 

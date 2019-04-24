@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import './_care-card.scss';
 
 const CareCard = props => {
   const { type, heading, children, disableHiddenText } = props;
   let hiddenText;
-  // Default
   switch (type) {
     case 'non-urgent':
       hiddenText = 'Non-urgent advice: ';

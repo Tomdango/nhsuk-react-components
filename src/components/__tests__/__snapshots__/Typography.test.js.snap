@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography Body matches snapshot 1`] = `
+<p
+  className="nhsuk-body "
+  style={Object {}}
+>
+  Text
+</p>
+`;
+
+exports[`Typography Heading matches snapshot 1`] = `
+<h1
+  className="nhsuk-heading-xl "
+  style={Object {}}
+>
+  Text
+</h1>
+`;
+
+exports[`Typography List matches snapshot 1`] = `
+<ul
+  className="nhsuk-list nhsuk-list--bullet "
+  style={Object {}}
+>
+  <li>
+    Text
+  </li>
+</ul>
+`;

@@ -4,87 +4,51 @@ import centered from '@storybook/addon-centered/react';
 import { NavAZ } from '../src';
 
 const items = [
-  {
-    label: 'A'
-  },
+  'A',
   {
     disable: 'true',
     label: 'B'
   },
-  {
-    label: 'C'
-  },
-  {
-    label: 'D'
-  },
-  {
-    label: 'E'
-  },
-  {
-    label: 'F'
-  },
-  {
-    label: 'G'
-  },
-  {
-    label: 'H'
-  },
-  {
-    label: 'I'
-  },
-  {
-    label: 'J'
-  },
-  {
-    label: 'K'
-  },
-  {
-    label: 'L'
-  },
-  {
-    label: 'M'
-  },
-  {
-    label: 'N'
-  },
-  {
-    label: 'O'
-  },
-  {
-    label: 'P'
-  },
-  {
-    label: 'Q'
-  },
-  {
-    label: 'R'
-  },
-  {
-    label: 'S'
-  },
-  {
-    label: 'T'
-  },
-  {
-    label: 'U'
-  },
-  {
-    label: 'V'
-  },
-  {
-    label: 'W'
-  },
-  {
-    label: 'X'
-  },
-  {
-    label: 'Y'
-  },
-  {
-    label: 'Z'
-  }
+  'C',
+  'D',
+  'E',
+  'F',
+  'G',
+  'H',
+  'I',
+  'J',
+  'K',
+  'L',
+  'M',
+  'N',
+  'O',
+  'P',
+  'Q',
+  'R',
+  'S',
+  'T',
+  'U',
+  'V',
+  'W',
+  'X',
+  'Y',
+  'Z'
 ];
 
 storiesOf('Nav A-Z', module)
   .addDecorator(centered)
-  .add('Standard', () => <NavAZ items={items} />);
+  .add('Using items', () => <NavAZ items={items} />)
+  .add('Using fullAlphabet', () => <NavAZ fullAlphabet />)
+  .add('Using fullAlphabet with excluded items', () => (
+    <NavAZ fullAlphabet excludedItems={['A', 'C', 'E']} />
+  ))
+  .add('Using fullAlphabet with disabled items', () => (
+    <NavAZ fullAlphabet disabledItems={['A', 'C', 'E']} />
+  ))
+  .add('Using fullAlphabet with disabled and excluded items', () => (
+    <NavAZ
+      fullAlphabet
+      disabledItems={['A', 'C', 'E']}
+      excludedItems={['G', 'I', 'K']}
+    />
+  ));

@@ -40,7 +40,11 @@ describe('Footer', () => {
     const shallowMount = shallow(
       <Footer.Link onClick={onClick}>Error item</Footer.Link>
     );
+    const shallowMountForAnonFunc = shallow(
+      <Footer.Link>Error item</Footer.Link>
+    );
     shallowMount.find('a').simulate('click');
+    shallowMountForAnonFunc.find('a').simulate('click');
     sinon.assert.called(onClick);
     shallowMount.unmount();
   });

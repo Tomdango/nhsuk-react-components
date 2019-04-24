@@ -1,14 +1,33 @@
 import React from 'react';
-// import './_review-date.scss';
+import PropTypes from 'prop-types';
 
-const ReviewDate = ({ lastReview, nextReview }) => (
+const ReviewDate = ({
+  lastReviewText,
+  nextReviewText,
+  lastReviewDate,
+  nextReviewDate
+}) => (
   <div className="nhsuk-review-date">
     <p className="nhsuk-body-s">
-      {lastReview ? `Page last reviewed: ${lastReview}` : null}
-      {lastReview && nextReview ? <br /> : null}
-      {nextReview ? `Next review due: ${nextReview}` : null}
+      {lastReviewDate ? `${lastReviewText} ${lastReviewDate}` : null}
+      {lastReviewDate && nextReviewDate ? <br /> : null}
+      {nextReviewDate ? `${nextReviewText} ${nextReviewDate}` : null}
     </p>
   </div>
 );
+
+ReviewDate.propTypes = {
+  lastReviewText: PropTypes.string,
+  nextReviewText: PropTypes.string,
+  lastReviewDate: PropTypes.string,
+  nextReviewDate: PropTypes.string
+};
+
+ReviewDate.defaultProps = {
+  lastReviewText: 'Page last reviewed:',
+  nextReviewText: 'Next review due:',
+  lastReviewDate: '',
+  nextReviewDate: ''
+};
 
 export default ReviewDate;

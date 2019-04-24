@@ -1,7 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Footer matches snapshot 1`] = `ShallowWrapper {}`;
+exports[`Footer matches snapshot 1`] = `
+<li
+  className="nhsuk-footer__list-item "
+  style={Object {}}
+>
+  <a
+    className="nhsuk-footer__list-item-link"
+    href="#"
+    onClick={[Function]}
+    rel=""
+    target=""
+  >
+    Hello
+  </a>
+</li>
+`;
 
-exports[`Footer matches snapshot 2`] = `ShallowWrapper {}`;
+exports[`Footer matches snapshot 2`] = `
+<footer
+  role="contentinfo"
+>
+  <div
+    className="nhsuk-footer "
+    id="nhsuk-footer"
+    style={Object {}}
+  >
+    <div
+      className="nhsuk-width-container"
+    >
+      <div>
+        <h2
+          className="nhsuk-u-visually-hidden"
+        >
+          Support links
+        </h2>
+        <ul
+          className="nhsuk-footer__list"
+        >
+          <Link
+            className=""
+            href="#"
+            onClick={[Function]}
+            openInNewWindow={false}
+            style={Object {}}
+          >
+            Hello
+          </Link>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+`;
 
-exports[`Footer renders copyright notice 1`] = `ShallowWrapper {}`;
+exports[`Footer renders copyright notice 1`] = `
+<p
+  className="nhsuk-footer__copyright"
+>
+  MIT License
+</p>
+`;

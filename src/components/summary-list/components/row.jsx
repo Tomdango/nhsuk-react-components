@@ -4,7 +4,7 @@ import stylePropType from 'react-style-proptype';
 
 const actionPropType = {
   href: PropTypes.string,
-  text: PropTypes.string,
+  text: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   visuallyHiddenText: PropTypes.string
 };
@@ -30,7 +30,7 @@ const Row = ({ rowKey, action, children, className, style }) => {
 
 Row.propTypes = {
   rowKey: PropTypes.string,
-  action: actionPropType,
+  action: PropTypes.oneOfType([actionPropType, PropTypes.bool]),
   children: PropTypes.node,
   className: PropTypes.string,
   style: stylePropType
@@ -38,43 +38,10 @@ Row.propTypes = {
 
 Row.defaultProps = {
   rowKey: '',
-  action: {
-    href: '#',
-    text: '',
-    onClick: () => {},
-    visuallyHiddenText: 'action'
-  },
+  action: false,
   children: '',
   className: '',
   style: {}
 };
-
-const Column = ({ children, width, className, style }) => (
-  <div className={`nhsuk-grid-column-${width} ${className}`} style={style}>
-    {children}
-  </div>
-);
-
-Column.propTypes = {
-  width: PropTypes.oneOf([
-    'full',
-    'three-quarters',
-    'one-half',
-    'two-thirds',
-    'one-third',
-    'one-quarter'
-  ]).isRequired,
-  children: PropTypes.node,
-  className: PropTypes.string,
-  style: stylePropType
-};
-
-Column.defaultProps = {
-  children: null,
-  className: '',
-  style: {}
-};
-
-Row.Column = Column;
 
 export default Row;

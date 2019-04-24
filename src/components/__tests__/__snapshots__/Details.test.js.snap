@@ -1,5 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Details expander matches snapshot 1`] = `ShallowWrapper {}`;
+exports[`Details expander matches snapshot 1`] = `
+<details
+  className="nhsuk-details nhsuk-expander "
+>
+  <summary
+    className="nhsuk-details__summary"
+  >
+    <span
+      className="nhsuk-details__summary-text"
+    >
+      Test Text
+    </span>
+  </summary>
+  <div
+    className="nhsuk-details__text"
+  >
+    Test Text
+  </div>
+</details>
+`;
 
-exports[`Details normal matches snapshot 1`] = `ShallowWrapper {}`;
+exports[`Details normal matches snapshot 1`] = `
+<details
+  className="nhsuk-details  "
+>
+  <summary
+    className="nhsuk-details__summary"
+  >
+    <span
+      className="nhsuk-details__summary-text"
+    >
+      Test Text
+    </span>
+  </summary>
+  <div
+    className="nhsuk-details__text"
+  >
+    Test Text
+  </div>
+</details>
+`;

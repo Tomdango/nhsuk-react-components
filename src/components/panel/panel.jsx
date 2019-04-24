@@ -1,5 +1,6 @@
 import React from 'react';
-// import './_panel.scss';
+import PropTypes from 'prop-types';
+import Group from './panel-group';
 
 const Panel = ({ children, label, grey }) => (
   <div
@@ -11,5 +12,18 @@ const Panel = ({ children, label, grey }) => (
     {children}
   </div>
 );
+
+Panel.propTypes = {
+  children: PropTypes.node.isRequired,
+  label: PropTypes.string,
+  grey: PropTypes.bool
+};
+
+Panel.defaultProps = {
+  label: '',
+  grey: false
+};
+
+Panel.Group = Group;
 
 export default Panel;

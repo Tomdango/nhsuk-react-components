@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image matches snapshot and element 1`] = `
+<figure
+  className="nhsuk-image"
+>
+  <img
+    alt="imagealt"
+    className="nhsuk-image__img"
+    src="imagesrc"
+  />
+</figure>
+`;

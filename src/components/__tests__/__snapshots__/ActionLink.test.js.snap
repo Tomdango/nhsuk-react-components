@@ -1,3 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ActionLink matches the snapshot 1`] = `ShallowWrapper {}`;
+exports[`ActionLink matches the snapshot 1`] = `
+<div
+  className="nhsuk-action-link "
+  style={Object {}}
+>
+  <a
+    className="nhsuk-action-link__link"
+    href="#"
+    onClick={[Function]}
+    rel=""
+    target=""
+  >
+    <ArrowRightCircle
+      className=""
+      height={32}
+      width={32}
+    />
+    <span
+      className="nhsuk-action-link__text"
+    >
+      Test
+    </span>
+  </a>
+</div>
+`;

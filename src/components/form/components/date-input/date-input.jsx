@@ -186,6 +186,7 @@ class DateInput extends React.Component {
     this.registerComponent = this.registerComponent.bind(this);
     this.injectPropsIntoChildren = this.injectPropsIntoChildren.bind(this);
     this.handleInput = this.handleInput.bind(this);
+    this.handleAutoFocus = this.handleAutoFocus.bind(this);
     this.state = {
       day: '',
       month: '',
@@ -199,10 +200,22 @@ class DateInput extends React.Component {
   }
 
   registerComponent(name, ref) {
-    if (name === 'month') {
-      this.monthInput = ref;
-    } else if (name === 'year') {
-      this.yearInput = ref;
+    switch (name) {
+      case 'month':
+        this.monthInput = ref;
+        break;
+      case 'year':
+        this.yearInput = ref;
+        break;
+      default:
+    }
+  }
+
+  handleAutoFocus(type, value) {
+    if (type === 'day' && value.length === 2) {
+      this.monthInput.focus();
+    } else if (type === 'month' && value.length === 2) {
+      this.yearInput.focus();
     }
   }
 
@@ -212,11 +225,7 @@ class DateInput extends React.Component {
       const { autoFocus, valueCallback, name } = this.props;
       valueCallback(name, this.state);
       if (autoFocus) {
-        if (type === 'day' && (value.length === 2 || value > 3)) {
-          this.monthInput.focus();
-        } else if (type === 'month' && (value.length === 2 || value >= 2)) {
-          this.yearInput.focus();
-        }
+        this.handleAutoFocus(type, value);
       }
     });
   }

@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout Column forces layout 1`] = `
+<div
+  className="nhsuk-grid-column-full nhsuk-u-full "
+>
+  Child
+</div>
+`;
+
+exports[`Layout Column matches snapshot and element 1`] = `
+<div
+  className="nhsuk-grid-column-full  "
+>
+  Child
+</div>
+`;
+
+exports[`Layout Column works with tablet width 1`] = `
+<div
+  className="nhsuk-grid-column-full  nhsuk-u-one-half-tablet"
+>
+  Child
+</div>
+`;
+
+exports[`Layout Container matches snapshot 1`] = `
+<div
+  className="nhsuk-width-container "
+  style={Object {}}
+>
+  Child
+</div>
+`;
+
+exports[`Layout MainWrapper matches snapshot 1`] = `
+<main
+  className="nhsuk-main-wrapper"
+  id=""
+>
+  Child
+</main>
+`;
+
+exports[`Layout ReadingWidth matches snapshot and element 1`] = `
+<div
+  className="nhsuk-u-reading-width"
+>
+  Text
+</div>
+`;
+
+exports[`Layout Row matches snapshot and element 1`] = `
+<div
+  className="nhsuk-grid-row"
+>
+  Child
+</div>
+`;

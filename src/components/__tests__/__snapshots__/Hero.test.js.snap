@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero Content matches snapshot and element 1`] = `
+<p
+  className="nhsuk-body-l nhsuk-u-margin-bottom-0"
+>
+  Content
+</p>
+`;
+
+exports[`Hero Heading matches snapshot and element 1`] = `
+<h1
+  className="nhsuk-u-margin-bottom-3"
+>
+  Heading
+</h1>
+`;
+
+exports[`Hero matches snapshot and element 1`] = `
+<section
+  className="nhsuk-hero  "
+  style={
+    Object {
+      "backgroundImage": "none",
+    }
+  }
+/>
+`;
+
+exports[`Hero matches snapshot and element as image 1`] = `
+<section
+  className="nhsuk-hero nhsuk-hero--image "
+  style={
+    Object {
+      "backgroundImage": "url('image')",
+    }
+  }
+/>
+`;
+
+exports[`Hero matches snapshot and element as image with children 1`] = `
+<Hero
+  imageURL="image"
+>
+  <section
+    className="nhsuk-hero nhsuk-hero--image nhsuk-hero--image-description"
+    style={
+      Object {
+        "backgroundImage": "url('image')",
+      }
+    }
+  >
+    <div
+      className="nhsuk-hero__overlay"
+    >
+      <div
+        className="nhsuk-width-container "
+      >
+        <div
+          className="nhsuk-grid-row"
+        >
+          <div
+            className="nhsuk-grid-column-two-thirds"
+          >
+            <div
+              className="nhsuk-hero-content"
+            >
+              <Heading>
+                <h1
+                  className="nhsuk-u-margin-bottom-3"
+                >
+                  Heading
+                </h1>
+              </Heading>
+              <Content>
+                <p
+                  className="nhsuk-body-l nhsuk-u-margin-bottom-0"
+                >
+                  Content
+                </p>
+              </Content>
+              <span
+                aria-hidden="true"
+                className="nhsuk-hero__arrow"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Hero>
+`;
+
+exports[`Hero matches snapshot and element with children 1`] = `
+<Hero
+  imageURL=""
+>
+  <section
+    className="nhsuk-hero  "
+    style={
+      Object {
+        "backgroundImage": "none",
+      }
+    }
+  >
+    <div
+      className="nhsuk-hero__overlay"
+    >
+      <div
+        className="nhsuk-width-container nhsuk-hero--border"
+      >
+        <div
+          className="nhsuk-grid-row"
+        >
+          <div
+            className="nhsuk-grid-column-two-thirds"
+          >
+            <div
+              className="nhsuk-hero-content"
+            >
+              <Heading>
+                <h1
+                  className="nhsuk-u-margin-bottom-3"
+                >
+                  Heading
+                </h1>
+              </Heading>
+              <Content>
+                <p
+                  className="nhsuk-body-l nhsuk-u-margin-bottom-0"
+                >
+                  Content
+                </p>
+              </Content>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Hero>
+`;

@@ -1,83 +1,108 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
-import { Promo, PromoGroup } from '../src';
+import { Promo } from '../src';
 
 storiesOf('Promo', module)
   .addDecorator(centered)
   .add('Promo', () => (
-    <Promo
-      href="https://www.nhs.uk"
-      heading="Save a life: give blood"
-      description="Please register today. Donating blood is easy, and saves lives."
-    />
+    <Promo href="https://www.nhs.uk">
+      <Promo.Heading>Save a life: give blood</Promo.Heading>
+      <Promo.Content>
+        Please register today. Donating blood is easy, and saves lives.
+      </Promo.Content>
+    </Promo>
   ))
   .add('Promo with image', () => (
     <div style={{ maxWidth: '25vw' }}>
       <Promo
         href="https://www.nhs.uk"
-        heading="Save a life: give blood"
-        imgURL="https://www.nhs.uk/static/nhsuk_shared/img/homepage/give-blood.png"
-        description="Please register today. Donating blood is easy, and saves lives."
-      />
+        imgUrl="https://www.nhs.uk/static/nhsuk_shared/img/homepage/give-blood.png"
+        imgAlt="Give Blood Image"
+      >
+        <Promo.Heading>Save a life: give blood</Promo.Heading>
+        <Promo.Content>
+          Please register today. Donating blood is easy, and saves lives.
+        </Promo.Content>
+      </Promo>
     </div>
   ))
   .add('Promo with no description', () => (
-    <Promo href="https://www.nhs.uk" heading="Save a life: give blood" />
+    <Promo href="https://www.nhs.uk">
+      <Promo.Heading>Save a life: give blood</Promo.Heading>
+    </Promo>
   ))
   .add('Small promo', () => (
-    <Promo
-      small
-      href="https://www.nhs.uk"
-      heading="Access your GP record"
-      description="Please register today. Donating blood is easy, and saves lives."
-    />
+    <Promo href="https://www.nhs.uk" small>
+      <Promo.Heading>Access your GP record</Promo.Heading>
+      <Promo.Content>
+        Please register today. Donating blood is easy, and saves lives.
+      </Promo.Content>
+    </Promo>
   ))
   .add('Promo group', () => (
     <div style={{ margin: '10vh' }}>
-      <PromoGroup>
-        <PromoGroup.Promo
+      <Promo.Group>
+        <Promo
           href="https://www.nhs.uk"
-          heading="Save a life: give blood"
-          imgURL="https://www.nhs.uk/static/nhsuk_shared/img/homepage/give-blood.png"
-          description="Please register today. Donating blood is easy, and saves lives."
-        />
-        <PromoGroup.Promo
+          imgUrl="https://www.nhs.uk/static/nhsuk_shared/img/homepage/give-blood.png"
+          imgAlt="Give Blood Image"
+        >
+          <Promo.Heading>Save a life: give blood</Promo.Heading>
+          <Promo.Content>
+            Please register today. Donating blood is easy, and saves lives.
+          </Promo.Content>
+        </Promo>
+        <Promo
           href="https://www.nhs.uk"
-          heading="Save a life: give blood"
-          imgURL="https://www.nhs.uk/static/nhsuk_shared/img/homepage/give-blood.png"
-          description="Please register today. Donating blood is easy, and saves lives."
-        />
-      </PromoGroup>
-      <PromoGroup>
-        <PromoGroup.Promo
+          imgUrl="https://www.nhs.uk/static/nhsuk_shared/img/homepage/give-blood.png"
+          imgAlt="Give Blood Image"
+        >
+          <Promo.Heading>Save a life: give blood</Promo.Heading>
+          <Promo.Content>
+            Please register today. Donating blood is easy, and saves lives.
+          </Promo.Content>
+        </Promo>
+      </Promo.Group>
+      <Promo.Group>
+        <Promo
           href="https://www.nhs.uk"
-          heading="Save a life: give blood"
-          imgURL="https://www.nhs.uk/static/nhsuk_shared/img/homepage/give-blood.png"
-          description="Please register today. Donating blood is easy, and saves lives."
-        />
-        <PromoGroup.Promo
+          imgUrl="https://www.nhs.uk/static/nhsuk_shared/img/homepage/give-blood.png"
+          imgAlt="Give Blood Image"
+        >
+          <Promo.Heading>Save a life: give blood</Promo.Heading>
+          <Promo.Content>
+            Please register today. Donating blood is easy, and saves lives.
+          </Promo.Content>
+        </Promo>
+        <Promo
           href="https://www.nhs.uk"
-          heading="Save a life: give blood"
-          imgURL="https://www.nhs.uk/static/nhsuk_shared/img/homepage/give-blood.png"
-          description="Please register today. Donating blood is easy, and saves lives."
-        />
-        <PromoGroup.Promo
+          imgUrl="https://www.nhs.uk/static/nhsuk_shared/img/homepage/give-blood.png"
+          imgAlt="Give Blood Image"
+        >
+          <Promo.Heading>Save a life: give blood</Promo.Heading>
+          <Promo.Content>
+            Please register today. Donating blood is easy, and saves lives.
+          </Promo.Content>
+        </Promo>
+        <Promo
           href="https://www.nhs.uk"
-          heading="Save a life: give blood"
-          imgURL="https://www.nhs.uk/static/nhsuk_shared/img/homepage/give-blood.png"
-          description="Please register today. Donating blood is easy, and saves lives."
-        />
-      </PromoGroup>
-      <PromoGroup>
-        <PromoGroup.Promo
-          href="https://www.nhs.uk"
-          heading="Save a life: give blood"
-        />
-        <PromoGroup.Promo
-          href="https://www.nhs.uk"
-          heading="Save a life: give blood"
-        />
-      </PromoGroup>
+          imgUrl="https://www.nhs.uk/static/nhsuk_shared/img/homepage/give-blood.png"
+          imgAlt="Give Blood Image"
+        >
+          <Promo.Heading>Save a life: give blood</Promo.Heading>
+          <Promo.Content>
+            Please register today. Donating blood is easy, and saves lives.
+          </Promo.Content>
+        </Promo>
+      </Promo.Group>
+      <Promo.Group>
+        <Promo href="https://www.nhs.uk">
+          <Promo.Heading>Save a life: give blood</Promo.Heading>
+        </Promo>
+        <Promo href="https://www.nhs.uk">
+          <Promo.Heading>Save a life: give blood</Promo.Heading>
+        </Promo>
+      </Promo.Group>
     </div>
   ));

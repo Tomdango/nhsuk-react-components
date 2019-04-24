@@ -19,6 +19,11 @@ describe('CareCard', () => {
         Content
       </CareCard>
     );
+    const incorrect = mount(
+      <CareCard heading="TestHeading" type="incorrect">
+        Content
+      </CareCard>
+    );
     const disableHiddenText = mount(
       <CareCard disableHiddenText heading="TestHeading" type="immediate">
         Content
@@ -27,10 +32,12 @@ describe('CareCard', () => {
     expect(nonUrgent).toMatchSnapshot();
     expect(urgent).toMatchSnapshot();
     expect(immediate).toMatchSnapshot();
+    expect(incorrect).toMatchSnapshot();
     expect(disableHiddenText).toMatchSnapshot();
     nonUrgent.unmount();
     urgent.unmount();
     immediate.unmount();
+    incorrect.unmount();
     disableHiddenText.unmount();
   });
 });

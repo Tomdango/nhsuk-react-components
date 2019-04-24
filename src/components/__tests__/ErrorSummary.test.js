@@ -53,4 +53,22 @@ describe('ErrorSummary', () => {
     expect(mountedElement).toMatchSnapshot();
     mountedElement.unmount();
   });
+  it('responds to onClick', () => {
+    const clickFn = jest.fn();
+    const wrapper = mount(
+      <ErrorSummary>
+        <ErrorSummary.ErrorItem onClick={clickFn}>Item</ErrorSummary.ErrorItem>
+      </ErrorSummary>
+    );
+    const wrapperTest = mount(
+      <ErrorSummary>
+        <ErrorSummary.ErrorItem>Item</ErrorSummary.ErrorItem>
+      </ErrorSummary>
+    );
+    wrapper.find('a').simulate('click');
+    wrapperTest.find('a').simulate('click');
+    expect(clickFn).toHaveBeenCalled();
+    wrapper.unmount();
+    wrapperTest.unmount();
+  });
 });

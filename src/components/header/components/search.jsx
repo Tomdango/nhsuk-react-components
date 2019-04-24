@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class HeaderSearch extends React.Component {
   constructor(props) {
@@ -13,6 +14,8 @@ class HeaderSearch extends React.Component {
 
   handleSearchToggle() {
     const { searchToggle } = this.state;
+    const { toggleSearch } = this.props;
+    toggleSearch(!searchToggle);
     this.setState({ searchToggle: !searchToggle });
   }
 
@@ -20,9 +23,7 @@ class HeaderSearch extends React.Component {
     e.preventDefault();
     const { currentSearch } = this.state;
     const { onSubmit } = this.props;
-    if (onSubmit) {
-      onSubmit(currentSearch);
-    }
+    onSubmit(currentSearch);
   }
 
   render() {
@@ -66,7 +67,6 @@ class HeaderSearch extends React.Component {
             onSubmit={this.handleSubmit}
             role="search"
           >
-            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
             <label className="nhsuk-u-visually-hidden" htmlFor="search-field">
               {hiddenLabel}
             </label>
@@ -120,5 +120,17 @@ class HeaderSearch extends React.Component {
     );
   }
 }
+
+HeaderSearch.propTypes = {
+  hiddenLabel: PropTypes.string,
+  onSubmit: PropTypes.func,
+  toggleSearch: PropTypes.func
+};
+
+HeaderSearch.defaultProps = {
+  hiddenLabel: '',
+  onSubmit: () => {},
+  toggleSearch: () => {}
+};
 
 export default HeaderSearch;

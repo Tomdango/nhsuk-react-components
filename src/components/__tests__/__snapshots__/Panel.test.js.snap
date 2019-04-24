@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Panel PromoGroup matches snapshot 1`] = `
+<div
+  className="nhsuk-grid-row nhsuk-panel-group"
+>
+  <div
+    className="nhsuk-grid-column-full nhsuk-panel-group__item"
+    key=".0"
+  >
+    <h1>
+      Child
+    </h1>
+  </div>
+</div>
+`;
+
+exports[`Panel matches snapshot 1`] = `
+<div
+  className="nhsuk-panel "
+>
+  Child
+</div>
+`;
