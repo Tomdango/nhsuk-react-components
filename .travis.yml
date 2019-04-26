@@ -8,11 +8,4 @@ jobs:
       script: yarn lint
     - script: yarn test:ci
     - stage: Storybook Deploy
-      provider: pages
-      skip_cleanup: true
-      name: 'TravisCI Pages Deployment'
-      github_token: $GITHUB_TOKEN
-      keep_history: true
-      local_dir: storybook-static/
-      on:
-        branch: master
+      script: yarn deploy-storybook

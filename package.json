@@ -19,7 +19,7 @@
     "test:dev": "jest --watchAll -u --coverage",
     "test:coverage": "jest --coverage",
     "lint": "eslint src/",
-    "deploy-storybook": "yarn build-storybook & storybook-to-ghpages -e storybook-static",
+    "deploy-storybook": "yarn build-storybook & storybook-to-ghpages -e storybook-static --ci",
     "build-storybook": "build-storybook -c .storybook -o storybook-static -s ./.storybook/public/",
     "storybook": "start-storybook -p 9001 -c .storybook -s .storybook/public",
     "build": "cross-env BABEL_ENV=build rollup -c && yarn babel src/ --out-dir lib/ --config-file ./babelrc.build.js --source-maps",
