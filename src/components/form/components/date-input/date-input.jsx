@@ -325,7 +325,7 @@ class DateInput extends React.Component {
         {hint ? <Hint>{hint}</Hint> : null}
         <div className="nhsuk-date-input" id={id}>
           {children || (
-            <div>
+            <React.Fragment>
               <Day
                 _name={name}
                 required={required}
@@ -349,7 +349,7 @@ class DateInput extends React.Component {
                 _year={year}
                 error={!!error}
               />
-            </div>
+            </React.Fragment>
           )}
         </div>
       </Fieldset>

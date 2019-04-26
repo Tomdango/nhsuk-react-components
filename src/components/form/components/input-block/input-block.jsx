@@ -27,7 +27,7 @@ class Input extends React.Component {
       title
     } = this.props;
     return (
-      <div>
+      <React.Fragment>
         {title ? <Label>{title}</Label> : null}
         {hint ? <Hint>{hint}</Hint> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
@@ -47,7 +47,7 @@ class Input extends React.Component {
           aria-describedby={`${name}-hint`}
           autoComplete={autoComplete}
         />
-      </div>
+      </React.Fragment>
     );
   }
 }

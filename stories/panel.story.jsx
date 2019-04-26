@@ -32,7 +32,7 @@ storiesOf('Panel', module)
     </Panel>
   ))
   .add('Panel Group', () => (
-    <div>
+    <React.Fragment>
       <Panel.Group>
         <Panel>
           <h3>Live well</h3>
@@ -65,5 +65,5 @@ storiesOf('Panel', module)
           </p>
         </Panel>
       </Panel.Group>
-    </div>
+    </React.Fragment>
   ));

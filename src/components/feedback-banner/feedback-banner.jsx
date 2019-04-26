@@ -13,9 +13,7 @@ const isScrolledIntoView = element => {
 };
 
 const mockFooter = {
-  getBoundingClientRect: () => {
-    return { top: 10, bottom: 20 };
-  }
+  getBoundingClientRect: () => ({ top: 10, bottom: 20 })
 };
 class FeedbackBanner extends React.Component {
   constructor(props) {

@@ -6,9 +6,9 @@ import { SkipLink } from '../src';
 storiesOf('Skip Link', module)
   .addDecorator(centered)
   .add('Standard', () => (
-    <div>
+    <React.Fragment>
       <SkipLink />
       To view the skip link component, press tab or navigate to the next
       element.
-    </div>
+    </React.Fragment>
   ));

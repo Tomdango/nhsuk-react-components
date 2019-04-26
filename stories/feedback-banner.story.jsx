@@ -12,7 +12,7 @@ storiesOf('Feedback Banner', module)
     </FeedbackBanner>
   ))
   .add('With Footer', () => (
-    <div>
+    <React.Fragment>
       <div style={{ height: '120vh' }} />
       <FeedbackBanner title="Help us make the NHS website better">
         Your feedback helps us improve the NHS website.
@@ -33,5 +33,5 @@ storiesOf('Feedback Banner', module)
         </Footer.Link>
         <Footer.Copyright>&copy; Crown copyright</Footer.Copyright>
       </Footer>
-    </div>
+    </React.Fragment>
   ));

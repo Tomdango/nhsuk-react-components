@@ -1,6 +1,5 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import { tupleTypeAnnotation } from '@babel/types';
 import FeedbackBanner from '../feedback-banner';
 
 describe('FeedbackBanner', () => {

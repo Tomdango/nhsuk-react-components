@@ -78,9 +78,9 @@ class Checkboxes extends React.Component {
     const { name, valueCallback } = this.props;
     const { currentValue } = this.state;
     if (currentValue.includes(checkboxValue)) {
-      const filteredValues = currentValue.filter(value => {
-        return value !== checkboxValue;
-      });
+      const filteredValues = currentValue.filter(
+        value => value !== checkboxValue
+      );
       valueCallback(name, filteredValues);
       this.setState({ currentValue: filteredValues });
     } else {

@@ -29,26 +29,24 @@ exports[`Footer matches snapshot 2`] = `
     <div
       className="nhsuk-width-container"
     >
-      <div>
-        <h2
-          className="nhsuk-u-visually-hidden"
+      <h2
+        className="nhsuk-u-visually-hidden"
+      >
+        Support links
+      </h2>
+      <ul
+        className="nhsuk-footer__list"
+      >
+        <Link
+          className=""
+          href="#"
+          onClick={[Function]}
+          openInNewWindow={false}
+          style={Object {}}
         >
-          Support links
-        </h2>
-        <ul
-          className="nhsuk-footer__list"
-        >
-          <Link
-            className=""
-            href="#"
-            onClick={[Function]}
-            openInNewWindow={false}
-            style={Object {}}
-          >
-            Hello
-          </Link>
-        </ul>
-      </div>
+          Hello
+        </Link>
+      </ul>
     </div>
   </div>
 </footer>

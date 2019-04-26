@@ -87,12 +87,12 @@ const Footer = ({
       >
         <div className="nhsuk-width-container">
           {linksFromChildren.length !== 0 ? (
-            <div>
+            <React.Fragment>
               <h2 className="nhsuk-u-visually-hidden">
                 {linksVisuallyHiddenText}
               </h2>
               <ul className="nhsuk-footer__list">{linksFromChildren}</ul>
-            </div>
+            </React.Fragment>
           ) : null}
           {childrenWithLinksRemoved}
         </div>

@@ -47,23 +47,21 @@ const LastUpdated = ({ children, className, style }) => (
   </p>
 );
 
-const EmergencyAlert = ({ children, className, style, id }) => {
-  return (
-    <div
-      className={classNames('nhsuk-global-alert', className)}
-      style={style}
-      id={id}
-    >
-      <Container>
-        <Row>
-          <Row.Column size="full">
-            <div className="nhsuk-global-alert__content">{children}</div>
-          </Row.Column>
-        </Row>
-      </Container>
-    </div>
-  );
-};
+const EmergencyAlert = ({ children, className, style, id }) => (
+  <div
+    className={classNames('nhsuk-global-alert', className)}
+    style={style}
+    id={id}
+  >
+    <Container>
+      <Row>
+        <Row.Column size="full">
+          <div className="nhsuk-global-alert__content">{children}</div>
+        </Row.Column>
+      </Row>
+    </Container>
+  </div>
+);
 
 EmergencyAlert.propTypes = {
   children: PropTypes.node.isRequired,
