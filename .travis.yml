@@ -5,7 +5,7 @@ node_js:
 jobs:
   include:
     - stage: Test
-    - script: yarn lint
+      script: yarn lint
     - script: yarn test:ci
     - stage: Storybook Deploy
       provider: pages
