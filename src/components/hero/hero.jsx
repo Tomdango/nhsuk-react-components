@@ -1,35 +1,67 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 
-const Heading = ({ children }) => (
-  <h1 className="nhsuk-u-margin-bottom-3">{children}</h1>
+const Heading = ({ children, className, style }) => (
+  <h1
+    className={classNames('nhsuk-u-margin-bottom-3', className)}
+    style={style}
+  >
+    {children}
+  </h1>
 );
 
 Heading.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  style: stylePropType
 };
 
-const Content = ({ children }) => (
-  <p className="nhsuk-body-l nhsuk-u-margin-bottom-0">{children}</p>
+Heading.defaultProps = {
+  className: '',
+  style: {}
+};
+
+const Content = ({ children, className, style }) => (
+  <p
+    className={classNames('nhsuk-body-l', 'nhsuk-u-margin-bottom-0', className)}
+    style={style}
+  >
+    {children}
+  </p>
 );
 
 Content.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  style: stylePropType
 };
 
-const Hero = ({ children, imageURL }) => (
+Content.defaultProps = {
+  className: '',
+  style: {}
+};
+
+const Hero = ({ children, imageURL, className, style }) => (
   <section
-    className={`nhsuk-hero ${imageURL ? 'nhsuk-hero--image' : ''} ${
-      imageURL && children ? 'nhsuk-hero--image-description' : ''
-    }`}
-    style={{ backgroundImage: imageURL ? `url('${imageURL}')` : 'none' }}
+    className={classNames(
+      'nhsuk-hero',
+      { 'nhsuk-hero--image': imageURL },
+      { 'nhsuk-hero--image-description': imageURL && children !== null },
+      className
+    )}
+    style={{
+      backgroundImage: imageURL ? `url('${imageURL}')` : 'none',
+      ...style
+    }}
   >
     {children ? (
       <div className="nhsuk-hero__overlay">
         <div
-          className={`nhsuk-width-container ${
-            imageURL ? '' : 'nhsuk-hero--border'
-          }`}
+          className={classNames('nhsuk-width-container', {
+            'nhsuk-hero--border': imageURL
+          })}
         >
           <div className="nhsuk-grid-row">
             <div className="nhsuk-grid-column-two-thirds">
@@ -49,12 +81,16 @@ const Hero = ({ children, imageURL }) => (
 
 Hero.propTypes = {
   children: PropTypes.node,
-  imageURL: PropTypes.string
+  imageURL: PropTypes.string,
+  className: PropTypes.string,
+  style: stylePropType
 };
 
 Hero.defaultProps = {
   children: null,
-  imageURL: ''
+  imageURL: '',
+  className: '',
+  style: {}
 };
 
 Hero.Heading = Heading;

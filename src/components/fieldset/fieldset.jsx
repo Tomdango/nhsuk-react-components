@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 
 const Fieldset = ({
   title,
@@ -12,13 +13,13 @@ const Fieldset = ({
 }) => (
   <fieldset
     aria-describedby={describedBy}
-    className={`nhsuk-fieldset ${className}`}
+    className={classNames('nhsuk-fieldset', className)}
     style={style}
   >
     <legend
-      className={`nhsuk-fieldset__legend ${
-        asPageHeading ? 'nhsuk-fieldset__legend--xl' : ''
-      }`}
+      className={classNames('nhsuk-fieldset__legend', {
+        'nhsuk-fieldset__legend--xl': asPageHeading
+      })}
     >
       {asPageHeading ? (
         <h1 className="nhsuk-fieldset__heading nhsuk-fieldset__legend--l">

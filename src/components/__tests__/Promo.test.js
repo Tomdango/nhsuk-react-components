@@ -145,7 +145,7 @@ describe('PromoGroup', () => {
     ).toBeTruthy();
     expect(
       fiveChildren.containsMatchingElement(
-        <div className=" nhsuk-promo-group__item">
+        <div className="nhsuk-promo-group__item">
           <h1>Child</h1>
         </div>
       )

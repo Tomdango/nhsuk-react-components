@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 
 const WarningCallout = ({ heading, children, className, style }) => (
-  <div className={`nhsuk-warning-callout ${className}`} style={style}>
+  <div className={classNames('nhsuk-warning-callout', className)} style={style}>
     {heading ? (
       <h3 className="nhsuk-warning-callout__label">{heading}</h3>
     ) : null}

@@ -8,7 +8,7 @@ exports[`DoDontList matches snapshot for container 1`] = `
   type="tick"
 >
   <div
-    className="nhsuk-do-dont-list "
+    className="nhsuk-do-dont-list"
     style={Object {}}
   >
     <h3
@@ -30,13 +30,15 @@ exports[`DoDontList matches snapshot for container 1`] = `
           <Tick
             className=""
             height={32}
+            style={Object {}}
             width={32}
           >
             <svg
               aria-hidden="true"
-              className="nhsuk-icon nhsuk-icon__tick "
+              className="nhsuk-icon nhsuk-icon__tick"
               fill="none"
               height={32}
+              style={Object {}}
               viewBox="0 0 24 24"
               width={32}
               xmlns="http://www.w3.org/2000/svg"
@@ -65,6 +67,7 @@ exports[`DoDontList matches snapshot for do 1`] = `
   <Tick
     className=""
     height={32}
+    style={Object {}}
     width={32}
   />
   Test
@@ -79,6 +82,7 @@ exports[`DoDontList matches snapshot for dont 1`] = `
   <Cross
     className=""
     height={32}
+    style={Object {}}
     width={32}
   />
   Test

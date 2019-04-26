@@ -178,7 +178,7 @@ describe('FormWrapper', () => {
     );
     expect(
       fullMount.containsMatchingElement(
-        <span className="nhsuk-error-message ">
+        <span className="nhsuk-error-message">
           <span className="nhsuk-u-visually-hidden">Error: </span>Please
           actually enter something
         </span>
@@ -221,7 +221,7 @@ describe('FormWrapper', () => {
     );
     expect(
       shallowMount.containsMatchingElement(
-        <h2 className="nhsuk-heading-l ">Test Title</h2>
+        <h2 className="nhsuk-heading-l">Test Title</h2>
       )
     ).toBeTruthy();
     shallowMount.unmount();

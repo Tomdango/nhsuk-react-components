@@ -14,13 +14,13 @@ describe('Typography', () => {
       const mediumBody = mount(<Body size="m">Text</Body>);
       const largeBody = mount(<Body size="l">Text</Body>);
       expect(
-        smallBody.containsMatchingElement(<p className="nhsuk-body-s ">Text</p>)
+        smallBody.containsMatchingElement(<p className="nhsuk-body-s">Text</p>)
       ).toBeTruthy();
       expect(
-        mediumBody.containsMatchingElement(<p className="nhsuk-body ">Text</p>)
+        mediumBody.containsMatchingElement(<p className="nhsuk-body">Text</p>)
       ).toBeTruthy();
       expect(
-        largeBody.containsMatchingElement(<p className="nhsuk-body-l ">Text</p>)
+        largeBody.containsMatchingElement(<p className="nhsuk-body-l">Text</p>)
       ).toBeTruthy();
       largeBody.unmount();
       mediumBody.unmount();
@@ -40,19 +40,19 @@ describe('Typography', () => {
       const s = shallow(<Heading size="s">Title</Heading>);
       const xs = shallow(<Heading size="xs">Title</Heading>);
       expect(
-        xl.containsMatchingElement(<h1 className="nhsuk-heading-xl ">Title</h1>)
+        xl.containsMatchingElement(<h1 className="nhsuk-heading-xl">Title</h1>)
       ).toBeTruthy();
       expect(
-        l.containsMatchingElement(<h2 className="nhsuk-heading-l ">Title</h2>)
+        l.containsMatchingElement(<h2 className="nhsuk-heading-l">Title</h2>)
       ).toBeTruthy();
       expect(
-        m.containsMatchingElement(<h3 className="nhsuk-heading-m ">Title</h3>)
+        m.containsMatchingElement(<h3 className="nhsuk-heading-m">Title</h3>)
       ).toBeTruthy();
       expect(
-        s.containsMatchingElement(<h4 className="nhsuk-heading-s ">Title</h4>)
+        s.containsMatchingElement(<h4 className="nhsuk-heading-s">Title</h4>)
       ).toBeTruthy();
       expect(
-        xs.containsMatchingElement(<h5 className="nhsuk-heading-xs ">Title</h5>)
+        xs.containsMatchingElement(<h5 className="nhsuk-heading-xs">Title</h5>)
       ).toBeTruthy();
       xl.unmount();
       l.unmount();
@@ -64,7 +64,7 @@ describe('Typography', () => {
       const invalidSize = shallow(<Heading size="xxl">Title</Heading>);
       expect(
         invalidSize.containsMatchingElement(
-          <h1 className="nhsuk-heading-xl ">Title</h1>
+          <h1 className="nhsuk-heading-xl">Title</h1>
         )
       ).toBeFalsy();
       expect(invalidSize.getElement()).toEqual(null);
@@ -89,7 +89,7 @@ describe('Typography', () => {
       );
       expect(
         shallowMountNumber.containsMatchingElement(
-          <ol className="nhsuk-list nhsuk-list--number ">
+          <ol className="nhsuk-list nhsuk-list--number">
             <li>Text</li>
           </ol>
         )
@@ -102,7 +102,7 @@ describe('Typography', () => {
       );
       expect(
         shallowMountUnordered.containsMatchingElement(
-          <ul className="nhsuk-list nhsuk-list--bullet ">
+          <ul className="nhsuk-list nhsuk-list--bullet">
             <li>Text</li>
           </ul>
         )

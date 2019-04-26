@@ -2,7 +2,7 @@
 
 exports[`WarningCallout matches snapshot 1`] = `
 <div
-  className="nhsuk-warning-callout "
+  className="nhsuk-warning-callout"
   style={Object {}}
 >
   <h3

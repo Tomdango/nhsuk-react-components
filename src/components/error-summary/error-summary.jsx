@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 
 const ErrorItem = ({ href, children, className, style, onClick }) => (
   <li className={className} style={style}>
@@ -21,7 +22,7 @@ const ErrorSummary = ({
   dataModule
 }) => (
   <div
-    className={`nhsuk-error-summary ${className}`}
+    className={classNames('nhsuk-error-summary', className)}
     style={style}
     aria-labelledby={ariaLabelledBy}
     role={role}

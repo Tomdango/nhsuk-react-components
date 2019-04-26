@@ -1,9 +1,10 @@
 import React from 'react';
 import { node, string, func } from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 
 const Item = ({ children, href, onClick, className, style }) => (
-  <li className={`nhsuk-breadcrumb__item ${className}`} style={style}>
+  <li className={classNames('nhsuk-breadcrumb__item', className)} style={style}>
     <a className="nhsuk-breadcrumb__link" onClick={onClick} href={href}>
       {children}
     </a>
@@ -12,7 +13,7 @@ const Item = ({ children, href, onClick, className, style }) => (
 
 const Breadcrumbs = ({ children, className, style, ariaLabel }) => (
   <nav
-    className={`nhsuk-breadcrumb ${className}`}
+    className={classNames('nhsuk-breadcrumb', className)}
     style={style}
     aria-label={ariaLabel}
   >

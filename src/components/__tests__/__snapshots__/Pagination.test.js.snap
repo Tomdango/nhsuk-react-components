@@ -5,6 +5,7 @@ exports[`Pagination matches snapshot 1`] = `
   aria-label="Pagination"
   className="nhsuk-pagination"
   role="navigation"
+  style={Object {}}
 >
   <ul
     className="nhsuk-list nhsuk-pagination__list"

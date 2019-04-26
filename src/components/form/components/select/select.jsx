@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 import Fieldset from '../../../fieldset';
 import Hint from '../../../hint';
 import ErrorMessage from '../../../error-message';
 
-const Item = ({ children, value, disabled }) => (
-  <option value={value} disabled={disabled}>
+const Item = ({ children, value, disabled, className, style }) => (
+  <option value={value} disabled={disabled} className={className} style={style}>
     {children}
   </option>
 );
@@ -14,11 +15,15 @@ const Item = ({ children, value, disabled }) => (
 Item.propTypes = {
   children: PropTypes.node.isRequired,
   value: PropTypes.string.isRequired,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  className: PropTypes.string,
+  style: stylePropType
 };
 
 Item.defaultProps = {
-  disabled: false
+  disabled: false,
+  className: '',
+  style: {}
 };
 
 class Select extends React.Component {
@@ -75,7 +80,9 @@ class Select extends React.Component {
         <select
           value={value}
           onChange={this.handleChange}
-          className={`nhsuk-select ${error ? 'nhsuk-select--error' : ''}`}
+          className={classNames('nhsuk-select', {
+            'nhsuk-select--error': error
+          })}
           id={id || name}
           name={name}
         >

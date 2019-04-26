@@ -1,10 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 
-const Item = ({ href, current, children, onClick, ariaCurrent, className }) => (
+const Item = ({
+  href,
+  current,
+  children,
+  onClick,
+  ariaCurrent,
+  className,
+  style
+}) => (
   <li
-    className={`nhsuk-contents-list__item ${className}`}
+    className={classNames('nhsuk-contents-list__item', className)}
     aria-current={ariaCurrent}
+    style={style}
   >
     {current ? (
       <span className="nhsuk-contents-list__current">{children}</span>
@@ -21,12 +32,14 @@ const ContentsList = ({
   visuallyHiddenText,
   role,
   className,
-  ariaLabel
+  ariaLabel,
+  style
 }) => {
   return (
     <nav
-      className={`nhsuk-contents-list ${className}`}
+      className={classNames('nhsuk-contents-list', className)}
       role={role}
+      style={style}
       aria-label={ariaLabel}
     >
       <h2 className="nhsuk-u-visually-hidden">{visuallyHiddenText}</h2>
@@ -40,14 +53,16 @@ ContentsList.propTypes = {
   visuallyHiddenText: PropTypes.string,
   role: PropTypes.string,
   ariaLabel: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
+  style: stylePropType
 };
 
 ContentsList.defaultProps = {
   visuallyHiddenText: 'Contents',
   role: 'navigation',
   ariaLabel: 'Pages in this guide',
-  className: ''
+  className: '',
+  style: {}
 };
 
 Item.propTypes = {
@@ -56,7 +71,8 @@ Item.propTypes = {
   current: PropTypes.bool,
   onClick: PropTypes.func,
   ariaCurrent: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
+  style: stylePropType
 };
 
 Item.defaultProps = {
@@ -64,7 +80,8 @@ Item.defaultProps = {
   current: false,
   onClick: () => {},
   ariaCurrent: 'page',
-  className: ''
+  className: '',
+  style: {}
 };
 
 ContentsList.Item = Item;

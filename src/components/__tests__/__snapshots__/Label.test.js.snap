@@ -2,7 +2,9 @@
 
 exports[`Label matches snapshot 1`] = `
 <label
-  className="nhsuk-label   "
+  className="nhsuk-label"
+  htmlFor=""
+  style={Object {}}
 >
   Label
 </label>

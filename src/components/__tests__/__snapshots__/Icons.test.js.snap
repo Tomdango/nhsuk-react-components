@@ -3,8 +3,9 @@
 exports[`Icons all icons match snapshot 1`] = `
 <svg
   aria-hidden="true"
-  className="nhsuk-icon nhsuk-icon__arrow-left "
+  className="nhsuk-icon nhsuk-icon__arrow-left"
   height={32}
+  style={Object {}}
   viewBox="0 0 24 24"
   width={32}
   xmlns="http://www.w3.org/2000/svg"
@@ -18,8 +19,9 @@ exports[`Icons all icons match snapshot 1`] = `
 exports[`Icons all icons match snapshot 2`] = `
 <svg
   aria-hidden="true"
-  className="nhsuk-icon nhsuk-icon__arrow-right "
+  className="nhsuk-icon nhsuk-icon__arrow-right"
   height={32}
+  style={Object {}}
   viewBox="0 0 24 24"
   width={32}
   xmlns="http://www.w3.org/2000/svg"
@@ -33,8 +35,9 @@ exports[`Icons all icons match snapshot 2`] = `
 exports[`Icons all icons match snapshot 3`] = `
 <svg
   aria-hidden="true"
-  className="nhsuk-icon nhsuk-icon__arrow-right-circle "
+  className="nhsuk-icon nhsuk-icon__arrow-right-circle"
   height={32}
+  style={Object {}}
   viewBox="0 0 24 24"
   width={32}
   xmlns="http://www.w3.org/2000/svg"
@@ -52,8 +55,9 @@ exports[`Icons all icons match snapshot 3`] = `
 exports[`Icons all icons match snapshot 4`] = `
 <svg
   aria-hidden="true"
-  className="nhsuk-icon nhsuk-icon__chevron-left "
+  className="nhsuk-icon nhsuk-icon__chevron-left"
   height={32}
+  style={Object {}}
   viewBox="0 0 24 24"
   width={32}
   xmlns="http://www.w3.org/2000/svg"
@@ -67,8 +71,9 @@ exports[`Icons all icons match snapshot 4`] = `
 exports[`Icons all icons match snapshot 5`] = `
 <svg
   aria-hidden="true"
-  className="nhsuk-icon nhsuk-icon__chevron-right "
+  className="nhsuk-icon nhsuk-icon__chevron-right"
   height={32}
+  style={Object {}}
   viewBox="0 0 24 24"
   width={32}
   xmlns="http://www.w3.org/2000/svg"
@@ -82,9 +87,10 @@ exports[`Icons all icons match snapshot 5`] = `
 exports[`Icons all icons match snapshot 6`] = `
 <svg
   aria-hidden="true"
-  className="nhsuk-icon nhsuk-icon__close "
+  className="nhsuk-icon nhsuk-icon__close"
   focusable="false"
   height={32}
+  style={Object {}}
   viewBox="0 0 24 24"
   width={32}
   xmlns="http://www.w3.org/2000/svg"
@@ -98,8 +104,9 @@ exports[`Icons all icons match snapshot 6`] = `
 exports[`Icons all icons match snapshot 7`] = `
 <svg
   aria-hidden="true"
-  className="nhsuk-icon nhsuk-icon__cross "
+  className="nhsuk-icon nhsuk-icon__cross"
   height={32}
+  style={Object {}}
   viewBox="0 0 24 24"
   width={32}
   xmlns="http://www.w3.org/2000/svg"
@@ -116,8 +123,9 @@ exports[`Icons all icons match snapshot 7`] = `
 exports[`Icons all icons match snapshot 8`] = `
 <svg
   aria-hidden="true"
-  className="nhsuk-icon nhsuk-icon__emdash "
+  className="nhsuk-icon nhsuk-icon__emdash"
   height={1}
+  style={Object {}}
   width={16}
   xmlns="http://www.w3.org/2000/svg"
 >
@@ -130,8 +138,9 @@ exports[`Icons all icons match snapshot 8`] = `
 exports[`Icons all icons match snapshot 9`] = `
 <svg
   aria-hidden="true"
-  className="nhsuk-icon nhsuk-icon__emdash "
+  className="nhsuk-icon nhsuk-icon__emdash"
   height={1}
+  style={Object {}}
   width={19}
   xmlns="http://www.w3.org/2000/svg"
 >
@@ -144,8 +153,9 @@ exports[`Icons all icons match snapshot 9`] = `
 exports[`Icons all icons match snapshot 10`] = `
 <svg
   aria-hidden="true"
-  className="nhsuk-icon nhsuk-icon__minus "
+  className="nhsuk-icon nhsuk-icon__minus"
   height={32}
+  style={Object {}}
   viewBox="0 0 24 24"
   width={32}
   xmlns="http://www.w3.org/2000/svg"
@@ -169,8 +179,9 @@ exports[`Icons all icons match snapshot 10`] = `
 exports[`Icons all icons match snapshot 11`] = `
 <svg
   aria-hidden="true"
-  className="nhsuk-icon nhsuk-icon__plus "
+  className="nhsuk-icon nhsuk-icon__plus"
   height={32}
+  style={Object {}}
   viewBox="0 0 24 24"
   width={32}
   xmlns="http://www.w3.org/2000/svg"
@@ -194,9 +205,10 @@ exports[`Icons all icons match snapshot 11`] = `
 exports[`Icons all icons match snapshot 12`] = `
 <svg
   aria-hidden="true"
-  className="nhsuk-icon nhsuk-icon__search "
+  className="nhsuk-icon nhsuk-icon__search"
   focusable="false"
   height={32}
+  style={Object {}}
   viewBox="0 0 24 24"
   width={32}
   xmlns="http://www.w3.org/2000/svg"
@@ -210,9 +222,10 @@ exports[`Icons all icons match snapshot 12`] = `
 exports[`Icons all icons match snapshot 13`] = `
 <svg
   aria-hidden="true"
-  className="nhsuk-icon nhsuk-icon__tick "
+  className="nhsuk-icon nhsuk-icon__tick"
   fill="none"
   height={32}
+  style={Object {}}
   viewBox="0 0 24 24"
   width={32}
   xmlns="http://www.w3.org/2000/svg"

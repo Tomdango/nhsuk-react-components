@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 import { Tick, Cross } from '../icons';
 
 const Do = ({ children, className, style }) => (
@@ -18,7 +19,7 @@ const Dont = ({ children, className, style }) => (
 );
 
 const DoDontList = ({ title, type, children, className, style }) => (
-  <div className={`nhsuk-do-dont-list ${className}`} style={style}>
+  <div className={classNames('nhsuk-do-dont-list', className)} style={style}>
     <h3 className="nhsuk-do-dont-list__label">{title}</h3>
     <ul className={`nhsuk-list nhsuk-list--${type}`}>{children}</ul>
   </div>

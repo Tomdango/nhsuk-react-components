@@ -2,7 +2,7 @@
 
 exports[`Button matches the snapshot as a button 1`] = `
 <button
-  className="nhsuk-button   "
+  className="nhsuk-button"
   disabled={false}
   name=""
   onClick={[Function]}
@@ -16,7 +16,7 @@ exports[`Button matches the snapshot as a button 1`] = `
 
 exports[`Button matches the snapshot as a button 2`] = `
 <button
-  className="nhsuk-button nhsuk-button--secondary  "
+  className="nhsuk-button nhsuk-button--secondary"
   disabled={false}
   name=""
   onClick={[Function]}
@@ -30,7 +30,7 @@ exports[`Button matches the snapshot as a button 2`] = `
 
 exports[`Button matches the snapshot as a button 3`] = `
 <button
-  className="nhsuk-button  nhsuk-button--reverse "
+  className="nhsuk-button nhsuk-button--reverse"
   disabled={false}
   name=""
   onClick={[Function]}
@@ -44,7 +44,7 @@ exports[`Button matches the snapshot as a button 3`] = `
 
 exports[`Button matches the snapshot as a link 1`] = `
 <a
-  className="nhsuk-button   "
+  className="nhsuk-button"
   disabled={false}
   href="/"
   onClick={[Function]}
@@ -57,7 +57,7 @@ exports[`Button matches the snapshot as a link 1`] = `
 
 exports[`Button matches the snapshot as a link 2`] = `
 <a
-  className="nhsuk-button nhsuk-button--secondary  "
+  className="nhsuk-button nhsuk-button--secondary"
   disabled={false}
   href="/"
   onClick={[Function]}
@@ -70,7 +70,7 @@ exports[`Button matches the snapshot as a link 2`] = `
 
 exports[`Button matches the snapshot as a link 3`] = `
 <a
-  className="nhsuk-button  nhsuk-button--reverse "
+  className="nhsuk-button nhsuk-button--reverse"
   disabled={false}
   href="/"
   onClick={[Function]}

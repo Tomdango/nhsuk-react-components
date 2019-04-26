@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 import Fieldset from '../../../fieldset';
 import Label from '../../../label';
 import ErrorMessage from '../../../error-message';
@@ -12,16 +13,24 @@ const Day = ({
   _day,
   _handleInput,
   label,
+  className,
+  style,
   autoComplete,
   error
 }) => (
-  <div className="nhsuk-date-input__item">
+  <div
+    className={classNames('nhsuk-date-input__item', className)}
+    style={style}
+  >
     <div className="nhsuk-form-group">
       <Label htmlFor={`${_name}-day`}>{label}</Label>
       <input
-        className={`nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 ${
-          error ? 'nhsuk-input--error' : ''
-        }`}
+        className={classNames(
+          'nhsuk-input',
+          'nhsuk-date-input__input',
+          'nhsuk-input--width-2',
+          { 'nhsuk-input--error': error }
+        )}
         id={`${_name}-day`}
         name={`${_name}-day`}
         aria-label={`${_name}-day input`}
@@ -37,6 +46,8 @@ const Day = ({
 );
 
 Day.propTypes = {
+  className: PropTypes.string,
+  style: stylePropType,
   _name: PropTypes.string,
   required: PropTypes.bool,
   _day: PropTypes.string,
@@ -47,6 +58,8 @@ Day.propTypes = {
 };
 
 Day.defaultProps = {
+  className: '',
+  style: {},
   required: false,
   label: 'Day',
   autoComplete: '',
@@ -64,18 +77,26 @@ const Month = ({
   required,
   label,
   autoComplete,
+  className,
+  style,
   error
 }) => (
-  <div className="nhsuk-date-input__item">
+  <div
+    className={classNames('nhsuk-date-input__item', className)}
+    style={style}
+  >
     <div className="nhsuk-form-group">
       <Label htmlFor={`${_name}-day`}>{label}</Label>
       <input
         ref={ref => {
           _registerComponent('month', ref);
         }}
-        className={`nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 ${
-          error ? 'nhsuk-input--error' : ''
-        }`}
+        className={classNames(
+          'nhsuk-input',
+          'nhsuk-date-input__input',
+          'nhsuk-input--width-2',
+          { 'nhsuk-input--error': error }
+        )}
         id={`${_name}-month`}
         name={`${_name}-month`}
         aria-label={`${_name}-month input`}
@@ -98,7 +119,9 @@ Month.propTypes = {
   label: PropTypes.string,
   required: PropTypes.bool,
   autoComplete: PropTypes.string,
-  error: PropTypes.bool
+  error: PropTypes.bool,
+  className: PropTypes.string,
+  style: stylePropType
 };
 
 Month.defaultProps = {
@@ -109,7 +132,9 @@ Month.defaultProps = {
   _registerComponent: () => {},
   _name: '',
   _month: '',
-  _handleInput: () => {}
+  _handleInput: () => {},
+  className: '',
+  style: {}
 };
 
 const Year = ({
@@ -120,18 +145,26 @@ const Year = ({
   required,
   label,
   autoComplete,
-  error
+  error,
+  className,
+  style
 }) => (
-  <div className="nhsuk-date-input__item">
+  <div
+    className={classNames('nhsuk-date-input__item', className)}
+    style={style}
+  >
     <div className="nhsuk-form-group">
       <Label htmlFor={`${_name}-day`}>{label}</Label>
       <input
         ref={ref => {
           _registerComponent('year', ref);
         }}
-        className={`nhsuk-input nhsuk-date-input__input nhsuk-input--width-4 ${
-          error ? 'nhsuk-input--error' : ''
-        }`}
+        className={classNames(
+          'nhsuk-input',
+          'nhsuk-date-input__input',
+          'nhsuk-input--width-4',
+          { 'nhsuk-input--error': error }
+        )}
         id={`${_name}-year`}
         name={`${_name}-year`}
         autoComplete={autoComplete}
@@ -154,7 +187,9 @@ Year.propTypes = {
   required: PropTypes.bool,
   label: PropTypes.string,
   autoComplete: PropTypes.string,
-  error: PropTypes.bool
+  error: PropTypes.bool,
+  className: PropTypes.string,
+  style: stylePropType
 };
 
 Year.defaultProps = {
@@ -165,7 +200,9 @@ Year.defaultProps = {
   _registerComponent: () => {},
   _name: '',
   _year: '',
-  _handleInput: () => {}
+  _handleInput: () => {},
+  className: '',
+  style: {}
 };
 
 const sanitiseInput = (type, value) => {

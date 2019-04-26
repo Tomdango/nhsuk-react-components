@@ -1,13 +1,18 @@
 import React from 'react';
 import { oneOf, node, string } from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 
 const Body = ({ size, children, className, style }) => {
   return (
     <p
-      className={`nhsuk-body${
-        size && size !== 'm' ? `-${size}` : ''
-      } ${className}`}
+      className={classNames(
+        {
+          [`nhsuk-body-${size}`]: size && size !== 'm',
+          'nhsuk-body': size === 'm'
+        },
+        className
+      )}
       style={style}
     >
       {children}

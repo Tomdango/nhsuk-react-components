@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import stylePropType from 'react-style-proptype';
 
 class PromoGroup extends React.Component {
   constructor(props) {
@@ -28,13 +30,26 @@ class PromoGroup extends React.Component {
     const { children } = this.props;
     const columnSize = this.getColumnSize();
     return React.Children.map(children, child => (
-      <div className={`${columnSize} nhsuk-promo-group__item`}>{child}</div>
+      <div
+        className={classNames(
+          {
+            [columnSize]: columnSize !== ''
+          },
+          'nhsuk-promo-group__item'
+        )}
+      >
+        {child}
+      </div>
     ));
   }
 
   render() {
+    const { className, style } = this.props;
     return (
-      <div className="nhsuk-grid-row nhsuk-promo-group">
+      <div
+        className={classNames('nhsuk-grid-row nhsuk-promo-group', className)}
+        style={style}
+      >
         {this.wrapChildren()}
       </div>
     );
@@ -42,7 +57,14 @@ class PromoGroup extends React.Component {
 }
 
 PromoGroup.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  style: stylePropType
+};
+
+PromoGroup.defaultProps = {
+  className: '',
+  style: {}
 };
 
 export default PromoGroup;

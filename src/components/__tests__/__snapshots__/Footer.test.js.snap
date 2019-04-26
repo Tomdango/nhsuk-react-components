@@ -2,7 +2,7 @@
 
 exports[`Footer matches snapshot 1`] = `
 <li
-  className="nhsuk-footer__list-item "
+  className="nhsuk-footer__list-item"
   style={Object {}}
 >
   <a
@@ -22,7 +22,7 @@ exports[`Footer matches snapshot 2`] = `
   role="contentinfo"
 >
   <div
-    className="nhsuk-footer "
+    className="nhsuk-footer"
     id="nhsuk-footer"
     style={Object {}}
   >
@@ -57,6 +57,7 @@ exports[`Footer matches snapshot 2`] = `
 exports[`Footer renders copyright notice 1`] = `
 <p
   className="nhsuk-footer__copyright"
+  style={Object {}}
 >
   MIT License
 </p>

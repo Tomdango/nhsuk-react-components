@@ -8,7 +8,7 @@ exports[`SkipLink matches snapshot 1`] = `
   testHeadingElement={false}
 >
   <a
-    className="nhsuk-skip-link "
+    className="nhsuk-skip-link"
     href="#maincontent"
     onClick={[Function]}
     style={Object {}}

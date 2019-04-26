@@ -1,29 +1,50 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import stylePropType from 'react-style-proptype';
 
-const CareCard = props => {
-  const { type, heading, children, disableHiddenText } = props;
-  let hiddenText;
-  switch (type) {
-    case 'non-urgent':
-      hiddenText = 'Non-urgent advice: ';
-      break;
-    case 'urgent':
-      hiddenText = 'Urgent advice: ';
-      break;
-    case 'immediate':
-      hiddenText = 'Immediate action required: ';
-      break;
-    default:
-      hiddenText = '';
+const CareCard = ({
+  type,
+  heading,
+  children,
+  style,
+  disableHiddenText,
+  className,
+  hiddenText
+}) => {
+  let componentHiddenText = hiddenText;
+  if (componentHiddenText === false) {
+    switch (type) {
+      case 'non-urgent':
+        componentHiddenText = 'Non-urgent advice: ';
+        break;
+      case 'urgent':
+        componentHiddenText = 'Urgent advice: ';
+        break;
+      case 'immediate':
+        componentHiddenText = 'Immediate action required: ';
+        break;
+      default:
+        componentHiddenText = '';
+    }
   }
+
   return (
-    <div className={`nhsuk-care-card nhsuk-care-card--${type}`}>
+    <div
+      className={classNames(
+        'nhsuk-care-card',
+        `nhsuk-care-card--${type}`,
+        className
+      )}
+      style={style}
+    >
       <div className="nhsuk-care-card__heading-container">
         <h3 className="nhsuk-care-card__heading">
           <span>
             {disableHiddenText ? null : (
-              <span className="nhsuk-u-visually-hidden">{hiddenText}</span>
+              <span className="nhsuk-u-visually-hidden">
+                {componentHiddenText}
+              </span>
             )}
             {heading}
           </span>
@@ -39,11 +60,17 @@ CareCard.propTypes = {
   type: PropTypes.oneOf(['non-urgent', 'urgent', 'immediate']).isRequired,
   heading: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
-  disableHiddenText: PropTypes.bool
+  disableHiddenText: PropTypes.bool,
+  hiddenText: PropTypes.oneOf([PropTypes.boolean, PropTypes.string]),
+  className: PropTypes.string,
+  style: stylePropType
 };
 
 CareCard.defaultProps = {
-  disableHiddenText: false
+  disableHiddenText: false,
+  hiddenText: false,
+  className: '',
+  style: {}
 };
 
 export default CareCard;

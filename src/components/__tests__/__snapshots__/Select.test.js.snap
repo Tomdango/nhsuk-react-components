@@ -9,7 +9,7 @@ exports[`Select matches snapshot 1`] = `
   title=""
 >
   <select
-    className="nhsuk-select "
+    className="nhsuk-select"
     onChange={[Function]}
     value=""
   />

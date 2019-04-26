@@ -1,10 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 
 const Container = ({ fluid, children, className, style }) => (
   <div
-    className={`nhsuk-width-container${fluid ? '-fluid' : ''} ${className}`}
+    className={classNames(
+      { 'nhsuk-width-container': !fluid },
+      { 'nhsuk-width-container-fluid': fluid },
+      className
+    )}
     style={style}
   >
     {children}

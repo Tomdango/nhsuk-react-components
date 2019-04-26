@@ -2,12 +2,16 @@
 
 exports[`CareCard matches snapshot 1`] = `
 <CareCard
+  className=""
   disableHiddenText={false}
   heading="TestHeading"
+  hiddenText={false}
+  style={Object {}}
   type="non-urgent"
 >
   <div
     className="nhsuk-care-card nhsuk-care-card--non-urgent"
+    style={Object {}}
   >
     <div
       className="nhsuk-care-card__heading-container"
@@ -40,12 +44,16 @@ exports[`CareCard matches snapshot 1`] = `
 
 exports[`CareCard matches snapshot 2`] = `
 <CareCard
+  className=""
   disableHiddenText={false}
   heading="TestHeading"
+  hiddenText={false}
+  style={Object {}}
   type="urgent"
 >
   <div
     className="nhsuk-care-card nhsuk-care-card--urgent"
+    style={Object {}}
   >
     <div
       className="nhsuk-care-card__heading-container"
@@ -78,12 +86,16 @@ exports[`CareCard matches snapshot 2`] = `
 
 exports[`CareCard matches snapshot 3`] = `
 <CareCard
+  className=""
   disableHiddenText={false}
   heading="TestHeading"
+  hiddenText={false}
+  style={Object {}}
   type="immediate"
 >
   <div
     className="nhsuk-care-card nhsuk-care-card--immediate"
+    style={Object {}}
   >
     <div
       className="nhsuk-care-card__heading-container"
@@ -116,12 +128,16 @@ exports[`CareCard matches snapshot 3`] = `
 
 exports[`CareCard matches snapshot 4`] = `
 <CareCard
+  className=""
   disableHiddenText={false}
   heading="TestHeading"
+  hiddenText={false}
+  style={Object {}}
   type="incorrect"
 >
   <div
     className="nhsuk-care-card nhsuk-care-card--incorrect"
+    style={Object {}}
   >
     <div
       className="nhsuk-care-card__heading-container"
@@ -152,12 +168,16 @@ exports[`CareCard matches snapshot 4`] = `
 
 exports[`CareCard matches snapshot 5`] = `
 <CareCard
+  className=""
   disableHiddenText={true}
   heading="TestHeading"
+  hiddenText={false}
+  style={Object {}}
   type="immediate"
 >
   <div
     className="nhsuk-care-card nhsuk-care-card--immediate"
+    style={Object {}}
   >
     <div
       className="nhsuk-care-card__heading-container"
@@ -167,6 +187,46 @@ exports[`CareCard matches snapshot 5`] = `
       >
         <span>
           TestHeading
+        </span>
+      </h3>
+      <span
+        aria-hidden="true"
+        className="nhsuk-care-card__arrow"
+      />
+    </div>
+    <div
+      className="nhsuk-care-card__content"
+    >
+      Content
+    </div>
+  </div>
+</CareCard>
+`;
+
+exports[`CareCard matches snapshot 6`] = `
+<CareCard
+  className=""
+  disableHiddenText={false}
+  hiddenText="hello"
+  style={Object {}}
+  type="immediate"
+>
+  <div
+    className="nhsuk-care-card nhsuk-care-card--immediate"
+    style={Object {}}
+  >
+    <div
+      className="nhsuk-care-card__heading-container"
+    >
+      <h3
+        className="nhsuk-care-card__heading"
+      >
+        <span>
+          <span
+            className="nhsuk-u-visually-hidden"
+          >
+            hello
+          </span>
         </span>
       </h3>
       <span

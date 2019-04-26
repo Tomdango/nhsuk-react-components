@@ -1,22 +1,27 @@
 import React from 'react';
 import { number, string } from 'prop-types';
+import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 
 const iconPropTypes = {
   height: number,
   width: number,
-  className: string
+  className: string,
+  style: stylePropType
 };
 
 const iconDefaultProps = {
   height: 32,
   width: 32,
-  className: ''
+  className: '',
+  style: {}
 };
 
-export const ArrowLeft = ({ className, height, width }) => (
+export const ArrowLeft = ({ className, style, height, width }) => (
   <svg
-    className={`nhsuk-icon nhsuk-icon__arrow-left ${className}`}
+    className={classNames('nhsuk-icon', 'nhsuk-icon__arrow-left', className)}
     xmlns="http://www.w3.org/2000/svg"
+    style={style}
     viewBox="0 0 24 24"
     aria-hidden="true"
     height={height}
@@ -29,10 +34,11 @@ export const ArrowLeft = ({ className, height, width }) => (
 ArrowLeft.propTypes = iconPropTypes;
 ArrowLeft.defaultProps = iconDefaultProps;
 
-export const ArrowRight = ({ className, height, width }) => (
+export const ArrowRight = ({ className, style, height, width }) => (
   <svg
-    className={`nhsuk-icon nhsuk-icon__arrow-right ${className}`}
+    className={classNames('nhsuk-icon', 'nhsuk-icon__arrow-right', className)}
     xmlns="http://www.w3.org/2000/svg"
+    style={style}
     viewBox="0 0 24 24"
     aria-hidden="true"
     height={height}
@@ -45,10 +51,15 @@ export const ArrowRight = ({ className, height, width }) => (
 ArrowRight.propTypes = iconPropTypes;
 ArrowRight.defaultProps = iconDefaultProps;
 
-export const ArrowRightCircle = ({ className, height, width }) => (
+export const ArrowRightCircle = ({ className, style, height, width }) => (
   <svg
-    className={`nhsuk-icon nhsuk-icon__arrow-right-circle ${className}`}
+    className={classNames(
+      'nhsuk-icon',
+      'nhsuk-icon__arrow-right-circle',
+      className
+    )}
     xmlns="http://www.w3.org/2000/svg"
+    style={style}
     viewBox="0 0 24 24"
     aria-hidden="true"
     height={height}
@@ -62,10 +73,11 @@ export const ArrowRightCircle = ({ className, height, width }) => (
 ArrowRightCircle.propTypes = iconPropTypes;
 ArrowRightCircle.defaultProps = iconDefaultProps;
 
-export const ChevronLeft = ({ className, height, width }) => (
+export const ChevronLeft = ({ className, style, height, width }) => (
   <svg
-    className={`nhsuk-icon nhsuk-icon__chevron-left ${className}`}
+    className={classNames('nhsuk-icon', 'nhsuk-icon__chevron-left', className)}
     xmlns="http://www.w3.org/2000/svg"
+    style={style}
     viewBox="0 0 24 24"
     aria-hidden="true"
     height={height}
@@ -78,10 +90,11 @@ export const ChevronLeft = ({ className, height, width }) => (
 ChevronLeft.propTypes = iconPropTypes;
 ChevronLeft.defaultProps = iconDefaultProps;
 
-export const ChevronRight = ({ className, height, width }) => (
+export const ChevronRight = ({ className, style, height, width }) => (
   <svg
-    className={`nhsuk-icon nhsuk-icon__chevron-right ${className}`}
+    className={classNames('nhsuk-icon', 'nhsuk-icon__chevron-right', className)}
     xmlns="http://www.w3.org/2000/svg"
+    style={style}
     viewBox="0 0 24 24"
     aria-hidden="true"
     height={height}
@@ -94,10 +107,11 @@ export const ChevronRight = ({ className, height, width }) => (
 ChevronRight.propTypes = iconPropTypes;
 ChevronRight.defaultProps = iconDefaultProps;
 
-export const Close = ({ className, height, width }) => (
+export const Close = ({ className, style, height, width }) => (
   <svg
-    className={`nhsuk-icon nhsuk-icon__close ${className}`}
+    className={classNames('nhsuk-icon', 'nhsuk-icon__close', className)}
     xmlns="http://www.w3.org/2000/svg"
+    style={style}
     viewBox="0 0 24 24"
     aria-hidden="true"
     focusable="false"
@@ -111,10 +125,11 @@ export const Close = ({ className, height, width }) => (
 Close.propTypes = iconPropTypes;
 Close.defaultProps = iconDefaultProps;
 
-export const Cross = ({ className, height, width }) => (
+export const Cross = ({ className, style, height, width }) => (
   <svg
-    className={`nhsuk-icon nhsuk-icon__cross ${className}`}
+    className={classNames('nhsuk-icon', 'nhsuk-icon__cross', className)}
     xmlns="http://www.w3.org/2000/svg"
+    style={style}
     viewBox="0 0 24 24"
     aria-hidden="true"
     height={height}
@@ -128,10 +143,11 @@ export const Cross = ({ className, height, width }) => (
 Cross.propTypes = iconPropTypes;
 Cross.defaultProps = iconDefaultProps;
 
-export const SmallEmdash = ({ className, height, width }) => (
+export const SmallEmdash = ({ className, style, height, width }) => (
   <svg
-    className={`nhsuk-icon nhsuk-icon__emdash ${className}`}
+    className={classNames('nhsuk-icon', 'nhsuk-icon__emdash', className)}
     xmlns="http://www.w3.org/2000/svg"
+    style={style}
     aria-hidden="true"
     height={height}
     width={width}
@@ -144,13 +160,15 @@ SmallEmdash.propTypes = iconPropTypes;
 SmallEmdash.defaultProps = {
   width: 16,
   height: 1,
-  className: ''
+  className: '',
+  style: {}
 };
 
-export const Emdash = ({ className, height, width }) => (
+export const Emdash = ({ className, style, height, width }) => (
   <svg
-    className={`nhsuk-icon nhsuk-icon__emdash ${className}`}
+    className={classNames('nhsuk-icon', 'nhsuk-icon__emdash', className)}
     xmlns="http://www.w3.org/2000/svg"
+    style={style}
     aria-hidden="true"
     height={height}
     width={width}
@@ -163,13 +181,15 @@ Emdash.propTypes = iconPropTypes;
 Emdash.defaultProps = {
   width: 19,
   height: 1,
-  className: ''
+  className: '',
+  style: {}
 };
 
-export const Minus = ({ className, height, width }) => (
+export const Minus = ({ className, style, height, width }) => (
   <svg
-    className={`nhsuk-icon nhsuk-icon__minus ${className}`}
+    className={classNames('nhsuk-icon', 'nhsuk-icon__minus', className)}
     xmlns="http://www.w3.org/2000/svg"
+    style={style}
     viewBox="0 0 24 24"
     aria-hidden="true"
     height={height}
@@ -190,10 +210,11 @@ export const Minus = ({ className, height, width }) => (
 Minus.propTypes = iconPropTypes;
 Minus.defaultProps = iconDefaultProps;
 
-export const Plus = ({ className, height, width }) => (
+export const Plus = ({ className, style, height, width }) => (
   <svg
-    className={`nhsuk-icon nhsuk-icon__plus ${className}`}
+    className={classNames('nhsuk-icon', 'nhsuk-icon__plus', className)}
     xmlns="http://www.w3.org/2000/svg"
+    style={style}
     viewBox="0 0 24 24"
     aria-hidden="true"
     height={height}
@@ -214,10 +235,11 @@ export const Plus = ({ className, height, width }) => (
 Plus.propTypes = iconPropTypes;
 Plus.defaultProps = iconDefaultProps;
 
-export const Search = ({ className, height, width }) => (
+export const Search = ({ className, style, height, width }) => (
   <svg
-    className={`nhsuk-icon nhsuk-icon__search ${className}`}
+    className={classNames('nhsuk-icon', 'nhsuk-icon__search', className)}
     xmlns="http://www.w3.org/2000/svg"
+    style={style}
     viewBox="0 0 24 24"
     aria-hidden="true"
     focusable="false"
@@ -231,10 +253,11 @@ export const Search = ({ className, height, width }) => (
 Search.propTypes = iconPropTypes;
 Search.defaultProps = iconDefaultProps;
 
-export const Tick = ({ className, height, width }) => (
+export const Tick = ({ className, style, height, width }) => (
   <svg
-    className={`nhsuk-icon nhsuk-icon__tick ${className}`}
+    className={classNames('nhsuk-icon', 'nhsuk-icon__tick', className)}
     xmlns="http://www.w3.org/2000/svg"
+    style={style}
     viewBox="0 0 24 24"
     aria-hidden="true"
     fill="none"

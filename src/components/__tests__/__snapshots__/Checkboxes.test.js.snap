@@ -3,6 +3,7 @@
 exports[`Checkboxes box matches snapshot 1`] = `
 <div
   className="nhsuk-checkboxes__item"
+  style={Object {}}
 >
   <input
     className="nhsuk-checkboxes__input"
@@ -36,7 +37,7 @@ exports[`Checkboxes returns other children normally 1`] = `
   valueCallback={[Function]}
 >
   <div
-    className="nhsuk-checkboxes "
+    className="nhsuk-checkboxes"
     style={Object {}}
   >
     <Fieldset
@@ -48,11 +49,11 @@ exports[`Checkboxes returns other children normally 1`] = `
     >
       <fieldset
         aria-describedby=""
-        className="nhsuk-fieldset "
+        className="nhsuk-fieldset"
         style={Object {}}
       >
         <legend
-          className="nhsuk-fieldset__legend "
+          className="nhsuk-fieldset__legend"
         />
         <p
           key=".0"
@@ -79,7 +80,7 @@ exports[`Checkboxes wrapper matches snapshot 1`] = `
   valueCallback={[Function]}
 >
   <div
-    className="nhsuk-checkboxes "
+    className="nhsuk-checkboxes"
     style={Object {}}
   >
     <Fieldset
@@ -91,23 +92,26 @@ exports[`Checkboxes wrapper matches snapshot 1`] = `
     >
       <fieldset
         aria-describedby=""
-        className="nhsuk-fieldset "
+        className="nhsuk-fieldset"
         style={Object {}}
       >
         <legend
-          className="nhsuk-fieldset__legend "
+          className="nhsuk-fieldset__legend"
         />
         <Box
           _id="name-1"
           _onClick={[Function]}
+          className=""
           disabled={false}
           hint=""
           key=".0"
           name="name"
+          style={Object {}}
           value="box"
         >
           <div
             className="nhsuk-checkboxes__item"
+            style={Object {}}
           >
             <input
               className="nhsuk-checkboxes__input"

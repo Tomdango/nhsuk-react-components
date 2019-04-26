@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 import Fieldset from '../../../fieldset';
 import Hint from '../../../hint';
 import ErrorMessage from '../../../error-message';
@@ -53,9 +54,11 @@ class Input extends React.Component {
         {hint ? <Hint>{hint}</Hint> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
         <input
-          className={`nhsuk-input ${error ? 'nhsuk-input--error' : ''} ${
-            width ? `nhsuk-input--width-${width}` : ''
-          }`}
+          className={classNames(
+            'nhsuk-input',
+            { 'nhsuk-input--error': error },
+            { [`nhsuk-input--width-${width}`]: width }
+          )}
           id={id || name}
           name={`${name}-hint`}
           type="text"

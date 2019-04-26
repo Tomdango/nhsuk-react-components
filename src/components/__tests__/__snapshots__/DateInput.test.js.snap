@@ -25,11 +25,11 @@ exports[`DateInput Wrapper matches snapshot 1`] = `
   >
     <fieldset
       aria-describedby=""
-      className="nhsuk-fieldset "
+      className="nhsuk-fieldset"
       style={Object {}}
     >
       <legend
-        className="nhsuk-fieldset__legend "
+        className="nhsuk-fieldset__legend"
       />
       <div
         className="nhsuk-date-input"
@@ -40,22 +40,31 @@ exports[`DateInput Wrapper matches snapshot 1`] = `
           _handleInput={[Function]}
           _name="dateInput"
           autoComplete=""
+          className=""
           error={false}
           key=".0"
           label="Day"
           required={false}
+          style={Object {}}
         >
           <div
             className="nhsuk-date-input__item"
+            style={Object {}}
           >
             <div
               className="nhsuk-form-group"
             >
               <Label
+                className=""
                 htmlFor="dateInput-day"
+                htmlForId=""
+                style={Object {}}
+                type=""
               >
                 <label
-                  className="nhsuk-label   "
+                  className="nhsuk-label"
+                  htmlFor=""
+                  style={Object {}}
                 >
                   Day
                 </label>
@@ -63,7 +72,7 @@ exports[`DateInput Wrapper matches snapshot 1`] = `
               <input
                 aria-label="dateInput-day input"
                 autoComplete=""
-                className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 "
+                className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
                 id="dateInput-day"
                 name="dateInput-day"
                 onChange={[Function]}
@@ -81,22 +90,31 @@ exports[`DateInput Wrapper matches snapshot 1`] = `
           _name="dateInput"
           _registerComponent={[Function]}
           autoComplete=""
+          className=""
           error={false}
           key=".1"
           label="Month"
           required={false}
+          style={Object {}}
         >
           <div
             className="nhsuk-date-input__item"
+            style={Object {}}
           >
             <div
               className="nhsuk-form-group"
             >
               <Label
+                className=""
                 htmlFor="dateInput-day"
+                htmlForId=""
+                style={Object {}}
+                type=""
               >
                 <label
-                  className="nhsuk-label   "
+                  className="nhsuk-label"
+                  htmlFor=""
+                  style={Object {}}
                 >
                   Month
                 </label>
@@ -104,7 +122,7 @@ exports[`DateInput Wrapper matches snapshot 1`] = `
               <input
                 aria-label="dateInput-month input"
                 autoComplete=""
-                className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 "
+                className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
                 id="dateInput-month"
                 name="dateInput-month"
                 onChange={[Function]}
@@ -122,22 +140,31 @@ exports[`DateInput Wrapper matches snapshot 1`] = `
           _registerComponent={[Function]}
           _year=""
           autoComplete=""
+          className=""
           error={false}
           key=".2"
           label="Year"
           required={false}
+          style={Object {}}
         >
           <div
             className="nhsuk-date-input__item"
+            style={Object {}}
           >
             <div
               className="nhsuk-form-group"
             >
               <Label
+                className=""
                 htmlFor="dateInput-day"
+                htmlForId=""
+                style={Object {}}
+                type=""
               >
                 <label
-                  className="nhsuk-label   "
+                  className="nhsuk-label"
+                  htmlFor=""
+                  style={Object {}}
                 >
                   Year
                 </label>
@@ -145,7 +172,7 @@ exports[`DateInput Wrapper matches snapshot 1`] = `
               <input
                 aria-label="dateInput-year input"
                 autoComplete=""
-                className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4 "
+                className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
                 id="dateInput-year"
                 name="dateInput-year"
                 onChange={[Function]}
@@ -188,11 +215,11 @@ exports[`DateInput Wrapper renders without individual components 1`] = `
   >
     <fieldset
       aria-describedby=""
-      className="nhsuk-fieldset "
+      className="nhsuk-fieldset"
       style={Object {}}
     >
       <legend
-        className="nhsuk-fieldset__legend "
+        className="nhsuk-fieldset__legend"
       />
       <div
         className="nhsuk-date-input"
@@ -204,21 +231,30 @@ exports[`DateInput Wrapper renders without individual components 1`] = `
             _handleInput={[Function]}
             _name="dateInput"
             autoComplete=""
+            className=""
             error={false}
             label="Day"
             required={false}
+            style={Object {}}
           >
             <div
               className="nhsuk-date-input__item"
+              style={Object {}}
             >
               <div
                 className="nhsuk-form-group"
               >
                 <Label
+                  className=""
                   htmlFor="dateInput-day"
+                  htmlForId=""
+                  style={Object {}}
+                  type=""
                 >
                   <label
-                    className="nhsuk-label   "
+                    className="nhsuk-label"
+                    htmlFor=""
+                    style={Object {}}
                   >
                     Day
                   </label>
@@ -226,7 +262,7 @@ exports[`DateInput Wrapper renders without individual components 1`] = `
                 <input
                   aria-label="dateInput-day input"
                   autoComplete=""
-                  className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 "
+                  className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
                   id="dateInput-day"
                   name="dateInput-day"
                   onChange={[Function]}
@@ -244,21 +280,30 @@ exports[`DateInput Wrapper renders without individual components 1`] = `
             _name="dateInput"
             _registerComponent={[Function]}
             autoComplete=""
+            className=""
             error={false}
             label="Month"
             required={false}
+            style={Object {}}
           >
             <div
               className="nhsuk-date-input__item"
+              style={Object {}}
             >
               <div
                 className="nhsuk-form-group"
               >
                 <Label
+                  className=""
                   htmlFor="dateInput-day"
+                  htmlForId=""
+                  style={Object {}}
+                  type=""
                 >
                   <label
-                    className="nhsuk-label   "
+                    className="nhsuk-label"
+                    htmlFor=""
+                    style={Object {}}
                   >
                     Month
                   </label>
@@ -266,7 +311,7 @@ exports[`DateInput Wrapper renders without individual components 1`] = `
                 <input
                   aria-label="dateInput-month input"
                   autoComplete=""
-                  className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 "
+                  className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
                   id="dateInput-month"
                   name="dateInput-month"
                   onChange={[Function]}
@@ -284,21 +329,30 @@ exports[`DateInput Wrapper renders without individual components 1`] = `
             _registerComponent={[Function]}
             _year=""
             autoComplete=""
+            className=""
             error={false}
             label="Year"
             required={false}
+            style={Object {}}
           >
             <div
               className="nhsuk-date-input__item"
+              style={Object {}}
             >
               <div
                 className="nhsuk-form-group"
               >
                 <Label
+                  className=""
                   htmlFor="dateInput-day"
+                  htmlForId=""
+                  style={Object {}}
+                  type=""
                 >
                   <label
-                    className="nhsuk-label   "
+                    className="nhsuk-label"
+                    htmlFor=""
+                    style={Object {}}
                   >
                     Year
                   </label>
@@ -306,7 +360,7 @@ exports[`DateInput Wrapper renders without individual components 1`] = `
                 <input
                   aria-label="dateInput-year input"
                   autoComplete=""
-                  className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4 "
+                  className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
                   id="dateInput-year"
                   name="dateInput-year"
                   onChange={[Function]}

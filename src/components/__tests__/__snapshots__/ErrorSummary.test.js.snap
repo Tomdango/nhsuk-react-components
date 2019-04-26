@@ -12,7 +12,7 @@ exports[`ErrorSummary all matches snapshot 1`] = `
 >
   <div
     aria-labelledby="error-summary-title"
-    className="nhsuk-error-summary "
+    className="nhsuk-error-summary"
     data-module="error-summary"
     role="alert"
     style={Object {}}
@@ -85,7 +85,7 @@ exports[`ErrorSummary doesn't render description or title when not provided 1`] 
 >
   <div
     aria-labelledby="error-summary-title"
-    className="nhsuk-error-summary "
+    className="nhsuk-error-summary"
     data-module="error-summary"
     role="alert"
     style={Object {}}

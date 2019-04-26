@@ -80,6 +80,7 @@
     "webpack": "^4.29.6"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "nhsuk-frontend": "^2.1.0"
   },
   "files": [

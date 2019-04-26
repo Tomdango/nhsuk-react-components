@@ -18,7 +18,7 @@ describe('DateInput', () => {
       expect(
         wrapper.containsMatchingElement(
           <input
-            className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 "
+            className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
             id="name-day"
             name="name-day"
             aria-label="name-day input"
@@ -64,7 +64,7 @@ describe('DateInput', () => {
       expect(
         wrapper.containsMatchingElement(
           <input
-            className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 "
+            className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
             id="name-month"
             name="name-month"
             aria-label="name-month input"
@@ -118,7 +118,7 @@ describe('DateInput', () => {
           <input
             aria-label="name-year input"
             autoComplete=""
-            className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4 "
+            className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
             id="name-year"
             name="name-year"
             pattern="[0-9]*"

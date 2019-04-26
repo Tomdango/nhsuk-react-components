@@ -2,7 +2,7 @@
 
 exports[`ActionLink matches the snapshot 1`] = `
 <div
-  className="nhsuk-action-link "
+  className="nhsuk-action-link"
   style={Object {}}
 >
   <a
@@ -15,6 +15,7 @@ exports[`ActionLink matches the snapshot 1`] = `
     <ArrowRightCircle
       className=""
       height={32}
+      style={Object {}}
       width={32}
     />
     <span

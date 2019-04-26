@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 import TableHeader from './components/table-header';
 import TableBody from './components/table-body';
 import TableRow from './components/table-row';
 
 const TablePanel = ({ heading, children, className, style }) => (
   <div
-    className={`nhsuk-table__panel-with-heading-tab ${className}`}
+    className={classNames('nhsuk-table__panel-with-heading-tab', className)}
     style={style}
   >
     {heading ? <h3 className="nhsuk-table__heading-tab">{heading}</h3> : null}
@@ -30,7 +31,7 @@ TablePanel.defaultProps = {
 
 const Table = ({ caption, children, className, style }) => (
   <div className="nhsuk-table-responsive">
-    <table className={`nhsuk-table ${className}`} style={style}>
+    <table className={classNames('nhsuk-table', className)} style={style}>
       {caption ? (
         <caption className="nhsuk-table__caption">{caption}</caption>
       ) : null}

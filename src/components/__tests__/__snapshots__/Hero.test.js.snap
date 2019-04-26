@@ -3,6 +3,7 @@
 exports[`Hero Content matches snapshot and element 1`] = `
 <p
   className="nhsuk-body-l nhsuk-u-margin-bottom-0"
+  style={Object {}}
 >
   Content
 </p>
@@ -11,6 +12,7 @@ exports[`Hero Content matches snapshot and element 1`] = `
 exports[`Hero Heading matches snapshot and element 1`] = `
 <h1
   className="nhsuk-u-margin-bottom-3"
+  style={Object {}}
 >
   Heading
 </h1>
@@ -18,7 +20,7 @@ exports[`Hero Heading matches snapshot and element 1`] = `
 
 exports[`Hero matches snapshot and element 1`] = `
 <section
-  className="nhsuk-hero  "
+  className="nhsuk-hero"
   style={
     Object {
       "backgroundImage": "none",
@@ -29,7 +31,7 @@ exports[`Hero matches snapshot and element 1`] = `
 
 exports[`Hero matches snapshot and element as image 1`] = `
 <section
-  className="nhsuk-hero nhsuk-hero--image "
+  className="nhsuk-hero nhsuk-hero--image"
   style={
     Object {
       "backgroundImage": "url('image')",
@@ -40,7 +42,9 @@ exports[`Hero matches snapshot and element as image 1`] = `
 
 exports[`Hero matches snapshot and element as image with children 1`] = `
 <Hero
+  className=""
   imageURL="image"
+  style={Object {}}
 >
   <section
     className="nhsuk-hero nhsuk-hero--image nhsuk-hero--image-description"
@@ -54,7 +58,7 @@ exports[`Hero matches snapshot and element as image with children 1`] = `
       className="nhsuk-hero__overlay"
     >
       <div
-        className="nhsuk-width-container "
+        className="nhsuk-width-container nhsuk-hero--border"
       >
         <div
           className="nhsuk-grid-row"
@@ -65,16 +69,24 @@ exports[`Hero matches snapshot and element as image with children 1`] = `
             <div
               className="nhsuk-hero-content"
             >
-              <Heading>
+              <Heading
+                className=""
+                style={Object {}}
+              >
                 <h1
                   className="nhsuk-u-margin-bottom-3"
+                  style={Object {}}
                 >
                   Heading
                 </h1>
               </Heading>
-              <Content>
+              <Content
+                className=""
+                style={Object {}}
+              >
                 <p
                   className="nhsuk-body-l nhsuk-u-margin-bottom-0"
+                  style={Object {}}
                 >
                   Content
                 </p>
@@ -94,10 +106,12 @@ exports[`Hero matches snapshot and element as image with children 1`] = `
 
 exports[`Hero matches snapshot and element with children 1`] = `
 <Hero
+  className=""
   imageURL=""
+  style={Object {}}
 >
   <section
-    className="nhsuk-hero  "
+    className="nhsuk-hero"
     style={
       Object {
         "backgroundImage": "none",
@@ -108,7 +122,7 @@ exports[`Hero matches snapshot and element with children 1`] = `
       className="nhsuk-hero__overlay"
     >
       <div
-        className="nhsuk-width-container nhsuk-hero--border"
+        className="nhsuk-width-container"
       >
         <div
           className="nhsuk-grid-row"
@@ -119,16 +133,24 @@ exports[`Hero matches snapshot and element with children 1`] = `
             <div
               className="nhsuk-hero-content"
             >
-              <Heading>
+              <Heading
+                className=""
+                style={Object {}}
+              >
                 <h1
                   className="nhsuk-u-margin-bottom-3"
+                  style={Object {}}
                 >
                   Heading
                 </h1>
               </Heading>
-              <Content>
+              <Content
+                className=""
+                style={Object {}}
+              >
                 <p
                   className="nhsuk-body-l nhsuk-u-margin-bottom-0"
+                  style={Object {}}
                 >
                   Content
                 </p>

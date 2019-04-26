@@ -2,7 +2,7 @@
 
 exports[`BackLink matches snapshot 1`] = `
 <div
-  className="nhsuk-back-link "
+  className="nhsuk-back-link"
   style={Object {}}
 >
   <a
@@ -13,6 +13,7 @@ exports[`BackLink matches snapshot 1`] = `
     <ChevronLeft
       className=""
       height={32}
+      style={Object {}}
       width={32}
     />
   </a>

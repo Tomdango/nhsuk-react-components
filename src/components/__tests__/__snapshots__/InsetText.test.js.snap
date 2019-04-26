@@ -3,6 +3,7 @@
 exports[`InsetText matches snapshot and element 1`] = `
 <div
   className="nhsuk-inset-text"
+  style={Object {}}
 >
   <span
     className="nhsuk-u-visually-hidden"

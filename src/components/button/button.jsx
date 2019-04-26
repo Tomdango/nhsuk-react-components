@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 
 const Button = props => {
   const {
@@ -25,9 +26,14 @@ const Button = props => {
         role={role}
         href={href}
         onClick={onClick}
-        className={`nhsuk-button ${
-          secondary ? 'nhsuk-button--secondary' : ''
-        } ${reverse ? 'nhsuk-button--reverse' : ''} ${className}`}
+        className={classNames(
+          'nhsuk-button',
+          {
+            'nhsuk-button--secondary': secondary
+          },
+          { 'nhsuk-button--reverse': reverse },
+          className
+        )}
         disabled={disabled}
       >
         {children}
@@ -38,9 +44,14 @@ const Button = props => {
     // https://github.com/yannickcr/eslint-plugin-react/issues/1555
     // eslint-disable-next-line react/button-has-type
     <button
-      className={`nhsuk-button ${secondary ? 'nhsuk-button--secondary' : ''} ${
-        reverse ? 'nhsuk-button--reverse' : ''
-      } ${className}`}
+      className={classNames(
+        'nhsuk-button',
+        {
+          'nhsuk-button--secondary': secondary
+        },
+        { 'nhsuk-button--reverse': reverse },
+        className
+      )}
       style={style}
       name={name}
       onClick={onClick}

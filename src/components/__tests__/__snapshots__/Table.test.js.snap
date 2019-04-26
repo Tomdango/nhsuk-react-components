@@ -2,7 +2,7 @@
 
 exports[`Table Body matches snapshot 1`] = `
 <tbody
-  className="nhsuk-table__body "
+  className="nhsuk-table__body"
   style={Object {}}
 >
   <TableRow
@@ -14,7 +14,7 @@ exports[`Table Body matches snapshot 1`] = `
 
 exports[`Table Header matches snapshot 1`] = `
 <thead
-  className="nhsuk-table__head "
+  className="nhsuk-table__head"
   style={Object {}}
 >
   <tr
@@ -43,7 +43,7 @@ exports[`Table NormalTable matches snapshot 1`] = `
   className="nhsuk-table-responsive"
 >
   <table
-    className="nhsuk-table "
+    className="nhsuk-table"
     style={Object {}}
   />
 </div>
@@ -51,7 +51,7 @@ exports[`Table NormalTable matches snapshot 1`] = `
 
 exports[`Table Row matches snapshot 1`] = `
 <tr
-  className="nhsuk-table__row "
+  className="nhsuk-table__row"
   style={Object {}}
 >
   <td
@@ -71,7 +71,7 @@ exports[`Table Row matches snapshot 1`] = `
 
 exports[`Table TablePanel matches snapshot 1`] = `
 <div
-  className="nhsuk-table__panel-with-heading-tab "
+  className="nhsuk-table__panel-with-heading-tab"
   style={Object {}}
 />
 `;

@@ -5,12 +5,14 @@ exports[`ContentsList container matches snapshot 1`] = `
   ariaLabel="Pages in this guide"
   className=""
   role="navigation"
+  style={Object {}}
   visuallyHiddenText="Contents"
 >
   <nav
     aria-label="Pages in this guide"
-    className="nhsuk-contents-list "
+    className="nhsuk-contents-list"
     role="navigation"
+    style={Object {}}
   >
     <h2
       className="nhsuk-u-visually-hidden"
@@ -26,10 +28,12 @@ exports[`ContentsList container matches snapshot 1`] = `
         current={false}
         href="#"
         onClick={[Function]}
+        style={Object {}}
       >
         <li
           aria-current="page"
-          className="nhsuk-contents-list__item "
+          className="nhsuk-contents-list__item"
+          style={Object {}}
         >
           <a
             className="nhsuk-contents-list__link"
@@ -46,10 +50,12 @@ exports[`ContentsList container matches snapshot 1`] = `
         current={true}
         href="#"
         onClick={[Function]}
+        style={Object {}}
       >
         <li
           aria-current="page"
-          className="nhsuk-contents-list__item "
+          className="nhsuk-contents-list__item"
+          style={Object {}}
         >
           <span
             className="nhsuk-contents-list__current"
@@ -70,10 +76,12 @@ exports[`ContentsList current item matches snapshot 1`] = `
   current={true}
   href="#"
   onClick={[Function]}
+  style={Object {}}
 >
   <li
     aria-current="page"
-    className="nhsuk-contents-list__item "
+    className="nhsuk-contents-list__item"
+    style={Object {}}
   >
     <span
       className="nhsuk-contents-list__current"
@@ -91,10 +99,12 @@ exports[`ContentsList item matches snapshot 1`] = `
   current={false}
   href="#"
   onClick={[Function]}
+  style={Object {}}
 >
   <li
     aria-current="page"
-    className="nhsuk-contents-list__item "
+    className="nhsuk-contents-list__item"
+    style={Object {}}
   >
     <a
       className="nhsuk-contents-list__link"

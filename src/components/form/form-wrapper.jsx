@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 import Heading from '../typography/heading';
 
 class Form extends React.Component {
@@ -77,9 +78,11 @@ class Form extends React.Component {
       >
         {title ? <Heading size={titleSize}>{title}</Heading> : null}
         <div
-          className={`nhsuk-form-group ${
-            errorInChild ? 'nhsuk-form-group--error' : null
-          } ${className}`}
+          className={classNames(
+            'nhsuk-form-group',
+            { 'nhsuk-form-group--error': errorInChild },
+            className
+          )}
           style={style}
         >
           {modifiedChildren}
@@ -97,7 +100,9 @@ Form.propTypes = {
   className: PropTypes.string,
   style: stylePropType,
   elementMargin: PropTypes.number,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  title: PropTypes.string,
+  titleSize: PropTypes.string
 };
 
 Form.defaultProps = {
@@ -107,7 +112,9 @@ Form.defaultProps = {
   style: {},
   elementMargin: 0,
   onSubmit: () => {},
-  onChange: () => {}
+  onChange: () => {},
+  title: '',
+  titleSize: 'm'
 };
 
 export default Form;

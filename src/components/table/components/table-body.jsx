@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 
 const TableBody = ({ children, className, style }) => (
-  <tbody className={`nhsuk-table__body ${className}`} style={style}>
+  <tbody className={classNames('nhsuk-table__body', className)} style={style}>
     {children}
   </tbody>
 );

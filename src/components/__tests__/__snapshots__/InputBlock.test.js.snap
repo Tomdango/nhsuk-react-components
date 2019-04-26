@@ -5,7 +5,7 @@ exports[`InputBlock Input matches snapshot 1`] = `
   <input
     aria-describedby="thing-hint"
     autoComplete=""
-    className="nhsuk-input nhsuk-input--block   "
+    className="nhsuk-input nhsuk-input--block"
     id="thing"
     name="thing-hint"
     onChange={[Function]}

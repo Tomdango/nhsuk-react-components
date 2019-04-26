@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 
 const Item = ({ children, className, style, href }) => (
-  <li className={`nhsuk-list-panel__item ${className}`} style={style}>
+  <li className={classNames('nhsuk-list-panel__item', className)} style={style}>
     <a className="nhsuk-list-panel__link" href={href}>
       {children}
     </a>
@@ -34,7 +35,7 @@ const Panel = ({
   children,
   style
 }) => (
-  <div className={`nhsuk-list-panel ${className}`} style={style}>
+  <div className={classNames('nhsuk-list-panel', className)} style={style}>
     <h2 className="nhsuk-list-panel__label" id={id}>
       {label}
     </h2>

@@ -1,8 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 
-const Pagination = ({ previousUrl, previousPage, nextUrl, nextPage }) => (
-  <nav className="nhsuk-pagination" role="navigation" aria-label="Pagination">
+const Pagination = ({
+  previousUrl,
+  previousPage,
+  previousTitle,
+  nextUrl,
+  nextPage,
+  nextTitle,
+  ariaLabel,
+  role,
+  className,
+  style
+}) => (
+  <nav
+    className={classNames('nhsuk-pagination', className)}
+    role={role}
+    aria-label={ariaLabel}
+    style={style}
+  >
     <ul className="nhsuk-list nhsuk-pagination__list">
       {previousUrl !== '#' || previousPage ? (
         <li className="nhsuk-pagination-item--previous">
@@ -10,7 +28,7 @@ const Pagination = ({ previousUrl, previousPage, nextUrl, nextPage }) => (
             className="nhsuk-pagination__link nhsuk-pagination__link--prev"
             href={previousUrl}
           >
-            <span className="nhsuk-pagination__title">Previous</span>
+            <span className="nhsuk-pagination__title">{previousTitle}</span>
             <span className="nhsuk-u-visually-hidden">:</span>
             <span className="nhsuk-pagination__page">{previousPage}</span>
             <svg
@@ -30,7 +48,7 @@ const Pagination = ({ previousUrl, previousPage, nextUrl, nextPage }) => (
             className="nhsuk-pagination__link nhsuk-pagination__link--next"
             href={nextUrl}
           >
-            <span className="nhsuk-pagination__title">Next</span>
+            <span className="nhsuk-pagination__title">{nextTitle}</span>
             <span className="nhsuk-u-visually-hidden">:</span>
             <span className="nhsuk-pagination__page">{nextPage}</span>
             <svg
@@ -52,12 +70,24 @@ Pagination.propTypes = {
   nextUrl: PropTypes.string,
   previousUrl: PropTypes.string,
   previousPage: PropTypes.string,
-  nextPage: PropTypes.string
+  nextPage: PropTypes.string,
+  previousTitle: PropTypes.string,
+  nextTitle: PropTypes.string,
+  className: PropTypes.string,
+  style: stylePropType,
+  role: PropTypes.string,
+  ariaLabel: PropTypes.string
 };
 Pagination.defaultProps = {
   nextUrl: '#',
   previousUrl: '#',
   previousPage: '',
-  nextPage: ''
+  nextPage: '',
+  role: 'navigation',
+  ariaLabel: 'Pagination',
+  style: {},
+  className: '',
+  nextTitle: 'Next',
+  previousTitle: 'Previous'
 };
 export default Pagination;

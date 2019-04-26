@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 import Row from './components/row';
 
 const SummaryList = ({ children, className, style }) => (
-  <dl className={`nhsuk-summary-list ${className}`} style={style}>
+  <dl className={classNames('nhsuk-summary-list', className)} style={style}>
     {children}
   </dl>
 );

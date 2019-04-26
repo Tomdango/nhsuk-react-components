@@ -2,8 +2,9 @@
 
 exports[`Header matches snapshot 1`] = `
 <header
-  className="nhsuk-header "
+  className="nhsuk-header"
   role="banner"
+  style={Object {}}
 >
   <div
     className="nhsuk-width-container nhsuk-header__container"
@@ -164,6 +165,7 @@ exports[`Search matches snapshot 1`] = `
 
 exports[`Transactional matches snapshot 1`] = `
 <Header
+  className=""
   logoAriaLabel="NHS Logo"
   logoFill="#fff"
   logoHref="/"
@@ -176,6 +178,7 @@ exports[`Transactional matches snapshot 1`] = `
   searchAriaLabel=""
   serviceName="Service"
   serviceNameUrl="/url"
+  style={Object {}}
   toggleMenuButtonText="Menu"
   transactional={true}
   whiteLogo={true}
@@ -185,6 +188,7 @@ exports[`Transactional matches snapshot 1`] = `
   <header
     className="nhsuk-header nhsuk-header--transactional"
     role="banner"
+    style={Object {}}
   >
     <div
       className="nhsuk-width-container nhsuk-header__container"
@@ -230,7 +234,7 @@ exports[`Transactional matches snapshot 1`] = `
         </div>
       </Logo>
       <div
-        className="nhsuk-header__transactional-service-name "
+        className="nhsuk-header__transactional-service-name"
       >
         <a
           className="nhsuk-header__transactional-service-name--link"
@@ -240,7 +244,7 @@ exports[`Transactional matches snapshot 1`] = `
         </a>
       </div>
       <div
-        className="nhsuk-header__content "
+        className="nhsuk-header__content"
         id="content-header"
       >
         <HeaderSearch

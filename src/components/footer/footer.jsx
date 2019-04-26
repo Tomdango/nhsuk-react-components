@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 
 const Link = ({
   href,
@@ -10,7 +11,10 @@ const Link = ({
   className,
   style
 }) => (
-  <li className={`nhsuk-footer__list-item ${className}`} style={style}>
+  <li
+    className={classNames('nhsuk-footer__list-item', className)}
+    style={style}
+  >
     <a
       className="nhsuk-footer__list-item-link"
       onClick={onClick}
@@ -40,12 +44,21 @@ Link.defaultProps = {
   style: {}
 };
 
-const Copyright = ({ children }) => (
-  <p className="nhsuk-footer__copyright">{children}</p>
+const Copyright = ({ children, className, style }) => (
+  <p className={classNames('nhsuk-footer__copyright', className)} style={style}>
+    {children}
+  </p>
 );
 
 Copyright.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  style: stylePropType
+};
+
+Copyright.defaultProps = {
+  className: '',
+  style: {}
 };
 
 const Footer = ({
@@ -67,7 +80,11 @@ const Footer = ({
 
   return (
     <footer role={role}>
-      <div className={`nhsuk-footer ${className}`} style={style} id={id}>
+      <div
+        className={classNames('nhsuk-footer', className)}
+        style={style}
+        id={id}
+      >
         <div className="nhsuk-width-container">
           {linksFromChildren.length !== 0 ? (
             <div>

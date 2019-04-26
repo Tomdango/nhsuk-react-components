@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Panel PromoGroup matches snapshot 1`] = `
+exports[`Panel PanelGroup matches snapshot 1`] = `
 <div
   className="nhsuk-grid-row nhsuk-panel-group"
+  style={Object {}}
 >
   <div
     className="nhsuk-grid-column-full nhsuk-panel-group__item"
@@ -17,7 +18,8 @@ exports[`Panel PromoGroup matches snapshot 1`] = `
 
 exports[`Panel matches snapshot 1`] = `
 <div
-  className="nhsuk-panel "
+  className="nhsuk-panel"
+  style={Object {}}
 >
   Child
 </div>

@@ -3,11 +3,11 @@
 exports[`Fieldset matches snapshot 1`] = `
 <fieldset
   aria-describedby=""
-  className="nhsuk-fieldset "
+  className="nhsuk-fieldset"
   style={Object {}}
 >
   <legend
-    className="nhsuk-fieldset__legend "
+    className="nhsuk-fieldset__legend"
   />
   Test
 </fieldset>

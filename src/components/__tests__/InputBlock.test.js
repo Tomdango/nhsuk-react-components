@@ -65,7 +65,7 @@ describe('InputBlock', () => {
     it('changes width', () => {
       const wrapper = mount(<InputBlock.Input name="thing" width={12} />);
       expect(wrapper.find('input').props().className).toBe(
-        'nhsuk-input nhsuk-input--block  nhsuk-input--width-12 '
+        'nhsuk-input nhsuk-input--block nhsuk-input--width-12'
       );
       wrapper.unmount();
     });

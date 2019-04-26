@@ -3,6 +3,7 @@
 exports[`Image matches snapshot and element 1`] = `
 <figure
   className="nhsuk-image"
+  style={Object {}}
 >
   <img
     alt="imagealt"

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 import HeaderSearch from './components/search';
 import Logo from './components/logo';
 import MobileNavigation from './components/mobile-navigation';
@@ -9,9 +10,11 @@ import Navigation from './components/navigation';
 const Link = ({ href, children, onClick, mobileOnly, className, style }) => (
   <li
     style={style}
-    className={`nhsuk-header__navigation-item ${
-      mobileOnly ? 'nhsuk-header__navigation-item--for-mobile' : ''
-    } ${className}`}
+    className={classNames(
+      'nhsuk-header__navigation-item',
+      { 'nhsuk-header__navigation-item--for-mobile': mobileOnly },
+      className
+    )}
   >
     <a className="nhsuk-header__navigation-link" onClick={onClick} href={href}>
       {children}
@@ -91,13 +94,20 @@ class Header extends React.Component {
       logoSrc,
       logoRole,
       logoFill,
-      whiteLogo
+      whiteLogo,
+      className,
+      style
     } = this.props;
     return (
       <header
-        className={`nhsuk-header ${
-          transactional ? 'nhsuk-header--transactional' : ''
-        }`}
+        className={classNames(
+          'nhsuk-header',
+          {
+            'nhsuk-header--transactional': transactional
+          },
+          className
+        )}
+        style={style}
         role={role}
       >
         <div className="nhsuk-width-container nhsuk-header__container">
@@ -112,11 +122,12 @@ class Header extends React.Component {
           />
           {transactional && serviceName ? (
             <div
-              className={`nhsuk-header__transactional-service-name ${
-                longServiceName
-                  ? 'nhsuk-header__transactional-service-name--long'
-                  : ''
-              }`}
+              className={classNames(
+                'nhsuk-header__transactional-service-name',
+                {
+                  'nhsuk-header__transactional-service-name--long': longServiceName
+                }
+              )}
             >
               <a
                 className="nhsuk-header__transactional-service-name--link"
@@ -128,9 +139,9 @@ class Header extends React.Component {
           ) : null}
           {withNavigation || withSearch ? (
             <div
-              className={`nhsuk-header__content ${
-                searchToggle ? 'js-show' : ''
-              }`}
+              className={classNames('nhsuk-header__content', {
+                'js-show': searchToggle
+              })}
               id="content-header"
             >
               {withNavigation ? (
@@ -180,7 +191,9 @@ Header.propTypes = {
   logoAriaLabel: PropTypes.string,
   logoXlinkHref: PropTypes.string,
   logoFill: PropTypes.string,
-  whiteLogo: PropTypes.bool
+  whiteLogo: PropTypes.bool,
+  className: PropTypes.string,
+  style: stylePropType
 };
 
 Header.defaultProps = {
@@ -201,6 +214,8 @@ Header.defaultProps = {
   logoAriaLabel: 'NHS Logo',
   logoXlinkHref: '',
   logoFill: '#fff',
-  whiteLogo: true
+  whiteLogo: true,
+  className: '',
+  style: {}
 };
 export default Header;

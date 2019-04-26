@@ -8,7 +8,7 @@ describe('Panel', () => {
     expect(shallowMount).toMatchSnapshot();
     expect(
       shallowMount.containsMatchingElement(
-        <div className="nhsuk-panel ">Child</div>
+        <div className="nhsuk-panel">Child</div>
       )
     ).toBeTruthy();
     shallowMount.unmount();
@@ -17,7 +17,7 @@ describe('Panel', () => {
     const shallowMount = shallow(<Panel label="label">Child</Panel>);
     expect(
       shallowMount.containsMatchingElement(
-        <div className="nhsuk-panel-with-label ">
+        <div className="nhsuk-panel-with-label">
           <h3 className="nhsuk-panel-with-label__label">label</h3>
           Child
         </div>
@@ -35,7 +35,7 @@ describe('Panel', () => {
     shallowMount.unmount();
   });
 
-  describe('PromoGroup', () => {
+  describe('PanelGroup', () => {
     it('matches snapshot', () => {
       const shallowMount = shallow(
         <Panel.Group>
@@ -111,7 +111,7 @@ describe('Panel', () => {
       ).toBeTruthy();
       expect(
         fiveChildren.containsMatchingElement(
-          <div className=" nhsuk-panel-group__item">
+          <div className="nhsuk-panel-group__item">
             <h1>Child</h1>
           </div>
         )

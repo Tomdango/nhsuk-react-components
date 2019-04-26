@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import stylePropType from 'react-style-proptype';
 import Fieldset from '../../../fieldset';
 import Hint from '../../../hint';
 import ErrorMessage from '../../../error-message';
@@ -30,12 +31,16 @@ class Textarea extends React.Component {
       error,
       rows,
       name,
-      id
+      id,
+      className,
+      style
     } = this.props;
 
     return (
       <Fieldset
         describedBy={describedBy}
+        className={className}
+        style={style}
         asPageHeading={asPageHeading}
         title={title}
       >
@@ -65,7 +70,9 @@ Textarea.propTypes = {
   name: PropTypes.string.isRequired,
   id: PropTypes.string,
   valueCallback: PropTypes.func,
-  registerInitialValue: PropTypes.func
+  registerInitialValue: PropTypes.func,
+  className: PropTypes.string,
+  style: stylePropType
 };
 
 Textarea.defaultProps = {
@@ -78,7 +85,9 @@ Textarea.defaultProps = {
   rows: 5,
   id: '',
   valueCallback: () => {},
-  registerInitialValue: () => {}
+  registerInitialValue: () => {},
+  className: '',
+  style: {}
 };
 
 export default Textarea;

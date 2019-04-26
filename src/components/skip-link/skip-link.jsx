@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
-
+import classNames from 'classnames';
 /*
  * Skip link
  *
@@ -69,7 +69,7 @@ class SkipLink extends React.Component {
       <a
         ref={this.skipLinkRef}
         onClick={this.handleSkipLink}
-        className={`nhsuk-skip-link ${className}`}
+        className={classNames('nhsuk-skip-link', className)}
         style={style}
         href={href}
       >

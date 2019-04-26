@@ -2,17 +2,20 @@
 
 exports[`FeedbackBanner matches snapshot 1`] = `
 <FeedbackBanner
+  className=""
   href="#"
   id="nhsuk-feedback-banner"
   label="Answer the survey"
   onClick={[Function]}
+  style={Object {}}
   timeout={0}
   title="Help us make the NHS website better"
   visuallyHiddenText=" feedback invite"
 >
   <div
-    className="nhsuk-feedback-banner  "
+    className="nhsuk-feedback-banner"
     id="nhsuk-feedback-banner"
+    style={Object {}}
   >
     <Container
       className=""
@@ -20,20 +23,27 @@ exports[`FeedbackBanner matches snapshot 1`] = `
       style={Object {}}
     >
       <div
-        className="nhsuk-width-container "
+        className="nhsuk-width-container"
         style={Object {}}
       >
-        <Row>
+        <Row
+          className=""
+          style={Object {}}
+        >
           <div
             className="nhsuk-grid-row"
+            style={Object {}}
           >
             <Column
+              className=""
               forceLayout={false}
+              style={Object {}}
               tabletWidth=""
               width="full"
             >
               <div
-                className="nhsuk-grid-column-full  "
+                className="nhsuk-grid-column-full"
+                style={Object {}}
               >
                 <div
                   className="nhsuk-feedback-banner__content"

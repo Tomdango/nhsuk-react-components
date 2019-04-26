@@ -29,15 +29,22 @@ describe('CareCard', () => {
         Content
       </CareCard>
     );
+    const hiddenTextCard = mount(
+      <CareCard hiddenText="hello" type="immediate">
+        Content
+      </CareCard>
+    );
     expect(nonUrgent).toMatchSnapshot();
     expect(urgent).toMatchSnapshot();
     expect(immediate).toMatchSnapshot();
     expect(incorrect).toMatchSnapshot();
     expect(disableHiddenText).toMatchSnapshot();
+    expect(hiddenTextCard).toMatchSnapshot();
     nonUrgent.unmount();
     urgent.unmount();
     immediate.unmount();
     incorrect.unmount();
     disableHiddenText.unmount();
+    hiddenTextCard.unmount();
   });
 });

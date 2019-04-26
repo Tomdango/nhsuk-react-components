@@ -7,7 +7,7 @@ exports[`FormWrapper matches snapshot 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="nhsuk-form-group null "
+    className="nhsuk-form-group"
     style={Object {}}
   >
     Child

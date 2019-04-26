@@ -7,7 +7,7 @@ exports[`EmergencyAlert all matches snapshot 1`] = `
   style={Object {}}
 >
   <div
-    className="nhsuk-global-alert "
+    className="nhsuk-global-alert"
     id="nhsuk-global-alert"
     style={Object {}}
   >
@@ -17,20 +17,27 @@ exports[`EmergencyAlert all matches snapshot 1`] = `
       style={Object {}}
     >
       <div
-        className="nhsuk-width-container "
+        className="nhsuk-width-container"
         style={Object {}}
       >
-        <Row>
+        <Row
+          className=""
+          style={Object {}}
+        >
           <div
             className="nhsuk-grid-row"
+            style={Object {}}
           >
             <Column
+              className=""
               forceLayout={false}
               size="full"
+              style={Object {}}
               tabletWidth=""
             >
               <div
-                className="nhsuk-grid-column-undefined  "
+                className="nhsuk-grid-column-undefined"
+                style={Object {}}
               >
                 <div
                   className="nhsuk-global-alert__content"
@@ -41,7 +48,7 @@ exports[`EmergencyAlert all matches snapshot 1`] = `
                     visuallyHiddenText="Alert: "
                   >
                     <h2
-                      className="nhsuk-global-alert__heading "
+                      className="nhsuk-global-alert__heading"
                       style={Object {}}
                     >
                       <span
@@ -57,7 +64,7 @@ exports[`EmergencyAlert all matches snapshot 1`] = `
                     style={Object {}}
                   >
                     <p
-                      className="nhsuk-global-alert__message "
+                      className="nhsuk-global-alert__message"
                       style={Object {}}
                     >
                       There has been a national flu outbreak.
@@ -68,7 +75,7 @@ exports[`EmergencyAlert all matches snapshot 1`] = `
                         style={Object {}}
                       >
                         <a
-                          className="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override "
+                          className="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override"
                           href="https://www.nhs.uk"
                           onClick={[Function]}
                           style={Object {}}
@@ -83,7 +90,7 @@ exports[`EmergencyAlert all matches snapshot 1`] = `
                     style={Object {}}
                   >
                     <p
-                      className="nhsuk-global-alert__updated "
+                      className="nhsuk-global-alert__updated"
                       style={Object {}}
                     >
                       Updated 23 mins ago
@@ -102,7 +109,7 @@ exports[`EmergencyAlert all matches snapshot 1`] = `
 
 exports[`EmergencyAlert last updated matches snapshot 1`] = `
 <p
-  className="nhsuk-global-alert__updated "
+  className="nhsuk-global-alert__updated"
   style={Object {}}
 >
   Updated 23 mins ago
@@ -111,7 +118,7 @@ exports[`EmergencyAlert last updated matches snapshot 1`] = `
 
 exports[`EmergencyAlert link matches snapshot 1`] = `
 <a
-  className="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override "
+  className="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override"
   href="#"
   onClick={[Function]}
   style={Object {}}
@@ -122,7 +129,7 @@ exports[`EmergencyAlert link matches snapshot 1`] = `
 
 exports[`EmergencyAlert message matches snapshot 1`] = `
 <p
-  className="nhsuk-global-alert__message "
+  className="nhsuk-global-alert__message"
   style={Object {}}
 >
   Message
@@ -131,7 +138,7 @@ exports[`EmergencyAlert message matches snapshot 1`] = `
 
 exports[`EmergencyAlert title matches snapshot 1`] = `
 <h2
-  className="nhsuk-global-alert__heading "
+  className="nhsuk-global-alert__heading"
   style={Object {}}
 >
   <span

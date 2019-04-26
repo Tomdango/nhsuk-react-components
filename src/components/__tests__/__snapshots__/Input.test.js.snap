@@ -11,7 +11,7 @@ exports[`Input matches snapshot 1`] = `
   <input
     aria-describedby="-hint"
     autoComplete=""
-    className="nhsuk-input  "
+    className="nhsuk-input"
     id=""
     name="-hint"
     onChange={[Function]}

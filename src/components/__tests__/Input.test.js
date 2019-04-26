@@ -46,7 +46,7 @@ describe('Input', () => {
     expect(
       wrapper.containsMatchingElement(
         <input
-          className="nhsuk-input  nhsuk-input--width-12"
+          className="nhsuk-input nhsuk-input--width-12"
           id="name"
           name="name-hint"
           type="text"

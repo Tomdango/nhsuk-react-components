@@ -1,24 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 import { Container, Row } from '../layout';
 
 const Title = ({ children, visuallyHiddenText, className, style }) => (
-  <h2 className={`nhsuk-global-alert__heading ${className}`} style={style}>
+  <h2
+    className={classNames('nhsuk-global-alert__heading', className)}
+    style={style}
+  >
     <span className="nhsuk-u-visually-hidden">{visuallyHiddenText}</span>
     {children}
   </h2>
 );
 
 const Message = ({ children, className, style }) => (
-  <p className={`nhsuk-global-alert__message ${className}`} style={style}>
+  <p
+    className={classNames('nhsuk-global-alert__message', className)}
+    style={style}
+  >
     {children}
   </p>
 );
 
 const Link = ({ href, children, onClick, className, style }) => (
   <a
-    className={`nhsuk-u-nowrap nhsuk-global-alert-link__margin-override ${className}`}
+    className={classNames(
+      'nhsuk-u-nowrap',
+      'nhsuk-global-alert-link__margin-override',
+      className
+    )}
     onClick={onClick}
     style={style}
     href={href}
@@ -28,14 +39,21 @@ const Link = ({ href, children, onClick, className, style }) => (
 );
 
 const LastUpdated = ({ children, className, style }) => (
-  <p className={`nhsuk-global-alert__updated ${className}`} style={style}>
+  <p
+    className={classNames('nhsuk-global-alert__updated', className)}
+    style={style}
+  >
     {children}
   </p>
 );
 
 const EmergencyAlert = ({ children, className, style, id }) => {
   return (
-    <div className={`nhsuk-global-alert ${className}`} style={style} id={id}>
+    <div
+      className={classNames('nhsuk-global-alert', className)}
+      style={style}
+      id={id}
+    >
       <Container>
         <Row>
           <Row.Column size="full">

@@ -128,13 +128,13 @@ describe('Checkboxes', () => {
     );
     expect(
       mountwithHint.containsMatchingElement(
-        <span className="nhsuk-hint ">hint</span>
+        <span className="nhsuk-hint">hint</span>
       )
     ).toBeTruthy();
 
     expect(
       mountwithError.containsMatchingElement(
-        <span className="nhsuk-error-message ">
+        <span className="nhsuk-error-message">
           <span className="nhsuk-u-visually-hidden">Error: </span>error
         </span>
       )

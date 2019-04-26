@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 
 class PanelGroup extends React.Component {
   constructor(props) {
@@ -28,13 +30,24 @@ class PanelGroup extends React.Component {
     const { children } = this.props;
     const columnSize = this.getColumnSize();
     return React.Children.map(children, child => (
-      <div className={`${columnSize} nhsuk-panel-group__item`}>{child}</div>
+      <div
+        className={classNames(
+          { [columnSize]: columnSize },
+          'nhsuk-panel-group__item'
+        )}
+      >
+        {child}
+      </div>
     ));
   }
 
   render() {
+    const { className, style } = this.props;
     return (
-      <div className="nhsuk-grid-row nhsuk-panel-group">
+      <div
+        className={classNames('nhsuk-grid-row nhsuk-panel-group', className)}
+        style={style}
+      >
         {this.wrapChildren()}
       </div>
     );
@@ -42,7 +55,14 @@ class PanelGroup extends React.Component {
 }
 
 PanelGroup.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  style: stylePropType
+};
+
+PanelGroup.defaultProps = {
+  className: '',
+  style: {}
 };
 
 export default PanelGroup;

@@ -14,7 +14,7 @@ describe('Label', () => {
     const shallowMount = shallow(<Label type="bold">Label</Label>);
     expect(
       shallowMount.containsMatchingElement(
-        <label className="nhsuk-label  nhsuk-label--s ">Label</label>
+        <label className="nhsuk-label nhsuk-label--s">Label</label>
       )
     ).toBeTruthy();
     shallowMount.unmount();
@@ -23,7 +23,7 @@ describe('Label', () => {
     const shallowMount = shallow(<Label type="heading">Label</Label>);
     expect(
       shallowMount.containsMatchingElement(
-        <label className="nhsuk-label   nhsuk-label--xl">Label</label>
+        <label className="nhsuk-label nhsuk-label--xl">Label</label>
       )
     ).toBeTruthy();
     shallowMount.unmount();

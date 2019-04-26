@@ -32,7 +32,7 @@ describe('Hero', () => {
     expect(shallowMount).toMatchSnapshot();
     expect(
       shallowMount.containsMatchingElement(
-        <section className="nhsuk-hero  " style={{ backgroundImage: 'none' }} />
+        <section className="nhsuk-hero" style={{ backgroundImage: 'none' }} />
       )
     ).toBeTruthy();
     shallowMount.unmount();
@@ -43,7 +43,7 @@ describe('Hero', () => {
     expect(
       shallowMount.containsMatchingElement(
         <section
-          className="nhsuk-hero nhsuk-hero--image "
+          className="nhsuk-hero nhsuk-hero--image"
           style={{ backgroundImage: `url('image')` }}
         />
       )

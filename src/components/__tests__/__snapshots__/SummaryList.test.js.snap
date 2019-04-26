@@ -18,7 +18,7 @@ exports[`SummaryList Row matches snapshot 1`] = `
 
 exports[`SummaryList matches snapshot 1`] = `
 <dl
-  className="nhsuk-summary-list "
+  className="nhsuk-summary-list"
   style={Object {}}
 >
   Child

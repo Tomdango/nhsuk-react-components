@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 import { Container, Row } from '../layout';
 
 const isScrolledIntoView = element => {
@@ -89,14 +91,20 @@ class FeedbackBanner extends React.Component {
       href,
       id,
       onClick,
+      className,
+      style,
       visuallyHiddenText
     } = this.props;
     const { shown, jsInView } = this.state;
     return (
       <div
-        className={`nhsuk-feedback-banner ${
-          shown ? 'nhsuk-feedback-banner__shown' : ''
-        } ${jsInView ? 'js-inview' : ''}`}
+        className={classNames(
+          'nhsuk-feedback-banner',
+          { 'nhsuk-feedback-banner__shown': shown },
+          { 'js-inview': jsInView },
+          className
+        )}
+        style={style}
         id={id}
       >
         <Container>
@@ -144,7 +152,9 @@ FeedbackBanner.propTypes = {
   label: PropTypes.node,
   href: PropTypes.string,
   onClick: PropTypes.func,
-  visuallyHiddenText: PropTypes.string
+  visuallyHiddenText: PropTypes.string,
+  className: PropTypes.string,
+  style: stylePropType
 };
 
 FeedbackBanner.defaultProps = {
@@ -154,6 +164,8 @@ FeedbackBanner.defaultProps = {
   label: '',
   href: '#',
   onClick: () => {},
-  visuallyHiddenText: ' feedback invite'
+  visuallyHiddenText: ' feedback invite',
+  className: '',
+  style: {}
 };
 export default FeedbackBanner;

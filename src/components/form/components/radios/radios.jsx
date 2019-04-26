@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 import Fieldset from '../../../fieldset';
 import Hint from '../../../hint';
 import ErrorMessage from '../../../error-message';
@@ -16,7 +17,7 @@ const Radio = ({
   className,
   style
 }) => (
-  <div className={`nhsuk-radios__item ${className}`} style={style}>
+  <div className={classNames('nhsuk-radios__item', className)} style={style}>
     <input
       className="nhsuk-radios__input"
       id={id}
@@ -55,12 +56,21 @@ Radio.defaultProps = {
   style: {}
 };
 
-const Divider = ({ children }) => (
-  <div className="nhsuk-radios__divider">{children}</div>
+const Divider = ({ children, className, style }) => (
+  <div className={classNames('nhsuk-radios__divider', className)} style={style}>
+    {children}
+  </div>
 );
 
 Divider.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  style: stylePropType
+};
+
+Divider.defaultProps = {
+  className: '',
+  style: {}
 };
 
 class Radios extends React.Component {
@@ -118,7 +128,11 @@ class Radios extends React.Component {
       >
         {hint ? <Hint>{hint}</Hint> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
-        <div className={`nhsuk-radios ${inline ? 'nhsuk-radios--inline' : ''}`}>
+        <div
+          className={classNames('nhsuk-radios', {
+            'nhsuk-radios--inline': inline
+          })}
+        >
           {children}
         </div>
       </Fieldset>

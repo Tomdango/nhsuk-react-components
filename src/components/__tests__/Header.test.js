@@ -54,10 +54,6 @@ describe('Header', () => {
     });
     wrapper.unmount();
   });
-  it('handles onClick', () => {
-    const onClick = jest.fn();
-    const wrapper = shallow(<Header.Link onClick={onClick} />);
-  });
   it('toggles search', () => {
     const preventDefault = jest.fn();
     const wrapper = mount(<Header withSearch />);
@@ -122,7 +118,7 @@ describe('Transactional', () => {
     expect(wrapper).toMatchSnapshot();
     expect(
       wrapper.containsMatchingElement(
-        <div className="nhsuk-header__transactional-service-name ">
+        <div className="nhsuk-header__transactional-service-name">
           <a
             className="nhsuk-header__transactional-service-name--link"
             href="/url"

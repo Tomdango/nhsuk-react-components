@@ -14,12 +14,12 @@ describe('Layout', () => {
       const fluid = shallow(<Container fluid>Child</Container>);
       expect(
         standard.containsMatchingElement(
-          <div className="nhsuk-width-container ">Child</div>
+          <div className="nhsuk-width-container">Child</div>
         )
       ).toBeTruthy();
       expect(
         fluid.containsMatchingElement(
-          <div className="nhsuk-width-container-fluid ">Child</div>
+          <div className="nhsuk-width-container-fluid">Child</div>
         )
       ).toBeTruthy();
       standard.unmount();
@@ -68,7 +68,7 @@ describe('Layout', () => {
       expect(shallowMount).toMatchSnapshot();
       expect(
         shallowMount.containsMatchingElement(
-          <div className="nhsuk-grid-column-full  ">Child</div>
+          <div className="nhsuk-grid-column-full">Child</div>
         )
       ).toBeTruthy();
       shallowMount.unmount();
@@ -82,7 +82,7 @@ describe('Layout', () => {
       expect(shallowMount).toMatchSnapshot();
       expect(
         shallowMount.containsMatchingElement(
-          <div className="nhsuk-grid-column-full nhsuk-u-full ">Child</div>
+          <div className="nhsuk-grid-column-full nhsuk-u-full">Child</div>
         )
       ).toBeTruthy();
       shallowMount.unmount();
@@ -96,7 +96,7 @@ describe('Layout', () => {
       expect(shallowMount).toMatchSnapshot();
       expect(
         shallowMount.containsMatchingElement(
-          <div className="nhsuk-grid-column-full  nhsuk-u-one-half-tablet">
+          <div className="nhsuk-grid-column-full nhsuk-u-one-half-tablet">
             Child
           </div>
         )

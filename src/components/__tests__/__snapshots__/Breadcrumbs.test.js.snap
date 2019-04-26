@@ -8,7 +8,7 @@ exports[`Breadcrumbs item matches snapshot 1`] = `
   style={Object {}}
 >
   <li
-    className="nhsuk-breadcrumb__item "
+    className="nhsuk-breadcrumb__item"
     style={Object {}}
   >
     <a
@@ -30,7 +30,7 @@ exports[`Breadcrumbs matches snapshot 1`] = `
 >
   <nav
     aria-label="Breadcrumbs"
-    className="nhsuk-breadcrumb "
+    className="nhsuk-breadcrumb"
     style={Object {}}
   >
     <div
@@ -46,7 +46,7 @@ exports[`Breadcrumbs matches snapshot 1`] = `
           style={Object {}}
         >
           <li
-            className="nhsuk-breadcrumb__item "
+            className="nhsuk-breadcrumb__item"
             style={Object {}}
           >
             <a

@@ -1,12 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 import ErrorMessage from '../../../error-message';
 import Fieldset from '../../../fieldset';
 import Hint from '../../../hint';
 
-const Box = ({ children, name, _id, value, hint, disabled, _onClick }) => (
-  <div className="nhsuk-checkboxes__item">
+const Box = ({
+  children,
+  name,
+  _id,
+  value,
+  hint,
+  disabled,
+  _onClick,
+  className,
+  style
+}) => (
+  <div
+    className={classNames('nhsuk-checkboxes__item', className)}
+    style={style}
+  >
     <input
       className="nhsuk-checkboxes__input"
       id={_id}
@@ -30,7 +44,9 @@ Box.propTypes = {
   value: PropTypes.string.isRequired,
   _onClick: PropTypes.func,
   hint: PropTypes.string,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  className: PropTypes.string,
+  style: stylePropType
 };
 
 Box.defaultProps = {
@@ -38,7 +54,9 @@ Box.defaultProps = {
   disabled: false,
   name: '',
   _id: '',
-  _onClick: () => {}
+  _onClick: () => {},
+  className: '',
+  style: {}
 };
 
 class Checkboxes extends React.Component {
@@ -97,7 +115,7 @@ class Checkboxes extends React.Component {
       return child;
     });
     return (
-      <div className={`nhsuk-checkboxes ${className}`} style={style}>
+      <div className={classNames('nhsuk-checkboxes', className)} style={style}>
         <Fieldset
           describedBy={describedBy}
           asPageHeading={asPageHeading}

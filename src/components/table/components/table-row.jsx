@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
+import classNames from 'classnames';
 
 const TableRow = ({ items, className, style }) => {
   const cells = items.map(item => (
@@ -9,7 +10,7 @@ const TableRow = ({ items, className, style }) => {
     </td>
   ));
   return (
-    <tr className={`nhsuk-table__row ${className}`} style={style}>
+    <tr className={classNames('nhsuk-table__row', className)} style={style}>
       {cells}
     </tr>
   );
