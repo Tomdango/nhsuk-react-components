@@ -7,6 +7,5 @@ jobs:
     - stage: Test
       script: yarn lint
     - script: yarn test:ci
-    - script: yarn report-coverage
     - stage: Storybook Deploy
       script: yarn deploy-storybook
