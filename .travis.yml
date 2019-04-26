@@ -5,11 +5,12 @@ node_js:
 jobs:
   include:
     - stage: Test
-      script: yarn lint
+    - script: yarn lint
+      name: 'Lint'
     - script: yarn test:ci
+      name: 'Test with Coverage'
     - stage: Storybook Deploy
       provider: pages
-      script: yarn build-storybook
       skip_cleanup: true
       name: 'TravisCI Pages Deployment'
       github_token: $GITHUB_TOKEN
