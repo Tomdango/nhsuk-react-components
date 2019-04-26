@@ -34,19 +34,17 @@ const ContentsList = ({
   className,
   ariaLabel,
   style
-}) => {
-  return (
-    <nav
-      className={classNames('nhsuk-contents-list', className)}
-      role={role}
-      style={style}
-      aria-label={ariaLabel}
-    >
-      <h2 className="nhsuk-u-visually-hidden">{visuallyHiddenText}</h2>
-      <ol className="nhsuk-contents-list__list">{children}</ol>
-    </nav>
-  );
-};
+}) => (
+  <nav
+    className={classNames('nhsuk-contents-list', className)}
+    role={role}
+    style={style}
+    aria-label={ariaLabel}
+  >
+    <h2 className="nhsuk-u-visually-hidden">{visuallyHiddenText}</h2>
+    <ol className="nhsuk-contents-list__list">{children}</ol>
+  </nav>
+);
 
 ContentsList.propTypes = {
   children: PropTypes.node.isRequired,

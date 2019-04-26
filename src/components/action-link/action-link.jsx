@@ -11,22 +11,20 @@ const ActionLink = ({
   onClick,
   className,
   style
-}) => {
-  return (
-    <div className={classNames('nhsuk-action-link', className)} style={style}>
-      <a
-        className="nhsuk-action-link__link"
-        target={openInNewWindow ? '_blank' : ''}
-        onClick={onClick}
-        rel={openInNewWindow ? 'noreferrer noopener' : ''}
-        href={href}
-      >
-        <ArrowRightCircle />
-        <span className="nhsuk-action-link__text">{children}</span>
-      </a>
-    </div>
-  );
-};
+}) => (
+  <div className={classNames('nhsuk-action-link', className)} style={style}>
+    <a
+      className="nhsuk-action-link__link"
+      target={openInNewWindow ? '_blank' : ''}
+      onClick={onClick}
+      rel={openInNewWindow ? 'noreferrer noopener' : ''}
+      href={href}
+    >
+      <ArrowRightCircle />
+      <span className="nhsuk-action-link__text">{children}</span>
+    </a>
+  </div>
+);
 
 ActionLink.defaultProps = {
   href: '#',
