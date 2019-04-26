@@ -13,7 +13,7 @@
   "module": "dist/index.es.js",
   "scripts": {
     "test": "jest",
-    "test:ci": "jest --coverage",
+    "test:ci": "jest --coverage && cat ./coverage/lcov.info | codacy-coverage",
     "test:watch": "jest --watch",
     "test:update": "jest -u",
     "test:dev": "jest --watchAll -u --coverage",
@@ -23,8 +23,7 @@
     "build-storybook": "build-storybook -c .storybook -o storybook-static -s ./.storybook/public/",
     "storybook": "start-storybook -p 9001 -c .storybook -s .storybook/public",
     "build": "cross-env BABEL_ENV=build rollup -c && yarn babel src/ --out-dir lib/ --config-file ./babelrc.build.js --source-maps",
-    "prepare": "yarn run build",
-    "report-coverage": "cat ./coverage/lcov.info | codacy-coverage"
+    "prepare": "yarn run build"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
