@@ -1,13 +1,12 @@
 language: node_js
 node_js:
   - '8'
+
 jobs:
   include:
-    - stage: Lint
-      script: yarn lint
     - stage: Test
-      script: yarn test:ci
-    - stage: Report Coverage
-      script: cat ./coverage/lcov.info | codacy-coverage
-    - stage: Deploy
+      script: yarn lint
+    - script: yarn test:ci
+    - script: yarn report-coverage
+    - stage: Storybook Deploy
       script: yarn deploy-storybook
