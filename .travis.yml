@@ -6,9 +6,7 @@ jobs:
   include:
     - stage: Test
     - script: yarn lint
-      name: 'Lint'
     - script: yarn test:ci
-      name: 'Test with Coverage'
     - stage: Storybook Deploy
       provider: pages
       skip_cleanup: true
