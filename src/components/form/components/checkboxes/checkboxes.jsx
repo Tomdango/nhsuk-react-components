@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import ErrorMessage from '../../../error-message';
 import Fieldset from '../../../fieldset';
 import Hint from '../../../hint';
+import Label from '../../../label';
 
 const Box = ({
   children,
@@ -28,11 +29,12 @@ const Box = ({
       type="checkbox"
       value={value}
       onClick={_onClick}
+      aria-describedBy={`${_id}__label`}
       disabled={disabled}
     />
-    <label className="nhsuk-label nhsuk-checkboxes__label" htmlFor={_id}>
+    <Label htmlFor={_id} className="nhsuk-checkboxes__label">
       {children}
-    </label>
+    </Label>
     {hint ? <Hint className="nhsuk-checkboxes__hint">{hint}</Hint> : null}
   </div>
 );

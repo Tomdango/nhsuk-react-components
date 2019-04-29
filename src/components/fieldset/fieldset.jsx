@@ -3,19 +3,8 @@ import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 
-const Fieldset = ({
-  title,
-  describedBy,
-  asPageHeading,
-  children,
-  className,
-  style
-}) => (
-  <fieldset
-    aria-describedby={describedBy}
-    className={classNames('nhsuk-fieldset', className)}
-    style={style}
-  >
+const Fieldset = ({ title, asPageHeading, children, className, style }) => (
+  <fieldset className={classNames('nhsuk-fieldset', className)} style={style}>
     <legend
       className={classNames('nhsuk-fieldset__legend', {
         'nhsuk-fieldset__legend--xl': asPageHeading
@@ -35,7 +24,6 @@ const Fieldset = ({
 
 Fieldset.propTypes = {
   title: PropTypes.string,
-  describedBy: PropTypes.string,
   asPageHeading: PropTypes.bool,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
@@ -44,7 +32,6 @@ Fieldset.propTypes = {
 
 Fieldset.defaultProps = {
   title: '',
-  describedBy: '',
   asPageHeading: false,
   className: '',
   style: {}

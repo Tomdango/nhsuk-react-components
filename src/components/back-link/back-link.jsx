@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, node, oneOfType, func, bool } from 'prop-types';
+import { string, node, func } from 'prop-types';
 import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 import { ChevronLeft } from '../icons';
@@ -18,7 +18,7 @@ BackLink.defaultProps = {
   children: '',
   className: '',
   style: {},
-  onClick: false
+  onClick: () => {}
 };
 
 BackLink.propTypes = {
@@ -26,7 +26,7 @@ BackLink.propTypes = {
   children: node,
   className: string,
   style: stylePropType,
-  onClick: oneOfType([bool, func])
+  onClick: func
 };
 
 export default BackLink;

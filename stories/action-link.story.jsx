@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
 import { boolean, text } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
-import { ActionLink } from '../src';
+import ActionLink from '../src/components/action-link';
 import './storybook.scss';
 
 const clickAction = action('clicked');

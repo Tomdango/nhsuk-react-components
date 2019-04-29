@@ -13,7 +13,7 @@ const CareCard = ({
   hiddenText
 }) => {
   let componentHiddenText = hiddenText;
-  if (componentHiddenText === false) {
+  if (componentHiddenText === '' && !disableHiddenText) {
     switch (type) {
       case 'non-urgent':
         componentHiddenText = 'Non-urgent advice: ';
@@ -61,14 +61,14 @@ CareCard.propTypes = {
   heading: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   disableHiddenText: PropTypes.bool,
-  hiddenText: PropTypes.oneOf([PropTypes.boolean, PropTypes.string]),
+  hiddenText: PropTypes.string,
   className: PropTypes.string,
   style: stylePropType
 };
 
 CareCard.defaultProps = {
   disableHiddenText: false,
-  hiddenText: false,
+  hiddenText: '',
   className: '',
   style: {}
 };

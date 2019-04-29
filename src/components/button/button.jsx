@@ -83,7 +83,7 @@ Button.defaultProps = {
   secondary: false,
   reverse: false,
   disabled: false,
-  href: '',
+  href: '#',
   role: 'button',
   type: 'button',
   name: '',

@@ -35,8 +35,8 @@ ActionLink.defaultProps = {
 };
 
 ActionLink.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
-  onClick: PropTypes.oneOfType([PropTypes.func, PropTypes.bool]),
+  children: PropTypes.PropTypes.node.isRequired,
+  onClick: PropTypes.func,
   className: PropTypes.string,
   href: PropTypes.string,
   openInNewWindow: PropTypes.bool,

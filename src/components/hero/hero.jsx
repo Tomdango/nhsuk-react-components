@@ -65,12 +65,16 @@ const Hero = ({ children, imageURL, className, style }) => (
         >
           <div className="nhsuk-grid-row">
             <div className="nhsuk-grid-column-two-thirds">
-              <div className="nhsuk-hero-content">
-                {children}
-                {imageURL ? (
-                  <span className="nhsuk-hero__arrow" aria-hidden="true" />
-                ) : null}
-              </div>
+              {imageURL ? (
+                <div className="nhsuk-hero-content">
+                  {children}
+                  {imageURL ? (
+                    <span className="nhsuk-hero__arrow" aria-hidden="true" />
+                  ) : null}
+                </div>
+              ) : (
+                <div className="nhsuk-hero__wrapper">{children}</div>
+              )}
             </div>
           </div>
         </div>

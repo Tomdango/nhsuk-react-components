@@ -1,11 +1,10 @@
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs } from '@storybook/addon-knobs';
-import { addReadme } from 'storybook-readme';
 
 import NHSTheme from './theme';
 import { fromEventPattern } from 'rxjs';
-addDecorator(addReadme);
+
 addDecorator(withA11y);
 addDecorator(withKnobs);
 addParameters({

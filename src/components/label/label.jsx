@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import stylePropType from 'react-style-proptype';
 
-const Label = ({ htmlForId, type, children, className, style }) => (
+const Label = ({ htmlFor, type, children, className, style }) => (
   <label
-    htmlFor={htmlForId}
+    id={`${htmlFor}__label`}
+    htmlFor={htmlFor}
     className={classNames(
       'nhsuk-label',
       { 'nhsuk-label--s': type === 'bold' },
@@ -20,7 +21,7 @@ const Label = ({ htmlForId, type, children, className, style }) => (
 );
 
 Label.propTypes = {
-  htmlForId: PropTypes.string,
+  htmlFor: PropTypes.string,
   type: PropTypes.string,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
@@ -28,7 +29,7 @@ Label.propTypes = {
 };
 
 Label.defaultProps = {
-  htmlForId: '',
+  htmlFor: '',
   type: '',
   className: '',
   style: {}

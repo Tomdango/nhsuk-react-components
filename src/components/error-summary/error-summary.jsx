@@ -17,17 +17,13 @@ const ErrorSummary = ({
   children,
   style,
   className,
-  ariaLabelledBy,
-  role,
-  dataModule
+  role
 }) => (
   <div
     className={classNames('nhsuk-error-summary', className)}
     style={style}
-    aria-labelledby={ariaLabelledBy}
     role={role}
     tabIndex="-1"
-    data-module={dataModule}
   >
     <h2 className="nhsuk-error-summary__title">{title}</h2>
     <div className="nhsuk-error-summary__body">
@@ -58,20 +54,16 @@ ErrorSummary.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   style: stylePropType,
-  ariaLabelledBy: PropTypes.string,
-  role: PropTypes.string,
-  dataModule: PropTypes.string
+  role: PropTypes.string
 };
 
 ErrorSummary.defaultProps = {
   description: '',
   className: '',
   style: {},
-  ariaLabelledBy: 'error-summary-title',
-  role: 'alert',
-  dataModule: 'error-summary'
+  role: 'alert'
 };
 
-ErrorSummary.ErrorItem = ErrorItem;
+ErrorSummary.Item = ErrorItem;
 
 export default ErrorSummary;
