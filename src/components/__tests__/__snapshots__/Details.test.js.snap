@@ -10,9 +10,7 @@ exports[`Details expander matches snapshot 1`] = `
   >
     <span
       className="nhsuk-details__summary-text"
-    >
-      Test Text
-    </span>
+    />
   </summary>
   <div
     className="nhsuk-details__text"
@@ -32,9 +30,7 @@ exports[`Details normal matches snapshot 1`] = `
   >
     <span
       className="nhsuk-details__summary-text"
-    >
-      Test Text
-    </span>
+    />
   </summary>
   <div
     className="nhsuk-details__text"

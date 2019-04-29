@@ -32,9 +32,9 @@ describe('InputBlock', () => {
     wrapper.unmount();
   });
   it('renders heading', () => {
-    const wrapper = shallow(<InputBlock title="Title" />);
+    const wrapper = shallow(<InputBlock heading="Title" headingSize="xl" />);
     expect(
-      wrapper.containsMatchingElement(<Heading titleSize="m">Title</Heading>)
+      wrapper.containsMatchingElement(<Heading size="xl">Title</Heading>)
     ).toBeTruthy();
     wrapper.unmount();
   });
@@ -48,7 +48,7 @@ describe('InputBlock', () => {
       const wrapper = shallow(
         <InputBlock.Input
           name="thing"
-          title="title"
+          label="title"
           hint="hint"
           error="error"
         />

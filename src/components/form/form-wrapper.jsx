@@ -4,14 +4,29 @@ import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 import Heading from '../typography/heading';
 
-class Form extends React.Component {
+class Form extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      formData: {}
+      formData: {},
+      errorInChild: false
     };
     this.valueCallback = this.valueCallback.bind(this);
     this.registerInitialValue = this.registerInitialValue.bind(this);
+    this.callbackErrorFromChild = this.callbackErrorFromChild.bind(this);
+  }
+
+  componentWillMount() {
+    const { children } = this.props;
+    const { errorInChild } = this.state;
+    React.Children.forEach(children, child => {
+      const { props } = child;
+      if (props) {
+        if (props.error && !errorInChild) {
+          this.setState({ errorInChild: true });
+        }
+      }
+    });
   }
 
   registerInitialValue(key, value) {
@@ -30,6 +45,10 @@ class Form extends React.Component {
     });
   }
 
+  callbackErrorFromChild(errorInChild) {
+    this.setState({ errorInChild });
+  }
+
   render() {
     const {
       submitAction,
@@ -43,17 +62,15 @@ class Form extends React.Component {
       onSubmit
     } = this.props;
     const { formData } = this.state;
-    let errorInChild = false;
+    const { errorInChild } = this.state;
     const modifiedChildren = React.Children.map(children, child => {
       const { props } = child;
       if (props) {
-        if (props.error) {
-          errorInChild = true;
-        }
         const formElements = [
           'Checkboxes',
           'DateInput',
           'Input',
+          'Fieldset',
           'InputBlock',
           'Radios',
           'Select',
@@ -63,7 +80,9 @@ class Form extends React.Component {
           return React.cloneElement(child, {
             valueCallback: this.valueCallback,
             style: { ...child.props.style, marginBottom: elementMargin },
-            registerInitialValue: this.registerInitialValue
+            elementMargin,
+            registerInitialValue: this.registerInitialValue,
+            callbackErrorFromChild: this.callbackErrorFromChild
           });
         }
         return child;

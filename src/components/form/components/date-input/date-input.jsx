@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
-import Fieldset from '../../../fieldset';
 import Label from '../../../label';
 import ErrorMessage from '../../../error-message';
 import Hint from '../../../hint';
@@ -300,30 +299,28 @@ class DateInput extends React.Component {
 
   render() {
     const {
-      describedBy,
-      asPageHeading,
-      title,
       name,
       required,
       id,
       error,
       hint,
       className,
+      label,
+      labelHtmlFor,
       style
     } = this.props;
     const { day, month, year } = this.state;
     const children = this.injectPropsIntoChildren();
     return (
-      <Fieldset
-        describedBy={describedBy}
-        asPageHeading={asPageHeading}
-        title={title}
-        className={className}
-        style={style}
-      >
+      <React.Fragment>
+        {label ? <Label htmlFor={labelHtmlFor}>{label}</Label> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
         {hint ? <Hint>{hint}</Hint> : null}
-        <div className="nhsuk-date-input" id={id}>
+        <div
+          className={classNames('nhsuk-date-input', className)}
+          style={style}
+          id={id}
+        >
           {children || (
             <React.Fragment>
               <Day
@@ -352,15 +349,14 @@ class DateInput extends React.Component {
             </React.Fragment>
           )}
         </div>
-      </Fieldset>
+      </React.Fragment>
     );
   }
 }
 
 DateInput.propTypes = {
-  describedBy: PropTypes.string,
-  asPageHeading: PropTypes.bool,
-  title: PropTypes.string,
+  label: PropTypes.string,
+  labelHtmlFor: PropTypes.string,
   name: PropTypes.string.isRequired,
   required: PropTypes.bool,
   autoFocus: PropTypes.bool,
@@ -375,9 +371,8 @@ DateInput.propTypes = {
 };
 
 DateInput.defaultProps = {
-  describedBy: '',
-  asPageHeading: false,
-  title: '',
+  label: '',
+  labelHtmlFor: '',
   required: false,
   autoFocus: false,
   children: null,

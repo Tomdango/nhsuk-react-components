@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
-import Fieldset from '../../../fieldset';
+import classNames from 'classnames';
+import Label from '../../../label';
 import Hint from '../../../hint';
 import ErrorMessage from '../../../error-message';
 
@@ -23,9 +24,8 @@ class Textarea extends React.Component {
 
   render() {
     const {
-      describedBy,
-      asPageHeading,
-      title,
+      label,
+      labelHtmlFor,
       hint,
       autoComplete,
       error,
@@ -37,32 +37,27 @@ class Textarea extends React.Component {
     } = this.props;
 
     return (
-      <Fieldset
-        describedBy={describedBy}
-        className={className}
-        style={style}
-        asPageHeading={asPageHeading}
-        title={title}
-      >
+      <React.Fragment>
+        {label ? <Label htmlFor={labelHtmlFor}>{label}</Label> : null}
         {hint ? <Hint>{hint}</Hint> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
         <textarea
-          className="nhsuk-textarea"
+          className={classNames('nhsuk-textarea', className)}
           id={name || id}
           onChange={this.onChange}
           name={name}
+          style={style}
           rows={rows}
           autoComplete={autoComplete}
         />
-      </Fieldset>
+      </React.Fragment>
     );
   }
 }
 
 Textarea.propTypes = {
-  describedBy: PropTypes.string,
-  asPageHeading: PropTypes.bool,
-  title: PropTypes.string,
+  label: PropTypes.string,
+  labelHtmlFor: PropTypes.string,
   hint: PropTypes.string,
   autoComplete: PropTypes.string,
   error: PropTypes.string,
@@ -76,9 +71,8 @@ Textarea.propTypes = {
 };
 
 Textarea.defaultProps = {
-  describedBy: '',
-  asPageHeading: false,
-  title: '',
+  label: '',
+  labelHtmlFor: '',
   hint: '',
   autoComplete: '',
   error: '',

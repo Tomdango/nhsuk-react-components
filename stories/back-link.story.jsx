@@ -1,7 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
+import { action } from '@storybook/addon-actions';
 import { BackLink } from '../src';
+
+const clickAction = action('clicked');
 
 storiesOf('Back Link', module)
   .addDecorator(centered)
@@ -10,8 +13,7 @@ storiesOf('Back Link', module)
     <BackLink
       onClick={e => {
         e.preventDefault();
-        // eslint-disable-next-line no-alert
-        window.alert('Clicked!');
+        clickAction(e);
       }}
     >
       Go Back

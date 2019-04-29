@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
-import Fieldset from '../../../fieldset';
+import Label from '../../../label';
 import Hint from '../../../hint';
 import ErrorMessage from '../../../error-message';
 
@@ -30,11 +30,10 @@ class Input extends React.Component {
 
   render() {
     const {
-      describedBy,
-      title,
+      label,
+      labelHtmlFor,
       id,
       name,
-      asPageHeading,
       autocomplete,
       hint,
       error,
@@ -44,21 +43,20 @@ class Input extends React.Component {
     } = this.props;
 
     return (
-      <Fieldset
-        describedBy={describedBy}
-        asPageHeading={asPageHeading}
-        title={title}
-        className={className}
-        style={style}
-      >
+      <React.Fragment>
         {hint ? <Hint>{hint}</Hint> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
+        {label ? <Label htmlFor={labelHtmlFor}>{label}</Label> : null}
         <input
           className={classNames(
             'nhsuk-input',
             { 'nhsuk-input--error': error },
-            { [`nhsuk-input--width-${width}`]: width }
+            {
+              [`nhsuk-input--width-${width}`]: width,
+              className
+            }
           )}
+          style={style}
           id={id || name}
           name={`${name}-hint`}
           type="text"
@@ -66,17 +64,16 @@ class Input extends React.Component {
           aria-describedby={`${name}-hint`}
           autoComplete={autocomplete}
         />
-      </Fieldset>
+      </React.Fragment>
     );
   }
 }
 
 Input.propTypes = {
-  describedBy: PropTypes.string,
-  title: PropTypes.string,
   id: PropTypes.string,
   name: PropTypes.string,
-  asPageHeading: PropTypes.bool,
+  label: PropTypes.string,
+  labelHtmlFor: PropTypes.string,
   autocomplete: PropTypes.string,
   hint: PropTypes.string,
   error: PropTypes.string,
@@ -89,10 +86,9 @@ Input.propTypes = {
 
 Input.defaultProps = {
   name: '',
-  describedBy: '',
-  title: '',
   id: '',
-  asPageHeading: false,
+  label: '',
+  labelHtmlFor: '',
   autocomplete: '',
   hint: '',
   error: '',

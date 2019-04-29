@@ -1,13 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input matches snapshot 1`] = `
-<Fieldset
-  asPageHeading={false}
-  className=""
-  describedBy=""
-  style={Object {}}
-  title=""
->
+<Fragment>
   <input
     aria-describedby="-hint"
     autoComplete=""
@@ -15,7 +9,8 @@ exports[`Input matches snapshot 1`] = `
     id=""
     name="-hint"
     onChange={[Function]}
+    style={Object {}}
     type="text"
   />
-</Fieldset>
+</Fragment>
 `;

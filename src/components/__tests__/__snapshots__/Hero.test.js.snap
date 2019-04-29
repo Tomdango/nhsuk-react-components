@@ -131,7 +131,7 @@ exports[`Hero matches snapshot and element with children 1`] = `
             className="nhsuk-grid-column-two-thirds"
           >
             <div
-              className="nhsuk-hero-content"
+              className="nhsuk-hero__wrapper"
             >
               <Heading
                 className=""

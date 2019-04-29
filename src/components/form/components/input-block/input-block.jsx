@@ -24,11 +24,12 @@ class Input extends React.Component {
       name,
       _handleInput,
       autoComplete,
-      title
+      label,
+      labelHtmlFor
     } = this.props;
     return (
       <React.Fragment>
-        {title ? <Label>{title}</Label> : null}
+        {label ? <Label htmlFor={labelHtmlFor}>{label}</Label> : null}
         {hint ? <Hint>{hint}</Hint> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
         <input
@@ -61,9 +62,10 @@ Input.propTypes = {
   name: PropTypes.string.isRequired,
   _handleInput: PropTypes.func,
   autoComplete: PropTypes.string,
-  title: PropTypes.string,
+  label: PropTypes.string,
   style: stylePropType,
-  registerInitialValue: PropTypes.func
+  registerInitialValue: PropTypes.func,
+  labelHtmlFor: PropTypes.string
 };
 
 Input.defaultProps = {
@@ -73,17 +75,18 @@ Input.defaultProps = {
   width: NaN,
   id: '',
   autoComplete: '',
-  title: '',
+  label: '',
   style: {},
   registerInitialValue: () => {},
-  _handleInput: () => {}
+  _handleInput: () => {},
+  labelHtmlFor: ''
 };
 
 const InputBlock = ({
   valueCallback,
   children,
-  title,
-  titleSize,
+  heading,
+  headingSize,
   className,
   style,
   registerInitialValue
@@ -101,7 +104,7 @@ const InputBlock = ({
   });
   return (
     <div className={className} style={style}>
-      {title ? <Heading titleSize={titleSize}>{title}</Heading> : null}
+      {heading ? <Heading size={headingSize}>{heading}</Heading> : null}
       {modifiedChildren}
     </div>
   );
@@ -110,16 +113,16 @@ const InputBlock = ({
 InputBlock.propTypes = {
   valueCallback: PropTypes.func,
   children: PropTypes.node.isRequired,
-  title: PropTypes.string,
-  titleSize: PropTypes.string,
+  heading: PropTypes.string,
+  headingSize: PropTypes.string,
   className: PropTypes.string,
   style: stylePropType,
   registerInitialValue: PropTypes.func
 };
 
 InputBlock.defaultProps = {
-  title: '',
-  titleSize: 'm',
+  heading: '',
+  headingSize: 'm',
   className: '',
   style: {},
   valueCallback: () => {},

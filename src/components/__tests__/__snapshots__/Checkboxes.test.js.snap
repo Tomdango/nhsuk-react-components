@@ -6,6 +6,7 @@ exports[`Checkboxes box matches snapshot 1`] = `
   style={Object {}}
 >
   <input
+    aria-describedby="id__label"
     className="nhsuk-checkboxes__input"
     disabled={false}
     id="id"
@@ -14,124 +15,100 @@ exports[`Checkboxes box matches snapshot 1`] = `
     type="checkbox"
     value="option"
   />
-  <label
-    className="nhsuk-label nhsuk-checkboxes__label"
+  <Label
+    className="nhsuk-checkboxes__label"
     htmlFor="id"
+    style={Object {}}
+    type=""
   >
     Option
-  </label>
+  </Label>
 </div>
 `;
 
 exports[`Checkboxes returns other children normally 1`] = `
 <Checkboxes
-  asPageHeading={false}
   className=""
-  describedBy=""
   error=""
   hint=""
+  label=""
+  labelHtmlFor=""
   name="name"
   registerInitialValue={[Function]}
   style={Object {}}
-  title=""
   valueCallback={[Function]}
 >
   <div
     className="nhsuk-checkboxes"
     style={Object {}}
   >
-    <Fieldset
-      asPageHeading={false}
-      className=""
-      describedBy=""
-      style={Object {}}
-      title=""
+    <p
+      key=".0"
     >
-      <fieldset
-        aria-describedby=""
-        className="nhsuk-fieldset"
-        style={Object {}}
-      >
-        <legend
-          className="nhsuk-fieldset__legend"
-        />
-        <p
-          key=".0"
-        >
-          Hello
-        </p>
-      </fieldset>
-    </Fieldset>
+      Hello
+    </p>
   </div>
 </Checkboxes>
 `;
 
 exports[`Checkboxes wrapper matches snapshot 1`] = `
 <Checkboxes
-  asPageHeading={false}
   className=""
-  describedBy=""
   error=""
   hint=""
+  label=""
+  labelHtmlFor=""
   name="name"
   registerInitialValue={[Function]}
   style={Object {}}
-  title=""
   valueCallback={[Function]}
 >
   <div
     className="nhsuk-checkboxes"
     style={Object {}}
   >
-    <Fieldset
-      asPageHeading={false}
+    <Box
+      _id="name-1"
+      _onClick={[Function]}
       className=""
-      describedBy=""
+      disabled={false}
+      hint=""
+      key=".0"
+      name="name"
       style={Object {}}
-      title=""
+      value="box"
     >
-      <fieldset
-        aria-describedby=""
-        className="nhsuk-fieldset"
+      <div
+        className="nhsuk-checkboxes__item"
         style={Object {}}
       >
-        <legend
-          className="nhsuk-fieldset__legend"
-        />
-        <Box
-          _id="name-1"
-          _onClick={[Function]}
-          className=""
+        <input
+          aria-describedby="name-1__label"
+          className="nhsuk-checkboxes__input"
           disabled={false}
-          hint=""
-          key=".0"
+          id="name-1"
           name="name"
-          style={Object {}}
+          onClick={[Function]}
+          type="checkbox"
           value="box"
+        />
+        <Label
+          className="nhsuk-checkboxes__label"
+          htmlFor="name-1"
+          style={Object {}}
+          type=""
         >
-          <div
-            className="nhsuk-checkboxes__item"
+          <label
+            className="nhsuk-label nhsuk-checkboxes__label"
+            htmlFor="name-1"
+            id="name-1__label"
             style={Object {}}
           >
-            <input
-              className="nhsuk-checkboxes__input"
-              disabled={false}
-              id="name-1"
-              name="name"
-              onClick={[Function]}
-              type="checkbox"
-              value="box"
-            />
-            <label
-              className="nhsuk-label nhsuk-checkboxes__label"
-              htmlFor="name-1"
-            >
-              Box
-            </label>
-          </div>
-        </Box>
-      </fieldset>
-    </Fieldset>
+            Box
+          </label>
+        </Label>
+      </div>
+    </Box>
   </div>
 </Checkboxes>
 `;

@@ -22,11 +22,17 @@ describe('FormWrapper', () => {
   });
   it('registers the initial state', () => {
     const shallowMount = shallow(<Form>Child</Form>);
-    expect(shallowMount.state()).toEqual({ formData: {} });
+    expect(shallowMount.state()).toEqual({ errorInChild: false, formData: {} });
     shallowMount.instance().registerInitialValue('input', 'initial');
-    expect(shallowMount.state()).toEqual({ formData: { input: 'initial' } });
+    expect(shallowMount.state()).toEqual({
+      errorInChild: false,
+      formData: { input: 'initial' }
+    });
     shallowMount.instance().valueCallback('input', 'newvalue');
-    expect(shallowMount.state()).toEqual({ formData: { input: 'newvalue' } });
+    expect(shallowMount.state()).toEqual({
+      errorInChild: false,
+      formData: { input: 'newvalue' }
+    });
   });
   it('registers all new inputs into the state', () => {
     const fullFormMount = mount(
@@ -49,6 +55,7 @@ describe('FormWrapper', () => {
       </Form>
     );
     expect(fullFormMount.state()).toEqual({
+      errorInChild: false,
       formData: {
         checkboxes: [],
         dateInput: {
@@ -238,7 +245,10 @@ describe('FormWrapper', () => {
     wrapper.instance().valueCallback('key', 'value');
     wrapperForAnonFunc.instance().valueCallback('key', 'value');
     expect(onChange).toHaveBeenCalled();
-    expect(wrapper.state()).toEqual({ formData: { key: 'value' } });
+    expect(wrapper.state()).toEqual({
+      errorInChild: false,
+      formData: { key: 'value' }
+    });
     wrapper.find('form').simulate('submit');
     wrapperForAnonFunc.find('form').simulate('submit');
     expect(onSubmit).toHaveBeenCalled();

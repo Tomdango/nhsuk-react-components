@@ -6,7 +6,7 @@ import ErrorSummary from '../error-summary';
 describe('ErrorSummary', () => {
   it('item matches snapshot', () => {
     const shallowMount = shallow(
-      <ErrorSummary.ErrorItem href="#">Error item</ErrorSummary.ErrorItem>
+      <ErrorSummary.Item href="#">Error item</ErrorSummary.Item>
     );
     expect(shallowMount).toMatchSnapshot();
     shallowMount.unmount();
@@ -14,9 +14,7 @@ describe('ErrorSummary', () => {
   it('handles onClick properly', () => {
     const onClick = sinon.spy();
     const shallowMount = shallow(
-      <ErrorSummary.ErrorItem onClick={onClick}>
-        Error item
-      </ErrorSummary.ErrorItem>
+      <ErrorSummary.Item onClick={onClick}>Error item</ErrorSummary.Item>
     );
     shallowMount.find('a').simulate('click');
     sinon.assert.called(onClick);
@@ -28,12 +26,12 @@ describe('ErrorSummary', () => {
         title="This is a problem"
         description="Optional description of the errors and how to correct them"
       >
-        <ErrorSummary.ErrorItem href="#example-error-1">
+        <ErrorSummary.Item href="#example-error-1">
           Link to error with explanation
-        </ErrorSummary.ErrorItem>
-        <ErrorSummary.ErrorItem href="#example-error-2">
+        </ErrorSummary.Item>
+        <ErrorSummary.Item href="#example-error-2">
           Link to error with explanation
-        </ErrorSummary.ErrorItem>
+        </ErrorSummary.Item>
       </ErrorSummary>
     );
     expect(mountedElement).toMatchSnapshot();
@@ -42,12 +40,12 @@ describe('ErrorSummary', () => {
   it("doesn't render description or title when not provided", () => {
     const mountedElement = mount(
       <ErrorSummary>
-        <ErrorSummary.ErrorItem href="#example-error-1">
+        <ErrorSummary.Item href="#example-error-1">
           Link to error with explanation
-        </ErrorSummary.ErrorItem>
-        <ErrorSummary.ErrorItem href="#example-error-2">
+        </ErrorSummary.Item>
+        <ErrorSummary.Item href="#example-error-2">
           Link to error with explanation
-        </ErrorSummary.ErrorItem>
+        </ErrorSummary.Item>
       </ErrorSummary>
     );
     expect(mountedElement).toMatchSnapshot();
@@ -57,12 +55,12 @@ describe('ErrorSummary', () => {
     const clickFn = jest.fn();
     const wrapper = mount(
       <ErrorSummary>
-        <ErrorSummary.ErrorItem onClick={clickFn}>Item</ErrorSummary.ErrorItem>
+        <ErrorSummary.Item onClick={clickFn}>Item</ErrorSummary.Item>
       </ErrorSummary>
     );
     const wrapperTest = mount(
       <ErrorSummary>
-        <ErrorSummary.ErrorItem>Item</ErrorSummary.ErrorItem>
+        <ErrorSummary.Item>Item</ErrorSummary.Item>
       </ErrorSummary>
     );
     wrapper.find('a').simulate('click');

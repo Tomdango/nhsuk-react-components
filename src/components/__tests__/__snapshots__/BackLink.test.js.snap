@@ -8,7 +8,7 @@ exports[`BackLink matches snapshot 1`] = `
   <a
     className="nhsuk-back-link__link"
     href="#"
-    onClick={false}
+    onClick={[Function]}
   >
     <ChevronLeft
       className=""

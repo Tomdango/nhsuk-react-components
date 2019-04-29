@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 import ErrorMessage from '../../../error-message';
-import Fieldset from '../../../fieldset';
 import Hint from '../../../hint';
 import Label from '../../../label';
 
@@ -29,7 +28,7 @@ const Box = ({
       type="checkbox"
       value={value}
       onClick={_onClick}
-      aria-describedBy={`${_id}__label`}
+      aria-describedby={`${_id}__label`}
       disabled={disabled}
     />
     <Label htmlFor={_id} className="nhsuk-checkboxes__label">
@@ -96,9 +95,8 @@ class Checkboxes extends React.Component {
     const {
       children,
       name,
-      describedBy,
-      title,
-      asPageHeading,
+      label,
+      labelHtmlFor,
       className,
       error,
       hint,
@@ -118,15 +116,10 @@ class Checkboxes extends React.Component {
     });
     return (
       <div className={classNames('nhsuk-checkboxes', className)} style={style}>
-        <Fieldset
-          describedBy={describedBy}
-          asPageHeading={asPageHeading}
-          title={title}
-        >
-          {hint ? <Hint>{hint}</Hint> : null}
-          {error ? <ErrorMessage>{error}</ErrorMessage> : null}
-          {injectedChildren}
-        </Fieldset>
+        {label ? <Label htmlFor={labelHtmlFor}>{label}</Label> : null}
+        {hint ? <Hint>{hint}</Hint> : null}
+        {error ? <ErrorMessage>{error}</ErrorMessage> : null}
+        {injectedChildren}
       </div>
     );
   }
@@ -135,9 +128,8 @@ class Checkboxes extends React.Component {
 Checkboxes.propTypes = {
   children: PropTypes.node.isRequired,
   name: PropTypes.string.isRequired,
-  describedBy: PropTypes.string,
-  title: PropTypes.string,
-  asPageHeading: PropTypes.bool,
+  label: PropTypes.string,
+  labelHtmlFor: PropTypes.string,
   className: PropTypes.string,
   style: stylePropType,
   valueCallback: PropTypes.func,
@@ -147,9 +139,8 @@ Checkboxes.propTypes = {
 };
 
 Checkboxes.defaultProps = {
-  describedBy: '',
-  title: '',
-  asPageHeading: false,
+  label: '',
+  labelHtmlFor: '',
   className: '',
   style: {},
   valueCallback: () => {},

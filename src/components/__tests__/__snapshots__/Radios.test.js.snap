@@ -1,15 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input matches snapshot 1`] = `
-<Fieldset
-  asPageHeading={false}
-  className=""
-  describedBy=""
-  style={Object {}}
-  title=""
->
+<Fragment>
   <div
     className="nhsuk-radios"
+    style={Object {}}
   />
-</Fieldset>
+</Fragment>
 `;

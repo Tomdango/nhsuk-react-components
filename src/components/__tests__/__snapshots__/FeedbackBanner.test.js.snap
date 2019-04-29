@@ -8,7 +8,7 @@ exports[`FeedbackBanner matches snapshot 1`] = `
   label="Answer the survey"
   onClick={[Function]}
   style={Object {}}
-  timeout={0}
+  timeout={3000}
   title="Help us make the NHS website better"
   visuallyHiddenText=" feedback invite"
 >

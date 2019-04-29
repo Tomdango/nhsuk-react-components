@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
-import Fieldset from '../../../fieldset';
+import Label from '../../../label';
 import Hint from '../../../hint';
 import ErrorMessage from '../../../error-message';
 
@@ -108,42 +108,40 @@ class Radios extends React.Component {
 
   render() {
     const {
-      describedBy,
-      asPageHeading,
-      title,
       hint,
       inline,
       error,
+      label,
+      labelHtmlFor,
       className,
       style
     } = this.props;
     const children = this.injectChildren();
     return (
-      <Fieldset
-        describedBy={describedBy}
-        asPageHeading={asPageHeading}
-        title={title}
-        className={className}
-        style={style}
-      >
+      <React.Fragment>
         {hint ? <Hint>{hint}</Hint> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
+        {label ? <Label htmlFor={labelHtmlFor}>Label</Label> : null}
         <div
-          className={classNames('nhsuk-radios', {
-            'nhsuk-radios--inline': inline
-          })}
+          className={classNames(
+            'nhsuk-radios',
+            {
+              'nhsuk-radios--inline': inline
+            },
+            className
+          )}
+          style={style}
         >
           {children}
         </div>
-      </Fieldset>
+      </React.Fragment>
     );
   }
 }
 
 Radios.propTypes = {
-  describedBy: PropTypes.string,
-  asPageHeading: PropTypes.bool,
-  title: PropTypes.string,
+  label: PropTypes.string,
+  labelHtmlFor: PropTypes.string,
   hint: PropTypes.string,
   error: PropTypes.string,
   name: PropTypes.string.isRequired,
@@ -156,9 +154,8 @@ Radios.propTypes = {
 };
 
 Radios.defaultProps = {
-  describedBy: '',
-  asPageHeading: false,
-  title: '',
+  label: '',
+  labelHtmlFor: '',
   hint: '',
   error: '',
   inline: false,

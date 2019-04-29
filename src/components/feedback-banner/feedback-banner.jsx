@@ -15,6 +15,7 @@ const isScrolledIntoView = element => {
 const mockFooter = {
   getBoundingClientRect: () => ({ top: 10, bottom: 20 })
 };
+
 class FeedbackBanner extends React.Component {
   constructor(props) {
     super(props);
@@ -24,18 +25,25 @@ class FeedbackBanner extends React.Component {
     };
     this.toggleBanner = this.toggleBanner.bind(this);
     this.unstickBanner = this.unstickBanner.bind(this);
+    this.initialPendingTimeout = false;
     this.timer = false;
   }
 
   componentDidMount() {
     const { timeout } = this.props;
-    setTimeout(() => {
+    this.initialPendingTimeout = setTimeout(() => {
       this.toggleBanner(true);
     }, timeout);
     window.addEventListener('scroll', this.unstickBanner);
   }
 
   componentWillUnmount() {
+    if (this.initialPendingTimeout) {
+      clearTimeout(this.initialPendingTimeout);
+    }
+    if (this.timer) {
+      clearTimeout(this.timer);
+    }
     window.removeEventListener('scroll', this.unstickBanner);
   }
 
@@ -157,7 +165,7 @@ FeedbackBanner.propTypes = {
 
 FeedbackBanner.defaultProps = {
   id: 'nhsuk-feedback-banner',
-  timeout: 0,
+  timeout: 3000,
   title: '',
   label: '',
   href: '#',

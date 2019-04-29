@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
-import Fieldset from '../../../fieldset';
+import Label from '../../../label';
 import Hint from '../../../hint';
 import ErrorMessage from '../../../error-message';
 
@@ -55,9 +55,8 @@ class Select extends React.Component {
 
   render() {
     const {
-      describedBy,
-      asPageHeading,
-      title,
+      label,
+      labelHtmlFor,
       children,
       hint,
       error,
@@ -68,35 +67,34 @@ class Select extends React.Component {
     } = this.props;
     const { value } = this.state;
     return (
-      <Fieldset
-        describedBy={describedBy}
-        asPageHeading={asPageHeading}
-        title={title}
-        className={className}
-        style={style}
-      >
+      <React.Fragment>
+        {label ? <Label htmlFor={labelHtmlFor}>{label}</Label> : null}
         {hint ? <Hint>{hint}</Hint> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
         <select
           value={value}
           onChange={this.handleChange}
-          className={classNames('nhsuk-select', {
-            'nhsuk-select--error': error
-          })}
+          className={classNames(
+            'nhsuk-select',
+            {
+              'nhsuk-select--error': error
+            },
+            className
+          )}
+          style={style}
           id={id || name}
           name={name}
         >
           {children}
         </select>
-      </Fieldset>
+      </React.Fragment>
     );
   }
 }
 
 Select.propTypes = {
-  describedBy: PropTypes.string,
-  asPageHeading: PropTypes.bool,
-  title: PropTypes.string,
+  label: PropTypes.string,
+  labelHtmlFor: PropTypes.string,
   children: PropTypes.node.isRequired,
   hint: PropTypes.string,
   error: PropTypes.string,
@@ -109,9 +107,8 @@ Select.propTypes = {
 };
 
 Select.defaultProps = {
-  describedBy: '',
-  asPageHeading: false,
-  title: '',
+  label: '',
+  labelHtmlFor: '',
   hint: '',
   error: '',
   id: '',

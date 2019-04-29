@@ -2,377 +2,343 @@
 
 exports[`DateInput Wrapper matches snapshot 1`] = `
 <DateInput
-  asPageHeading={false}
   autoFocus={false}
   className=""
-  describedBy=""
   error=""
   hint=""
   id=""
+  label=""
+  labelHtmlFor=""
   name="dateInput"
   registerInitialValue={[Function]}
   required={false}
   style={Object {}}
-  title=""
   valueCallback={[Function]}
 >
-  <Fieldset
-    asPageHeading={false}
-    className=""
-    describedBy=""
+  <div
+    className="nhsuk-date-input"
+    id=""
     style={Object {}}
-    title=""
   >
-    <fieldset
-      aria-describedby=""
-      className="nhsuk-fieldset"
+    <Day
+      _day=""
+      _handleInput={[Function]}
+      _name="dateInput"
+      autoComplete=""
+      className=""
+      error={false}
+      key=".0"
+      label="Day"
+      required={false}
       style={Object {}}
     >
-      <legend
-        className="nhsuk-fieldset__legend"
-      />
       <div
-        className="nhsuk-date-input"
-        id=""
+        className="nhsuk-date-input__item"
+        style={Object {}}
       >
-        <Day
-          _day=""
-          _handleInput={[Function]}
-          _name="dateInput"
-          autoComplete=""
-          className=""
-          error={false}
-          key=".0"
-          label="Day"
-          required={false}
-          style={Object {}}
+        <div
+          className="nhsuk-form-group"
         >
-          <div
-            className="nhsuk-date-input__item"
+          <Label
+            className=""
+            htmlFor="dateInput-day"
             style={Object {}}
+            type=""
           >
-            <div
-              className="nhsuk-form-group"
+            <label
+              className="nhsuk-label"
+              htmlFor="dateInput-day"
+              id="dateInput-day__label"
+              style={Object {}}
             >
-              <Label
-                className=""
-                htmlFor="dateInput-day"
-                htmlForId=""
-                style={Object {}}
-                type=""
-              >
-                <label
-                  className="nhsuk-label"
-                  htmlFor=""
-                  style={Object {}}
-                >
-                  Day
-                </label>
-              </Label>
-              <input
-                aria-label="dateInput-day input"
-                autoComplete=""
-                className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
-                id="dateInput-day"
-                name="dateInput-day"
-                onChange={[Function]}
-                pattern="[0-9]*"
-                required={false}
-                type="number"
-                value=""
-              />
-            </div>
-          </div>
-        </Day>
-        <Month
-          _handleInput={[Function]}
-          _month=""
-          _name="dateInput"
-          _registerComponent={[Function]}
-          autoComplete=""
-          className=""
-          error={false}
-          key=".1"
-          label="Month"
-          required={false}
-          style={Object {}}
-        >
-          <div
-            className="nhsuk-date-input__item"
-            style={Object {}}
-          >
-            <div
-              className="nhsuk-form-group"
-            >
-              <Label
-                className=""
-                htmlFor="dateInput-day"
-                htmlForId=""
-                style={Object {}}
-                type=""
-              >
-                <label
-                  className="nhsuk-label"
-                  htmlFor=""
-                  style={Object {}}
-                >
-                  Month
-                </label>
-              </Label>
-              <input
-                aria-label="dateInput-month input"
-                autoComplete=""
-                className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
-                id="dateInput-month"
-                name="dateInput-month"
-                onChange={[Function]}
-                pattern="[0-9]*"
-                required={false}
-                type="number"
-                value=""
-              />
-            </div>
-          </div>
-        </Month>
-        <Year
-          _handleInput={[Function]}
-          _name="dateInput"
-          _registerComponent={[Function]}
-          _year=""
-          autoComplete=""
-          className=""
-          error={false}
-          key=".2"
-          label="Year"
-          required={false}
-          style={Object {}}
-        >
-          <div
-            className="nhsuk-date-input__item"
-            style={Object {}}
-          >
-            <div
-              className="nhsuk-form-group"
-            >
-              <Label
-                className=""
-                htmlFor="dateInput-day"
-                htmlForId=""
-                style={Object {}}
-                type=""
-              >
-                <label
-                  className="nhsuk-label"
-                  htmlFor=""
-                  style={Object {}}
-                >
-                  Year
-                </label>
-              </Label>
-              <input
-                aria-label="dateInput-year input"
-                autoComplete=""
-                className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
-                id="dateInput-year"
-                name="dateInput-year"
-                onChange={[Function]}
-                pattern="[0-9]*"
-                required={false}
-                type="number"
-                value=""
-              />
-            </div>
-          </div>
-        </Year>
+              Day
+            </label>
+          </Label>
+          <input
+            aria-label="dateInput-day input"
+            autoComplete=""
+            className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+            id="dateInput-day"
+            name="dateInput-day"
+            onChange={[Function]}
+            pattern="[0-9]*"
+            required={false}
+            type="number"
+            value=""
+          />
+        </div>
       </div>
-    </fieldset>
-  </Fieldset>
+    </Day>
+    <Month
+      _handleInput={[Function]}
+      _month=""
+      _name="dateInput"
+      _registerComponent={[Function]}
+      autoComplete=""
+      className=""
+      error={false}
+      key=".1"
+      label="Month"
+      required={false}
+      style={Object {}}
+    >
+      <div
+        className="nhsuk-date-input__item"
+        style={Object {}}
+      >
+        <div
+          className="nhsuk-form-group"
+        >
+          <Label
+            className=""
+            htmlFor="dateInput-day"
+            style={Object {}}
+            type=""
+          >
+            <label
+              className="nhsuk-label"
+              htmlFor="dateInput-day"
+              id="dateInput-day__label"
+              style={Object {}}
+            >
+              Month
+            </label>
+          </Label>
+          <input
+            aria-label="dateInput-month input"
+            autoComplete=""
+            className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+            id="dateInput-month"
+            name="dateInput-month"
+            onChange={[Function]}
+            pattern="[0-9]*"
+            required={false}
+            type="number"
+            value=""
+          />
+        </div>
+      </div>
+    </Month>
+    <Year
+      _handleInput={[Function]}
+      _name="dateInput"
+      _registerComponent={[Function]}
+      _year=""
+      autoComplete=""
+      className=""
+      error={false}
+      key=".2"
+      label="Year"
+      required={false}
+      style={Object {}}
+    >
+      <div
+        className="nhsuk-date-input__item"
+        style={Object {}}
+      >
+        <div
+          className="nhsuk-form-group"
+        >
+          <Label
+            className=""
+            htmlFor="dateInput-day"
+            style={Object {}}
+            type=""
+          >
+            <label
+              className="nhsuk-label"
+              htmlFor="dateInput-day"
+              id="dateInput-day__label"
+              style={Object {}}
+            >
+              Year
+            </label>
+          </Label>
+          <input
+            aria-label="dateInput-year input"
+            autoComplete=""
+            className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+            id="dateInput-year"
+            name="dateInput-year"
+            onChange={[Function]}
+            pattern="[0-9]*"
+            required={false}
+            type="number"
+            value=""
+          />
+        </div>
+      </div>
+    </Year>
+  </div>
 </DateInput>
 `;
 
 exports[`DateInput Wrapper renders without individual components 1`] = `
 <DateInput
-  asPageHeading={false}
   autoFocus={false}
   className=""
-  describedBy=""
   error=""
   hint=""
   id=""
+  label=""
+  labelHtmlFor=""
   name="dateInput"
   registerInitialValue={[Function]}
   required={false}
   style={Object {}}
-  title=""
   valueCallback={[Function]}
 >
-  <Fieldset
-    asPageHeading={false}
-    className=""
-    describedBy=""
+  <div
+    className="nhsuk-date-input"
+    id=""
     style={Object {}}
-    title=""
   >
-    <fieldset
-      aria-describedby=""
-      className="nhsuk-fieldset"
+    <Day
+      _day=""
+      _handleInput={[Function]}
+      _name="dateInput"
+      autoComplete=""
+      className=""
+      error={false}
+      label="Day"
+      required={false}
       style={Object {}}
     >
-      <legend
-        className="nhsuk-fieldset__legend"
-      />
       <div
-        className="nhsuk-date-input"
-        id=""
+        className="nhsuk-date-input__item"
+        style={Object {}}
       >
-        <Day
-          _day=""
-          _handleInput={[Function]}
-          _name="dateInput"
-          autoComplete=""
-          className=""
-          error={false}
-          label="Day"
-          required={false}
-          style={Object {}}
+        <div
+          className="nhsuk-form-group"
         >
-          <div
-            className="nhsuk-date-input__item"
+          <Label
+            className=""
+            htmlFor="dateInput-day"
             style={Object {}}
+            type=""
           >
-            <div
-              className="nhsuk-form-group"
+            <label
+              className="nhsuk-label"
+              htmlFor="dateInput-day"
+              id="dateInput-day__label"
+              style={Object {}}
             >
-              <Label
-                className=""
-                htmlFor="dateInput-day"
-                htmlForId=""
-                style={Object {}}
-                type=""
-              >
-                <label
-                  className="nhsuk-label"
-                  htmlFor=""
-                  style={Object {}}
-                >
-                  Day
-                </label>
-              </Label>
-              <input
-                aria-label="dateInput-day input"
-                autoComplete=""
-                className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
-                id="dateInput-day"
-                name="dateInput-day"
-                onChange={[Function]}
-                pattern="[0-9]*"
-                required={false}
-                type="number"
-                value=""
-              />
-            </div>
-          </div>
-        </Day>
-        <Month
-          _handleInput={[Function]}
-          _month=""
-          _name="dateInput"
-          _registerComponent={[Function]}
-          autoComplete=""
-          className=""
-          error={false}
-          label="Month"
-          required={false}
-          style={Object {}}
-        >
-          <div
-            className="nhsuk-date-input__item"
-            style={Object {}}
-          >
-            <div
-              className="nhsuk-form-group"
-            >
-              <Label
-                className=""
-                htmlFor="dateInput-day"
-                htmlForId=""
-                style={Object {}}
-                type=""
-              >
-                <label
-                  className="nhsuk-label"
-                  htmlFor=""
-                  style={Object {}}
-                >
-                  Month
-                </label>
-              </Label>
-              <input
-                aria-label="dateInput-month input"
-                autoComplete=""
-                className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
-                id="dateInput-month"
-                name="dateInput-month"
-                onChange={[Function]}
-                pattern="[0-9]*"
-                required={false}
-                type="number"
-                value=""
-              />
-            </div>
-          </div>
-        </Month>
-        <Year
-          _handleInput={[Function]}
-          _name="dateInput"
-          _registerComponent={[Function]}
-          _year=""
-          autoComplete=""
-          className=""
-          error={false}
-          label="Year"
-          required={false}
-          style={Object {}}
-        >
-          <div
-            className="nhsuk-date-input__item"
-            style={Object {}}
-          >
-            <div
-              className="nhsuk-form-group"
-            >
-              <Label
-                className=""
-                htmlFor="dateInput-day"
-                htmlForId=""
-                style={Object {}}
-                type=""
-              >
-                <label
-                  className="nhsuk-label"
-                  htmlFor=""
-                  style={Object {}}
-                >
-                  Year
-                </label>
-              </Label>
-              <input
-                aria-label="dateInput-year input"
-                autoComplete=""
-                className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
-                id="dateInput-year"
-                name="dateInput-year"
-                onChange={[Function]}
-                pattern="[0-9]*"
-                required={false}
-                type="number"
-                value=""
-              />
-            </div>
-          </div>
-        </Year>
+              Day
+            </label>
+          </Label>
+          <input
+            aria-label="dateInput-day input"
+            autoComplete=""
+            className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+            id="dateInput-day"
+            name="dateInput-day"
+            onChange={[Function]}
+            pattern="[0-9]*"
+            required={false}
+            type="number"
+            value=""
+          />
+        </div>
       </div>
-    </fieldset>
-  </Fieldset>
+    </Day>
+    <Month
+      _handleInput={[Function]}
+      _month=""
+      _name="dateInput"
+      _registerComponent={[Function]}
+      autoComplete=""
+      className=""
+      error={false}
+      label="Month"
+      required={false}
+      style={Object {}}
+    >
+      <div
+        className="nhsuk-date-input__item"
+        style={Object {}}
+      >
+        <div
+          className="nhsuk-form-group"
+        >
+          <Label
+            className=""
+            htmlFor="dateInput-day"
+            style={Object {}}
+            type=""
+          >
+            <label
+              className="nhsuk-label"
+              htmlFor="dateInput-day"
+              id="dateInput-day__label"
+              style={Object {}}
+            >
+              Month
+            </label>
+          </Label>
+          <input
+            aria-label="dateInput-month input"
+            autoComplete=""
+            className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+            id="dateInput-month"
+            name="dateInput-month"
+            onChange={[Function]}
+            pattern="[0-9]*"
+            required={false}
+            type="number"
+            value=""
+          />
+        </div>
+      </div>
+    </Month>
+    <Year
+      _handleInput={[Function]}
+      _name="dateInput"
+      _registerComponent={[Function]}
+      _year=""
+      autoComplete=""
+      className=""
+      error={false}
+      label="Year"
+      required={false}
+      style={Object {}}
+    >
+      <div
+        className="nhsuk-date-input__item"
+        style={Object {}}
+      >
+        <div
+          className="nhsuk-form-group"
+        >
+          <Label
+            className=""
+            htmlFor="dateInput-day"
+            style={Object {}}
+            type=""
+          >
+            <label
+              className="nhsuk-label"
+              htmlFor="dateInput-day"
+              id="dateInput-day__label"
+              style={Object {}}
+            >
+              Year
+            </label>
+          </Label>
+          <input
+            aria-label="dateInput-year input"
+            autoComplete=""
+            className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+            id="dateInput-year"
+            name="dateInput-year"
+            onChange={[Function]}
+            pattern="[0-9]*"
+            required={false}
+            type="number"
+            value=""
+          />
+        </div>
+      </div>
+    </Year>
+  </div>
 </DateInput>
 `;

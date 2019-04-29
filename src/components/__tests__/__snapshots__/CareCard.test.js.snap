@@ -5,7 +5,7 @@ exports[`CareCard matches snapshot 1`] = `
   className=""
   disableHiddenText={false}
   heading="TestHeading"
-  hiddenText={false}
+  hiddenText=""
   style={Object {}}
   type="non-urgent"
 >
@@ -47,7 +47,7 @@ exports[`CareCard matches snapshot 2`] = `
   className=""
   disableHiddenText={false}
   heading="TestHeading"
-  hiddenText={false}
+  hiddenText=""
   style={Object {}}
   type="urgent"
 >
@@ -89,7 +89,7 @@ exports[`CareCard matches snapshot 3`] = `
   className=""
   disableHiddenText={false}
   heading="TestHeading"
-  hiddenText={false}
+  hiddenText=""
   style={Object {}}
   type="immediate"
 >
@@ -131,7 +131,7 @@ exports[`CareCard matches snapshot 4`] = `
   className=""
   disableHiddenText={false}
   heading="TestHeading"
-  hiddenText={false}
+  hiddenText=""
   style={Object {}}
   type="incorrect"
 >
@@ -171,7 +171,7 @@ exports[`CareCard matches snapshot 5`] = `
   className=""
   disableHiddenText={true}
   heading="TestHeading"
-  hiddenText={false}
+  hiddenText=""
   style={Object {}}
   type="immediate"
 >
