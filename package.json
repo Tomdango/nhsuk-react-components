@@ -1,6 +1,6 @@
 {
   "name": "nhsuk-react-components",
-  "version": "0.7.2",
+  "version": "0.8.0",
   "description": "NHS.UK Frontend components ported to React",
   "author": "Tomdango",
   "license": "MIT",
