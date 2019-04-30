@@ -34,6 +34,24 @@ describe('FormWrapper', () => {
       formData: { input: 'newvalue' }
     });
   });
+  it('sets state on callbackErrorFromChild', () => {
+    const shallowMount = shallow(<Form>Child</Form>);
+    expect(shallowMount.state()).toEqual({
+      formData: {},
+      errorInChild: false
+    });
+    shallowMount.instance().callbackErrorFromChild(true);
+    expect(shallowMount.state()).toEqual({
+      formData: {},
+      errorInChild: true
+    });
+    shallowMount.instance().callbackErrorFromChild(false);
+    expect(shallowMount.state()).toEqual({
+      formData: {},
+      errorInChild: false
+    });
+    shallowMount.unmount();
+  });
   it('registers all new inputs into the state', () => {
     const fullFormMount = mount(
       <Form>

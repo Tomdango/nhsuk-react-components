@@ -314,8 +314,8 @@ class DateInput extends React.Component {
     return (
       <React.Fragment>
         {label ? <Label htmlFor={labelHtmlFor}>{label}</Label> : null}
-        {error ? <ErrorMessage>{error}</ErrorMessage> : null}
         {hint ? <Hint>{hint}</Hint> : null}
+        {error ? <ErrorMessage>{error}</ErrorMessage> : null}
         <div
           className={classNames('nhsuk-date-input', className)}
           style={style}

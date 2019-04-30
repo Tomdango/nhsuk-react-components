@@ -2,9 +2,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
 import { action } from '@storybook/addon-actions';
-import { BackLink } from '../src';
+import BackLink from '../src/components/back-link';
 
-const clickAction = action('clicked');
+const clickAction = action('backLinkClicked');
 
 storiesOf('Back Link', module)
   .addDecorator(centered)

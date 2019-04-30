@@ -1,61 +1,48 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
-import { Form, Input } from '../src';
+import Input from '../src/components/form/components/input';
 
 storiesOf('Input', module)
   .addDecorator(centered)
   .add('Input', () => (
-    <Form>
-      <Input
-        name="ni-number"
-        describedBy="national-insurance-hint"
-        title="National Insurance Number"
-      />
-    </Form>
+    <Input name="ni-number" label="National Insurance Number" />
   ))
   .add('Input with autocomplete attribute', () => (
-    <Form>
-      <Input
-        name="postcode"
-        describedBy="postcode-input"
-        title="Postcode"
-        autocomplete="postal-code"
-      />
-    </Form>
+    <Input name="postcode" label="Postcode" autoComplete="postal-code" />
+  ))
+  .add('Input with placeholder', () => (
+    <Input
+      name="postcode"
+      describedBy="postcode-input"
+      label="Postcode"
+      placeholder="Postcode"
+      autocomplete="postal-code"
+    />
   ))
   .add('Input with hint text', () => (
-    <Form>
-      <Input
-        name="ni-number-input"
-        describedBy="ni-number-input"
-        title="National Insurance Number"
-        autocomplete="postal-code"
-        hint="It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
-      />
-    </Form>
+    <Input
+      name="ni-number-input"
+      label="National Insurance Number"
+      autoComplete="postal-code"
+      hint="It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
+    />
   ))
   .add('Input with error', () => (
-    <Form>
-      <Input
-        name="ni-number-input"
-        describedBy="ni-number-input"
-        title="National Insurance Number"
-        autocomplete="postal-code"
-        hint="It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
-        error="Error message goes here"
-      />
-    </Form>
+    <Input
+      name="ni-number-input"
+      label="National Insurance Number"
+      autoComplete="postal-code"
+      hint="It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
+      error="Error message goes here"
+    />
   ))
   .add('Input with width modifier', () => (
-    <Form>
-      <Input
-        name="ni-number-input"
-        describedBy="ni-number-input"
-        title="National Insurance Number"
-        autocomplete="postal-code"
-        hint="It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
-        width={10}
-      />
-    </Form>
+    <Input
+      name="ni-number-input"
+      label="National Insurance Number"
+      autoComplete="postal-code"
+      hint="It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
+      width={10}
+    />
   ));

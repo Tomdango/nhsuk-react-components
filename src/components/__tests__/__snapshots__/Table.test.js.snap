@@ -22,14 +22,14 @@ exports[`Table Header matches snapshot 1`] = `
   >
     <th
       className="nhsuk-table__header"
-      key="Skin symptoms"
+      key=".0"
       scope="col"
     >
       Skin symptoms
     </th>
     <th
       className="nhsuk-table__header"
-      key="Possible cause"
+      key=".1"
       scope="col"
     >
       Possible cause
@@ -56,13 +56,13 @@ exports[`Table Row matches snapshot 1`] = `
 >
   <td
     className="nhsuk-table__cell"
-    key="Blisters on lips or around the mouth"
+    key=".0"
   >
     Blisters on lips or around the mouth
   </td>
   <td
     className="nhsuk-table__cell"
-    key="cold sores"
+    key=".1"
   >
     cold sores
   </td>

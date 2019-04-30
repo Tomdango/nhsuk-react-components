@@ -9,6 +9,7 @@ exports[`InputBlock Input matches snapshot 1`] = `
     id="thing"
     name="thing-hint"
     onChange={[Function]}
+    placeholder=""
     style={Object {}}
     type="text"
   />

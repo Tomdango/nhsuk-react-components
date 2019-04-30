@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import Textarea from '../form/components/textarea';
 import Hint from '../hint';
 import ErrorMessage from '../error-message';
+import Label from '../label';
 
 describe('Textarea', () => {
   it('matches snapshot', () => {
@@ -20,12 +21,15 @@ describe('Textarea', () => {
     expect(valueCallback.mock.calls[0][1]).toBe('Change');
     wrapper.unmount();
   });
-  it('renders hint and error', () => {
-    const wrapper = shallow(<Textarea error="Error" hint="Hint" />);
+  it('renders hint, error and label', () => {
+    const wrapper = shallow(
+      <Textarea label="Label" error="Error" hint="Hint" />
+    );
     expect(
       wrapper.containsMatchingElement(<ErrorMessage>Error</ErrorMessage>)
     ).toBeTruthy();
     expect(wrapper.containsMatchingElement(<Hint>Hint</Hint>)).toBeTruthy();
+    expect(wrapper.containsMatchingElement(<Label>Label</Label>)).toBeTruthy();
     wrapper.unmount();
   });
   it('has valid defaultProps', () => {

@@ -15,6 +15,10 @@ const Item = ({ children, value, disabled, className, style }) => (
 Item.propTypes = {
   children: PropTypes.node.isRequired,
   value: PropTypes.string.isRequired,
+  // This prop is only used in the container element to pull out
+  // the default value.
+  // eslint-disable-next-line react/no-unused-prop-types
+  default: PropTypes.bool,
   disabled: PropTypes.bool,
   className: PropTypes.string,
   style: stylePropType
@@ -22,6 +26,7 @@ Item.propTypes = {
 
 Item.defaultProps = {
   disabled: false,
+  default: false,
   className: '',
   style: {}
 };
@@ -39,9 +44,12 @@ class Select extends React.Component {
     const { children, registerInitialValue, name } = this.props;
     registerInitialValue(name, '');
     React.Children.forEach(children, child => {
-      if (child.props.selected) {
-        this.setState({ value: child.props.value });
-        registerInitialValue(name, String(child.props.value));
+      const { props } = child;
+      if (props) {
+        if (props.default) {
+          this.setState({ value: child.props.value });
+          registerInitialValue(name, String(child.props.value));
+        }
       }
     });
   }

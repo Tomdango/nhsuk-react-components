@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
-import { Image } from '../src';
+import Image from '../src/components/image';
 
 storiesOf('Image', module)
   .addDecorator(centered)

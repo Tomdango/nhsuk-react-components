@@ -28,6 +28,7 @@ class Textarea extends React.Component {
       labelHtmlFor,
       hint,
       autoComplete,
+      placeholder,
       error,
       rows,
       name,
@@ -43,8 +44,9 @@ class Textarea extends React.Component {
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
         <textarea
           className={classNames('nhsuk-textarea', className)}
-          id={name || id}
+          id={id || name}
           onChange={this.onChange}
+          placeholder={placeholder}
           name={name}
           style={style}
           rows={rows}
@@ -60,6 +62,7 @@ Textarea.propTypes = {
   labelHtmlFor: PropTypes.string,
   hint: PropTypes.string,
   autoComplete: PropTypes.string,
+  placeholder: PropTypes.string,
   error: PropTypes.string,
   rows: PropTypes.number,
   name: PropTypes.string.isRequired,
@@ -75,6 +78,7 @@ Textarea.defaultProps = {
   labelHtmlFor: '',
   hint: '',
   autoComplete: '',
+  placeholder: '',
   error: '',
   rows: 5,
   id: '',

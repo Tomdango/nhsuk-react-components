@@ -23,6 +23,7 @@ class Input extends React.Component {
       id,
       name,
       _handleInput,
+      placeholder,
       autoComplete,
       label,
       labelHtmlFor
@@ -43,6 +44,7 @@ class Input extends React.Component {
           id={id || name}
           name={`${name}-hint`}
           type="text"
+          placeholder={placeholder}
           style={style}
           onChange={_handleInput}
           aria-describedby={`${name}-hint`}
@@ -62,6 +64,7 @@ Input.propTypes = {
   name: PropTypes.string.isRequired,
   _handleInput: PropTypes.func,
   autoComplete: PropTypes.string,
+  placeholder: PropTypes.string,
   label: PropTypes.string,
   style: stylePropType,
   registerInitialValue: PropTypes.func,
@@ -75,6 +78,7 @@ Input.defaultProps = {
   width: NaN,
   id: '',
   autoComplete: '',
+  placeholder: '',
   label: '',
   style: {},
   registerInitialValue: () => {},

@@ -43,7 +43,7 @@ export {
 export { default as Image } from './components/image';
 export { default as InsetText } from './components/inset-text';
 export { default as Label } from './components/label';
-export { Container, Row, MainWrapper } from './components/layout';
+export { Container, Row, MainWrapper, ReadingWidth } from './components/layout';
 export { default as ListPanel } from './components/list-panel';
 export { default as NavAZ } from './components/nav-a-z';
 export { default as Pagination } from './components/pagination';

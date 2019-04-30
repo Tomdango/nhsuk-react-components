@@ -33,6 +33,7 @@ class FeedbackBanner extends React.Component {
     const { timeout } = this.props;
     this.initialPendingTimeout = setTimeout(() => {
       this.toggleBanner(true);
+      this.initialPendingTimeout = false;
     }, timeout);
     window.addEventListener('scroll', this.unstickBanner);
   }
@@ -84,7 +85,7 @@ class FeedbackBanner extends React.Component {
             this.setState({ jsInView: false });
           }
         }
-      }, 500);
+      }, 50);
       didScroll = forceDidScroll === undefined ? true : forceDidScroll;
     }
   }

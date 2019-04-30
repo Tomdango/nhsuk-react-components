@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
-import { Hint } from '../src';
+import Hint from '../src/components/hint';
 
 storiesOf('Hint', module)
   .addDecorator(centered)

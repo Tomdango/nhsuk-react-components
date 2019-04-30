@@ -70,14 +70,13 @@ const Footer = ({
   linksVisuallyHiddenText
 }) => {
   const linksFromChildren = [];
-  const childrenWithLinksRemoved = React.Children.forEach(children, child => {
-    if (child.type === Link) {
+  const childrenWithLinksRemoved = React.Children.map(children, child => {
+    if (child.type.name === 'Link') {
       linksFromChildren.push(child);
       return null;
     }
     return child;
   });
-
   return (
     <footer role={role}>
       <div

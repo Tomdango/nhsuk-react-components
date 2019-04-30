@@ -2,13 +2,13 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import '../node_modules/nhsuk-frontend/packages/core/all.scss';
-import { Breadcrumbs } from '../src';
+import Breadcrumbs from '../src/components/breadcrumbs';
 
-const clickAction = action('clicked');
+const clickAction = action('breadcrumbLinkClicked');
 
 storiesOf('Breadcrumb', module)
   .add('Standard', () => (
-    <Breadcrumbs>
+    <Breadcrumbs ariaLabel="breadcrumbs">
       <Breadcrumbs.Item href="/level-one">Level One</Breadcrumbs.Item>
       <Breadcrumbs.Item href="/level-one/level-two">Level Two</Breadcrumbs.Item>
       <Breadcrumbs.Item href="/level-one/level-two/level-three">
@@ -17,7 +17,7 @@ storiesOf('Breadcrumb', module)
     </Breadcrumbs>
   ))
   .add('With onClick', () => (
-    <Breadcrumbs>
+    <Breadcrumbs ariaLabel="breadcrumbs">
       <Breadcrumbs.Item
         onClick={e => {
           e.preventDefault();

@@ -1,30 +1,28 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
-import { boolean, text } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import ActionLink from '../src/components/action-link';
 import './storybook.scss';
 
-const clickAction = action('clicked');
+const clickAction = action('actionLinkClicked');
 storiesOf('Action Link', module)
   .addDecorator(centered)
   .add('Action Link', () => (
-    <ActionLink
-      openInNewWindow={boolean('Open in new window', false)}
-      href={text('Href', '#')}
-    >
-      {text('Link Text', 'Find a minor injuries unit')}
+    <ActionLink href="https://nhs.uk/">Find a minor injuries unit</ActionLink>
+  ))
+  .add('With openInNewWindow attribute', () => (
+    <ActionLink href="https://nhs.uk/" openInNewWindow>
+      Find a minor injuries unit
     </ActionLink>
   ))
   .add('With onClick attribute', () => (
     <ActionLink
-      openInNewWindow={boolean('Open in new window', false)}
       onClick={e => {
         e.preventDefault();
         clickAction(e);
       }}
     >
-      {text('Link Text', 'Find a minor injuries unit')}
+      Find a minor injuries unit
     </ActionLink>
   ));

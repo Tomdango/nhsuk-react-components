@@ -1,75 +1,43 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
-import { ListPanel } from '../src';
-
-const Panels = [
-  {
-    label: 'A',
-    id: 'A',
-    backToTop: 'true',
-    backToTopLink: '#nhsuk-nav-a-z',
-    items: [
-      {
-        URL: '/conditions/abdominal-aortic-aneurysm/',
-        link: 'AAA'
-      },
-      {
-        URL: '/conditions/abdominal-aortic-aneurysm/',
-        link: 'Abdominal aortic aneurysm'
-      },
-      {
-        URL: '/conditions/abscess/',
-        link: 'Abscess'
-      }
-    ]
-  },
-  {
-    label: 'B',
-    id: 'B',
-    disable: 'true',
-    backToTop: 'true',
-    backToTopLink: '#nhsuk-nav-a-z',
-    message: 'There are currently no conditions listed'
-  },
-  {
-    label: 'C',
-    id: 'C',
-    backToTop: 'true',
-    backToTopLink: '#nhsuk-nav-a-z',
-    items: [
-      {
-        URL: '/conditions/chest-pain/',
-        link: 'Chest pain'
-      },
-      {
-        URL: '/conditions/cold-sores/',
-        link: 'Cold sore'
-      }
-    ]
-  },
-  {
-    label: 'D',
-    id: 'D',
-    backToTop: 'true',
-    backToTopLink: '#nhsuk-nav-a-z',
-    items: [
-      {
-        URL: '/conditions/dandruff/',
-        link: 'Dandruff'
-      },
-      {
-        URL: '/conditions/dementia/',
-        link: 'Dementia'
-      },
-      {
-        URL: '/conditions/toothache/',
-        link: 'Dental pain'
-      }
-    ]
-  }
-];
+import ListPanel from '../src/components/list-panel';
 
 storiesOf('List Panel', module)
   .addDecorator(centered)
-  .add('Standard', () => <ListPanel panels={Panels} />);
+  .add('Standard', () => (
+    <ListPanel>
+      <ListPanel.Panel label="A" id="A">
+        <ListPanel.Item href="/conditions/abdominal-aortic-aneurysm/">
+          Abdominal aortic aneurysm
+        </ListPanel.Item>
+        <ListPanel.Item href="/conditions/abscess/">Abscess</ListPanel.Item>
+      </ListPanel.Panel>
+      <ListPanel.Panel label="B" id="B" disabled>
+        There are currently no conditions listed
+      </ListPanel.Panel>
+      <ListPanel.Panel label="C" id="C" backToTop backToTopLink="#top">
+        <ListPanel.Item href="/conditions/chest-pain/">
+          Chest pain
+        </ListPanel.Item>
+        <ListPanel.Item href="/conditions/cold-sores/">
+          Cold sore
+        </ListPanel.Item>
+      </ListPanel.Panel>
+      <ListPanel.Panel label="D" id="D" backToTop backToTopLink="#top">
+        <ListPanel.Item href="/conditions/dandruff/">Dandruff</ListPanel.Item>
+        <ListPanel.Item href="/conditions/dementia/">Dementia</ListPanel.Item>
+        <ListPanel.Item href="/conditions/toothache/">
+          Dental pain
+        </ListPanel.Item>
+      </ListPanel.Panel>
+    </ListPanel>
+  ))
+  .add('Single Panel', () => (
+    <ListPanel.Panel label="A" id="A">
+      <ListPanel.Item href="/conditions/abdominal-aortic-aneurysm/">
+        Abdominal aortic aneurysm
+      </ListPanel.Item>
+      <ListPanel.Item href="/conditions/abscess/">Abscess</ListPanel.Item>
+    </ListPanel.Panel>
+  ));

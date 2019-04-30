@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
-import { SkipLink } from '../src';
+import SkipLink from '../src/components/skip-link';
 
 storiesOf('Skip Link', module)
   .addDecorator(centered)

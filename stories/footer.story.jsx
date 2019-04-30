@@ -1,10 +1,16 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Footer } from '../src';
+import { action } from '@storybook/addon-actions';
+import Footer from '../src/components/footer';
 
-storiesOf('Footer', module).add('Standard', () => (
-  <div style={{ marginTop: '80vh' }}>
-    <Footer>
+const clicked = action('footerLinkClicked');
+
+storiesOf('Footer', module)
+  .add('Standard', () => (
+    <Footer
+      linksVisuallyHiddenText="Support links"
+      style={{ marginTop: '80vh' }}
+    >
       <Footer.Link href="https://www.nhs.uk/Pages/nhs-sites.aspx">
         NHS sites
       </Footer.Link>
@@ -20,5 +26,26 @@ storiesOf('Footer', module).add('Standard', () => (
       </Footer.Link>
       <Footer.Copyright>&copy; Crown copyright</Footer.Copyright>
     </Footer>
-  </div>
-));
+  ))
+  .add('With onClick', () => (
+    <Footer style={{ marginTop: '80vh' }}>
+      <Footer.Link
+        onClick={e => {
+          e.preventDefault();
+          clicked(e);
+        }}
+      >
+        NHS sites
+      </Footer.Link>
+    </Footer>
+  ))
+  .add('With openInNewWindow', () => (
+    <Footer style={{ marginTop: '80vh' }}>
+      <Footer.Link
+        openInNewWindow
+        href="https://www.nhs.uk/Pages/nhs-sites.aspx"
+      >
+        NHS sites
+      </Footer.Link>
+    </Footer>
+  ));

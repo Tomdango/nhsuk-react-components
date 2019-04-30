@@ -34,8 +34,9 @@ class Input extends React.Component {
       labelHtmlFor,
       id,
       name,
-      autocomplete,
+      autoComplete,
       hint,
+      placeholder,
       error,
       width,
       className,
@@ -44,9 +45,9 @@ class Input extends React.Component {
 
     return (
       <React.Fragment>
+        {label ? <Label htmlFor={labelHtmlFor}>{label}</Label> : null}
         {hint ? <Hint>{hint}</Hint> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
-        {label ? <Label htmlFor={labelHtmlFor}>{label}</Label> : null}
         <input
           className={classNames(
             'nhsuk-input',
@@ -56,13 +57,14 @@ class Input extends React.Component {
               className
             }
           )}
+          placeholder={placeholder}
           style={style}
           id={id || name}
           name={`${name}-hint`}
           type="text"
           onChange={this.handleInput}
           aria-describedby={`${name}-hint`}
-          autoComplete={autocomplete}
+          autoComplete={autoComplete}
         />
       </React.Fragment>
     );
@@ -74,7 +76,8 @@ Input.propTypes = {
   name: PropTypes.string,
   label: PropTypes.string,
   labelHtmlFor: PropTypes.string,
-  autocomplete: PropTypes.string,
+  autoComplete: PropTypes.string,
+  placeholder: PropTypes.string,
   hint: PropTypes.string,
   error: PropTypes.string,
   width: PropTypes.number,
@@ -89,7 +92,8 @@ Input.defaultProps = {
   id: '',
   label: '',
   labelHtmlFor: '',
-  autocomplete: '',
+  autoComplete: '',
+  placeholder: '',
   hint: '',
   error: '',
   width: undefined,

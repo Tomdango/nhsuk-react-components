@@ -98,6 +98,7 @@ class Checkboxes extends React.Component {
       label,
       labelHtmlFor,
       className,
+      id,
       error,
       hint,
       style
@@ -115,7 +116,11 @@ class Checkboxes extends React.Component {
       return child;
     });
     return (
-      <div className={classNames('nhsuk-checkboxes', className)} style={style}>
+      <div
+        id={id}
+        className={classNames('nhsuk-checkboxes', className)}
+        style={style}
+      >
         {label ? <Label htmlFor={labelHtmlFor}>{label}</Label> : null}
         {hint ? <Hint>{hint}</Hint> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
@@ -130,6 +135,7 @@ Checkboxes.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string,
   labelHtmlFor: PropTypes.string,
+  id: PropTypes.string,
   className: PropTypes.string,
   style: stylePropType,
   valueCallback: PropTypes.func,
@@ -143,6 +149,7 @@ Checkboxes.defaultProps = {
   labelHtmlFor: '',
   className: '',
   style: {},
+  id: '',
   valueCallback: () => {},
   error: '',
   hint: '',

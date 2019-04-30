@@ -6,10 +6,12 @@ import Radios from './components/radios';
 import Select from './components/select';
 import Textarea from './components/textarea';
 import InputBlock from './components/input-block';
+import Fieldset from '../fieldset';
 
 export {
   Form,
   Checkboxes,
+  Fieldset,
   DateInput,
   Input,
   Radios,

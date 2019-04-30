@@ -3,6 +3,7 @@ import { shallow, mount } from 'enzyme';
 import Input from '../form/components/input';
 import ErrorMessage from '../error-message';
 import Hint from '../hint';
+import Label from '../label';
 
 describe('Input', () => {
   it('matches snapshot', () => {
@@ -18,12 +19,13 @@ describe('Input', () => {
     expect(valueCallback.mock.calls[0][1]).toBe('Change');
     wrapper.unmount();
   });
-  it('renders hint and error', () => {
-    const wrapper = shallow(<Input error="Error" hint="Hint" />);
+  it('renders hint, label and error', () => {
+    const wrapper = shallow(<Input label="Label" error="Error" hint="Hint" />);
     expect(
       wrapper.containsMatchingElement(<ErrorMessage>Error</ErrorMessage>)
     ).toBeTruthy();
     expect(wrapper.containsMatchingElement(<Hint>Hint</Hint>)).toBeTruthy();
+    expect(wrapper.containsMatchingElement(<Label>Label</Label>)).toBeTruthy();
     wrapper.unmount();
   });
   it('handles input', () => {

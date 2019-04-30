@@ -47,6 +47,13 @@ exports[`Footer matches snapshot 2`] = `
           Hello
         </Link>
       </ul>
+      <Copyright
+        className=""
+        key=".1"
+        style={Object {}}
+      >
+        MIT License
+      </Copyright>
     </div>
   </div>
 </footer>

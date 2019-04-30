@@ -3,12 +3,20 @@ import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 
-const TableHeader = ({ rows, className, style }) => {
-  const tableRows = rows.map(row => (
-    <th className="nhsuk-table__header" scope="col" key={row}>
-      {row}
-    </th>
-  ));
+const TableHeader = ({ children, className, style }) => {
+  const tableRows = React.Children.map(children, child => {
+    const { type } = child;
+    if (type === 'th') {
+      const { className: childClassName } = child.props;
+      return React.cloneElement(child, {
+        ...child.props,
+        className: classNames('nhsuk-table__header', childClassName),
+        scope: 'col'
+      });
+    }
+    return child;
+  });
+
   return (
     <thead className={classNames('nhsuk-table__head', className)} style={style}>
       <tr className="nhsuk-table__row">{tableRows}</tr>
@@ -17,9 +25,7 @@ const TableHeader = ({ rows, className, style }) => {
 };
 
 TableHeader.propTypes = {
-  rows: PropTypes.arrayOf(
-    PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-  ).isRequired,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
   style: stylePropType
 };

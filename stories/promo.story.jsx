@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
-import { Promo } from '../src';
+import Promo from '../src/components/promo';
 
 storiesOf('Promo', module)
   .addDecorator(centered)

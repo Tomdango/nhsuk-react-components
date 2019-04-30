@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
-import { WarningCallout } from '../src';
+import WarningCallout from '../src/components/warning-callout';
 
 storiesOf('Warning Callout', module)
   .addDecorator(centered)

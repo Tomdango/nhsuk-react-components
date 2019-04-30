@@ -1,6 +1,7 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import sinon from 'sinon';
+import Label from '../label';
 import { Checkboxes } from '../form';
 
 describe('Checkboxes', () => {
@@ -113,27 +114,35 @@ describe('Checkboxes', () => {
     expect(fullMount).toMatchSnapshot();
     fullMount.unmount();
   });
-  it('renders with hint and error', () => {
-    const mountwithError = mount(
-      <Checkboxes name="name" error="error">
+  it('renders with hint, label and error', () => {
+    const mountWithError = mount(
+      <Checkboxes name="name" label="Label" error="error">
         <Checkboxes.Box value="box">Box</Checkboxes.Box>
         <Checkboxes.Box value="box2">Box2</Checkboxes.Box>
       </Checkboxes>
     );
-    const mountwithHint = mount(
-      <Checkboxes name="name" hint="hint">
+    const mountWithHint = mount(
+      <Checkboxes name="name" label="Label" hint="hint">
         <Checkboxes.Box value="box">Box</Checkboxes.Box>
         <Checkboxes.Box value="box2">Box2</Checkboxes.Box>
       </Checkboxes>
     );
     expect(
-      mountwithHint.containsMatchingElement(
+      mountWithHint.containsMatchingElement(
         <span className="nhsuk-hint">hint</span>
       )
     ).toBeTruthy();
 
     expect(
-      mountwithError.containsMatchingElement(
+      mountWithError.containsMatchingElement(<Label>Label</Label>)
+    ).toBeTruthy();
+
+    expect(
+      mountWithHint.containsMatchingElement(<Label>Label</Label>)
+    ).toBeTruthy();
+
+    expect(
+      mountWithError.containsMatchingElement(
         <span className="nhsuk-error-message">
           <span className="nhsuk-u-visually-hidden">Error: </span>error
         </span>

@@ -1,6 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Container, Row, Panel } from '../src';
+import Panel from '../src/components/panel';
+import {
+  Container,
+  Row,
+  MainWrapper,
+  ReadingWidth
+} from '../src/components/layout';
 
 storiesOf('Layout', module)
   .add('Fixed Container', () => (
@@ -188,4 +194,26 @@ storiesOf('Layout', module)
         </Row.Column>
       </Row>
     </Container>
+  ))
+  .add('Main Wrapper', () => (
+    <MainWrapper id="main">
+      <p>Wrap main page content within here</p>
+    </MainWrapper>
+  ))
+  .add('Reading Width', () => (
+    <ReadingWidth>
+      <p>
+        Wrap long text in this component to have it automatically set it to a
+        normal reading width.
+      </p>
+      <p>
+        Bacon ipsum dolor amet alcatra spare ribs buffalo leberkas, tail t-bone
+        turducken ground round picanha. T-bone spare ribs ground round picanha
+        tri-tip sausage turkey meatball pork drumstick strip steak doner ham
+        hock ball tip. Buffalo meatloaf shankle porchetta pork loin shank. Chuck
+        frankfurter pork chop biltong shankle cupim. Sausage jowl rump, boudin
+        biltong pancetta kevin meatloaf meatball pastrami t-bone bresaola.
+        Tri-tip meatball pig turkey, pork loin turducken burgdoggen.
+      </p>
+    </ReadingWidth>
   ));

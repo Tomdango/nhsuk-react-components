@@ -2,6 +2,7 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import { DateInput } from '../form';
 import Hint from '../hint';
+import Label from '../label';
 import ErrorMessage from '../error-message';
 
 describe('DateInput', () => {
@@ -244,11 +245,12 @@ describe('DateInput', () => {
     wrapper.unmount();
   });
 
-  it('renders with error and hint', () => {
+  it('renders with error, label and hint', () => {
     const wrapper = shallow(
-      <DateInput name="dateInput" hint="hint" error="error" />
+      <DateInput name="dateInput" hint="hint" label="Label" error="error" />
     );
     expect(wrapper.containsMatchingElement(<Hint>hint</Hint>)).toBeTruthy();
+    expect(wrapper.containsMatchingElement(<Label>Label</Label>)).toBeTruthy();
     expect(
       wrapper.containsMatchingElement(<ErrorMessage>error</ErrorMessage>)
     ).toBeTruthy();

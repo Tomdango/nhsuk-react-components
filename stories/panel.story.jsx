@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
-import { Panel } from '../src';
+import Panel from '../src/components/panel';
 
 storiesOf('Panel', module)
   .addDecorator(centered)
@@ -51,7 +51,7 @@ storiesOf('Panel', module)
       </Panel.Group>
       <Panel.Group>
         <Panel>
-          <h3>Excercise</h3>
+          <h3>Exercise</h3>
           <p>
             Programmes, workouts and tips to get you moving and improve your
             fitness and wellbeing

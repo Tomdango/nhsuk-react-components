@@ -6,14 +6,44 @@ describe('Table', () => {
   describe('Header', () => {
     it('matches snapshot', () => {
       const shallowMount = shallow(
-        <Table.Header rows={['Skin symptoms', 'Possible cause']} />
+        <Table.Header>
+          <th>Skin symptoms</th>
+          <th>Possible cause</th>
+        </Table.Header>
       );
       expect(shallowMount).toMatchSnapshot();
       shallowMount.unmount();
     });
     it('renders its children', () => {
       const shallowMount = shallow(
-        <Table.Header rows={['Skin symptoms', 'Possible cause']} />
+        <Table.Header>
+          <th>Skin symptoms</th>
+          <th>Possible cause</th>
+        </Table.Header>
+      );
+      expect(
+        shallowMount.containsMatchingElement(
+          <th className="nhsuk-table__header" scope="col">
+            Skin symptoms
+          </th>
+        )
+      ).toBeTruthy();
+      expect(
+        shallowMount.containsMatchingElement(
+          <th className="nhsuk-table__header" scope="col">
+            Possible cause
+          </th>
+        )
+      ).toBeTruthy();
+      shallowMount.unmount();
+    });
+    it('handles weird children', () => {
+      const shallowMount = shallow(
+        <Table.Header>
+          <th>Skin symptoms</th>
+          <th>Possible cause</th>
+          Weird child
+        </Table.Header>
       );
       expect(
         shallowMount.containsMatchingElement(
@@ -35,18 +65,42 @@ describe('Table', () => {
   describe('Row', () => {
     it('matches snapshot', () => {
       const shallowMount = shallow(
-        <Table.Row
-          items={['Blisters on lips or around the mouth', 'cold sores']}
-        />
+        <Table.Row>
+          <td>Blisters on lips or around the mouth</td>
+          <td>cold sores</td>
+        </Table.Row>
       );
       expect(shallowMount).toMatchSnapshot();
       shallowMount.unmount();
     });
     it('properly renders items', () => {
       const shallowMount = shallow(
-        <Table.Row
-          items={['Blisters on lips or around the mouth', 'cold sores']}
-        />
+        <Table.Row>
+          <td>Blisters on lips or around the mouth</td>
+          <td>cold sores</td>
+        </Table.Row>
+      );
+      expect(
+        shallowMount.containsMatchingElement(
+          <td className="nhsuk-table__cell">
+            Blisters on lips or around the mouth
+          </td>
+        )
+      ).toBeTruthy();
+      expect(
+        shallowMount.containsMatchingElement(
+          <td className="nhsuk-table__cell">cold sores</td>
+        )
+      ).toBeTruthy();
+      shallowMount.unmount();
+    });
+    it('handles weird children', () => {
+      const shallowMount = shallow(
+        <Table.Row>
+          <td>Blisters on lips or around the mouth</td>
+          <td>cold sores</td>
+          Weird child
+        </Table.Row>
       );
       expect(
         shallowMount.containsMatchingElement(

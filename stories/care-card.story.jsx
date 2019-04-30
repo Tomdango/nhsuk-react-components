@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
-import { CareCard } from '../src';
+import CareCard from '../src/components/care-card';
 
 storiesOf('Care Card', module)
   .addDecorator(centered)
@@ -52,6 +52,38 @@ storiesOf('Care Card', module)
       type="immediate"
       heading="Call 999 if you have sudden chest pain that:"
     >
+      <ul>
+        <li>spreads to your arms, back, neck or jaw</li>
+        <li>makes your chest feel tight or heavy</li>
+        <li>
+          also started with shortness of breath, sweating and feeling or being
+          sick
+        </li>
+      </ul>
+      <p>
+        You could be having a heart attack. Call 999 immediately as you need
+        immediate treatment in hospital.
+      </p>
+    </CareCard>
+  ))
+  .add('With disabled hidden text', () => (
+    <CareCard disableHiddenText>
+      <ul>
+        <li>spreads to your arms, back, neck or jaw</li>
+        <li>makes your chest feel tight or heavy</li>
+        <li>
+          also started with shortness of breath, sweating and feeling or being
+          sick
+        </li>
+      </ul>
+      <p>
+        You could be having a heart attack. Call 999 immediately as you need
+        immediate treatment in hospital.
+      </p>
+    </CareCard>
+  ))
+  .add('With custom hidden text', () => (
+    <CareCard hiddenText="Custom Text">
       <ul>
         <li>spreads to your arms, back, neck or jaw</li>
         <li>makes your chest feel tight or heavy</li>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Hero } from '../src';
+import Hero from '../src/components/hero';
 
 storiesOf('Hero', module)
   .add('With heading and content', () => (

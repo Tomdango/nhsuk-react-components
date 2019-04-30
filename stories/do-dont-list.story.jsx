@@ -1,8 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { DoDontList } from '../src';
+import centered from '@storybook/addon-centered/react';
+import DoDontList from '../src/components/do-dont-list';
 
 storiesOf("Do Don't List", module)
+  .addDecorator(centered)
   .add('Do', () => (
     <DoDontList title="Do" type="tick">
       <DoDontList.Do>

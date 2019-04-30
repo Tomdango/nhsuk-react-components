@@ -3,6 +3,7 @@ import { mount, shallow } from 'enzyme';
 import Radios from '../form/components/radios';
 import ErrorMessage from '../error-message';
 import Hint from '../hint';
+import Label from '../label';
 
 describe('Input', () => {
   it('matches snapshot', () => {
@@ -35,12 +36,13 @@ describe('Input', () => {
     ).toBeTruthy();
     wrapper.unmount();
   });
-  it('renders hint and error', () => {
-    const wrapper = shallow(<Radios error="Error" hint="Hint" />);
+  it('renders hint, label and error', () => {
+    const wrapper = shallow(<Radios label="Label" error="Error" hint="Hint" />);
     expect(
       wrapper.containsMatchingElement(<ErrorMessage>Error</ErrorMessage>)
     ).toBeTruthy();
     expect(wrapper.containsMatchingElement(<Hint>Hint</Hint>)).toBeTruthy();
+    expect(wrapper.containsMatchingElement(<Label>Label</Label>)).toBeTruthy();
     wrapper.unmount();
   });
   it('renders divider', () => {

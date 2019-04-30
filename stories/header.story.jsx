@@ -1,6 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Header } from '../src';
+import { action } from '@storybook/addon-actions';
+import Header from '../src/components/header';
+
+const searchAction = action('headerSearchAction');
+const headerLinkAction = action('headerLinkClicked');
 
 storiesOf('Header', module)
   .add('Standard', () => (
@@ -8,8 +12,7 @@ storiesOf('Header', module)
       <Header
         withNavigation
         withSearch
-        // eslint-disable-next-line no-alert
-        onSearch={string => window.alert(`Search: ${string}`)}
+        onSearch={string => searchAction(string)}
         searchAriaLabel="Search the NHS Website"
       >
         <Header.Link href="/" mobileOnly>
@@ -53,12 +56,66 @@ storiesOf('Header', module)
       </Header>
     </div>
   ))
+  .add('With onClick', () => (
+    <div style={{ marginBottom: '80vh' }}>
+      <Header withNavigation>
+        <Header.Link
+          onClick={e => {
+            e.preventDefault();
+            headerLinkAction(e);
+          }}
+          mobileOnly
+        >
+          Home
+        </Header.Link>
+        <Header.Link
+          onClick={e => {
+            e.preventDefault();
+            headerLinkAction(e);
+          }}
+        >
+          Health A-Z
+        </Header.Link>
+        <Header.Link
+          onClick={e => {
+            e.preventDefault();
+            headerLinkAction(e);
+          }}
+        >
+          Live Well
+        </Header.Link>
+        <Header.Link
+          onClick={e => {
+            e.preventDefault();
+            headerLinkAction(e);
+          }}
+        >
+          Care and support
+        </Header.Link>
+        <Header.Link
+          onClick={e => {
+            e.preventDefault();
+            headerLinkAction(e);
+          }}
+        >
+          Health news
+        </Header.Link>
+        <Header.Link
+          onClick={e => {
+            e.preventDefault();
+            headerLinkAction(e);
+          }}
+        >
+          Services near you
+        </Header.Link>
+      </Header>
+    </div>
+  ))
   .add('With Search', () => (
     <div style={{ marginBottom: '80vh' }}>
       <Header
         withSearch
-        // eslint-disable-next-line no-alert
-        onSearch={string => window.alert(`Search: ${string}`)}
+        onSearch={string => searchAction(string)}
         searchAriaLabel="Search the NHS Website"
       />
     </div>

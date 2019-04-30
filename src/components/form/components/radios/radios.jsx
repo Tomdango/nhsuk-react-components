@@ -111,6 +111,7 @@ class Radios extends React.Component {
       hint,
       inline,
       error,
+      id,
       label,
       labelHtmlFor,
       className,
@@ -119,9 +120,9 @@ class Radios extends React.Component {
     const children = this.injectChildren();
     return (
       <React.Fragment>
+        {label ? <Label htmlFor={labelHtmlFor}>{label}</Label> : null}
         {hint ? <Hint>{hint}</Hint> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
-        {label ? <Label htmlFor={labelHtmlFor}>Label</Label> : null}
         <div
           className={classNames(
             'nhsuk-radios',
@@ -130,6 +131,7 @@ class Radios extends React.Component {
             },
             className
           )}
+          id={id}
           style={style}
         >
           {children}
@@ -142,6 +144,7 @@ class Radios extends React.Component {
 Radios.propTypes = {
   label: PropTypes.string,
   labelHtmlFor: PropTypes.string,
+  id: PropTypes.string,
   hint: PropTypes.string,
   error: PropTypes.string,
   name: PropTypes.string.isRequired,
@@ -156,6 +159,7 @@ Radios.propTypes = {
 Radios.defaultProps = {
   label: '',
   labelHtmlFor: '',
+  id: '',
   hint: '',
   error: '',
   inline: false,
