@@ -8,4 +8,14 @@ describe('BackLink', () => {
     expect(shallowMount).toMatchSnapshot();
     shallowMount.unmount();
   });
+  it('handles onClick', () => {
+    const onClick = jest.fn();
+    const wrapper = shallow(<BackLink onClick={onClick} />);
+    wrapper.find('a').simulate('click');
+    expect(onClick).toHaveBeenCalled();
+    wrapper.unmount();
+  });
+  it('has valid defaultProps', () => {
+    expect(BackLink.defaultProps.onClick()).toBe(undefined);
+  });
 });

@@ -213,4 +213,15 @@ describe('FeedbackBanner', () => {
       }, 600);
     }, 600);
   });
+  it('properly unmounts', () => {
+    const wrapper = mount(
+      <FeedbackBanner
+        title="Help us make the NHS website better"
+        timeout={3000}
+      >
+        Your feedback helps us improve the NHS website.
+      </FeedbackBanner>
+    );
+    wrapper.unmount();
+  });
 });

@@ -48,4 +48,3 @@ The contents list item component takes the following props:
 | ariaCurrent | String   | No       | `page`     | `aria-current` value of Item component                 |
 | className   | String   | No       | `""`       | Custom className to be applied to component            |
 | style       | Object   | No       | `{}`       | Custom style to be applied to component                |
-
