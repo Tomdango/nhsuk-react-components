@@ -6,5 +6,10 @@ module.exports = {
       { removeImport: true, additionalLibraries: ['react-style-proptype'] }
     ]
   ],
+  env: {
+    production: {
+      presets: ['minify']
+    }
+  },
   ignore: ['**/*.test.js', '**/__mocks__', '**/setupTests.js']
 };

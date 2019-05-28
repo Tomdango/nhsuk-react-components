@@ -9,8 +9,8 @@
     "node": ">=8",
     "npm": ">=5"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
   "scripts": {
     "test": "jest",
     "test:ci": "jest --coverage && cat ./coverage/lcov.info | codacy-coverage",
@@ -22,11 +22,10 @@
     "deploy-storybook": "yarn build-storybook & storybook-to-ghpages -e storybook-static --ci",
     "build-storybook": "build-storybook -c .storybook -o storybook-static -s ./.storybook/public/",
     "storybook": "start-storybook -p 9001 -c .storybook -s .storybook/public",
-    "build": "cross-env BABEL_ENV=build rollup -c && yarn babel src/ --out-dir lib/ --config-file ./babelrc.build.js --source-maps",
-    "prepare": "yarn run build"
+    "build": "node pre-build.js && cross-env BABEL_ENV=production yarn babel src/ --out-dir lib/ --config-file ./babelrc.build.js --source-maps",
+    "prepare": "yarn build"
   },
   "peerDependencies": {
-    "prop-types": "^15.7.2",
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0"
   },
@@ -48,6 +47,7 @@
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "babel-preset-minify": "^0.5.0",
     "codacy-coverage": "^3.4.0",
     "cross-env": "^5.1.4",
     "enzyme": "^3.9.0",
@@ -65,20 +65,12 @@
     "jsdom": "^15.0.0",
     "node-sass": "^4.11.0",
     "prettier": "^1.16.4",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.4.1",
     "react-style-proptype": "^3.2.2",
-    "rollup": "^1.10.0",
-    "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-cleaner": "^0.2.0",
-    "rollup-plugin-commonjs": "^9.3.4",
-    "rollup-plugin-copy": "^1.1.0",
-    "rollup-plugin-node-resolve": "^4.2.3",
-    "rollup-plugin-url": "^2.2.1",
     "sass-loader": "^7.1.0",
-    "sinon": "^7.3.1",
-    "storybook-readme": "^5.0.2",
-    "webpack": "^4.29.6"
+    "sinon": "^7.3.1"
   },
   "dependencies": {
     "classnames": "^2.2.6",
