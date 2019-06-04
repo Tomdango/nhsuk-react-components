@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
-import Form from '../src/components/form-context';
+import {
+  Form,
+  Textarea,
+  Radios,
+  DateInput,
+  Input,
+  Checkboxes,
+  Select
+} from '../src/components/form';
 import { Container, Row } from '../src/components/layout';
-import Textarea from '../src/components/form-context/components/textarea';
-import Fieldset from '../src/components/fieldset';
-import Radios from '../src/components/form-context/components/radios';
-import DateInput from '../src/components/form-context/components/date-input';
-import Input from '../src/components/form-context/components/input';
 import Button from '../src/components/button';
 import Hint from '../src/components/hint';
-import Checkboxes from '../src/components/form-context/components/checkboxes';
-import Select from '../src/components/form-context/components/select';
+import Fieldset from '../src/components/fieldset';
 
 const FormWrapper = ({ children }) => {
   const [formData, setFormData] = useState({});
