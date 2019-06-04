@@ -32,6 +32,7 @@
   "devDependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "@storybook/addon-a11y": "^5.0.6",
@@ -43,7 +44,6 @@
     "@storybook/react": "^5.0.6",
     "@storybook/storybook-deployer": "^2.8.1",
     "@storybook/theming": "^5.0.6",
-    "@svgr/rollup": "^4.2.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
@@ -74,7 +74,8 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "nhsuk-frontend": "^2.1.0"
+    "nhsuk-frontend": "^2.1.0",
+    "unistore": "^3.4.1"
   },
   "files": [
     "dist",

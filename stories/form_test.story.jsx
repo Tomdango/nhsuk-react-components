@@ -31,32 +31,55 @@ class TestWrapper extends React.Component {
     const { children } = this.props;
     const { formData } = this.state;
     return (
-      <Container fluid style={{ paddingTop: 40 }}>
-        <Row>
-          <Row.Column width="one-half">
-            <Form
-              onSubmit={(e, data) => {
-                e.preventDefault();
-                submitAction(e, data);
-              }}
-              onChange={data => {
-                this.setState({ formData: data.formData });
-                onChangeAction(data);
-              }}
-              title="Family doctor services registration"
-              titleSize="l"
-              elementMargin={30}
-            >
-              {children}
-            </Form>
-          </Row.Column>
-          <Row.Column width="one-half">
-            <pre style={{ padding: 15, backgroundColor: '#fff' }}>
-              {JSON.stringify(formData, null, 2)}
-            </pre>
-          </Row.Column>
-        </Row>
-      </Container>
+      <Form>
+        <Fieldset>
+          <Radios name="gender" id="gender" label="Gender" inline>
+            <Radios.Radio value={1}>Male</Radios.Radio>
+            <Radios.Radio value={2}>Female</Radios.Radio>
+          </Radios>
+          {/* <InputBlock>
+                                    <Input
+                                        label={FP_PD_FIRST_NAME_LABEL}
+                                        name="firstname"
+                                        id="firstnameInputField"
+                                        autoComplete="off"
+                                        width={20}
+                                        // value={this.state.inputs.firstname.value}
+                                    />
+                                    <Input
+                                        label={FP_PD_SURNAME_LABEL}
+                                        name="surname"
+                                        id="surnameInputField"
+                                        autoComplete="off"
+                                        width={20}
+                                        // value={this.state.inputs.surname.value}
+                                    />
+                                </InputBlock>
+                                <DateInput
+                                    label={FP_PD_DOB_LABEL}
+                                    hint={FP_PD_DOB_EXAMPLE}
+                                    name="dobFrom"
+                                    autoFocus
+                                />
+
+                                <Input
+                                    label={FP_PD_POSTCODE_LABEL}
+                                    name="postcode"
+                                    id="postcodeInputField"
+                                    autoComplete="off"
+                                    width={10}
+                                    // value={this.state.inputs.surname.value}
+                                    // initialState={this.state.inputs.postcode.value}
+                                /> */}
+        </Fieldset>
+        <Button
+          className="patient-search-form__button"
+          // disabled={!this.state.valid}
+          type="submit"
+        >
+          Submit
+        </Button>
+      </Form>
     );
   }
 }
@@ -65,7 +88,7 @@ TestWrapper.propTypes = {
   children: node.isRequired
 };
 
-storiesOf('Form', module)
+storiesOf('FormTest', module)
   .add('Combined Form', () => (
     <TestWrapper>
       <Fieldset title="Patient Details">

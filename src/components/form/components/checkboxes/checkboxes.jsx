@@ -1,161 +1,116 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
-import ErrorMessage from '../../../error-message';
-import Hint from '../../../hint';
+import Box from './box';
 import Label from '../../../label';
+import Hint from '../../../hint';
+import ErrorMessage from '../../../error-message';
+import FormContext from '../../FormContext';
+import CheckboxContext from './CheckboxContext';
 
-const Box = ({
-  children,
-  name,
-  _id,
-  value,
-  hint,
-  disabled,
-  _onClick,
-  className,
-  style
-}) => (
-  <div
-    className={classNames('nhsuk-checkboxes__item', className)}
-    style={style}
-  >
-    <input
-      className="nhsuk-checkboxes__input"
-      id={_id}
-      name={name}
-      type="checkbox"
-      value={value}
-      onClick={_onClick}
-      aria-describedby={`${_id}__label`}
-      disabled={disabled}
-    />
-    <Label htmlFor={_id} className="nhsuk-checkboxes__label">
-      {children}
-    </Label>
-    {hint ? <Hint className="nhsuk-checkboxes__hint">{hint}</Hint> : null}
-  </div>
-);
+class Checkboxes extends Component {
+  static Box = Box;
 
-Box.propTypes = {
-  children: PropTypes.node.isRequired,
-  name: PropTypes.string,
-  _id: PropTypes.string,
-  value: PropTypes.string.isRequired,
-  _onClick: PropTypes.func,
-  hint: PropTypes.string,
-  disabled: PropTypes.bool,
-  className: PropTypes.string,
-  style: stylePropType
-};
+  static contextType = FormContext;
 
-Box.defaultProps = {
-  hint: '',
-  disabled: false,
-  name: '',
-  _id: '',
-  _onClick: () => {},
-  className: '',
-  style: {}
-};
+  static propTypes = {
+    children: PropTypes.node.isRequired,
+    name: PropTypes.string.isRequired,
+    error: PropTypes.string,
+    label: PropTypes.string,
+    labelHtmlFor: PropTypes.string,
+    className: PropTypes.string,
+    hint: PropTypes.string
+  };
 
-class Checkboxes extends React.Component {
-  constructor(props) {
-    super(props);
+  static defaultProps = {
+    label: '',
+    labelHtmlFor: '',
+    error: '',
+    className: '',
+    hint: ''
+  };
+
+  constructor(props, context) {
+    super(props, context);
     this.state = {
-      currentValue: []
+      checkboxes: []
     };
-    this.onClick = this.onClick.bind(this);
   }
 
-  componentDidMount() {
-    const { name, registerInitialValue } = this.props;
-    registerInitialValue(name, []);
-  }
+  componentWillMount() {
+    const { name, children, error } = this.props;
+    const { registerComponent, passBackError } = this.context;
+    if (passBackError) passBackError(name, !!error, error);
 
-  onClick(event) {
-    const checkboxValue = event.target.value;
-    const { name, valueCallback } = this.props;
-    const { currentValue } = this.state;
-    if (currentValue.includes(checkboxValue)) {
-      const filteredValues = currentValue.filter(
-        value => value !== checkboxValue
-      );
-      valueCallback(name, filteredValues);
-      this.setState({ currentValue: filteredValues });
-    } else {
-      currentValue.push(checkboxValue);
-      valueCallback(name, currentValue);
-      this.setState({ currentValue });
+    const defaultCheckboxes = [];
+    React.Children.forEach(children, child => {
+      const { type } = child;
+      if (type === Checkboxes.Box) {
+        const { checked, value } = child.props;
+        if (checked) {
+          defaultCheckboxes.push(value);
+        }
+      }
+    });
+    this.setState({ checkboxes: defaultCheckboxes });
+    if (registerComponent) {
+      registerComponent(name, defaultCheckboxes);
     }
   }
 
+  componentDidUpdate() {
+    const { name, error } = this.props;
+    const { passBackError } = this.context;
+    if (passBackError) passBackError(name, !!error, error);
+  }
+
+  _passValuesContext = () => {
+    const { updateFormState } = this.context;
+    if (updateFormState) {
+      const { checkboxes } = this.state;
+      const { name } = this.props;
+      updateFormState(name, checkboxes);
+    }
+  };
+
+  _handleClick = e => {
+    const { checked, value } = e.target;
+    const { checkboxes } = this.state;
+    if (checkboxes.includes(value) && !checked) {
+      const index = checkboxes.indexOf(value);
+      checkboxes.splice(index, 1);
+      this.setState({ checkboxes }, this._passValuesContext);
+    } else {
+      this.setState(
+        { checkboxes: [...checkboxes, value] },
+        this._passValuesContext
+      );
+    }
+  };
+
   render() {
     const {
-      children,
-      name,
       label,
       labelHtmlFor,
       className,
-      id,
       error,
       hint,
-      style
+      children,
+      ...rest
     } = this.props;
-    let checkboxIdNumber = 0;
-    const injectedChildren = React.Children.map(children, child => {
-      if (child.type === Box) {
-        checkboxIdNumber += 1;
-        return React.cloneElement(child, {
-          name,
-          _id: `${name}-${checkboxIdNumber}`,
-          _onClick: this.onClick
-        });
-      }
-      return child;
-    });
+
     return (
-      <div
-        id={id}
-        className={classNames('nhsuk-checkboxes', className)}
-        style={style}
-      >
+      <div {...rest} className={classNames('nhsuk-checkboxes', className)}>
         {label ? <Label htmlFor={labelHtmlFor}>{label}</Label> : null}
-        {hint ? <Hint>{hint}</Hint> : null}
+        {hint ? <Hint>{label}</Hint> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
-        {injectedChildren}
+        <CheckboxContext.Provider value={{ onChange: this._handleClick }}>
+          {children}
+        </CheckboxContext.Provider>
       </div>
     );
   }
 }
-
-Checkboxes.propTypes = {
-  children: PropTypes.node.isRequired,
-  name: PropTypes.string.isRequired,
-  label: PropTypes.string,
-  labelHtmlFor: PropTypes.string,
-  id: PropTypes.string,
-  className: PropTypes.string,
-  style: stylePropType,
-  valueCallback: PropTypes.func,
-  error: PropTypes.string,
-  hint: PropTypes.string,
-  registerInitialValue: PropTypes.func
-};
-
-Checkboxes.defaultProps = {
-  label: '',
-  labelHtmlFor: '',
-  className: '',
-  style: {},
-  id: '',
-  valueCallback: () => {},
-  error: '',
-  hint: '',
-  registerInitialValue: () => {}
-};
-
-Checkboxes.Box = Box;
 
 export default Checkboxes;

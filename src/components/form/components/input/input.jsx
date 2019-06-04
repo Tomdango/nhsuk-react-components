@@ -1,54 +1,93 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 import Label from '../../../label';
 import Hint from '../../../hint';
 import ErrorMessage from '../../../error-message';
+import FormContext from '../../FormContext';
 
-class Input extends React.Component {
-  constructor(props) {
-    super(props);
+class Input extends Component {
+  static propTypes = {
+    label: PropTypes.string,
+    labelHtmlFor: PropTypes.string,
+    hint: PropTypes.string,
+    error: PropTypes.string,
+    className: PropTypes.string,
+    width: PropTypes.number,
+    value: PropTypes.string,
+    initialValue: PropTypes.string,
+    name: PropTypes.string
+  };
+
+  static defaultProps = {
+    label: '',
+    labelHtmlFor: '',
+    hint: '',
+    error: '',
+    className: '',
+    width: undefined,
+    value: '',
+    initialValue: '',
+    name: ''
+  };
+
+  static contextType = FormContext;
+
+  constructor(props, context) {
+    super(props, context);
     this.state = {
-      input: ''
+      value: ''
     };
-    this.handleInput = this.handleInput.bind(this);
+  }
+
+  componentWillMount() {
+    const { registerComponent, passBackError } = this.context;
+    const { name, value, error } = this.props;
+    if (registerComponent) {
+      registerComponent(name, value);
+    }
+    if (passBackError) passBackError(name, !!error, error);
   }
 
   componentDidMount() {
-    const { name, registerInitialValue } = this.props;
-    registerInitialValue(name, '');
+    const { value } = this.props;
+    this.setState({ value });
   }
 
-  handleInput(event) {
-    this.setState({ input: event.target.value }, () => {
-      const { valueCallback, name } = this.props;
-      const { input } = this.state;
-      valueCallback(name, input);
-    });
+  componentDidUpdate() {
+    const { name, error } = this.props;
+    const { passBackError } = this.context;
+    if (passBackError) passBackError(name, !!error, error);
   }
+
+  handleInput = e => {
+    const { value } = e.target;
+    const { name } = this.props;
+    const { updateFormState } = this.context;
+    if (updateFormState) {
+      updateFormState(name, value);
+    }
+    this.setState({ value });
+  };
 
   render() {
     const {
       label,
       labelHtmlFor,
-      id,
-      name,
-      autoComplete,
       hint,
-      placeholder,
       error,
-      width,
       className,
-      style
+      width,
+      name
     } = this.props;
-
+    const { value } = this.state;
     return (
       <React.Fragment>
         {label ? <Label htmlFor={labelHtmlFor}>{label}</Label> : null}
         {hint ? <Hint>{hint}</Hint> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
         <input
+          {...this.props}
           className={classNames(
             'nhsuk-input',
             { 'nhsuk-input--error': error },
@@ -57,50 +96,15 @@ class Input extends React.Component {
               className
             }
           )}
-          placeholder={placeholder}
-          style={style}
-          id={id || name}
           name={`${name}-hint`}
           type="text"
+          value={value}
           onChange={this.handleInput}
           aria-describedby={`${name}-hint`}
-          autoComplete={autoComplete}
         />
       </React.Fragment>
     );
   }
 }
-
-Input.propTypes = {
-  id: PropTypes.string,
-  name: PropTypes.string,
-  label: PropTypes.string,
-  labelHtmlFor: PropTypes.string,
-  autoComplete: PropTypes.string,
-  placeholder: PropTypes.string,
-  hint: PropTypes.string,
-  error: PropTypes.string,
-  width: PropTypes.number,
-  valueCallback: PropTypes.func,
-  className: PropTypes.string,
-  style: stylePropType,
-  registerInitialValue: PropTypes.func
-};
-
-Input.defaultProps = {
-  name: '',
-  id: '',
-  label: '',
-  labelHtmlFor: '',
-  autoComplete: '',
-  placeholder: '',
-  hint: '',
-  error: '',
-  width: undefined,
-  valueCallback: () => {},
-  className: '',
-  style: {},
-  registerInitialValue: () => {}
-};
 
 export default Input;
