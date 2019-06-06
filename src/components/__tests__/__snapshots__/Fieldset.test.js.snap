@@ -3,7 +3,6 @@
 exports[`Fieldset matches snapshot 1`] = `
 <fieldset
   className="nhsuk-fieldset"
-  style={Object {}}
 >
   Test
 </fieldset>

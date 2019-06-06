@@ -44,13 +44,13 @@ export default class Textarea extends Component {
     if (value) {
       this.setState({ text: value });
     }
-    if (passBackError) passBackError(name, !!error);
+    if (passBackError) passBackError(name, !!error, error);
   }
 
   componentDidUpdate() {
     const { name, error } = this.props;
     const { passBackError } = this.context;
-    if (passBackError) passBackError(name, !!error);
+    if (passBackError) passBackError(name, !!error, error);
   }
 
   onChange = e => {

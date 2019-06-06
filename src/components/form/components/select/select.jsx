@@ -55,7 +55,9 @@ export default class Select extends Component {
 
     this.setState({ selectedValue: defaultSelected }, () => {
       const { registerComponent } = this.context;
-      registerComponent(name, defaultSelected);
+      if (registerComponent) {
+        registerComponent(name, defaultSelected);
+      }
     });
   }
 

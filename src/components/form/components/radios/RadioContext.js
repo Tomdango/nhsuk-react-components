@@ -1,5 +1,5 @@
 import { createContext } from 'react';
 
-const RadioContext = createContext();
+const RadioContext = createContext({});
 
 export default RadioContext;

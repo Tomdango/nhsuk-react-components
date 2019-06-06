@@ -1,11 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Input matches snapshot 1`] = `
+exports[`Divider matches snapshot 1`] = `
+<div
+  className="nhsuk-radio__divider"
+>
+  Or
+</div>
+`;
+
+exports[`Radio matches snapshot 1`] = `
+<div
+  className="nhsuk-radios__item"
+>
+  <input
+    checked={false}
+    className="nhsuk-radios__input"
+    id=""
+    name=""
+    type="radio"
+    value="1"
+  />
+  <Label
+    className="nhsuk-radios__label"
+    htmlFor=""
+    style={Object {}}
+    type=""
+  >
+    1
+  </Label>
+</div>
+`;
+
+exports[`Radios matches snapshot 1`] = `
 <Fragment>
   <div
     className="nhsuk-radios"
-    id=""
-    style={Object {}}
-  />
+  >
+    <ContextProvider
+      value={
+        Object {
+          "handleClick": [Function],
+          "name": "radios",
+          "radioSelected": "",
+        }
+      }
+    />
+  </div>
 </Fragment>
 `;

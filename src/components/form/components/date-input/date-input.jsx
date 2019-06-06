@@ -92,22 +92,6 @@ export default class DateInput extends Component {
     return hasError;
   };
 
-  passBackErrorToForm = () => {
-    const { passBackError } = this.context;
-    const { name } = this.props;
-    const { errors } = this.state;
-    if (passBackError) passBackError(name);
-  };
-
-  passBackErrorToDate = (type, error) => {
-    const { name } = this.props;
-    const { errors } = this.state;
-    this.setState(
-      { errors: { ...errors, [type]: error } },
-      this.passBackErrorToForm
-    );
-  };
-
   registerRef = (type, ref) => {
     if (type === 'month') {
       this.monthRef = ref;
@@ -138,6 +122,21 @@ export default class DateInput extends Component {
     });
   };
 
+  passErrorToForm = () => {
+    const { errors } = this.state;
+    const { name } = this.props;
+    const { passBackError } = this.context;
+    if (passBackError) passBackError(name, errors);
+  };
+
+  passErrorToDate = (type, value) => {
+    const { errors } = this.state;
+    this.setState(
+      { errors: { [type]: value, ...errors } },
+      this.passErrorToForm
+    );
+  };
+
   render() {
     const {
       children,
@@ -152,6 +151,7 @@ export default class DateInput extends Component {
     const contextValue = {
       handleInput: this.handleInput,
       registerRef: this.registerRef,
+      passBackError: this.passErrorToDate,
       day,
       month,
       year,
