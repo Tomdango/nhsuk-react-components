@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Promo.Heading matches snapshot and element 1`] = `
+<h3
+  className="nhsuk-promo__heading"
+  style={Object {}}
+>
+  Hello
+</h3>
+`;

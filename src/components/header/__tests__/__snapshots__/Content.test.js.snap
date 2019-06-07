@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header.Content matches snapshot 1`] = `
+<div
+  className="nhsuk-header__content"
+>
+  Child
+</div>
+`;

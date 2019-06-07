@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header.MenuToggle matches snapshot 1`] = `
+<MenuToggle
+  className=""
+>
+  <div
+    className="nhsuk-header__menu"
+  >
+    <button
+      aria-controls="header-navigation"
+      aria-label="Open menu"
+      className="nhsuk-header__menu-toggle"
+      id="toggle-menu"
+      onClick={[MockFunction]}
+      type="button"
+    >
+      Menu
+    </button>
+  </div>
+</MenuToggle>
+`;

@@ -21,7 +21,8 @@ class Checkboxes extends Component {
     labelHtmlFor: PropTypes.string,
     className: PropTypes.string,
     hint: PropTypes.string,
-    onChange: PropTypes.func
+    onChange: PropTypes.func,
+    id: PropTypes.string
   };
 
   static defaultProps = {
@@ -30,7 +31,8 @@ class Checkboxes extends Component {
     error: '',
     className: '',
     hint: '',
-    onChange: () => {}
+    onChange: () => {},
+    id: ''
   };
 
   constructor(props, context) {
@@ -92,13 +94,6 @@ class Checkboxes extends Component {
       );
     }
     onChange(e);
-  };
-
-  registerId = done => {
-    const { _idAssigned } = this.state;
-    this.setState({ _idAssigned: _idAssigned + 1 }, () => {
-      done(_idAssigned);
-    });
   };
 
   modifyChildren = () => {

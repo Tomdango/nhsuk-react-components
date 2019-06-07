@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkboxes matches snapshot 1`] = `
+<div
+  className="nhsuk-checkboxes"
+  onChange={[Function]}
+>
+  <ContextProvider
+    value={
+      Object {
+        "onChange": [Function],
+      }
+    }
+  />
+</div>
+`;

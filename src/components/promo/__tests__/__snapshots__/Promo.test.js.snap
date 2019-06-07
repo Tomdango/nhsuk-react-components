@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Promo matches snapshot 1`] = `
+<div
+  className="nhsuk-promo"
+>
+  <a
+    className="nhsuk-promo__link-wrapper"
+    href="#"
+    onClick={[Function]}
+  >
+    <div
+      className="nhsuk-promo__content"
+    >
+      Child
+    </div>
+  </a>
+</div>
+`;

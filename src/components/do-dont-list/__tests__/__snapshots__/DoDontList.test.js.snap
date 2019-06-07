@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DoDontList matches snapshot for container 1`] = `
+<DoDontList
+  className=""
+  style={Object {}}
+  title="Do"
+  type="tick"
+>
+  <div
+    className="nhsuk-do-dont-list"
+    style={Object {}}
+  >
+    <h3
+      className="nhsuk-do-dont-list__label"
+    >
+      Do
+    </h3>
+    <ul
+      className="nhsuk-list nhsuk-list--tick"
+    >
+      <Do
+        className=""
+        style={Object {}}
+      >
+        <li
+          className=""
+          style={Object {}}
+        >
+          <Tick
+            className=""
+            height={32}
+            style={Object {}}
+            width={32}
+          >
+            <svg
+              aria-hidden="true"
+              className="nhsuk-icon nhsuk-icon__tick"
+              fill="none"
+              height={32}
+              style={Object {}}
+              viewBox="0 0 24 24"
+              width={32}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.4 7.8l-8.5 8.4L5.6 12"
+                stroke="#007f3b"
+                strokeLinecap="round"
+                strokeWidth="4"
+              />
+            </svg>
+          </Tick>
+          Test
+        </li>
+      </Do>
+    </ul>
+  </div>
+</DoDontList>
+`;
+
+exports[`DoDontList matches snapshot for do 1`] = `
+<li
+  className=""
+  style={Object {}}
+>
+  <Tick
+    className=""
+    height={32}
+    style={Object {}}
+    width={32}
+  />
+  Test
+</li>
+`;
+
+exports[`DoDontList matches snapshot for dont 1`] = `
+<li
+  className=""
+  style={Object {}}
+>
+  <Cross
+    className=""
+    height={32}
+    style={Object {}}
+    width={32}
+  />
+  Test
+</li>
+`;

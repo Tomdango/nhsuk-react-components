@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table Body matches snapshot 1`] = `
+<tbody
+  className="nhsuk-table__body"
+  style={Object {}}
+>
+  <TableRow
+    className=""
+    style={Object {}}
+  />
+</tbody>
+`;
+
+exports[`Table Header matches snapshot 1`] = `
+<thead
+  className="nhsuk-table__head"
+  style={Object {}}
+>
+  <tr
+    className="nhsuk-table__row"
+  >
+    <th
+      className="nhsuk-table__header"
+      key=".0"
+      scope="col"
+    >
+      Skin symptoms
+    </th>
+    <th
+      className="nhsuk-table__header"
+      key=".1"
+      scope="col"
+    >
+      Possible cause
+    </th>
+  </tr>
+</thead>
+`;
+
+exports[`Table NormalTable matches snapshot 1`] = `
+<div
+  className="nhsuk-table-responsive"
+>
+  <table
+    className="nhsuk-table"
+    style={Object {}}
+  />
+</div>
+`;
+
+exports[`Table Row matches snapshot 1`] = `
+<tr
+  className="nhsuk-table__row"
+  style={Object {}}
+>
+  <td
+    className="nhsuk-table__cell"
+    key=".0"
+  >
+    Blisters on lips or around the mouth
+  </td>
+  <td
+    className="nhsuk-table__cell"
+    key=".1"
+  >
+    cold sores
+  </td>
+</tr>
+`;
+
+exports[`Table TablePanel matches snapshot 1`] = `
+<div
+  className="nhsuk-table__panel-with-heading-tab"
+  style={Object {}}
+/>
+`;

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header matches snapshot 1`] = `
+<header
+  className="nhsuk-header"
+>
+  <ContextProvider
+    value={
+      Object {
+        "menuVisible": false,
+        "toggleMenu": [Function],
+        "transactional": "",
+      }
+    }
+  >
+    Child
+  </ContextProvider>
+</header>
+`;

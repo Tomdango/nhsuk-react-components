@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Details expander matches snapshot 1`] = `
+<details
+  className="nhsuk-details nhsuk-expander"
+  style={Object {}}
+>
+  <summary
+    className="nhsuk-details__summary"
+  >
+    <span
+      className="nhsuk-details__summary-text"
+    />
+  </summary>
+  <div
+    className="nhsuk-details__text"
+  >
+    Test Text
+  </div>
+</details>
+`;
+
+exports[`Details normal matches snapshot 1`] = `
+<details
+  className="nhsuk-details"
+  style={Object {}}
+>
+  <summary
+    className="nhsuk-details__summary"
+  >
+    <span
+      className="nhsuk-details__summary-text"
+    />
+  </summary>
+  <div
+    className="nhsuk-details__text"
+  >
+    Test Text
+  </div>
+</details>
+`;
+
+exports[`Details renders expandergroup 1`] = `
+<div
+  className="nhsuk-expander-group"
+>
+  Child
+</div>
+`;

@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentsList container matches snapshot 1`] = `
+<ContentsList
+  ariaLabel="Pages in this guide"
+  className=""
+  role="navigation"
+  style={Object {}}
+  visuallyHiddenText="Contents"
+>
+  <nav
+    aria-label="Pages in this guide"
+    className="nhsuk-contents-list"
+    role="navigation"
+    style={Object {}}
+  >
+    <h2
+      className="nhsuk-u-visually-hidden"
+    >
+      Contents
+    </h2>
+    <ol
+      className="nhsuk-contents-list__list"
+    >
+      <Item
+        ariaCurrent="page"
+        className=""
+        current={false}
+        href="#"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <li
+          aria-current="page"
+          className="nhsuk-contents-list__item"
+          style={Object {}}
+        >
+          <a
+            className="nhsuk-contents-list__link"
+            href="#"
+            onClick={[Function]}
+          >
+            Test
+          </a>
+        </li>
+      </Item>
+      <Item
+        ariaCurrent="page"
+        className=""
+        current={true}
+        href="#"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <li
+          aria-current="page"
+          className="nhsuk-contents-list__item"
+          style={Object {}}
+        >
+          <span
+            className="nhsuk-contents-list__current"
+          >
+            Test Text
+          </span>
+        </li>
+      </Item>
+    </ol>
+  </nav>
+</ContentsList>
+`;
+
+exports[`ContentsList current item matches snapshot 1`] = `
+<Item
+  ariaCurrent="page"
+  className=""
+  current={true}
+  href="#"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <li
+    aria-current="page"
+    className="nhsuk-contents-list__item"
+    style={Object {}}
+  >
+    <span
+      className="nhsuk-contents-list__current"
+    >
+      Test Text
+    </span>
+  </li>
+</Item>
+`;
+
+exports[`ContentsList item matches snapshot 1`] = `
+<Item
+  ariaCurrent="page"
+  className=""
+  current={false}
+  href="#"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <li
+    aria-current="page"
+    className="nhsuk-contents-list__item"
+    style={Object {}}
+  >
+    <a
+      className="nhsuk-contents-list__link"
+      href="#"
+      onClick={[Function]}
+    >
+      Test Text
+    </a>
+  </li>
+</Item>
+`;

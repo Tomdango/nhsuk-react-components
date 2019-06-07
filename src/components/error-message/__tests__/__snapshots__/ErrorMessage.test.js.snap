@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorMessage matches snapshot 1`] = `
+<span
+  className="nhsuk-error-message"
+  style={Object {}}
+>
+  <span
+    className="nhsuk-u-visually-hidden"
+  >
+    Error: 
+  </span>
+  Error Message
+</span>
+`;
