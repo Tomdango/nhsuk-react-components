@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Item = ({ children, ...rest }) => {
+const Option = ({ children, ...rest }) => {
   return <option {...rest}>{children}</option>;
 };
 
-Item.propTypes = {
+Option.propTypes = {
   children: PropTypes.node.isRequired,
   selected: PropTypes.bool,
   value: PropTypes.string.isRequired
 };
 
-Item.defaultProps = {
+Option.defaultProps = {
   selected: false
 };
 
-export default Item;
+export default Option;

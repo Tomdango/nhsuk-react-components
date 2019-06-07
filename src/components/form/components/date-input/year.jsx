@@ -4,8 +4,18 @@ import PropTypes from 'prop-types';
 import DateContext from './DateContext';
 import Label from '../../../label';
 
-const Year = ({ label, className, error, ...rest }) => {
-  const { handleInput, year, registerRef, name } = useContext(DateContext);
+const Year = ({ label, className, error, value, ...rest }) => {
+  const {
+    handleInput,
+    year,
+    registerRef,
+    name,
+    parentError,
+    passBackError
+  } = useContext(DateContext);
+  if (passBackError) {
+    passBackError('year', error);
+  }
   return (
     <div className="nhsuk-date-input__item">
       <Label htmlFor={`${name}-year`}>{label}</Label>
@@ -14,7 +24,7 @@ const Year = ({ label, className, error, ...rest }) => {
           'nhsuk-input',
           'nhsuk-date-input__input',
           'nhsuk-input--width-4',
-          { 'nhsuk-input--error': error },
+          { 'nhsuk-input--error': error || parentError },
           className
         )}
         ref={ref => registerRef('year', ref)}
@@ -22,7 +32,7 @@ const Year = ({ label, className, error, ...rest }) => {
         name={`${name}-year`}
         aria-label={`${name}-year input`}
         onChange={e => handleInput('year', e.target.value)}
-        value={year}
+        value={year || value}
         {...rest}
       />
     </div>
@@ -32,13 +42,15 @@ const Year = ({ label, className, error, ...rest }) => {
 Year.propTypes = {
   label: PropTypes.string,
   className: PropTypes.string,
-  error: PropTypes.bool
+  error: PropTypes.bool,
+  value: PropTypes.string
 };
 
 Year.defaultProps = {
   label: 'Year',
   className: '',
-  error: false
+  error: false,
+  value: ''
 };
 
 export default Year;

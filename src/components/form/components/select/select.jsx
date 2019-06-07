@@ -1,16 +1,16 @@
-import React, { Component, Children } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import FormContext from '../../FormContext';
 import Label from '../../../label';
 import Hint from '../../../hint';
 import ErrorMessage from '../../../error-message';
-import Item from './item';
+import Option from './option';
 
 export default class Select extends Component {
   static contextType = FormContext;
 
-  static Item = Item;
+  static Option = Option;
 
   static propTypes = {
     label: PropTypes.string,
@@ -19,7 +19,8 @@ export default class Select extends Component {
     error: PropTypes.string,
     name: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
-    className: PropTypes.string
+    className: PropTypes.string,
+    value: PropTypes.string
   };
 
   static defaultProps = {
@@ -27,7 +28,8 @@ export default class Select extends Component {
     labelHtmlFor: '',
     hint: '',
     error: '',
-    className: ''
+    className: '',
+    value: ''
   };
 
   constructor(props, context) {
@@ -38,25 +40,13 @@ export default class Select extends Component {
   }
 
   componentWillMount() {
-    const { name, children, error } = this.props;
+    const { name, value, error } = this.props;
     const { passBackError } = this.context;
     if (passBackError) passBackError(name, !!error, error);
-    let defaultSelected = '';
-    Children.forEach(children, child => {
-      if (child !== null) {
-        if (child.type === Select.Item) {
-          const { selected, value } = child.props;
-          if (selected) {
-            defaultSelected = value;
-          }
-        }
-      }
-    });
-
-    this.setState({ selectedValue: defaultSelected }, () => {
+    this.setState({ selectedValue: value }, () => {
       const { registerComponent } = this.context;
       if (registerComponent) {
-        registerComponent(name, defaultSelected);
+        registerComponent(name, value);
       }
     });
   }
@@ -92,6 +82,7 @@ export default class Select extends Component {
       name,
       children,
       className,
+      value,
       ...rest
     } = this.props;
     const { selectedValue } = this.state;

@@ -45,7 +45,7 @@ FormWrapper.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-storiesOf('FormContext', module).add('Combined Form', () => {
+storiesOf('Form', module).add('Combined Form', () => {
   return (
     <FormWrapper withErrors>
       <Fieldset title="Part 1 - About you and your partner">
@@ -54,7 +54,11 @@ storiesOf('FormContext', module).add('Combined Form', () => {
           please tick which ones. Please read the notes to see what you need to
           send to make your refund claim.
         </Hint>
-        <Checkboxes name="refund-items" style={{ marginBottom: 50 }}>
+        <Checkboxes
+          id="checkboxes"
+          name="refund-items"
+          style={{ marginBottom: 50 }}
+        >
           <Container fluid>
             <Row>
               <Row.Column width="one-half">
@@ -137,9 +141,9 @@ storiesOf('FormContext', module).add('Combined Form', () => {
           label="Preferred method of contact"
           style={{ marginBottom: 20 }}
         >
-          <Select.Item value="telephone">Telephone</Select.Item>
-          <Select.Item value="post">Post</Select.Item>
-          <Select.Item value="email">Email</Select.Item>
+          <Select.Option value="telephone">Telephone</Select.Option>
+          <Select.Option value="post">Post</Select.Option>
+          <Select.Option value="email">Email</Select.Option>
         </Select>
       </Fieldset>
       <Button className="patient-search-form__button" type="submit">

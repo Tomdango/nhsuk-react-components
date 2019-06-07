@@ -24,7 +24,7 @@ class Form extends Component {
     super(props);
     this.state = {
       formData: {},
-      erroredComponents: {}
+      errorState: {}
     };
   }
 
@@ -53,20 +53,21 @@ class Form extends Component {
   };
 
   passBackError = (name, error = true, errorDetails) => {
-    const { erroredComponents } = this.state;
-    const original = erroredComponents;
-    if (error) {
-      erroredComponents[name] = errorDetails;
-    } else if (Object.keys(erroredComponents).includes(name)) {
-      delete erroredComponents[name];
-    }
+    console.log(name, error, errorDetails);
 
-    if (original !== erroredComponents) {
-      this.setState({ erroredComponents }, () => {
-        const { onErrorChange } = this.props;
-        onErrorChange(erroredComponents);
-      });
+    const { errorState } = this.state;
+    if (!Object.keys(errorState).includes(name) && error === true) {
+      this.setState(
+        { errorState: { [name]: errorDetails, ...errorState } },
+        this.errorCallback
+      );
     }
+  };
+
+  errorCallback = () => {
+    const { errorState } = this.state;
+    const { onErrorChange } = this.props;
+    onErrorChange(errorState);
   };
 
   render() {
@@ -79,7 +80,7 @@ class Form extends Component {
       titleSize,
       ...rest
     } = this.props;
-    const { erroredComponents } = this.state;
+    const { errorState } = this.state;
     const contextValue = {
       registerComponent: this.registerComponent,
       updateFormState: this.updateFormState,
@@ -90,7 +91,7 @@ class Form extends Component {
         <div
           className={classNames(
             'nhsuk-form-group',
-            { 'nhsuk-form-group--error': erroredComponents.length > 0 },
+            { 'nhsuk-form-group--error': Object.keys(errorState).length > 0 },
             className
           )}
           {...rest}

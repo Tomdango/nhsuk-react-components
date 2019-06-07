@@ -78,7 +78,8 @@ class Input extends Component {
       error,
       className,
       width,
-      name
+      name,
+      ...rest
     } = this.props;
     const { value } = this.state;
     return (
@@ -87,7 +88,7 @@ class Input extends Component {
         {hint ? <Hint>{hint}</Hint> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
         <input
-          {...this.props}
+          {...rest}
           className={classNames(
             'nhsuk-input',
             { 'nhsuk-input--error': error },

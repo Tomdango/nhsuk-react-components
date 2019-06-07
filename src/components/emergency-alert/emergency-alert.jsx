@@ -4,10 +4,10 @@ import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 import { Container, Row } from '../layout';
 
-const Title = ({ children, visuallyHiddenText, className, style }) => (
+const Title = ({ children, visuallyHiddenText, className, ...rest }) => (
   <h2
     className={classNames('nhsuk-global-alert__heading', className)}
-    style={style}
+    {...rest}
   >
     <span className="nhsuk-u-visually-hidden">{visuallyHiddenText}</span>
     {children}

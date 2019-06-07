@@ -24,6 +24,7 @@ class Radios extends PureComponent {
     labelHtmlFor: PropTypes.string,
     className: PropTypes.string,
     inline: PropTypes.bool,
+    id: PropTypes.string,
     children: PropTypes.node.isRequired
   };
 
@@ -31,6 +32,7 @@ class Radios extends PureComponent {
     label: '',
     hint: '',
     error: '',
+    id: '',
     labelHtmlFor: '',
     className: '',
     inline: false
@@ -54,7 +56,7 @@ class Radios extends PureComponent {
       if (type === Radios.Radio) {
         const { selected, value } = child.props;
         if (selected) {
-          radioSelected = value;
+          radioSelected = value.toString();
         }
       }
     });
@@ -82,6 +84,20 @@ class Radios extends PureComponent {
   _handleClick = e => {
     const { value } = e.target;
     this.setState({ radioSelected: value }, this._passValuesContext);
+  };
+
+  modifiedChildren = () => {
+    const { children, id } = this.props;
+    return React.Children.map(children, (child, i) => {
+      if (child === null) return child;
+      const { type } = child;
+      if (type === Radios.Radio) {
+        return React.cloneElement(child, {
+          id: `${id}-radio-${i}`
+        });
+      }
+      return child;
+    });
   };
 
   render() {
@@ -116,7 +132,7 @@ class Radios extends PureComponent {
           {...rest}
         >
           <RadioContext.Provider value={contextValue}>
-            {children}
+            {this.modifiedChildren()}
           </RadioContext.Provider>
         </div>
       </>

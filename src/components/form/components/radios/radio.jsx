@@ -16,10 +16,10 @@ const Radio = ({ children, hint, value, _onClick, className, id, ...rest }) => {
         onChange={handleClick}
         value={value}
         id={id}
-        checked={radioSelected === value}
+        checked={radioSelected === value.toString()}
         {...rest}
       />
-      <Label className="nhsuk-radios__label" htmlFor={id || ''}>
+      <Label className="nhsuk-radios__label" htmlFor={id}>
         {children}
       </Label>
       {hint ? <Hint className="nhsuk-radios__hint">{hint}</Hint> : null}

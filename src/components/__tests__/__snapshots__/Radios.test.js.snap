@@ -2,7 +2,7 @@
 
 exports[`Divider matches snapshot 1`] = `
 <div
-  className="nhsuk-radio__divider"
+  className="nhsuk-radios__divider"
 >
   Or
 </div>
@@ -35,6 +35,7 @@ exports[`Radios matches snapshot 1`] = `
 <Fragment>
   <div
     className="nhsuk-radios"
+    id=""
   >
     <ContextProvider
       value={

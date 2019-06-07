@@ -1,23 +1,28 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Label from '../../../label';
 import Hint from '../../../hint';
 import CheckboxContext from './CheckboxContext';
 
-const Box = ({ children, _id, hint, className, checked, ...rest }) => {
+const Box = ({ children, id, hint, className, checked, ...rest }) => {
   const { onChange } = useContext(CheckboxContext);
+  const [selectedState, setSelectedState] = useState(checked);
   return (
     <div className="nhsuk-checkboxes__item">
       <input
-        id={_id}
-        onChange={onChange}
-        aria-describedby={`${_id}__label`}
+        onChange={e => {
+          setSelectedState(e.target.checked);
+          onChange(e);
+        }}
+        id={id}
+        aria-describedby={`${id}__label`}
         type="checkbox"
+        checked={selectedState}
         className={classNames('nhsuk-checkboxes__input', className)}
         {...rest}
       />
-      <Label htmlFor={_id} className="nhsuk-checkboxes__label">
+      <Label htmlFor={id} className="nhsuk-checkboxes__label">
         {children}
       </Label>
       {hint ? <Hint className="nhsuk-checkboxes__hint">{hint}</Hint> : null}

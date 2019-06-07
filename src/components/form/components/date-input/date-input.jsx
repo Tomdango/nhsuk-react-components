@@ -25,7 +25,8 @@ export default class DateInput extends Component {
     error: PropTypes.string,
     labelHtmlFor: PropTypes.string,
     name: PropTypes.string.isRequired,
-    autoFocus: PropTypes.bool
+    autoFocus: PropTypes.bool,
+    autoComplete: PropTypes.string
   };
 
   static defaultProps = {
@@ -34,7 +35,8 @@ export default class DateInput extends Component {
     hint: '',
     error: '',
     labelHtmlFor: '',
-    autoFocus: false
+    autoFocus: false,
+    autoComplete: ''
   };
 
   static sanitizeInput = (type, value) => {
@@ -51,45 +53,82 @@ export default class DateInput extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      data: {
-        day: '',
-        month: '',
-        year: ''
-      },
-      errors: {
-        combined: '',
-        day: '',
-        month: '',
-        year: ''
-      }
+      data: {},
+      multiErrors: {},
+      singleError: '',
+      multiComponentMode: false
     };
     this.monthRef = React.createRef();
     this.yearRef = React.createRef();
   }
 
   componentWillMount() {
-    const { name, error } = this.props;
-    const { errors } = this.state;
-
-    const { registerComponent, passBackError } = this.context;
-    if (registerComponent) {
-      const { data } = this.state;
-      registerComponent(name, data);
-    }
-    if (error) {
-      this.setState({ errors: { ...errors, combined: error } }, () => {});
-    }
-  }
-
-  hasError = () => {
-    const { errors } = this.state;
-    let hasError = false;
-    Object.values(errors).forEach(error => {
-      if (error !== '') {
-        hasError = true;
+    const { children } = this.props;
+    let multiComponentMode = false;
+    const defaultValue = {};
+    const defaultError = {};
+    React.Children.forEach(children, async child => {
+      if (child === null) return;
+      const { type } = child;
+      const { value, error } = child.props;
+      if (type === DateInput.Day) {
+        defaultValue.day = value;
+        defaultError.day = error;
+        multiComponentMode = true;
+      } else if (type === DateInput.Month) {
+        defaultValue.month = value;
+        defaultError.year = error;
+        multiComponentMode = true;
+      } else if (type === DateInput.Year) {
+        defaultValue.year = value;
+        defaultError.year = error;
+        multiComponentMode = true;
       }
     });
-    return hasError;
+    this.setState({ multiComponentMode }, () => {
+      if (multiComponentMode) {
+        this.registerMultiComponent(defaultValue, defaultError);
+      } else {
+        this.registerSingleComponent();
+      }
+    });
+  }
+
+  registerSingleComponent = () => {
+    const { passBackError, registerComponent } = this.context;
+    const { name, value, error } = this.props;
+    this.setState({ data: { day: '', month: '', year: '', ...value } }, () => {
+      if (passBackError) {
+        passBackError(name, !!error, error);
+      }
+      if (registerComponent) {
+        const { data } = this.state;
+        registerComponent(name, data);
+      }
+    });
+  };
+
+  registerMultiComponent = (defaultValue, defaultError) => {
+    const { passBackError, registerComponent } = this.context;
+    const { name, error } = this.props;
+    if (registerComponent) registerComponent(name, defaultValue);
+    if (passBackError) {
+      const returnedErrors = {};
+      let hasError = false;
+      Object.keys(defaultError).forEach(key => {
+        if (defaultError[key]) {
+          returnedErrors[key] = defaultError[key];
+          hasError = true;
+        }
+      });
+      if (error) {
+        returnedErrors.root = error;
+        hasError = true;
+      }
+      this.setState({ multiErrors: returnedErrors }, () => {
+        passBackError(name, hasError, returnedErrors);
+      });
+    }
   };
 
   registerRef = (type, ref) => {
@@ -108,6 +147,24 @@ export default class DateInput extends Component {
     }
   };
 
+  passBackErrorFromComponent = (element, value) => {
+    const { name } = this.props;
+    const { passBackError } = this.context;
+    const { multiErrors } = this.state;
+    const editedMultiErrors = multiErrors;
+    if (value) {
+      editedMultiErrors[element] = value;
+    } else if (Object.keys(multiErrors).includes(element)) {
+      delete editedMultiErrors[element];
+    }
+    if (multiErrors !== editedMultiErrors) {
+      this.setState({ multiErrors: editedMultiErrors }, () => {
+        const hasError = Object.keys(editedMultiErrors).length > 0;
+        passBackError(name, hasError, editedMultiErrors);
+      });
+    }
+  };
+
   handleInput = (type, value) => {
     const { autoFocus, name } = this.props;
     const { data } = this.state;
@@ -122,21 +179,6 @@ export default class DateInput extends Component {
     });
   };
 
-  passErrorToForm = () => {
-    const { errors } = this.state;
-    const { name } = this.props;
-    const { passBackError } = this.context;
-    if (passBackError) passBackError(name, errors);
-  };
-
-  passErrorToDate = (type, value) => {
-    const { errors } = this.state;
-    this.setState(
-      { errors: { [type]: value, ...errors } },
-      this.passErrorToForm
-    );
-  };
-
   render() {
     const {
       children,
@@ -144,19 +186,21 @@ export default class DateInput extends Component {
       hint,
       error,
       labelHtmlFor,
+      autoComplete,
       name,
       ...rest
     } = this.props;
-    const { day, month, year } = this.state;
+    const { data, multiErrors } = this.state;
+    const parentError = Object.keys(multiErrors).length > 0 ? false : !!error;
     const contextValue = {
       handleInput: this.handleInput,
       registerRef: this.registerRef,
-      passBackError: this.passErrorToDate,
-      day,
-      month,
-      year,
-      name
+      passBackError: this.passBackErrorFromComponent,
+      parentError,
+      name,
+      ...data
     };
+
     return (
       <>
         {label ? <Label htmlFor={labelHtmlFor}>{label}</Label> : null}
@@ -166,9 +210,9 @@ export default class DateInput extends Component {
           <DateContext.Provider value={contextValue}>
             {children || (
               <>
-                <Day />
-                <Month />
-                <Year />
+                <Day autoComplete={autoComplete} />
+                <Month autoComplete={autoComplete} />
+                <Year autoComplete={autoComplete} />
               </>
             )}
           </DateContext.Provider>

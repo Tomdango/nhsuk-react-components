@@ -5,11 +5,7 @@ exports[`Input matches snapshot 1`] = `
   <input
     aria-describedby="input-hint"
     className="nhsuk-input"
-    error=""
-    hint=""
     initialValue=""
-    label=""
-    labelHtmlFor=""
     name="input-hint"
     onChange={[Function]}
     type="text"

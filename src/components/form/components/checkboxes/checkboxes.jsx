@@ -20,7 +20,8 @@ class Checkboxes extends Component {
     label: PropTypes.string,
     labelHtmlFor: PropTypes.string,
     className: PropTypes.string,
-    hint: PropTypes.string
+    hint: PropTypes.string,
+    onChange: PropTypes.func
   };
 
   static defaultProps = {
@@ -28,13 +29,15 @@ class Checkboxes extends Component {
     labelHtmlFor: '',
     error: '',
     className: '',
-    hint: ''
+    hint: '',
+    onChange: () => {}
   };
 
   constructor(props, context) {
     super(props, context);
     this.state = {
-      checkboxes: []
+      checkboxes: [],
+      _idAssigned: 1
     };
   }
 
@@ -77,6 +80,7 @@ class Checkboxes extends Component {
   _handleClick = e => {
     const { checked, value } = e.target;
     const { checkboxes } = this.state;
+    const { onChange } = this.props;
     if (checkboxes.includes(value) && !checked) {
       const index = checkboxes.indexOf(value);
       checkboxes.splice(index, 1);
@@ -87,6 +91,28 @@ class Checkboxes extends Component {
         this._passValuesContext
       );
     }
+    onChange(e);
+  };
+
+  registerId = done => {
+    const { _idAssigned } = this.state;
+    this.setState({ _idAssigned: _idAssigned + 1 }, () => {
+      done(_idAssigned);
+    });
+  };
+
+  modifyChildren = () => {
+    const { children, id } = this.props;
+    return React.Children.map(children, (child, i) => {
+      if (child === null) return child;
+      const { type } = child;
+      if (type === Checkboxes.Box) {
+        return React.cloneElement(child, {
+          id: `${id}-box-${i}`
+        });
+      }
+      return child;
+    });
   };
 
   render() {
@@ -103,10 +129,10 @@ class Checkboxes extends Component {
     return (
       <div {...rest} className={classNames('nhsuk-checkboxes', className)}>
         {label ? <Label htmlFor={labelHtmlFor}>{label}</Label> : null}
-        {hint ? <Hint>{label}</Hint> : null}
+        {hint ? <Hint>{hint}</Hint> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
         <CheckboxContext.Provider value={{ onChange: this._handleClick }}>
-          {children}
+          {this.modifyChildren()}
         </CheckboxContext.Provider>
       </div>
     );
