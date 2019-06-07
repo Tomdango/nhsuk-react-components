@@ -16,13 +16,9 @@ class SkipLink extends React.Component {
   constructor() {
     super();
     this.skipLinkRef = React.createRef();
-    this.handleSkipLink = this.handleSkipLink.bind(this);
-    this.addFocus = this.addFocus.bind(this);
-    this.removeFocus = this.removeFocus.bind(this);
-    this.componentDidMount = this.componentDidMount.bind(this);
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     const { testHeadingElement } = this.props;
     const [headingElement] = document.getElementsByTagName('h1');
     this.headingElement = testHeadingElement || headingElement;
@@ -32,7 +28,7 @@ class SkipLink extends React.Component {
         this.removeFocus();
       });
     }
-  }
+  };
 
   componentWillUnmount() {
     if (this.headingElement) {
@@ -43,35 +39,35 @@ class SkipLink extends React.Component {
     }
   }
 
-  addFocus() {
+  addFocus = () => {
     if (this.headingElement) {
       this.headingElement.setAttribute('tabIndex', '-1');
       this.headingElement.focus();
     }
-  }
+  };
 
-  removeFocus() {
+  removeFocus = () => {
     if (this.headingElement) {
       this.headingElement.removeAttribute('tabIndex');
     }
-  }
+  };
 
-  handleSkipLink(e) {
+  handleSkipLink = e => {
     e.preventDefault();
     if (this.headingElement) {
       this.addFocus();
     }
-  }
+  };
 
   render() {
-    const { href, children, className, style } = this.props;
+    const { href, children, className, ...rest } = this.props;
     return (
       <a
+        href={href}
         ref={this.skipLinkRef}
         onClick={this.handleSkipLink}
         className={classNames('nhsuk-skip-link', className)}
-        style={style}
-        href={href}
+        {...rest}
       >
         {children}
       </a>

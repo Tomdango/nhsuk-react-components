@@ -6,12 +6,10 @@ exports[`CareCard matches snapshot 1`] = `
   disableHiddenText={false}
   heading="TestHeading"
   hiddenText=""
-  style={Object {}}
   type="non-urgent"
 >
   <div
     className="nhsuk-care-card nhsuk-care-card--non-urgent"
-    style={Object {}}
   >
     <div
       className="nhsuk-care-card__heading-container"
@@ -48,12 +46,10 @@ exports[`CareCard matches snapshot 2`] = `
   disableHiddenText={false}
   heading="TestHeading"
   hiddenText=""
-  style={Object {}}
   type="urgent"
 >
   <div
     className="nhsuk-care-card nhsuk-care-card--urgent"
-    style={Object {}}
   >
     <div
       className="nhsuk-care-card__heading-container"
@@ -90,12 +86,10 @@ exports[`CareCard matches snapshot 3`] = `
   disableHiddenText={false}
   heading="TestHeading"
   hiddenText=""
-  style={Object {}}
   type="immediate"
 >
   <div
     className="nhsuk-care-card nhsuk-care-card--immediate"
-    style={Object {}}
   >
     <div
       className="nhsuk-care-card__heading-container"
@@ -132,12 +126,10 @@ exports[`CareCard matches snapshot 4`] = `
   disableHiddenText={false}
   heading="TestHeading"
   hiddenText=""
-  style={Object {}}
   type="incorrect"
 >
   <div
     className="nhsuk-care-card nhsuk-care-card--incorrect"
-    style={Object {}}
   >
     <div
       className="nhsuk-care-card__heading-container"
@@ -172,12 +164,10 @@ exports[`CareCard matches snapshot 5`] = `
   disableHiddenText={true}
   heading="TestHeading"
   hiddenText=""
-  style={Object {}}
   type="immediate"
 >
   <div
     className="nhsuk-care-card nhsuk-care-card--immediate"
-    style={Object {}}
   >
     <div
       className="nhsuk-care-card__heading-container"
@@ -208,12 +198,10 @@ exports[`CareCard matches snapshot 6`] = `
   className=""
   disableHiddenText={false}
   hiddenText="hello"
-  style={Object {}}
   type="immediate"
 >
   <div
     className="nhsuk-care-card nhsuk-care-card--immediate"
-    style={Object {}}
   >
     <div
       className="nhsuk-care-card__heading-container"

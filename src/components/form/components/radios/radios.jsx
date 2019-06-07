@@ -1,175 +1,143 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import stylePropType from 'react-style-proptype';
+import React, { PureComponent } from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import FormContext from '../../FormContext';
+import RadioContext from './RadioContext';
 import Label from '../../../label';
 import Hint from '../../../hint';
 import ErrorMessage from '../../../error-message';
+import Radio from './radio';
+import Divider from './divider';
 
-const Radio = ({
-  children,
-  disabled,
-  hint,
-  id,
-  name,
-  value,
-  _onClick,
-  className,
-  style
-}) => (
-  <div className={classNames('nhsuk-radios__item', className)} style={style}>
-    <input
-      className="nhsuk-radios__input"
-      id={id}
-      name={name}
-      type="radio"
-      onClick={_onClick}
-      value={value}
-      disabled={disabled}
-    />
-    <label className="nhsuk-label nhsuk-radios__label" htmlFor={id}>
-      {children}
-    </label>
-    {hint ? <Hint className="nhsuk-radios__hint">{hint}</Hint> : null}
-  </div>
-);
+class Radios extends PureComponent {
+  static Radio = Radio;
 
-Radio.propTypes = {
-  children: PropTypes.node.isRequired,
-  disabled: PropTypes.bool,
-  hint: PropTypes.string,
-  id: PropTypes.string,
-  name: PropTypes.string,
-  value: PropTypes.string.isRequired,
-  _onClick: PropTypes.func,
-  className: PropTypes.string,
-  style: stylePropType
-};
+  static Divider = Divider;
 
-Radio.defaultProps = {
-  disabled: false,
-  hint: '',
-  id: '',
-  name: '',
-  _onClick: () => {},
-  className: '',
-  style: {}
-};
+  static contextType = FormContext;
 
-const Divider = ({ children, className, style }) => (
-  <div className={classNames('nhsuk-radios__divider', className)} style={style}>
-    {children}
-  </div>
-);
+  static propTypes = {
+    label: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    hint: PropTypes.string,
+    error: PropTypes.string,
+    labelHtmlFor: PropTypes.string,
+    className: PropTypes.string,
+    inline: PropTypes.bool,
+    id: PropTypes.string,
+    children: PropTypes.node.isRequired
+  };
 
-Divider.propTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: stylePropType
-};
+  static defaultProps = {
+    label: '',
+    hint: '',
+    error: '',
+    id: '',
+    labelHtmlFor: '',
+    className: '',
+    inline: false
+  };
 
-Divider.defaultProps = {
-  className: '',
-  style: {}
-};
-
-class Radios extends React.Component {
-  constructor(props) {
-    super(props);
-    this.injectChildren = this.injectChildren.bind(this);
-    this.onClick = this.onClick.bind(this);
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
+      radioSelected: ''
+    };
   }
 
-  componentDidMount() {
-    const { registerInitialValue, name } = this.props;
-    registerInitialValue(name, '');
+  componentWillMount() {
+    const { name, children, error } = this.props;
+    const { registerComponent, passBackError } = this.context;
+    if (passBackError) passBackError(name, !!error, error);
+
+    let radioSelected = '';
+    React.Children.forEach(children, child => {
+      const { type } = child;
+      if (type === Radios.Radio) {
+        const { selected, value } = child.props;
+        if (selected) {
+          radioSelected = value.toString();
+        }
+      }
+    });
+    this.setState({ radioSelected });
+    if (registerComponent) {
+      registerComponent(name, radioSelected);
+    }
   }
 
-  onClick(event) {
-    const { name, valueCallback } = this.props;
-    valueCallback(name, event.target.value);
+  componentDidUpdate() {
+    const { name, error } = this.props;
+    const { passBackError } = this.context;
+    if (passBackError) passBackError(name, !!error, error);
   }
 
-  injectChildren() {
-    const { children, name } = this.props;
-    let idCounter = 0;
-    return React.Children.map(children, child => {
-      if (child.type === Radio) {
-        idCounter += 1;
+  _passValuesContext = () => {
+    const { updateFormState } = this.context;
+    if (updateFormState) {
+      const { radioSelected } = this.state;
+      const { name } = this.props;
+      updateFormState(name, radioSelected);
+    }
+  };
+
+  _handleClick = e => {
+    const { value } = e.target;
+    this.setState({ radioSelected: value }, this._passValuesContext);
+  };
+
+  modifiedChildren = () => {
+    const { children, id } = this.props;
+    return React.Children.map(children, (child, i) => {
+      if (child === null) return child;
+      const { type } = child;
+      if (type === Radios.Radio) {
         return React.cloneElement(child, {
-          name,
-          id: `${name}-${idCounter}`,
-          _onClick: this.onClick
+          id: `${id}-radio-${i}`
         });
       }
       return child;
     });
-  }
+  };
 
   render() {
     const {
-      hint,
-      inline,
-      error,
-      id,
       label,
+      hint,
+      error,
+      name,
       labelHtmlFor,
       className,
-      style
+      inline,
+      children,
+      ...rest
     } = this.props;
-    const children = this.injectChildren();
+    const { radioSelected } = this.state;
+    const contextValue = {
+      name,
+      handleClick: this._handleClick,
+      radioSelected
+    };
     return (
-      <React.Fragment>
+      <>
         {label ? <Label htmlFor={labelHtmlFor}>{label}</Label> : null}
         {hint ? <Hint>{hint}</Hint> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
         <div
           className={classNames(
             'nhsuk-radios',
-            {
-              'nhsuk-radios--inline': inline
-            },
+            { 'nhsuk-radios--inline': inline },
             className
           )}
-          id={id}
-          style={style}
+          {...rest}
         >
-          {children}
+          <RadioContext.Provider value={contextValue}>
+            {this.modifiedChildren()}
+          </RadioContext.Provider>
         </div>
-      </React.Fragment>
+      </>
     );
   }
 }
-
-Radios.propTypes = {
-  label: PropTypes.string,
-  labelHtmlFor: PropTypes.string,
-  id: PropTypes.string,
-  hint: PropTypes.string,
-  error: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
-  inline: PropTypes.bool,
-  valueCallback: PropTypes.func,
-  className: PropTypes.string,
-  style: stylePropType,
-  registerInitialValue: PropTypes.func
-};
-
-Radios.defaultProps = {
-  label: '',
-  labelHtmlFor: '',
-  id: '',
-  hint: '',
-  error: '',
-  inline: false,
-  valueCallback: () => {},
-  className: '',
-  style: {},
-  registerInitialValue: () => {}
-};
-
-Radios.Radio = Radio;
-Radios.Divider = Divider;
 
 export default Radios;

@@ -6,7 +6,6 @@ exports[`NavAZ matches snapshot 1`] = `
   className="nhsuk-nav-a-z"
   id="nhsuk-nav-a-z"
   role="navigation"
-  style={Object {}}
 >
   <ol
     className="nhsuk-nav-a-z__list"

@@ -1,91 +1,96 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
+import FormContext from '../../FormContext';
 import Label from '../../../label';
 import Hint from '../../../hint';
 import ErrorMessage from '../../../error-message';
 
-class Textarea extends React.Component {
-  constructor(props) {
-    super(props);
-    this.onChange = this.onChange.bind(this);
+export default class Textarea extends Component {
+  static contextType = FormContext;
+
+  static propTypes = {
+    label: PropTypes.string,
+    labelHtmlFor: PropTypes.string,
+    hint: PropTypes.string,
+    error: PropTypes.string,
+    className: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    value: PropTypes.string
+  };
+
+  static defaultProps = {
+    label: '',
+    labelHtmlFor: '',
+    hint: '',
+    error: '',
+    className: '',
+    value: ''
+  };
+
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
+      text: ''
+    };
   }
 
-  componentDidMount() {
-    const { name, registerInitialValue } = this.props;
-    registerInitialValue(name, '');
+  componentWillMount() {
+    const { name, value, error } = this.props;
+    const { registerComponent, passBackError } = this.context;
+    if (registerComponent) {
+      registerComponent(name, value);
+    }
+    if (value) {
+      this.setState({ text: value });
+    }
+    if (passBackError) passBackError(name, !!error, error);
   }
 
-  onChange(event) {
-    const { name, valueCallback } = this.props;
-    valueCallback(name, event.target.value);
+  componentDidUpdate() {
+    const { name, error } = this.props;
+    const { passBackError } = this.context;
+    if (passBackError) passBackError(name, !!error, error);
   }
+
+  onChange = e => {
+    const { value } = e.target;
+    this.setState({ text: value }, () => {
+      const { updateFormState } = this.context;
+      const { name } = this.props;
+      if (updateFormState) {
+        updateFormState(name, value);
+      }
+    });
+  };
 
   render() {
     const {
       label,
       labelHtmlFor,
       hint,
-      autoComplete,
-      placeholder,
       error,
-      rows,
-      name,
-      id,
       className,
-      style
+      value,
+      ...rest
     } = this.props;
-
+    const { text } = this.state;
     return (
-      <React.Fragment>
+      <>
         {label ? <Label htmlFor={labelHtmlFor}>{label}</Label> : null}
         {hint ? <Hint>{hint}</Hint> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
         <textarea
-          className={classNames('nhsuk-textarea', className)}
-          id={id || name}
+          value={text}
+          className={classNames(
+            'nhsuk-textarea',
+            { 'nhsuk-textarea--error': error },
+            className
+          )}
           onChange={this.onChange}
-          placeholder={placeholder}
-          name={name}
-          style={style}
-          rows={rows}
-          autoComplete={autoComplete}
+          {...rest}
         />
-      </React.Fragment>
+      </>
     );
   }
 }
-
-Textarea.propTypes = {
-  label: PropTypes.string,
-  labelHtmlFor: PropTypes.string,
-  hint: PropTypes.string,
-  autoComplete: PropTypes.string,
-  placeholder: PropTypes.string,
-  error: PropTypes.string,
-  rows: PropTypes.number,
-  name: PropTypes.string.isRequired,
-  id: PropTypes.string,
-  valueCallback: PropTypes.func,
-  registerInitialValue: PropTypes.func,
-  className: PropTypes.string,
-  style: stylePropType
-};
-
-Textarea.defaultProps = {
-  label: '',
-  labelHtmlFor: '',
-  hint: '',
-  autoComplete: '',
-  placeholder: '',
-  error: '',
-  rows: 5,
-  id: '',
-  valueCallback: () => {},
-  registerInitialValue: () => {},
-  className: '',
-  style: {}
-};
-
-export default Textarea;

@@ -3,7 +3,6 @@
 exports[`Hero Content matches snapshot and element 1`] = `
 <p
   className="nhsuk-body-l nhsuk-u-margin-bottom-0"
-  style={Object {}}
 >
   Content
 </p>
@@ -12,7 +11,6 @@ exports[`Hero Content matches snapshot and element 1`] = `
 exports[`Hero Heading matches snapshot and element 1`] = `
 <h1
   className="nhsuk-u-margin-bottom-3"
-  style={Object {}}
 >
   Heading
 </h1>
@@ -71,22 +69,18 @@ exports[`Hero matches snapshot and element as image with children 1`] = `
             >
               <Heading
                 className=""
-                style={Object {}}
               >
                 <h1
                   className="nhsuk-u-margin-bottom-3"
-                  style={Object {}}
                 >
                   Heading
                 </h1>
               </Heading>
               <Content
                 className=""
-                style={Object {}}
               >
                 <p
                   className="nhsuk-body-l nhsuk-u-margin-bottom-0"
-                  style={Object {}}
                 >
                   Content
                 </p>
@@ -135,22 +129,18 @@ exports[`Hero matches snapshot and element with children 1`] = `
             >
               <Heading
                 className=""
-                style={Object {}}
               >
                 <h1
                   className="nhsuk-u-margin-bottom-3"
-                  style={Object {}}
                 >
                   Heading
                 </h1>
               </Heading>
               <Content
                 className=""
-                style={Object {}}
               >
                 <p
                   className="nhsuk-body-l nhsuk-u-margin-bottom-0"
-                  style={Object {}}
                 >
                   Content
                 </p>

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import stylePropType from 'react-style-proptype';
 
 const ReviewDate = ({
   lastReviewText,
@@ -9,9 +8,9 @@ const ReviewDate = ({
   lastReviewDate,
   nextReviewDate,
   className,
-  style
+  ...rest
 }) => (
-  <div className={classNames('nhsuk-review-date', className)} style={style}>
+  <div className={classNames('nhsuk-review-date', className)} {...rest}>
     <p className="nhsuk-body-s">
       {lastReviewDate ? `${lastReviewText} ${lastReviewDate}` : null}
       {lastReviewDate && nextReviewDate ? <br /> : null}
@@ -25,8 +24,7 @@ ReviewDate.propTypes = {
   nextReviewText: PropTypes.string,
   lastReviewDate: PropTypes.string,
   nextReviewDate: PropTypes.string,
-  className: PropTypes.string,
-  style: stylePropType
+  className: PropTypes.string
 };
 
 ReviewDate.defaultProps = {
@@ -34,8 +32,7 @@ ReviewDate.defaultProps = {
   nextReviewText: 'Next review due:',
   lastReviewDate: '',
   nextReviewDate: '',
-  className: '',
-  style: {}
+  className: ''
 };
 
 export default ReviewDate;

@@ -3,15 +3,13 @@
 exports[`Input matches snapshot 1`] = `
 <Fragment>
   <input
-    aria-describedby="-hint"
-    autoComplete=""
+    aria-describedby="input-hint"
     className="nhsuk-input"
-    id=""
-    name="-hint"
+    initialValue=""
+    name="input-hint"
     onChange={[Function]}
-    placeholder=""
-    style={Object {}}
     type="text"
+    value=""
   />
 </Fragment>
 `;

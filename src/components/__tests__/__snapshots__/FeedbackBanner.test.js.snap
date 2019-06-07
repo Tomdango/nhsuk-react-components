@@ -7,7 +7,6 @@ exports[`FeedbackBanner matches snapshot 1`] = `
   id="nhsuk-feedback-banner"
   label="Answer the survey"
   onClick={[Function]}
-  style={Object {}}
   timeout={3000}
   title="Help us make the NHS website better"
   visuallyHiddenText=" feedback invite"
@@ -15,35 +14,29 @@ exports[`FeedbackBanner matches snapshot 1`] = `
   <div
     className="nhsuk-feedback-banner"
     id="nhsuk-feedback-banner"
-    style={Object {}}
+    timeout={3000}
   >
     <Container
       className=""
       fluid={false}
-      style={Object {}}
     >
       <div
         className="nhsuk-width-container"
-        style={Object {}}
       >
         <Row
           className=""
-          style={Object {}}
         >
           <div
             className="nhsuk-grid-row"
-            style={Object {}}
           >
             <Column
               className=""
               forceLayout={false}
-              style={Object {}}
               tabletWidth=""
               width="full"
             >
               <div
                 className="nhsuk-grid-column-full"
-                style={Object {}}
               >
                 <div
                   className="nhsuk-feedback-banner__content"
@@ -60,6 +53,7 @@ exports[`FeedbackBanner matches snapshot 1`] = `
                     <a
                       className="nhsuk-u-nowrap nhsuk-feedback-banner__label"
                       href="#"
+                      id="nhsuk-feedback-banner__label"
                       onClick={[Function]}
                     >
                       Answer the survey

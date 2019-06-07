@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 
-const Item = ({ children, className, style, href }) => (
-  <li className={classNames('nhsuk-list-panel__item', className)} style={style}>
-    <a className="nhsuk-list-panel__link" href={href}>
+const Item = ({ children, className, ...rest }) => (
+  <li className={classNames('nhsuk-list-panel__item', className)}>
+    <a className="nhsuk-list-panel__link" {...rest}>
       {children}
     </a>
   </li>
@@ -13,15 +12,11 @@ const Item = ({ children, className, style, href }) => (
 
 Item.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: stylePropType,
-  href: PropTypes.string
+  className: PropTypes.string
 };
 
 Item.defaultProps = {
-  className: '',
-  style: {},
-  href: '#'
+  className: ''
 };
 
 const Panel = ({
@@ -33,9 +28,9 @@ const Panel = ({
   disabled,
   className,
   children,
-  style
+  ...rest
 }) => (
-  <div className={classNames('nhsuk-list-panel', className)} style={style}>
+  <div className={classNames('nhsuk-list-panel', className)} {...rest}>
     <h2 className="nhsuk-list-panel__label" id={id}>
       {label}
     </h2>
@@ -76,8 +71,7 @@ Panel.propTypes = {
   backToTopText: PropTypes.string,
   disabled: PropTypes.bool,
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: stylePropType
+  className: PropTypes.string
 };
 
 Panel.defaultProps = {
@@ -86,8 +80,7 @@ Panel.defaultProps = {
   backToTopHref: '#',
   backToTopText: 'Back to top',
   disabled: false,
-  className: '',
-  style: {}
+  className: ''
 };
 
 const ListPanel = ({ children }) => <ol className="nhsuk-list">{children}</ol>;

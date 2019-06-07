@@ -1,23 +1,20 @@
 import React from 'react';
 import { node, string } from 'prop-types';
-import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 
-const ReadingWidth = ({ children, className, style }) => (
-  <div className={classNames('nhsuk-u-reading-width', className)} style={style}>
+const ReadingWidth = ({ children, className, ...rest }) => (
+  <div className={classNames('nhsuk-u-reading-width', className)} {...rest}>
     {children}
   </div>
 );
 
 ReadingWidth.propTypes = {
   children: node.isRequired,
-  className: string,
-  style: stylePropType
+  className: string
 };
 
 ReadingWidth.defaultProps = {
-  className: '',
-  style: {}
+  className: ''
 };
 
 export default ReadingWidth;

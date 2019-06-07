@@ -1,11 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Item matches snapshot 1`] = `
+<option
+  selected={false}
+  value="item"
+>
+  Item
+</option>
+`;
+
 exports[`Select matches snapshot 1`] = `
 <Fragment>
   <select
     className="nhsuk-select"
+    name="select"
     onChange={[Function]}
-    style={Object {}}
     value=""
   />
 </Fragment>

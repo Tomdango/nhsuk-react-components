@@ -20,21 +20,7 @@ describe('Fieldset', () => {
     ).toBeTruthy();
     shallowMount.unmount();
   });
-  it('passes back on error', () => {
-    const callbackErrorFromChild = jest.fn();
-    const wrapper = shallow(
-      <Fieldset callbackErrorFromChild={callbackErrorFromChild}>
-        <Input value="input" error="error">
-          Input
-        </Input>
-        <Input value="input">Input</Input>
-        <p>Non-Form Element</p>
-      </Fieldset>
-    );
-    expect(callbackErrorFromChild).toHaveBeenCalled();
-    expect(callbackErrorFromChild.mock.calls[0][0]).toBe(true);
-    wrapper.unmount();
-  });
+
   it('produces different titleSizes', () => {
     const wrapper = shallow(<Fieldset title="title" titleSize="xl" />);
     expect(
@@ -46,10 +32,5 @@ describe('Fieldset', () => {
         </legend>
       )
     );
-  });
-  it('has valid defaultProps', () => {
-    expect(Fieldset.defaultProps.valueCallback()).toBe(undefined);
-    expect(Fieldset.defaultProps.callbackErrorFromChild()).toBe(undefined);
-    expect(Fieldset.defaultProps.registerInitialValue()).toBe(undefined);
   });
 });

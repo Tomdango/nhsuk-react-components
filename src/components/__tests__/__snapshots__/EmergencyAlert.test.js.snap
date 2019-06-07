@@ -14,42 +14,35 @@ exports[`EmergencyAlert all matches snapshot 1`] = `
     <Container
       className=""
       fluid={false}
-      style={Object {}}
     >
       <div
         className="nhsuk-width-container"
-        style={Object {}}
       >
         <Row
           className=""
-          style={Object {}}
         >
           <div
             className="nhsuk-grid-row"
-            style={Object {}}
           >
             <Column
               className=""
               forceLayout={false}
               size="full"
-              style={Object {}}
               tabletWidth=""
             >
               <div
                 className="nhsuk-grid-column-undefined"
-                style={Object {}}
+                size="full"
               >
                 <div
                   className="nhsuk-global-alert__content"
                 >
                   <Title
                     className=""
-                    style={Object {}}
                     visuallyHiddenText="Alert: "
                   >
                     <h2
                       className="nhsuk-global-alert__heading"
-                      style={Object {}}
                     >
                       <span
                         className="nhsuk-u-visually-hidden"
@@ -61,24 +54,18 @@ exports[`EmergencyAlert all matches snapshot 1`] = `
                   </Title>
                   <Message
                     className=""
-                    style={Object {}}
                   >
                     <p
                       className="nhsuk-global-alert__message"
-                      style={Object {}}
                     >
                       There has been a national flu outbreak.
                       <Link
                         className=""
                         href="https://www.nhs.uk"
-                        onClick={[Function]}
-                        style={Object {}}
                       >
                         <a
                           className="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override"
                           href="https://www.nhs.uk"
-                          onClick={[Function]}
-                          style={Object {}}
                         >
                           How does it affect me
                         </a>
@@ -87,11 +74,9 @@ exports[`EmergencyAlert all matches snapshot 1`] = `
                   </Message>
                   <LastUpdated
                     className=""
-                    style={Object {}}
                   >
                     <p
                       className="nhsuk-global-alert__updated"
-                      style={Object {}}
                     >
                       Updated 23 mins ago
                     </p>
@@ -110,7 +95,6 @@ exports[`EmergencyAlert all matches snapshot 1`] = `
 exports[`EmergencyAlert last updated matches snapshot 1`] = `
 <p
   className="nhsuk-global-alert__updated"
-  style={Object {}}
 >
   Updated 23 mins ago
 </p>
@@ -120,8 +104,6 @@ exports[`EmergencyAlert link matches snapshot 1`] = `
 <a
   className="nhsuk-u-nowrap nhsuk-global-alert-link__margin-override"
   href="#"
-  onClick={[Function]}
-  style={Object {}}
 >
   Link
 </a>
@@ -130,7 +112,6 @@ exports[`EmergencyAlert link matches snapshot 1`] = `
 exports[`EmergencyAlert message matches snapshot 1`] = `
 <p
   className="nhsuk-global-alert__message"
-  style={Object {}}
 >
   Message
 </p>
@@ -139,7 +120,6 @@ exports[`EmergencyAlert message matches snapshot 1`] = `
 exports[`EmergencyAlert title matches snapshot 1`] = `
 <h2
   className="nhsuk-global-alert__heading"
-  style={Object {}}
 >
   <span
     className="nhsuk-u-visually-hidden"

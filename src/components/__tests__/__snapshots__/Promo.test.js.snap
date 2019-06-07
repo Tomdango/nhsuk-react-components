@@ -3,7 +3,6 @@
 exports[`Promo content matches snapshot and element 1`] = `
 <p
   className="nhsuk-promo__description"
-  style={Object {}}
 >
   Hello
 </p>
@@ -12,7 +11,6 @@ exports[`Promo content matches snapshot and element 1`] = `
 exports[`Promo heading matches snapshot and element 1`] = `
 <h3
   className="nhsuk-promo__heading"
-  style={Object {}}
 >
   Hello
 </h3>
@@ -21,11 +19,11 @@ exports[`Promo heading matches snapshot and element 1`] = `
 exports[`Promo matches snapshot 1`] = `
 <div
   className="nhsuk-promo"
-  style={Object {}}
 >
   <a
     className="nhsuk-promo__link-wrapper"
     href="#"
+    onClick={[Function]}
   >
     <div
       className="nhsuk-promo__content"
@@ -39,7 +37,6 @@ exports[`Promo matches snapshot 1`] = `
 exports[`PromoGroup matches snapshot 1`] = `
 <div
   className="nhsuk-grid-row nhsuk-promo-group"
-  style={Object {}}
 >
   <div
     className="nhsuk-grid-column-full nhsuk-promo-group__item"

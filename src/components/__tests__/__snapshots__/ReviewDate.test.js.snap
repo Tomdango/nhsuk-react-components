@@ -3,7 +3,6 @@
 exports[`ReviewDate matches snapshot 1`] = `
 <div
   className="nhsuk-review-date"
-  style={Object {}}
 >
   <p
     className="nhsuk-body-s"

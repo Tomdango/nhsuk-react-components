@@ -1,12 +1,12 @@
 import React from 'react';
-import { string, node, func } from 'prop-types';
-import stylePropType from 'react-style-proptype';
+import { string, node } from 'prop-types';
 import classNames from 'classnames';
+import stylePropType from 'react-style-proptype';
 import { ChevronLeft } from '../icons';
 
-const BackLink = ({ href, className, style, children, onClick }) => (
-  <div className={classNames('nhsuk-back-link', className)} style={style}>
-    <a className="nhsuk-back-link__link" href={href} onClick={onClick}>
+const BackLink = ({ className, children, ...rest }) => (
+  <div className={classNames('nhsuk-back-link', className)}>
+    <a className="nhsuk-back-link__link" {...rest}>
       <ChevronLeft />
       {children}
     </a>
@@ -14,19 +14,15 @@ const BackLink = ({ href, className, style, children, onClick }) => (
 );
 
 BackLink.defaultProps = {
-  href: '#',
   children: '',
   className: '',
-  style: {},
-  onClick: () => {}
+  style: {}
 };
 
 BackLink.propTypes = {
-  href: string,
   children: node,
   className: string,
-  style: stylePropType,
-  onClick: func
+  style: stylePropType
 };
 
 export default BackLink;

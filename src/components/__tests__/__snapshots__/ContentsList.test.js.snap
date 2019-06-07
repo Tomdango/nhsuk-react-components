@@ -2,17 +2,13 @@
 
 exports[`ContentsList container matches snapshot 1`] = `
 <ContentsList
-  ariaLabel="Pages in this guide"
   className=""
   role="navigation"
-  style={Object {}}
   visuallyHiddenText="Contents"
 >
   <nav
-    aria-label="Pages in this guide"
     className="nhsuk-contents-list"
     role="navigation"
-    style={Object {}}
   >
     <h2
       className="nhsuk-u-visually-hidden"
@@ -23,21 +19,20 @@ exports[`ContentsList container matches snapshot 1`] = `
       className="nhsuk-contents-list__list"
     >
       <Item
-        ariaCurrent="page"
         className=""
         current={false}
         href="#"
+        id=""
         onClick={[Function]}
-        style={Object {}}
       >
         <li
-          aria-current="page"
           className="nhsuk-contents-list__item"
-          style={Object {}}
+          id=""
         >
           <a
             className="nhsuk-contents-list__link"
             href="#"
+            id="null"
             onClick={[Function]}
           >
             Test
@@ -45,17 +40,15 @@ exports[`ContentsList container matches snapshot 1`] = `
         </li>
       </Item>
       <Item
-        ariaCurrent="page"
         className=""
         current={true}
         href="#"
+        id=""
         onClick={[Function]}
-        style={Object {}}
       >
         <li
-          aria-current="page"
           className="nhsuk-contents-list__item"
-          style={Object {}}
+          id=""
         >
           <span
             className="nhsuk-contents-list__current"
@@ -71,17 +64,15 @@ exports[`ContentsList container matches snapshot 1`] = `
 
 exports[`ContentsList current item matches snapshot 1`] = `
 <Item
-  ariaCurrent="page"
   className=""
   current={true}
   href="#"
+  id=""
   onClick={[Function]}
-  style={Object {}}
 >
   <li
-    aria-current="page"
     className="nhsuk-contents-list__item"
-    style={Object {}}
+    id=""
   >
     <span
       className="nhsuk-contents-list__current"
@@ -94,21 +85,20 @@ exports[`ContentsList current item matches snapshot 1`] = `
 
 exports[`ContentsList item matches snapshot 1`] = `
 <Item
-  ariaCurrent="page"
   className=""
   current={false}
   href="#"
+  id=""
   onClick={[Function]}
-  style={Object {}}
 >
   <li
-    aria-current="page"
     className="nhsuk-contents-list__item"
-    style={Object {}}
+    id=""
   >
     <a
       className="nhsuk-contents-list__link"
       href="#"
+      id="null"
       onClick={[Function]}
     >
       Test Text

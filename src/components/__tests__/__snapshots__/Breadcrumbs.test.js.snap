@@ -3,8 +3,6 @@
 exports[`Breadcrumbs item matches snapshot 1`] = `
 <Item
   className=""
-  href="#"
-  onClick={[Function]}
   style={Object {}}
 >
   <li
@@ -13,8 +11,6 @@ exports[`Breadcrumbs item matches snapshot 1`] = `
   >
     <a
       className="nhsuk-breadcrumb__link"
-      href="#"
-      onClick={[Function]}
     >
       Item
     </a>
@@ -24,14 +20,10 @@ exports[`Breadcrumbs item matches snapshot 1`] = `
 
 exports[`Breadcrumbs matches snapshot 1`] = `
 <Breadcrumbs
-  ariaLabel="Breadcrumbs"
   className=""
-  style={Object {}}
 >
   <nav
-    aria-label="Breadcrumbs"
     className="nhsuk-breadcrumb"
-    style={Object {}}
   >
     <div
       className="nhsuk-width-container"
@@ -41,8 +33,6 @@ exports[`Breadcrumbs matches snapshot 1`] = `
       >
         <Item
           className=""
-          href="#"
-          onClick={[Function]}
           style={Object {}}
         >
           <li
@@ -51,8 +41,6 @@ exports[`Breadcrumbs matches snapshot 1`] = `
           >
             <a
               className="nhsuk-breadcrumb__link"
-              href="#"
-              onClick={[Function]}
             >
               Test
             </a>

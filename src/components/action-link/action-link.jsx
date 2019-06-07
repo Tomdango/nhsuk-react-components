@@ -1,25 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
+import stylePropType from 'react-style-proptype';
 import { ArrowRightCircle } from '../icons';
 
-const ActionLink = ({
-  children,
-  href,
-  openInNewWindow,
-  onClick,
-  className,
-  style
-}) => (
+const ActionLink = ({ children, className, style, ...rest }) => (
   <div className={classNames('nhsuk-action-link', className)} style={style}>
-    <a
-      className="nhsuk-action-link__link"
-      target={openInNewWindow ? '_blank' : ''}
-      onClick={onClick}
-      rel={openInNewWindow ? 'noreferrer noopener' : ''}
-      href={href}
-    >
+    <a className="nhsuk-action-link__link" {...rest}>
       <ArrowRightCircle />
       <span className="nhsuk-action-link__text">{children}</span>
     </a>
@@ -27,19 +14,13 @@ const ActionLink = ({
 );
 
 ActionLink.defaultProps = {
-  href: '#',
-  openInNewWindow: false,
   className: '',
-  onClick: () => {},
   style: {}
 };
 
 ActionLink.propTypes = {
   children: PropTypes.PropTypes.node.isRequired,
-  onClick: PropTypes.func,
   className: PropTypes.string,
-  href: PropTypes.string,
-  openInNewWindow: PropTypes.bool,
   style: stylePropType
 };
 

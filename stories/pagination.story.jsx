@@ -4,23 +4,27 @@ import Pagination from '../src/components/pagination';
 
 storiesOf('Pagination', module)
   .add('Standard', () => (
-    <Pagination
-      previousUrl="/section/treatments"
-      previousPage="Treatments"
-      previousTitle="Previous"
-      nextUrl="/section/symptoms"
-      nextPage="Symptoms"
-      role="navigation"
-      ariaLabel="pagination"
-    />
+    <Pagination>
+      <Pagination.Previous href="/section/treatments">
+        Treatments
+      </Pagination.Previous>
+      <Pagination.Next href="/section/symptoms">Symptoms</Pagination.Next>
+    </Pagination>
   ))
   .add('Next Pagination', () => (
-    <Pagination
-      nextUrl="/section/symptoms"
-      nextTitle="Next"
-      nextPage="Symptoms"
-    />
+    <Pagination>
+      <Pagination.Next href="/section/treatments" description="Custom Next">
+        Treatments
+      </Pagination.Next>
+    </Pagination>
   ))
   .add('Previous Pagination', () => (
-    <Pagination previousUrl="/section/treatments" previousPage="Treatments" />
+    <Pagination>
+      <Pagination.Previous
+        href="/section/symptoms"
+        description="Custom Previous"
+      >
+        Symptoms
+      </Pagination.Previous>
+    </Pagination>
   ));

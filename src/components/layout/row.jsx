@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 
-const Row = ({ children, className, style }) => (
-  <div className={classNames('nhsuk-grid-row', className)} style={style}>
+const Row = ({ children, className, ...rest }) => (
+  <div className={classNames('nhsuk-grid-row', className)} {...rest}>
     {children}
   </div>
 );
+
 const Column = ({
   children,
   width,
   tabletWidth,
   forceLayout,
   className,
-  style
+  ...rest
 }) => (
   <div
     className={classNames(
@@ -23,7 +23,7 @@ const Column = ({
       { [`nhsuk-u-${tabletWidth}-tablet`]: tabletWidth },
       className
     )}
-    style={style}
+    {...rest}
   >
     {children}
   </div>
@@ -31,14 +31,12 @@ const Column = ({
 
 Row.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.string,
-  style: stylePropType
+  className: PropTypes.string
 };
 
 Row.defaultProps = {
   children: null,
-  className: '',
-  style: {}
+  className: ''
 };
 
 Column.propTypes = {
@@ -61,16 +59,14 @@ Column.propTypes = {
     'one-third',
     'one-quarter'
   ]),
-  className: PropTypes.string,
-  style: stylePropType
+  className: PropTypes.string
 };
 
 Column.defaultProps = {
   children: null,
   forceLayout: false,
   tabletWidth: '',
-  className: '',
-  style: {}
+  className: ''
 };
 
 Row.Column = Column;

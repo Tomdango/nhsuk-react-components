@@ -5,13 +5,12 @@ exports[`ErrorSummary all matches snapshot 1`] = `
   className=""
   description="Optional description of the errors and how to correct them"
   role="alert"
-  style={Object {}}
+  tabIndex="-1"
   title="This is a problem"
 >
   <div
     className="nhsuk-error-summary"
     role="alert"
-    style={Object {}}
     tabIndex="-1"
   >
     <h2
@@ -31,15 +30,15 @@ exports[`ErrorSummary all matches snapshot 1`] = `
         <ErrorItem
           className=""
           href="#example-error-1"
+          id=""
           onClick={[Function]}
-          style={Object {}}
         >
           <li
-            className=""
-            style={Object {}}
+            id=""
           >
             <a
               href="#example-error-1"
+              id="null"
               onClick={[Function]}
             >
               Link to error with explanation
@@ -49,15 +48,15 @@ exports[`ErrorSummary all matches snapshot 1`] = `
         <ErrorItem
           className=""
           href="#example-error-2"
+          id=""
           onClick={[Function]}
-          style={Object {}}
         >
           <li
-            className=""
-            style={Object {}}
+            id=""
           >
             <a
               href="#example-error-2"
+              id="null"
               onClick={[Function]}
             >
               Link to error with explanation
@@ -75,12 +74,11 @@ exports[`ErrorSummary doesn't render description or title when not provided 1`] 
   className=""
   description=""
   role="alert"
-  style={Object {}}
+  tabIndex="-1"
 >
   <div
     className="nhsuk-error-summary"
     role="alert"
-    style={Object {}}
     tabIndex="-1"
   >
     <h2
@@ -95,15 +93,15 @@ exports[`ErrorSummary doesn't render description or title when not provided 1`] 
         <ErrorItem
           className=""
           href="#example-error-1"
+          id=""
           onClick={[Function]}
-          style={Object {}}
         >
           <li
-            className=""
-            style={Object {}}
+            id=""
           >
             <a
               href="#example-error-1"
+              id="null"
               onClick={[Function]}
             >
               Link to error with explanation
@@ -113,15 +111,15 @@ exports[`ErrorSummary doesn't render description or title when not provided 1`] 
         <ErrorItem
           className=""
           href="#example-error-2"
+          id=""
           onClick={[Function]}
-          style={Object {}}
         >
           <li
-            className=""
-            style={Object {}}
+            id=""
           >
             <a
               href="#example-error-2"
+              id="null"
               onClick={[Function]}
             >
               Link to error with explanation
@@ -136,11 +134,11 @@ exports[`ErrorSummary doesn't render description or title when not provided 1`] 
 
 exports[`ErrorSummary item matches snapshot 1`] = `
 <li
-  className=""
-  style={Object {}}
+  id=""
 >
   <a
     href="#"
+    id="null"
     onClick={[Function]}
   >
     Error item

@@ -3,12 +3,9 @@
 exports[`Textarea matches snapshot 1`] = `
 <Fragment>
   <textarea
-    autoComplete=""
     className="nhsuk-textarea"
     onChange={[Function]}
-    placeholder=""
-    rows={5}
-    style={Object {}}
+    value=""
   />
 </Fragment>
 `;

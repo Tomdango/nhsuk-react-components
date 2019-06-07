@@ -2,9 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import stylePropType from 'react-style-proptype';
 
-const Label = ({ htmlFor, type, children, className, style }) => (
+const Label = ({ htmlFor, type, children, className, ...rest }) => (
   <label
     id={`${htmlFor}__label`}
     htmlFor={htmlFor}
@@ -14,7 +13,7 @@ const Label = ({ htmlFor, type, children, className, style }) => (
       { 'nhsuk-label--xl': type === 'heading' },
       className
     )}
-    style={style}
+    {...rest}
   >
     {children}
   </label>
@@ -24,15 +23,13 @@ Label.propTypes = {
   htmlFor: PropTypes.string,
   type: PropTypes.string,
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: stylePropType
+  className: PropTypes.string
 };
 
 Label.defaultProps = {
   htmlFor: '',
   type: '',
-  className: '',
-  style: {}
+  className: ''
 };
 
 export default Label;

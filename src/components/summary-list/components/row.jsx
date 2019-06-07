@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import stylePropType from 'react-style-proptype';
 
 const actionPropType = {
   href: PropTypes.string,
@@ -9,8 +8,8 @@ const actionPropType = {
   visuallyHiddenText: PropTypes.string
 };
 
-const Row = ({ rowKey, action, children, className, style }) => (
-  <div className={`nhsuk-summary-list__row ${className}`} style={style}>
+const Row = ({ rowKey, action, children, className, ...rest }) => (
+  <div className={`nhsuk-summary-list__row ${className}`} {...rest}>
     <dt className="nhsuk-summary-list__key">{rowKey}</dt>
     <dd className="nhsuk-summary-list__value">{children}</dd>
     {action ? (
@@ -30,16 +29,14 @@ Row.propTypes = {
   rowKey: PropTypes.string,
   action: PropTypes.oneOfType([actionPropType, PropTypes.bool]),
   children: PropTypes.node,
-  className: PropTypes.string,
-  style: stylePropType
+  className: PropTypes.string
 };
 
 Row.defaultProps = {
   rowKey: '',
   action: false,
   children: '',
-  className: '',
-  style: {}
+  className: ''
 };
 
 export default Row;
