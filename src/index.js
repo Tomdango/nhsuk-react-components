@@ -17,7 +17,6 @@ export {
   Checkboxes,
   DateInput,
   Input,
-  InputBlock,
   Radios,
   Select,
   Textarea

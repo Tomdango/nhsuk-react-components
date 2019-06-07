@@ -38,8 +38,7 @@ class Checkboxes extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      checkboxes: [],
-      _idAssigned: 1
+      checkboxes: []
     };
   }
 

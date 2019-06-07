@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Fieldset from '..';
-import Input from '../../form/components/input';
 
 describe('Fieldset', () => {
   it('matches snapshot', () => {
