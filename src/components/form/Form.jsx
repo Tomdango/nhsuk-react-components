@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import stylePropType from 'react-style-proptype';
 import FormContext from './FormContext';
 import { Heading } from '../typography';
 
@@ -11,6 +12,8 @@ class Form extends Component {
     onSubmit: PropTypes.func,
     children: PropTypes.node.isRequired,
     onErrorChange: PropTypes.func,
+    title: PropTypes.string,
+    titleSize: PropTypes.string,
     style: stylePropType
   };
 
@@ -19,6 +22,8 @@ class Form extends Component {
     onChange: () => {},
     onSubmit: () => {},
     onErrorChange: () => {},
+    title: '',
+    titleSize: 'xl',
     style: {}
   };
 

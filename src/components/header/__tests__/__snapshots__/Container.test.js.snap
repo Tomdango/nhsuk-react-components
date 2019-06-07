@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header.Container matches snapshot 1`] = `
+<div
+  className="nhsuk-width-container nhsuk-header__container"
+>
+  Child
+</div>
+`;

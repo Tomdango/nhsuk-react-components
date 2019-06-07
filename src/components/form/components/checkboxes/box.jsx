@@ -35,13 +35,15 @@ Box.propTypes = {
   _id: PropTypes.string.isRequired,
   hint: PropTypes.string,
   className: PropTypes.string,
-  checked: PropTypes.bool
+  checked: PropTypes.bool,
+  id: PropTypes.string
 };
 
 Box.defaultProps = {
   hint: '',
   className: '',
-  checked: false
+  checked: false,
+  id: ''
 };
 
 export default Box;

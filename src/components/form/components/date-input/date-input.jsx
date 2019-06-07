@@ -9,6 +9,12 @@ import Day from './day';
 import Month from './month';
 import Year from './year';
 
+const valuePropType = {
+  day: PropTypes.string,
+  month: PropTypes.string,
+  year: PropTypes.string
+};
+
 export default class DateInput extends Component {
   static contextType = FormContext;
 
@@ -26,7 +32,8 @@ export default class DateInput extends Component {
     labelHtmlFor: PropTypes.string,
     name: PropTypes.string.isRequired,
     autoFocus: PropTypes.bool,
-    autoComplete: PropTypes.string
+    autoComplete: PropTypes.string,
+    value: valuePropType
   };
 
   static defaultProps = {
@@ -36,7 +43,8 @@ export default class DateInput extends Component {
     error: '',
     labelHtmlFor: '',
     autoFocus: false,
-    autoComplete: ''
+    autoComplete: '',
+    value: ''
   };
 
   static sanitizeInput = (type, value) => {
@@ -54,9 +62,7 @@ export default class DateInput extends Component {
     super(props, context);
     this.state = {
       data: {},
-      multiErrors: {},
-      singleError: '',
-      multiComponentMode: false
+      multiErrors: {}
     };
     this.monthRef = React.createRef();
     this.yearRef = React.createRef();
@@ -85,13 +91,12 @@ export default class DateInput extends Component {
         multiComponentMode = true;
       }
     });
-    this.setState({ multiComponentMode }, () => {
-      if (multiComponentMode) {
-        this.registerMultiComponent(defaultValue, defaultError);
-      } else {
-        this.registerSingleComponent();
-      }
-    });
+
+    if (multiComponentMode) {
+      this.registerMultiComponent(defaultValue, defaultError);
+    } else {
+      this.registerSingleComponent();
+    }
   }
 
   registerSingleComponent = () => {

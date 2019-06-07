@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header.Link matches snapshot 1`] = `
+<li
+  className="nhsuk-header__navigation-item"
+  style={Object {}}
+>
+  <a
+    className="nhsuk-header__navigation-link"
+    href="/target"
+  >
+    Child
+    <svg
+      aria-hidden="true"
+      className="nhsuk-icon nhsuk-icon__chevron-right"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"
+      />
+    </svg>
+  </a>
+</li>
+`;

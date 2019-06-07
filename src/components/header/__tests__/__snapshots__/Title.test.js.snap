@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header.Title matches snapshot 1`] = `
+<div
+  className="nhsuk-header__transactional-service-name"
+  style={Object {}}
+>
+  <a
+    className="nhsuk-header__transactional-service-name--link"
+  >
+    Hello
+  </a>
+</div>
+`;
