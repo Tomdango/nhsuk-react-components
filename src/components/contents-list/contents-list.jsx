@@ -1,46 +1,47 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 
-const Item = ({
-  href,
-  current,
-  children,
-  onClick,
-  ariaCurrent,
-  className,
-  style
-}) => (
+const Item = ({ href, current, children, onClick, className, id, ...rest }) => (
   <li
     className={classNames('nhsuk-contents-list__item', className)}
-    aria-current={ariaCurrent}
-    style={style}
+    id={id}
+    {...rest}
   >
     {current ? (
       <span className="nhsuk-contents-list__current">{children}</span>
     ) : (
-      <a className="nhsuk-contents-list__link" onClick={onClick} href={href}>
+      <a
+        className="nhsuk-contents-list__link"
+        id={`${id ? `${id}__link` : null}`}
+        onClick={onClick}
+        href={href}
+      >
         {children}
       </a>
     )}
   </li>
 );
 
-const ContentsList = ({
-  children,
-  visuallyHiddenText,
-  role,
-  className,
-  ariaLabel,
-  style
-}) => (
-  <nav
-    className={classNames('nhsuk-contents-list', className)}
-    role={role}
-    style={style}
-    aria-label={ariaLabel}
-  >
+Item.propTypes = {
+  href: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  current: PropTypes.bool,
+  onClick: PropTypes.func,
+  className: PropTypes.string,
+  id: PropTypes.string
+};
+
+Item.defaultProps = {
+  href: '#',
+  current: false,
+  onClick: () => {},
+  className: '',
+  id: ''
+};
+
+const ContentsList = ({ children, visuallyHiddenText, className, ...rest }) => (
+  <nav className={classNames('nhsuk-contents-list', className)} {...rest}>
     <h2 className="nhsuk-u-visually-hidden">{visuallyHiddenText}</h2>
     <ol className="nhsuk-contents-list__list">{children}</ol>
   </nav>
@@ -49,37 +50,14 @@ const ContentsList = ({
 ContentsList.propTypes = {
   children: PropTypes.node.isRequired,
   visuallyHiddenText: PropTypes.string,
-  role: PropTypes.string,
-  ariaLabel: PropTypes.string,
   className: PropTypes.string,
-  style: stylePropType
+  role: PropTypes.string
 };
 
 ContentsList.defaultProps = {
   visuallyHiddenText: 'Contents',
   role: 'navigation',
-  ariaLabel: 'Pages in this guide',
-  className: '',
-  style: {}
-};
-
-Item.propTypes = {
-  href: PropTypes.string,
-  children: PropTypes.node.isRequired,
-  current: PropTypes.bool,
-  onClick: PropTypes.func,
-  ariaCurrent: PropTypes.string,
-  className: PropTypes.string,
-  style: stylePropType
-};
-
-Item.defaultProps = {
-  href: '#',
-  current: false,
-  onClick: () => {},
-  ariaCurrent: 'page',
-  className: '',
-  style: {}
+  className: ''
 };
 
 ContentsList.Item = Item;

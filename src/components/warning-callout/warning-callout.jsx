@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 
-const WarningCallout = ({ heading, children, className, style }) => (
-  <div className={classNames('nhsuk-warning-callout', className)} style={style}>
+const WarningCallout = ({ heading, children, className, ...rest }) => (
+  <div className={classNames('nhsuk-warning-callout', className)} {...rest}>
     {heading ? (
       <h3 className="nhsuk-warning-callout__label">{heading}</h3>
     ) : null}
@@ -15,13 +14,11 @@ const WarningCallout = ({ heading, children, className, style }) => (
 WarningCallout.propTypes = {
   heading: PropTypes.string,
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: stylePropType
+  className: PropTypes.string
 };
 
 WarningCallout.defaultProps = {
   heading: '',
-  className: '',
-  style: {}
+  className: ''
 };
 export default WarningCallout;

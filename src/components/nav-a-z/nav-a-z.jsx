@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 
 const alphabet = [
@@ -37,11 +36,8 @@ const NavAZ = ({
   fullAlphabet,
   excludedItems,
   disabledItems,
-  ariaLabel,
-  role,
-  id,
   className,
-  style
+  ...rest
 }) => {
   let renderedItems;
   if (fullAlphabet) {
@@ -97,13 +93,7 @@ const NavAZ = ({
     });
   }
   return (
-    <nav
-      className={classNames('nhsuk-nav-a-z', className)}
-      style={style}
-      id={id}
-      role={role}
-      aria-label={ariaLabel}
-    >
+    <nav className={classNames('nhsuk-nav-a-z', className)} {...rest}>
       <ol className="nhsuk-nav-a-z__list">{renderedItems}</ol>
     </nav>
   );
@@ -116,9 +106,8 @@ NavAZ.propTypes = {
   fullAlphabet: PropTypes.bool,
   id: PropTypes.string,
   role: PropTypes.string,
-  ariaLabel: PropTypes.string,
-  className: PropTypes.string,
-  style: stylePropType
+  'aria-label': PropTypes.string,
+  className: PropTypes.string
 };
 
 NavAZ.defaultProps = {
@@ -128,8 +117,7 @@ NavAZ.defaultProps = {
   fullAlphabet: false,
   id: 'nhsuk-nav-a-z',
   role: 'navigation',
-  ariaLabel: 'A to Z Navigation',
-  className: '',
-  style: {}
+  'aria-label': 'A to Z Navigation',
+  className: ''
 };
 export default NavAZ;

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 import { Container, Row } from '../layout';
 
@@ -17,6 +16,29 @@ const mockFooter = {
 };
 
 class FeedbackBanner extends React.Component {
+  static propTypes = {
+    id: PropTypes.string,
+    timeout: PropTypes.number,
+    title: PropTypes.string,
+    children: PropTypes.node.isRequired,
+    label: PropTypes.node,
+    href: PropTypes.string,
+    onClick: PropTypes.func,
+    visuallyHiddenText: PropTypes.string,
+    className: PropTypes.string
+  };
+
+  static defaultProps = {
+    id: 'nhsuk-feedback-banner',
+    timeout: 3000,
+    title: '',
+    label: '',
+    href: '#',
+    onClick: () => {},
+    visuallyHiddenText: ' feedback invite',
+    className: ''
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -96,11 +118,11 @@ class FeedbackBanner extends React.Component {
       children,
       label,
       href,
-      id,
       onClick,
       className,
-      style,
-      visuallyHiddenText
+      visuallyHiddenText,
+      id,
+      ...rest
     } = this.props;
     const { shown, jsInView } = this.state;
     return (
@@ -111,8 +133,8 @@ class FeedbackBanner extends React.Component {
           { 'js-inview': jsInView },
           className
         )}
-        style={style}
         id={id}
+        {...rest}
       >
         <Container>
           <Row>
@@ -125,6 +147,7 @@ class FeedbackBanner extends React.Component {
                     <a
                       href={href}
                       onClick={onClick}
+                      id={`${id ? `${id}__label` : null}`}
                       className="nhsuk-u-nowrap nhsuk-feedback-banner__label"
                     >
                       {label}
@@ -151,28 +174,4 @@ class FeedbackBanner extends React.Component {
   }
 }
 
-FeedbackBanner.propTypes = {
-  id: PropTypes.string,
-  timeout: PropTypes.number,
-  title: PropTypes.string,
-  children: PropTypes.node.isRequired,
-  label: PropTypes.node,
-  href: PropTypes.string,
-  onClick: PropTypes.func,
-  visuallyHiddenText: PropTypes.string,
-  className: PropTypes.string,
-  style: stylePropType
-};
-
-FeedbackBanner.defaultProps = {
-  id: 'nhsuk-feedback-banner',
-  timeout: 3000,
-  title: '',
-  label: '',
-  href: '#',
-  onClick: () => {},
-  visuallyHiddenText: ' feedback invite',
-  className: '',
-  style: {}
-};
 export default FeedbackBanner;

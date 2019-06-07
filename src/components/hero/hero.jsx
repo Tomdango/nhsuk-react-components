@@ -3,30 +3,25 @@ import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 
-const Heading = ({ children, className, style }) => (
-  <h1
-    className={classNames('nhsuk-u-margin-bottom-3', className)}
-    style={style}
-  >
+const Heading = ({ children, className, ...rest }) => (
+  <h1 className={classNames('nhsuk-u-margin-bottom-3', className)} {...rest}>
     {children}
   </h1>
 );
 
 Heading.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: stylePropType
+  className: PropTypes.string
 };
 
 Heading.defaultProps = {
-  className: '',
-  style: {}
+  className: ''
 };
 
-const Content = ({ children, className, style }) => (
+const Content = ({ children, className, ...rest }) => (
   <p
     className={classNames('nhsuk-body-l', 'nhsuk-u-margin-bottom-0', className)}
-    style={style}
+    {...rest}
   >
     {children}
   </p>
@@ -34,16 +29,14 @@ const Content = ({ children, className, style }) => (
 
 Content.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: stylePropType
+  className: PropTypes.string
 };
 
 Content.defaultProps = {
-  className: '',
-  style: {}
+  className: ''
 };
 
-const Hero = ({ children, imageURL, className, style }) => (
+const Hero = ({ children, imageURL, className, style, ...rest }) => (
   <section
     className={classNames(
       'nhsuk-hero',
@@ -55,6 +48,7 @@ const Hero = ({ children, imageURL, className, style }) => (
       backgroundImage: imageURL ? `url('${imageURL}')` : 'none',
       ...style
     }}
+    {...rest}
   >
     {children ? (
       <div className="nhsuk-hero__overlay">

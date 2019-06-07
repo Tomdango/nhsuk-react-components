@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import stylePropType from 'react-style-proptype';
 
 const CareCard = ({
   type,
   heading,
   children,
-  style,
   disableHiddenText,
   className,
-  hiddenText
+  hiddenText,
+  ...rest
 }) => {
   let componentHiddenText = hiddenText;
   if (componentHiddenText === '' && !disableHiddenText) {
@@ -36,7 +35,7 @@ const CareCard = ({
         `nhsuk-care-card--${type}`,
         className
       )}
-      style={style}
+      {...rest}
     >
       <div className="nhsuk-care-card__heading-container">
         <h3 className="nhsuk-care-card__heading">
@@ -62,15 +61,13 @@ CareCard.propTypes = {
   children: PropTypes.node.isRequired,
   disableHiddenText: PropTypes.bool,
   hiddenText: PropTypes.string,
-  className: PropTypes.string,
-  style: stylePropType
+  className: PropTypes.string
 };
 
 CareCard.defaultProps = {
   disableHiddenText: false,
   hiddenText: '',
-  className: '',
-  style: {}
+  className: ''
 };
 
 export default CareCard;

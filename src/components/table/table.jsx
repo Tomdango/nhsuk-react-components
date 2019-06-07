@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 import TableHeader from './components/table-header';
 import TableBody from './components/table-body';
 import TableRow from './components/table-row';
 
-const TablePanel = ({ heading, children, className, style }) => (
+const TablePanel = ({ heading, children, className, ...rest }) => (
   <div
     className={classNames('nhsuk-table__panel-with-heading-tab', className)}
-    style={style}
+    {...rest}
   >
     {heading ? <h3 className="nhsuk-table__heading-tab">{heading}</h3> : null}
     {children}
@@ -19,19 +18,17 @@ const TablePanel = ({ heading, children, className, style }) => (
 TablePanel.propTypes = {
   heading: PropTypes.string,
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: stylePropType
+  className: PropTypes.string
 };
 
 TablePanel.defaultProps = {
   heading: '',
-  className: '',
-  style: {}
+  className: ''
 };
 
-const Table = ({ caption, children, className, style }) => (
+const Table = ({ caption, children, className, ...rest }) => (
   <div className="nhsuk-table-responsive">
-    <table className={classNames('nhsuk-table', className)} style={style}>
+    <table className={classNames('nhsuk-table', className)} {...rest}>
       {caption ? (
         <caption className="nhsuk-table__caption">{caption}</caption>
       ) : null}
@@ -43,14 +40,12 @@ const Table = ({ caption, children, className, style }) => (
 Table.propTypes = {
   caption: PropTypes.string,
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: stylePropType
+  className: PropTypes.string
 };
 
 Table.defaultProps = {
   caption: '',
-  className: '',
-  style: {}
+  className: ''
 };
 
 Table.Header = TableHeader;

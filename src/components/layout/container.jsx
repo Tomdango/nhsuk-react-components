@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 
-const Container = ({ fluid, children, className, style }) => (
+const Container = ({ fluid, children, className, ...rest }) => (
   <div
     className={classNames(
       { 'nhsuk-width-container': !fluid },
       { 'nhsuk-width-container-fluid': fluid },
       className
     )}
-    style={style}
+    {...rest}
   >
     {children}
   </div>
@@ -19,14 +18,12 @@ const Container = ({ fluid, children, className, style }) => (
 Container.propTypes = {
   fluid: PropTypes.bool,
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: stylePropType
+  className: PropTypes.string
 };
 
 Container.defaultProps = {
   fluid: false,
-  className: '',
-  style: {}
+  className: ''
 };
 
 export default Container;

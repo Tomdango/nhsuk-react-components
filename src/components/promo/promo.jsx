@@ -1,56 +1,57 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import stylePropType from 'react-style-proptype';
 import Group from './promo-group';
 
-const Heading = ({ children, className, style }) => (
-  <h3 className={classNames('nhsuk-promo__heading', className)} style={style}>
+const Heading = ({ children, className, ...rest }) => (
+  <h3 className={classNames('nhsuk-promo__heading', className)} {...rest}>
     {children}
   </h3>
 );
 
 Heading.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: stylePropType
+  className: PropTypes.string
 };
 
 Heading.defaultProps = {
-  className: '',
-  style: {}
+  className: ''
 };
 
-const Content = ({ children, className, style }) => (
-  <p
-    className={classNames('nhsuk-promo__description', className)}
-    style={style}
-  >
+const Content = ({ children, className, ...rest }) => (
+  <p className={classNames('nhsuk-promo__description', className)} {...rest}>
     {children}
   </p>
 );
 
 Content.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: stylePropType
+  className: PropTypes.string
 };
 
 Content.defaultProps = {
-  className: '',
-  style: {}
+  className: ''
 };
 
-const Promo = ({ href, children, imgUrl, imgAlt, small, className, style }) => (
+const Promo = ({
+  href,
+  onClick,
+  children,
+  imgUrl,
+  imgAlt,
+  small,
+  className,
+  ...rest
+}) => (
   <div
     className={classNames(
       'nhsuk-promo',
       { 'nhsuk-promo--small': small },
       className
     )}
-    style={style}
+    {...rest}
   >
-    <a className="nhsuk-promo__link-wrapper" href={href}>
+    <a className="nhsuk-promo__link-wrapper" onClick={onClick} href={href}>
       {imgUrl ? (
         <img className="nhsuk-promo__img" src={imgUrl} alt={imgAlt} />
       ) : null}
@@ -66,7 +67,7 @@ Promo.propTypes = {
   imgAlt: PropTypes.string,
   small: PropTypes.bool,
   className: PropTypes.string,
-  style: stylePropType
+  onClick: PropTypes.func
 };
 
 Promo.defaultProps = {
@@ -75,7 +76,7 @@ Promo.defaultProps = {
   imgAlt: '',
   small: false,
   className: '',
-  style: {}
+  onClick: () => {}
 };
 
 Promo.Group = Group;

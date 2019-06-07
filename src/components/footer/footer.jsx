@@ -3,24 +3,16 @@ import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 
-const Link = ({
-  href,
-  openInNewWindow,
-  onClick,
-  children,
-  className,
-  style
-}) => (
+const Link = ({ children, className, id, style, ...rest }) => (
   <li
     className={classNames('nhsuk-footer__list-item', className)}
     style={style}
+    id={id}
   >
     <a
       className="nhsuk-footer__list-item-link"
-      onClick={onClick}
-      target={openInNewWindow ? '_blank' : ''}
-      rel={openInNewWindow ? 'noreferrer noopener' : ''}
-      href={href}
+      id={id ? `${id}__link` : null}
+      {...rest}
     >
       {children}
     </a>
@@ -28,46 +20,39 @@ const Link = ({
 );
 
 Link.propTypes = {
-  href: PropTypes.string,
   children: PropTypes.node.isRequired,
-  onClick: PropTypes.func,
-  openInNewWindow: PropTypes.bool,
+  id: PropTypes.string,
   className: PropTypes.string,
   style: stylePropType
 };
 
 Link.defaultProps = {
-  href: '#',
-  onClick: () => {},
-  openInNewWindow: false,
+  id: '',
   className: '',
   style: {}
 };
 
-const Copyright = ({ children, className, style }) => (
-  <p className={classNames('nhsuk-footer__copyright', className)} style={style}>
+const Copyright = ({ children, className, ...rest }) => (
+  <p className={classNames('nhsuk-footer__copyright', className)} {...rest}>
     {children}
   </p>
 );
 
 Copyright.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: stylePropType
+  className: PropTypes.string
 };
 
 Copyright.defaultProps = {
-  className: '',
-  style: {}
+  className: ''
 };
 
 const Footer = ({
   children,
-  style,
   className,
   role,
-  id,
-  linksVisuallyHiddenText
+  linksVisuallyHiddenText,
+  ...rest
 }) => {
   const linksFromChildren = [];
   const childrenWithLinksRemoved = React.Children.map(children, child => {
@@ -79,11 +64,7 @@ const Footer = ({
   });
   return (
     <footer role={role}>
-      <div
-        className={classNames('nhsuk-footer', className)}
-        style={style}
-        id={id}
-      >
+      <div className={classNames('nhsuk-footer', className)} {...rest}>
         <div className="nhsuk-width-container">
           {linksFromChildren.length !== 0 ? (
             <React.Fragment>
@@ -104,7 +85,6 @@ Footer.propTypes = {
   id: PropTypes.string,
   role: PropTypes.string,
   className: PropTypes.string,
-  style: stylePropType,
   children: PropTypes.node.isRequired,
   linksVisuallyHiddenText: PropTypes.string
 };
@@ -113,7 +93,6 @@ Footer.defaultProps = {
   id: 'nhsuk-footer',
   role: 'contentinfo',
   className: '',
-  style: {},
   linksVisuallyHiddenText: 'Support links'
 };
 

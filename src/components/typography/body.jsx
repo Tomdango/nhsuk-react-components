@@ -1,9 +1,8 @@
 import React from 'react';
 import { oneOf, node, string } from 'prop-types';
-import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 
-const Body = ({ size, children, className, style }) => (
+const Body = ({ size, children, className, ...rest }) => (
   <p
     className={classNames(
       {
@@ -12,7 +11,7 @@ const Body = ({ size, children, className, style }) => (
       },
       className
     )}
-    style={style}
+    {...rest}
   >
     {children}
   </p>
@@ -21,13 +20,11 @@ const Body = ({ size, children, className, style }) => (
 Body.propTypes = {
   size: oneOf(['s', 'm', 'l']),
   children: node.isRequired,
-  style: stylePropType,
   className: string
 };
 
 Body.defaultProps = {
   size: 'm',
-  style: {},
   className: ''
 };
 

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 
-const TableBody = ({ children, className, style }) => (
-  <tbody className={classNames('nhsuk-table__body', className)} style={style}>
+const TableBody = ({ children, className, ...rest }) => (
+  <tbody className={classNames('nhsuk-table__body', className)} {...rest}>
     {children}
   </tbody>
 );

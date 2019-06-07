@@ -10,14 +10,16 @@ class Form extends Component {
     onChange: PropTypes.func,
     onSubmit: PropTypes.func,
     children: PropTypes.node.isRequired,
-    onErrorChange: PropTypes.func
+    onErrorChange: PropTypes.func,
+    style: stylePropType
   };
 
   static defaultProps = {
     className: '',
     onChange: () => {},
     onSubmit: () => {},
-    onErrorChange: () => {}
+    onErrorChange: () => {},
+    style: {}
   };
 
   constructor(props) {
@@ -53,8 +55,6 @@ class Form extends Component {
   };
 
   passBackError = (name, error = true, errorDetails) => {
-    console.log(name, error, errorDetails);
-
     const { errorState } = this.state;
     if (!Object.keys(errorState).includes(name) && error === true) {
       this.setState(
@@ -74,10 +74,9 @@ class Form extends Component {
     const {
       className,
       children,
-      action,
-      method,
       title,
       titleSize,
+      style,
       ...rest
     } = this.props;
     const { errorState } = this.state;
@@ -87,14 +86,14 @@ class Form extends Component {
       passBackError: this.passBackError
     };
     return (
-      <form action={action} method={method} onSubmit={this.onSubmit}>
+      <form {...rest} onSubmit={this.onSubmit}>
         <div
           className={classNames(
             'nhsuk-form-group',
             { 'nhsuk-form-group--error': Object.keys(errorState).length > 0 },
             className
           )}
-          {...rest}
+          style={style}
         >
           {title ? <Heading size={titleSize}>{title}</Heading> : null}
           <FormContext.Provider value={contextValue}>

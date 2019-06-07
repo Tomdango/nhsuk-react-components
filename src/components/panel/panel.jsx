@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import stylePropType from 'react-style-proptype';
 import Group from './panel-group';
 
-const Panel = ({ children, label, grey, className, style }) => (
+const Panel = ({ children, label, grey, className, ...rest }) => (
   <div
     className={classNames(
       {
@@ -14,7 +13,7 @@ const Panel = ({ children, label, grey, className, style }) => (
       },
       className
     )}
-    style={style}
+    {...rest}
   >
     {label ? <h3 className="nhsuk-panel-with-label__label">{label}</h3> : null}
     {children}
@@ -25,15 +24,13 @@ Panel.propTypes = {
   children: PropTypes.node.isRequired,
   label: PropTypes.string,
   grey: PropTypes.bool,
-  className: PropTypes.string,
-  style: stylePropType
+  className: PropTypes.string
 };
 
 Panel.defaultProps = {
   label: '',
   grey: false,
-  className: '',
-  style: {}
+  className: ''
 };
 
 Panel.Group = Group;

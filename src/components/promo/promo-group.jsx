@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import stylePropType from 'react-style-proptype';
 
 class PromoGroup extends React.Component {
   constructor(props) {
@@ -44,11 +43,11 @@ class PromoGroup extends React.Component {
   }
 
   render() {
-    const { className, style } = this.props;
+    const { className, ...rest } = this.props;
     return (
       <div
         className={classNames('nhsuk-grid-row nhsuk-promo-group', className)}
-        style={style}
+        {...rest}
       >
         {this.wrapChildren()}
       </div>
@@ -58,13 +57,11 @@ class PromoGroup extends React.Component {
 
 PromoGroup.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: stylePropType
+  className: PropTypes.string
 };
 
 PromoGroup.defaultProps = {
-  className: '',
-  style: {}
+  className: ''
 };
 
 export default PromoGroup;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 
-const TableRow = ({ children, className, style }) => {
+const TableRow = ({ children, className, ...rest }) => {
   const cells = React.Children.map(children, child => {
     const { type } = child;
     if (type === 'td') {
@@ -16,7 +16,7 @@ const TableRow = ({ children, className, style }) => {
     return child;
   });
   return (
-    <tr className={classNames('nhsuk-table__row', className)} style={style}>
+    <tr className={classNames('nhsuk-table__row', className)} {...rest}>
       {cells}
     </tr>
   );

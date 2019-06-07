@@ -1,30 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 
-const ErrorItem = ({ href, children, className, style, onClick }) => (
-  <li className={className} style={style}>
-    <a href={href} onClick={onClick}>
+const ErrorItem = ({ href, children, className, id, onClick, ...rest }) => (
+  <li id={id} {...rest}>
+    <a href={href} id={`${id ? `${id}__link` : null}`} onClick={onClick}>
       {children}
     </a>
   </li>
 );
 
-const ErrorSummary = ({
-  title,
-  description,
-  children,
-  style,
-  className,
-  role
-}) => (
-  <div
-    className={classNames('nhsuk-error-summary', className)}
-    style={style}
-    role={role}
-    tabIndex="-1"
-  >
+ErrorItem.propTypes = {
+  href: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  id: PropTypes.string,
+  onClick: PropTypes.func
+};
+
+ErrorItem.defaultProps = {
+  href: '#',
+  className: '',
+  id: '',
+  onClick: () => {}
+};
+
+const ErrorSummary = ({ title, description, children, className, ...rest }) => (
+  <div className={classNames('nhsuk-error-summary', className)} {...rest}>
     <h2 className="nhsuk-error-summary__title">{title}</h2>
     <div className="nhsuk-error-summary__body">
       {description ? <p>{description}</p> : null}
@@ -33,35 +35,20 @@ const ErrorSummary = ({
   </div>
 );
 
-ErrorItem.propTypes = {
-  href: PropTypes.string,
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: stylePropType,
-  onClick: PropTypes.func
-};
-
-ErrorItem.defaultProps = {
-  href: '#',
-  className: '',
-  style: {},
-  onClick: () => {}
-};
-
 ErrorSummary.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  style: stylePropType,
-  role: PropTypes.string
+  role: PropTypes.string,
+  tabIndex: PropTypes.string
 };
 
 ErrorSummary.defaultProps = {
   description: '',
   className: '',
-  style: {},
-  role: 'alert'
+  role: 'alert',
+  tabIndex: '-1'
 };
 
 ErrorSummary.Item = ErrorItem;

@@ -14,45 +14,71 @@ const Title = ({ children, visuallyHiddenText, className, ...rest }) => (
   </h2>
 );
 
-const Message = ({ children, className, style }) => (
-  <p
-    className={classNames('nhsuk-global-alert__message', className)}
-    style={style}
-  >
+Title.propTypes = {
+  children: PropTypes.node.isRequired,
+  visuallyHiddenText: PropTypes.string,
+  className: PropTypes.string
+};
+
+Title.defaultProps = {
+  visuallyHiddenText: 'Alert: ',
+  className: ''
+};
+
+const Message = ({ children, className, ...rest }) => (
+  <p className={classNames('nhsuk-global-alert__message', className)} {...rest}>
     {children}
   </p>
 );
 
-const Link = ({ href, children, onClick, className, style }) => (
+Message.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string
+};
+
+Message.defaultProps = {
+  className: ''
+};
+
+const Link = ({ children, className, ...rest }) => (
   <a
     className={classNames(
       'nhsuk-u-nowrap',
       'nhsuk-global-alert-link__margin-override',
       className
     )}
-    onClick={onClick}
-    style={style}
-    href={href}
+    {...rest}
   >
     {children}
   </a>
 );
 
-const LastUpdated = ({ children, className, style }) => (
-  <p
-    className={classNames('nhsuk-global-alert__updated', className)}
-    style={style}
-  >
+Link.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string
+};
+
+Link.defaultProps = {
+  className: ''
+};
+
+const LastUpdated = ({ children, className, ...rest }) => (
+  <p className={classNames('nhsuk-global-alert__updated', className)} {...rest}>
     {children}
   </p>
 );
 
-const EmergencyAlert = ({ children, className, style, id }) => (
-  <div
-    className={classNames('nhsuk-global-alert', className)}
-    style={style}
-    id={id}
-  >
+LastUpdated.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string
+};
+
+LastUpdated.defaultProps = {
+  className: ''
+};
+
+const EmergencyAlert = ({ children, className, ...rest }) => (
+  <div className={classNames('nhsuk-global-alert', className)} {...rest}>
     <Container>
       <Row>
         <Row.Column size="full">
@@ -74,55 +100,6 @@ EmergencyAlert.defaultProps = {
   className: '',
   style: {},
   id: 'nhsuk-global-alert'
-};
-
-Title.propTypes = {
-  children: PropTypes.node.isRequired,
-  visuallyHiddenText: PropTypes.string,
-  className: PropTypes.string,
-  style: stylePropType
-};
-
-Title.defaultProps = {
-  visuallyHiddenText: 'Alert: ',
-  className: '',
-  style: {}
-};
-
-Message.propTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: stylePropType
-};
-
-Message.defaultProps = {
-  className: '',
-  style: {}
-};
-
-Link.propTypes = {
-  href: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: stylePropType,
-  onClick: PropTypes.func
-};
-
-Link.defaultProps = {
-  className: '',
-  style: {},
-  onClick: () => {}
-};
-
-LastUpdated.propTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: stylePropType
-};
-
-LastUpdated.defaultProps = {
-  className: '',
-  style: {}
 };
 
 EmergencyAlert.Title = Title;

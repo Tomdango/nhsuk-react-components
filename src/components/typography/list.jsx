@@ -1,14 +1,13 @@
 import React from 'react';
 import { oneOf, node, string } from 'prop-types';
-import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 
-const List = ({ type, children, className, style }) => {
+const List = ({ type, children, className, ...rest }) => {
   if (type === 'number') {
     return (
       <ol
         className={classNames('nhsuk-list nhsuk-list--number', className)}
-        style={style}
+        {...rest}
       >
         {children}
       </ol>
@@ -17,7 +16,7 @@ const List = ({ type, children, className, style }) => {
   return (
     <ul
       className={classNames('nhsuk-list nhsuk-list--bullet', className)}
-      style={style}
+      {...rest}
     >
       {children}
     </ul>
@@ -27,14 +26,12 @@ const List = ({ type, children, className, style }) => {
 List.propTypes = {
   type: oneOf(['bullet', 'number']),
   children: node.isRequired,
-  className: string,
-  style: stylePropType
+  className: string
 };
 
 List.defaultProps = {
   type: 'bullet',
-  className: '',
-  style: {}
+  className: ''
 };
 
 export default List;

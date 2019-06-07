@@ -1,24 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 import Row from './components/row';
 
-const SummaryList = ({ children, className, style }) => (
-  <dl className={classNames('nhsuk-summary-list', className)} style={style}>
+const SummaryList = ({ children, className, ...rest }) => (
+  <dl className={classNames('nhsuk-summary-list', className)} {...rest}>
     {children}
   </dl>
 );
 
 SummaryList.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: stylePropType
+  className: PropTypes.string
 };
 
 SummaryList.defaultProps = {
-  className: '',
-  style: {}
+  className: ''
 };
 
 SummaryList.Row = Row;

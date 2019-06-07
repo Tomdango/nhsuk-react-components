@@ -1,23 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 
-const Hint = ({ children, className, style }) => (
-  <span className={classNames('nhsuk-hint', className)} style={style}>
+const Hint = ({ children, className, ...rest }) => (
+  <span className={classNames('nhsuk-hint', className)} {...rest}>
     {children}
   </span>
 );
 
 Hint.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: stylePropType
+  className: PropTypes.string
 };
 
 Hint.defaultProps = {
-  className: '',
-  style: {}
+  className: ''
 };
 
 export default Hint;

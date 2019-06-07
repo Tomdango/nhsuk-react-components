@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
 import classNames from 'classnames';
 
-const TableHeader = ({ children, className, style }) => {
+const TableHeader = ({ children, className, ...rest }) => {
   const tableRows = React.Children.map(children, child => {
     const { type } = child;
     if (type === 'th') {
@@ -18,7 +18,7 @@ const TableHeader = ({ children, className, style }) => {
   });
 
   return (
-    <thead className={classNames('nhsuk-table__head', className)} style={style}>
+    <thead className={classNames('nhsuk-table__head', className)} {...rest}>
       <tr className="nhsuk-table__row">{tableRows}</tr>
     </thead>
   );
