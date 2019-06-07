@@ -3,33 +3,26 @@
 exports[`Header matches snapshot 1`] = `
 <header
   className="nhsuk-header"
-  role="banner"
-  style={Object {}}
 >
-  <div
-    className="nhsuk-width-container nhsuk-header__container"
-  >
-    <Logo
-      ariaLabel="NHS Logo"
-      fill="#fff"
-      href="/"
-      role="presentation"
-      src="https://assets.nhs.uk/images/nhs-logo.png"
-      whiteLogo={true}
-      xlinkHref=""
-    />
-  </div>
+  <ContextProvider
+    value={
+      Object {
+        "menuVisible": false,
+        "toggleMenu": [Function],
+        "transactional": "",
+      }
+    }
+  />
 </header>
 `;
 
 exports[`Logo matches snapshot 1`] = `
 <div
   className="nhsuk-header__logo"
+  style={Object {}}
 >
   <a
-    aria-label="NHS Logo"
     className="nhsuk-header__link"
-    href="/"
   >
     <svg
       className="nhsuk-logo nhsuk-logo--white"
@@ -61,9 +54,8 @@ exports[`Search matches snapshot 1`] = `
 >
   <button
     aria-controls="search"
-    aria-expanded={false}
     aria-label="Open search"
-    className="nhsuk-header__search-toggle "
+    className="nhsuk-header__search-toggle"
     id="toggle-search"
     onClick={[Function]}
     type="button"
@@ -86,21 +78,21 @@ exports[`Search matches snapshot 1`] = `
     </span>
   </button>
   <div
-    className="nhsuk-header__search-wrap "
-    id="wrap-search"
+    className="nhsuk-header__search-wrap"
   >
     <form
-      action="/search/"
+      action=""
       className="nhsuk-header__search-form"
-      id="search"
-      method="get"
+      method=""
       onSubmit={[Function]}
       role="search"
     >
       <label
         className="nhsuk-u-visually-hidden"
-        htmlFor="search-field"
-      />
+        htmlFor=""
+      >
+        Search the NHS website
+      </label>
       <div
         className="autocomplete-container"
         id="autocomplete-container"
@@ -108,11 +100,10 @@ exports[`Search matches snapshot 1`] = `
       <input
         autoComplete="off"
         className="nhsuk-search__input"
-        id="search-field"
-        onChange={[Function]}
+        id=""
+        name="search-field"
         placeholder="Search"
-        type="text"
-        value=""
+        type="search"
       />
       <button
         className="nhsuk-search__submit"
@@ -166,200 +157,16 @@ exports[`Search matches snapshot 1`] = `
 exports[`Transactional matches snapshot 1`] = `
 <Header
   className=""
-  logoAriaLabel="NHS Logo"
-  logoFill="#fff"
-  logoHref="/"
-  logoRole="presentation"
-  logoSrc="https://assets.nhs.uk/images/nhs-logo.png"
-  logoXlinkHref=""
-  longServiceName={false}
-  onSearch={[Function]}
-  role="banner"
-  searchAriaLabel=""
   serviceName="Service"
   serviceNameUrl="/url"
-  style={Object {}}
-  toggleMenuButtonText="Menu"
   transactional={true}
-  whiteLogo={true}
-  withNavigation={false}
   withSearch={true}
 >
   <header
     className="nhsuk-header nhsuk-header--transactional"
-    role="banner"
-    style={Object {}}
-  >
-    <div
-      className="nhsuk-width-container nhsuk-header__container"
-    >
-      <Logo
-        ariaLabel="NHS Logo"
-        fill="#fff"
-        href="/"
-        role="presentation"
-        src="https://assets.nhs.uk/images/nhs-logo.png"
-        whiteLogo={true}
-        xlinkHref=""
-      >
-        <div
-          className="nhsuk-header__logo"
-        >
-          <a
-            aria-label="NHS Logo"
-            className="nhsuk-header__link"
-            href="/"
-          >
-            <svg
-              className="nhsuk-logo nhsuk-logo--white"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 40 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 0h40v16H0z"
-                fill="#fff"
-              />
-              <path
-                d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"
-                fill="#005eb8"
-              />
-              <image
-                src="https://assets.nhs.uk/images/nhs-logo.png"
-                xlinkHref=""
-              />
-            </svg>
-          </a>
-        </div>
-      </Logo>
-      <div
-        className="nhsuk-header__transactional-service-name"
-      >
-        <a
-          className="nhsuk-header__transactional-service-name--link"
-          href="/url"
-        >
-          Service
-        </a>
-      </div>
-      <div
-        className="nhsuk-header__content"
-        id="content-header"
-      >
-        <HeaderSearch
-          hiddenLabel=""
-          onSubmit={[Function]}
-          toggleSearch={[Function]}
-        >
-          <div
-            className="nhsuk-header__search"
-          >
-            <button
-              aria-controls="search"
-              aria-expanded={false}
-              aria-label="Open search"
-              className="nhsuk-header__search-toggle "
-              id="toggle-search"
-              onClick={[Function]}
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                className="nhsuk-icon nhsuk-icon__search"
-                focusable="false"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"
-                />
-              </svg>
-              <span
-                className="nhsuk-u-visually-hidden"
-              >
-                Search
-              </span>
-            </button>
-            <div
-              className="nhsuk-header__search-wrap "
-              id="wrap-search"
-            >
-              <form
-                action="/search/"
-                className="nhsuk-header__search-form"
-                id="search"
-                method="get"
-                onSubmit={[Function]}
-                role="search"
-              >
-                <label
-                  className="nhsuk-u-visually-hidden"
-                  htmlFor="search-field"
-                />
-                <div
-                  className="autocomplete-container"
-                  id="autocomplete-container"
-                />
-                <input
-                  autoComplete="off"
-                  className="nhsuk-search__input"
-                  id="search-field"
-                  onChange={[Function]}
-                  placeholder="Search"
-                  type="text"
-                  value=""
-                />
-                <button
-                  className="nhsuk-search__submit"
-                  type="submit"
-                >
-                  <svg
-                    aria-hidden="true"
-                    className="nhsuk-icon nhsuk-icon__search"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"
-                    />
-                  </svg>
-                  <span
-                    className="nhsuk-u-visually-hidden"
-                  >
-                    Search
-                  </span>
-                </button>
-                <button
-                  className="nhsuk-search__close"
-                  id="close-search"
-                  onClick={[Function]}
-                  type="button"
-                >
-                  <svg
-                    aria-hidden="true"
-                    className="nhsuk-icon nhsuk-icon__close"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"
-                    />
-                  </svg>
-                  <span
-                    className="nhsuk-u-visually-hidden"
-                  >
-                    Close search
-                  </span>
-                </button>
-              </form>
-            </div>
-          </div>
-        </HeaderSearch>
-      </div>
-    </div>
-  </header>
+    serviceName="Service"
+    serviceNameUrl="/url"
+    withSearch={true}
+  />
 </Header>
 `;

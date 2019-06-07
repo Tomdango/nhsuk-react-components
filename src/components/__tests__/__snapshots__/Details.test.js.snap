@@ -3,7 +3,7 @@
 exports[`Details expander matches snapshot 1`] = `
 <details
   className="nhsuk-details nhsuk-expander"
-  style={Object {}}
+  text="Test Text"
 >
   <summary
     className="nhsuk-details__summary"
@@ -23,7 +23,7 @@ exports[`Details expander matches snapshot 1`] = `
 exports[`Details normal matches snapshot 1`] = `
 <details
   className="nhsuk-details"
-  style={Object {}}
+  text="Test Text"
 >
   <summary
     className="nhsuk-details__summary"

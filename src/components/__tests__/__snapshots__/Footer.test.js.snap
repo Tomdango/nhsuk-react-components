@@ -3,14 +3,12 @@
 exports[`Footer matches snapshot 1`] = `
 <li
   className="nhsuk-footer__list-item"
+  id=""
   style={Object {}}
 >
   <a
     className="nhsuk-footer__list-item-link"
-    href="#"
-    onClick={[Function]}
-    rel=""
-    target=""
+    id={null}
   >
     Hello
   </a>
@@ -24,7 +22,6 @@ exports[`Footer matches snapshot 2`] = `
   <div
     className="nhsuk-footer"
     id="nhsuk-footer"
-    style={Object {}}
   >
     <div
       className="nhsuk-width-container"
@@ -39,9 +36,7 @@ exports[`Footer matches snapshot 2`] = `
       >
         <Link
           className=""
-          href="#"
-          onClick={[Function]}
-          openInNewWindow={false}
+          id=""
           style={Object {}}
         >
           Hello
@@ -50,7 +45,6 @@ exports[`Footer matches snapshot 2`] = `
       <Copyright
         className=""
         key=".1"
-        style={Object {}}
       >
         MIT License
       </Copyright>
@@ -62,7 +56,6 @@ exports[`Footer matches snapshot 2`] = `
 exports[`Footer renders copyright notice 1`] = `
 <p
   className="nhsuk-footer__copyright"
-  style={Object {}}
 >
   MIT License
 </p>

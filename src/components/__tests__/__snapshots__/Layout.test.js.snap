@@ -3,7 +3,6 @@
 exports[`Layout Column forces layout 1`] = `
 <div
   className="nhsuk-grid-column-full nhsuk-u-full"
-  style={Object {}}
 >
   Child
 </div>
@@ -12,7 +11,6 @@ exports[`Layout Column forces layout 1`] = `
 exports[`Layout Column matches snapshot and element 1`] = `
 <div
   className="nhsuk-grid-column-full"
-  style={Object {}}
 >
   Child
 </div>
@@ -21,7 +19,6 @@ exports[`Layout Column matches snapshot and element 1`] = `
 exports[`Layout Column works with tablet width 1`] = `
 <div
   className="nhsuk-grid-column-full nhsuk-u-one-half-tablet"
-  style={Object {}}
 >
   Child
 </div>
@@ -30,7 +27,6 @@ exports[`Layout Column works with tablet width 1`] = `
 exports[`Layout Container matches snapshot 1`] = `
 <div
   className="nhsuk-width-container"
-  style={Object {}}
 >
   Child
 </div>
@@ -40,7 +36,6 @@ exports[`Layout MainWrapper matches snapshot 1`] = `
 <main
   className="nhsuk-main-wrapper"
   id=""
-  style={Object {}}
 >
   Child
 </main>
@@ -49,7 +44,6 @@ exports[`Layout MainWrapper matches snapshot 1`] = `
 exports[`Layout ReadingWidth matches snapshot and element 1`] = `
 <div
   className="nhsuk-u-reading-width"
-  style={Object {}}
 >
   Text
 </div>
@@ -58,7 +52,6 @@ exports[`Layout ReadingWidth matches snapshot and element 1`] = `
 exports[`Layout Row matches snapshot and element 1`] = `
 <div
   className="nhsuk-grid-row"
-  style={Object {}}
 >
   Child
 </div>

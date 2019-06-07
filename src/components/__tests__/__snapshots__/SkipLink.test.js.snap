@@ -12,6 +12,7 @@ exports[`SkipLink matches snapshot 1`] = `
     href="#maincontent"
     onClick={[Function]}
     style={Object {}}
+    testHeadingElement={false}
   >
     Skip to main content
   </a>

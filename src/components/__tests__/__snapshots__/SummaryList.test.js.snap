@@ -3,7 +3,6 @@
 exports[`SummaryList Row matches snapshot 1`] = `
 <div
   className="nhsuk-summary-list__row "
-  style={Object {}}
 >
   <dt
     className="nhsuk-summary-list__key"
@@ -19,7 +18,6 @@ exports[`SummaryList Row matches snapshot 1`] = `
 exports[`SummaryList matches snapshot 1`] = `
 <dl
   className="nhsuk-summary-list"
-  style={Object {}}
 >
   Child
 </dl>

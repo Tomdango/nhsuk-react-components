@@ -23,7 +23,6 @@ exports[`Radio matches snapshot 1`] = `
   <Label
     className="nhsuk-radios__label"
     htmlFor=""
-    style={Object {}}
     type=""
   >
     1

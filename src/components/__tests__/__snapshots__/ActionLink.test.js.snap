@@ -7,15 +7,10 @@ exports[`ActionLink matches the snapshot 1`] = `
 >
   <a
     className="nhsuk-action-link__link"
-    href="#"
-    onClick={[Function]}
-    rel=""
-    target=""
   >
     <ArrowRightCircle
       className=""
       height={32}
-      style={Object {}}
       width={32}
     />
     <span

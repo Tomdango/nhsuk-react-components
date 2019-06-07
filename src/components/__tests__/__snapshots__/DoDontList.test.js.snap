@@ -3,13 +3,11 @@
 exports[`DoDontList matches snapshot for container 1`] = `
 <DoDontList
   className=""
-  style={Object {}}
   title="Do"
   type="tick"
 >
   <div
     className="nhsuk-do-dont-list"
-    style={Object {}}
   >
     <h3
       className="nhsuk-do-dont-list__label"
@@ -19,18 +17,11 @@ exports[`DoDontList matches snapshot for container 1`] = `
     <ul
       className="nhsuk-list nhsuk-list--tick"
     >
-      <Do
-        className=""
-        style={Object {}}
-      >
-        <li
-          className=""
-          style={Object {}}
-        >
+      <Do>
+        <li>
           <Tick
             className=""
             height={32}
-            style={Object {}}
             width={32}
           >
             <svg
@@ -38,7 +29,6 @@ exports[`DoDontList matches snapshot for container 1`] = `
               className="nhsuk-icon nhsuk-icon__tick"
               fill="none"
               height={32}
-              style={Object {}}
               viewBox="0 0 24 24"
               width={32}
               xmlns="http://www.w3.org/2000/svg"
@@ -60,14 +50,10 @@ exports[`DoDontList matches snapshot for container 1`] = `
 `;
 
 exports[`DoDontList matches snapshot for do 1`] = `
-<li
-  className=""
-  style={Object {}}
->
+<li>
   <Tick
     className=""
     height={32}
-    style={Object {}}
     width={32}
   />
   Test
@@ -75,14 +61,10 @@ exports[`DoDontList matches snapshot for do 1`] = `
 `;
 
 exports[`DoDontList matches snapshot for dont 1`] = `
-<li
-  className=""
-  style={Object {}}
->
+<li>
   <Cross
     className=""
     height={32}
-    style={Object {}}
     width={32}
   />
   Test
