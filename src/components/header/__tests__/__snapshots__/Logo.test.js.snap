@@ -3,11 +3,10 @@
 exports[`Header.Logo matches snapshot 1`] = `
 <div
   className="nhsuk-header__logo"
+  style={Object {}}
 >
   <a
-    aria-label="NHS Logo"
     className="nhsuk-header__link"
-    href="/"
   >
     <svg
       className="nhsuk-logo nhsuk-logo--white"

@@ -3,7 +3,6 @@
 exports[`ErrorMessage matches snapshot 1`] = `
 <span
   className="nhsuk-error-message"
-  style={Object {}}
 >
   <span
     className="nhsuk-u-visually-hidden"

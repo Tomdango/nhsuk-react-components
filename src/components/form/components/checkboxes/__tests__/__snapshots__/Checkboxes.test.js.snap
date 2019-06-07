@@ -3,6 +3,7 @@
 exports[`Checkboxes matches snapshot 1`] = `
 <div
   className="nhsuk-checkboxes"
+  id=""
   onChange={[Function]}
 >
   <ContextProvider
