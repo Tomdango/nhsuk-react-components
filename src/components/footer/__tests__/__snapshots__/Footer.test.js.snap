@@ -26,13 +26,8 @@ exports[`Footer matches snapshot 2`] = `
     <div
       className="nhsuk-width-container"
     >
-      <h2
-        className="nhsuk-u-visually-hidden"
-      >
-        Support links
-      </h2>
-      <ul
-        className="nhsuk-footer__list"
+      <LinkList
+        className=""
       >
         <Link
           className=""
@@ -41,10 +36,9 @@ exports[`Footer matches snapshot 2`] = `
         >
           Hello
         </Link>
-      </ul>
+      </LinkList>
       <Copyright
         className=""
-        key=".1"
       >
         MIT License
       </Copyright>

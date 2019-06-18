@@ -8,7 +8,9 @@ describe('Footer', () => {
     const linkShallowMount = shallow(<Footer.Link>Hello</Footer.Link>);
     const footerShallowMount = shallow(
       <Footer>
-        <Footer.Link>Hello</Footer.Link>
+        <Footer.LinkList>
+          <Footer.Link>Hello</Footer.Link>
+        </Footer.LinkList>
         <Footer.Copyright>MIT License</Footer.Copyright>
       </Footer>
     );
@@ -59,7 +61,9 @@ describe('Footer', () => {
   it('adds hidden text when supplied links', () => {
     const mountedFooterWithLinks = mount(
       <Footer>
-        <Footer.Link>Test Link</Footer.Link>
+        <Footer.LinkList>
+          <Footer.Link>Test Link</Footer.Link>
+        </Footer.LinkList>
         <Footer.Copyright>MIT License</Footer.Copyright>
       </Footer>
     );

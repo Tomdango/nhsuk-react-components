@@ -47,6 +47,24 @@ Copyright.defaultProps = {
   className: ''
 };
 
+const LinkList = ({ children, className, ...rest }) => (
+  <>
+    <h2 className="nhsuk-u-visually-hidden">Support links</h2>
+    <ul className={classNames('nhsuk-footer__list', className)} {...rest}>
+      {children}
+    </ul>
+  </>
+);
+
+LinkList.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string
+};
+
+LinkList.defaultProps = {
+  className: ''
+};
+
 const Footer = ({
   children,
   className,
@@ -54,28 +72,10 @@ const Footer = ({
   linksVisuallyHiddenText,
   ...rest
 }) => {
-  const linksFromChildren = [];
-  const childrenWithLinksRemoved = React.Children.map(children, child => {
-    if (child.type.name === 'Link') {
-      linksFromChildren.push(child);
-      return null;
-    }
-    return child;
-  });
   return (
     <footer role={role}>
       <div className={classNames('nhsuk-footer', className)} {...rest}>
-        <div className="nhsuk-width-container">
-          {linksFromChildren.length !== 0 ? (
-            <React.Fragment>
-              <h2 className="nhsuk-u-visually-hidden">
-                {linksVisuallyHiddenText}
-              </h2>
-              <ul className="nhsuk-footer__list">{linksFromChildren}</ul>
-            </React.Fragment>
-          ) : null}
-          {childrenWithLinksRemoved}
-        </div>
+        <div className="nhsuk-width-container">{children}</div>
       </div>
     </footer>
   );
@@ -97,6 +97,7 @@ Footer.defaultProps = {
 };
 
 Footer.Link = Link;
+Footer.LinkList = LinkList;
 Footer.Copyright = Copyright;
 
 export default Footer;
