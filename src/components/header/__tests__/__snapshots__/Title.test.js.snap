@@ -7,6 +7,8 @@ exports[`Header.Title matches snapshot 1`] = `
 >
   <a
     className="nhsuk-header__transactional-service-name--link"
+    href=""
+    onClick={[Function]}
   >
     Hello
   </a>
