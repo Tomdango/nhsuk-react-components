@@ -1,17 +1,9 @@
-import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
 import stylePropType from 'react-style-proptype';
 
-const Title = ({
-  className,
-  href,
-  onClick,
-  children,
-  long,
-  style,
-  ...rest
-}) => (
+const Title = ({ className, children, long, style, ...rest }) => (
   <div
     className={classNames(
       'nhsuk-header__transactional-service-name',
