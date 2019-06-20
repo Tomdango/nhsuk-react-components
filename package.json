@@ -1,6 +1,6 @@
 {
   "name": "nhsuk-react-components",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "NHS.UK Frontend components ported to React",
   "author": "Tomdango",
   "license": "MIT",
@@ -13,12 +13,12 @@
   "module": "lib/index.js",
   "scripts": {
     "test": "jest",
-    "test:ci": "jest --coverage && cat ./coverage/lcov.info | codacy-coverage",
+    "test:ci": "jest --coverage",
+    "test:ci-coverage": "jest --coverage && cat ./coverage/lcov.info | codacy-coverage",
     "test:watch": "jest --watch",
     "test:update": "jest -u",
     "test:dev": "jest --watchAll -u --coverage",
-    "test:coverage": "jest --coverage",
-    "lint": "eslint --color --ext .js --ext .jsx src/ stories/",
+    "lint": "eslint --ext .js --ext .jsx src/ stories/",
     "deploy-storybook": "yarn build-storybook & storybook-to-ghpages -e storybook-static --ci",
     "build-storybook": "build-storybook -c .storybook -o storybook-static -s ./.storybook/public/",
     "storybook": "start-storybook -p 9001 -c .storybook -s .storybook/public",

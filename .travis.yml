@@ -9,3 +9,9 @@ jobs:
     - script: yarn test:ci
     # - stage: Storybook Deploy
     #   script: yarn deploy-storybook
+
+deploy:
+  provider: script
+  script: yarn test:ci-coverage
+  on:
+    branch: master
