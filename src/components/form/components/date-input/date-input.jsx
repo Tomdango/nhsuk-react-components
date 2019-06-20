@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import stylePropType from "react-style-proptype"
+import stylePropType from 'react-style-proptype';
 import FormContext from '../../FormContext';
 import DateContext from './DateContext';
 import Label from '../../../label';
@@ -193,6 +193,7 @@ export default class DateInput extends Component {
       className,
       style,
       label,
+      id,
       hint,
       error,
       labelHtmlFor,
@@ -215,13 +216,13 @@ export default class DateInput extends Component {
         {label ? <Label htmlFor={labelHtmlFor}>{label}</Label> : null}
         {hint ? <Hint>{hint}</Hint> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
-        <div className={className} style={style}>
+        <div className={className} style={style} id={id}>
           <DateContext.Provider value={contextValue}>
             {children || (
               <>
-                <Day {...rest}/>
-                <Month {...rest}/>
-                <Year {...rest}/>
+                <Day {...rest} />
+                <Month {...rest} />
+                <Year {...rest} />
               </>
             )}
           </DateContext.Provider>
