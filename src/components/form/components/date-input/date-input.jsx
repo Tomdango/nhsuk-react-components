@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import stylePropType from 'react-style-proptype';
 import FormContext from '../../FormContext';
 import DateContext from './DateContext';
 import Label from '../../../label';
@@ -26,24 +27,28 @@ export default class DateInput extends Component {
 
   static propTypes = {
     children: PropTypes.node,
+    className: PropTypes.string,
+    style: stylePropType,
     label: PropTypes.string,
     hint: PropTypes.string,
     error: PropTypes.string,
+    id: PropTypes.string,
     labelHtmlFor: PropTypes.string,
     name: PropTypes.string.isRequired,
     autoFocus: PropTypes.bool,
-    autoComplete: PropTypes.string,
     value: valuePropType
   };
 
   static defaultProps = {
     children: null,
+    className: '',
+    style: {},
     label: '',
     hint: '',
     error: '',
+    id: '',
     labelHtmlFor: '',
     autoFocus: false,
-    autoComplete: '',
     value: ''
   };
 
@@ -187,11 +192,13 @@ export default class DateInput extends Component {
   render() {
     const {
       children,
+      className,
+      style,
       label,
+      id,
       hint,
       error,
       labelHtmlFor,
-      autoComplete,
       name,
       ...rest
     } = this.props;
@@ -211,13 +218,13 @@ export default class DateInput extends Component {
         {label ? <Label htmlFor={labelHtmlFor}>{label}</Label> : null}
         {hint ? <Hint>{hint}</Hint> : null}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
-        <div {...rest}>
+        <div className={className} style={style} id={id}>
           <DateContext.Provider value={contextValue}>
             {children || (
               <>
-                <Day autoComplete={autoComplete} />
-                <Month autoComplete={autoComplete} />
-                <Year autoComplete={autoComplete} />
+                <Day {...rest} />
+                <Month {...rest} />
+                <Year {...rest} />
               </>
             )}
           </DateContext.Provider>

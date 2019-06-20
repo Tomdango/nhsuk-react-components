@@ -4,14 +4,9 @@ node_js:
 
 jobs:
   include:
-    - stage: Test
+    - stage: Test and Lint
+      script: yarn test:ci
       script: yarn lint
-    - script: yarn test:ci
-    # - stage: Storybook Deploy
-    #   script: yarn deploy-storybook
 
-deploy:
-  provider: script
-  script: yarn test:ci-coverage
-  on:
-    branch: master
+after_success: -
+  - bash ./scripts/send-coverage.sh

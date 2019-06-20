@@ -5,12 +5,12 @@ const fs = require('fs-extra');
 
 try {
   console.info('Cleaning ./lib folder...');
-  fs.removeSync(path.join(__dirname, './lib/'));
-  fs.mkdirSync(path.join(__dirname, './lib/'));
+  fs.removeSync(path.join(__dirname, '../lib/'));
+  fs.mkdirSync(path.join(__dirname, '../lib/'));
   console.log('Copying Styles...');
   fs.copySync(
-    path.join(__dirname, './src/styles'),
-    path.join(__dirname, './lib/styles')
+    path.join(__dirname, '../src/styles'),
+    path.join(__dirname, '../lib/styles')
   );
   console.info('Prebuild Completed without any errors.');
 } catch (exception) {

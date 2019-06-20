@@ -14,15 +14,14 @@
   "scripts": {
     "test": "jest",
     "test:ci": "jest --coverage",
-    "test:ci-coverage": "jest --coverage && cat ./coverage/lcov.info | codacy-coverage",
     "test:watch": "jest --watch",
     "test:update": "jest -u",
     "test:dev": "jest --watchAll -u --coverage",
-    "lint": "eslint --ext .js --ext .jsx src/ && eslint --ext .js --ext .jsx stories/",
+    "lint": "eslint --ext .js --ext .jsx src/ stories/",
     "deploy-storybook": "yarn build-storybook & storybook-to-ghpages -e storybook-static --ci",
     "build-storybook": "build-storybook -c .storybook -o storybook-static -s ./.storybook/public/",
     "storybook": "start-storybook -p 9001 -c .storybook -s .storybook/public",
-    "build": "node pre-build.js && cross-env BABEL_ENV=production yarn babel src/ --out-dir lib/ --config-file ./babelrc.build.js --source-maps",
+    "build": "node scripts/pre-build.js && cross-env BABEL_ENV=production yarn babel src/ --out-dir lib/ --config-file ./babelrc.build.js --source-maps",
     "prepare": "yarn build"
   },
   "peerDependencies": {
@@ -74,8 +73,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "nhsuk-frontend": "^2.1.0",
-    "unistore": "^3.4.1"
+    "nhsuk-frontend": "^2.1.0"
   },
   "files": [
     "dist",
