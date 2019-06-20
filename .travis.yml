@@ -8,5 +8,5 @@ jobs:
       script: yarn test:ci
       script: yarn lint
 
-after_success: -
+after_success:
   - bash ./scripts/send-coverage.sh
