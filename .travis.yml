@@ -6,7 +6,7 @@ jobs:
   include:
     - stage: Test and Lint
       script: yarn test:ci
-      script: yarn lint
+    - script: yarn lint
 
 after_success:
   - bash ./scripts/send-coverage.sh
