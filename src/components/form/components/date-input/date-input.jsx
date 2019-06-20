@@ -32,6 +32,7 @@ export default class DateInput extends Component {
     label: PropTypes.string,
     hint: PropTypes.string,
     error: PropTypes.string,
+    id: PropTypes.string,
     labelHtmlFor: PropTypes.string,
     name: PropTypes.string.isRequired,
     autoFocus: PropTypes.bool,
@@ -45,6 +46,7 @@ export default class DateInput extends Component {
     label: '',
     hint: '',
     error: '',
+    id: '',
     labelHtmlFor: '',
     autoFocus: false,
     value: ''
