@@ -49,7 +49,7 @@ export default class DateInput extends Component {
     id: '',
     labelHtmlFor: '',
     autoFocus: false,
-    value: ''
+    value: { day: '', month: '', year: '' }
   };
 
   static sanitizeInput = (type, value) => {
@@ -200,6 +200,7 @@ export default class DateInput extends Component {
       error,
       labelHtmlFor,
       name,
+      value, // Not used, but prevents it falling into ...rest for D/M/Y inputs
       ...rest
     } = this.props;
     const { data, multiErrors } = this.state;
