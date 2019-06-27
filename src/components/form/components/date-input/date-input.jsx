@@ -35,7 +35,7 @@ export default class DateInput extends Component {
     id: PropTypes.string,
     labelHtmlFor: PropTypes.string,
     name: PropTypes.string.isRequired,
-    autoFocus: PropTypes.bool,
+    autoSelectNext: PropTypes.bool,
     value: valuePropType
   };
 
@@ -48,7 +48,7 @@ export default class DateInput extends Component {
     error: '',
     id: '',
     labelHtmlFor: '',
-    autoFocus: false,
+    autoSelectNext: false,
     value: { day: '', month: '', year: '' }
   };
 
@@ -157,7 +157,7 @@ export default class DateInput extends Component {
     }
   };
 
-  autoFocus = (type, value) => {
+  autoSelectNext = (type, value) => {
     if (type === 'day' && value.length === 2) {
       if (this.monthRef.current !== null) this.monthRef.focus();
     } else if (type === 'month' && value.length === 2) {
@@ -184,12 +184,12 @@ export default class DateInput extends Component {
   };
 
   handleInput = (type, value) => {
-    const { autoFocus, name } = this.props;
+    const { autoSelectNext, name } = this.props;
     const { data } = this.state;
     const sanitizedValue = DateInput.sanitizeInput(type, value);
     const updatedData = { ...data, [type]: sanitizedValue };
     this.setState({ data: updatedData }, () => {
-      if (autoFocus) this.autoFocus(type, sanitizedValue);
+      if (autoSelectNext) this.autoSelectNext(type, sanitizedValue);
       const { updateFormState } = this.context;
       if (updateFormState) {
         updateFormState(name, updatedData);

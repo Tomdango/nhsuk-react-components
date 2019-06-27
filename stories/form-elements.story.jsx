@@ -401,13 +401,13 @@ storiesOf('Form Elements', module)
       </FormWrapper>
 
       <FormWrapper>
-        <DateInput label="With autoFocus" autoFocus name="dateinput" />
+        <DateInput label="With autoSelectNext" autoSelectNext name="dateinput" />
       </FormWrapper>
 
       <FormWrapper>
         <DateInput
-          label="With autoFocus on individual elements"
-          autoFocus
+          label="With autoSelectNext on individual elements"
+          autoSelectNext
           name="dateinput"
         >
           <DateInput.Day />
