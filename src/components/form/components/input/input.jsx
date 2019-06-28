@@ -15,7 +15,7 @@ class Input extends Component {
     className: PropTypes.string,
     width: PropTypes.number,
     value: PropTypes.string,
-    initialValue: PropTypes.string,
+    initialvalue: PropTypes.string,
     name: PropTypes.string
   };
 
@@ -27,7 +27,7 @@ class Input extends Component {
     className: '',
     width: undefined,
     value: '',
-    initialValue: '',
+    initialvalue: '',
     name: ''
   };
 
