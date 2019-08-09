@@ -3,7 +3,6 @@
 exports[`Button matches the snapshot as a button 1`] = `
 <button
   className="nhsuk-button"
-  href={false}
 >
   Primary
 </button>
@@ -12,7 +11,6 @@ exports[`Button matches the snapshot as a button 1`] = `
 exports[`Button matches the snapshot as a button 2`] = `
 <button
   className="nhsuk-button nhsuk-button--secondary"
-  href={false}
 >
   Secondary
 </button>
@@ -21,7 +19,6 @@ exports[`Button matches the snapshot as a button 2`] = `
 exports[`Button matches the snapshot as a button 3`] = `
 <button
   className="nhsuk-button nhsuk-button--reverse"
-  href={false}
 >
   Reverse
 </button>
