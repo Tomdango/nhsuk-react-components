@@ -35,7 +35,6 @@ const Button = props => {
         { 'nhsuk-button--reverse': reverse },
         className
       )}
-      href={href}
       {...rest}
     >
       {children}
