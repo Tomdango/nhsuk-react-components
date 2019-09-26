@@ -35,7 +35,7 @@ export default class DateInput extends Component {
     id: PropTypes.string,
     labelHtmlFor: PropTypes.string,
     name: PropTypes.string.isRequired,
-    autoselectnext: PropTypes.bool,
+    autoSelectNext: PropTypes.bool,
     value: valuePropType
   };
 
@@ -48,7 +48,7 @@ export default class DateInput extends Component {
     error: '',
     id: '',
     labelHtmlFor: '',
-    autoselectnext: false,
+    autoSelectNext: false,
     value: { day: '', month: '', year: '' }
   };
 
@@ -184,12 +184,12 @@ export default class DateInput extends Component {
   };
 
   handleInput = (type, value) => {
-    const { autoselectnext, name } = this.props;
+    const { autoSelectNext, name } = this.props;
     const { data } = this.state;
     const sanitizedValue = DateInput.sanitizeInput(type, value);
     const updatedData = { ...data, [type]: sanitizedValue };
     this.setState({ data: updatedData }, () => {
-      if (autoselectnext) this.autoSelectNextFunction(type, sanitizedValue);
+      if (autoSelectNext) this.autoSelectNextFunction(type, sanitizedValue);
       const { updateFormState } = this.context;
       if (updateFormState) {
         updateFormState(name, updatedData);

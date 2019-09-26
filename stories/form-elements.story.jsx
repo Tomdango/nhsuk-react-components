@@ -401,13 +401,17 @@ storiesOf('Form Elements', module)
       </FormWrapper>
 
       <FormWrapper>
-        <DateInput label="With autoselectnext" autoselectnext name="dateinput" />
+        <DateInput
+          label="With autoSelectNext"
+          autoSelectNext
+          name="dateinput"
+        />
       </FormWrapper>
 
       <FormWrapper>
         <DateInput
-          label="With autoselectnext on individual elements"
-          autoselectnext
+          label="With autoSelectNext on individual elements"
+          autoSelectNext
           name="dateinput"
         >
           <DateInput.Day />

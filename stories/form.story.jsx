@@ -132,7 +132,7 @@ storiesOf('Form', module).add('Combined Form', () => {
           name="date-of-birth"
           style={{ marginBottom: 10 }}
           label="Date of birth"
-          autoselectnext
+          autoSelectNext
         />
         <Textarea label="Address" rows={4} name="address" />
 
