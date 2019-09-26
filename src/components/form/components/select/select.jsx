@@ -34,21 +34,8 @@ export default class Select extends Component {
 
   constructor(props, context) {
     super(props, context);
-    this.state = {
-      selectedValue: ''
-    };
-  }
-
-  componentWillMount() {
-    const { name, value, error } = this.props;
-    const { passBackError } = this.context;
-    if (passBackError) passBackError(name, !!error, error);
-    this.setState({ selectedValue: value }, () => {
-      const { registerComponent } = this.context;
-      if (registerComponent) {
-        registerComponent(name, value);
-      }
-    });
+    const initialState = this.initialiseComponent();
+    this.state = initialState;
   }
 
   componentDidMount() {
@@ -72,6 +59,18 @@ export default class Select extends Component {
       }
     });
   };
+
+  initialiseComponent() {
+    const { name, value, error } = this.props;
+    const { passBackError } = this.context;
+    if (passBackError) passBackError(name, !!error, error);
+    const initialState = { selectedValue: value };
+    const { registerComponent } = this.context;
+    if (registerComponent) {
+      registerComponent(name, value);
+    }
+    return initialState;
+  }
 
   render() {
     const {

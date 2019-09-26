@@ -40,30 +40,8 @@ class Radios extends PureComponent {
 
   constructor(props, context) {
     super(props, context);
-    this.state = {
-      radioSelected: ''
-    };
-  }
-
-  componentWillMount() {
-    const { name, children, error } = this.props;
-    const { registerComponent, passBackError } = this.context;
-    if (passBackError) passBackError(name, !!error, error);
-
-    let radioSelected = '';
-    React.Children.forEach(children, child => {
-      const { type } = child;
-      if (type === Radios.Radio) {
-        const { selected, value } = child.props;
-        if (selected) {
-          radioSelected = value.toString();
-        }
-      }
-    });
-    this.setState({ radioSelected });
-    if (registerComponent) {
-      registerComponent(name, radioSelected);
-    }
+    const initialState = this.initialiseComponent();
+    this.state = initialState;
   }
 
   componentDidUpdate() {
@@ -99,6 +77,26 @@ class Radios extends PureComponent {
       return child;
     });
   };
+
+  initialiseComponent() {
+    const { name, children, error } = this.props;
+    const { registerComponent, passBackError } = this.context;
+    if (passBackError) passBackError(name, !!error, error);
+    let radioSelected = '';
+    React.Children.forEach(children, child => {
+      const { type } = child;
+      if (type === Radios.Radio) {
+        const { selected, value } = child.props;
+        if (selected) {
+          radioSelected = value.toString();
+        }
+      }
+    });
+    if (registerComponent) {
+      registerComponent(name, radioSelected);
+    }
+    return { radioSelected };
+  }
 
   render() {
     const {

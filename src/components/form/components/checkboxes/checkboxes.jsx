@@ -37,30 +37,25 @@ class Checkboxes extends Component {
 
   constructor(props, context) {
     super(props, context);
-    this.state = {
-      checkboxes: []
-    };
-  }
-
-  componentWillMount() {
-    const { name, children, error } = this.props;
+    const { name, children, error } = props;
     const { registerComponent, passBackError } = this.context;
-    if (passBackError) passBackError(name, !!error, error);
-
-    const defaultCheckboxes = [];
-    React.Children.forEach(children, child => {
-      const { type } = child;
-      if (type === Checkboxes.Box) {
-        const { checked, value } = child.props;
-        if (checked) {
-          defaultCheckboxes.push(value);
+    const defaultCheckboxes = React.Children.toArray(children).reduce(
+      (prevValue, child) => {
+        if (child.type === Checkboxes.Box) {
+          const { checked, value } = child.props;
+          if (checked) prevValue.push(value);
         }
-      }
-    });
-    this.setState({ checkboxes: defaultCheckboxes });
+        return prevValue;
+      },
+      []
+    );
+    this.state = {
+      checkboxes: defaultCheckboxes
+    };
     if (registerComponent) {
       registerComponent(name, defaultCheckboxes);
     }
+    if (passBackError) passBackError(name, !!error, error);
   }
 
   componentDidUpdate() {

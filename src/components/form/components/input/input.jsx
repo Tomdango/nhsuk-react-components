@@ -38,15 +38,7 @@ class Input extends Component {
     this.state = {
       value: ''
     };
-  }
-
-  componentWillMount() {
-    const { registerComponent, passBackError } = this.context;
-    const { name, value, error } = this.props;
-    if (registerComponent) {
-      registerComponent(name, value);
-    }
-    if (passBackError) passBackError(name, !!error, error);
+    this.initialiseComponent();
   }
 
   componentDidMount() {
@@ -69,6 +61,15 @@ class Input extends Component {
     }
     this.setState({ value });
   };
+
+  initialiseComponent() {
+    const { registerComponent, passBackError } = this.context;
+    const { name, value, error } = this.props;
+    if (registerComponent) {
+      registerComponent(name, value);
+    }
+    if (passBackError) passBackError(name, !!error, error);
+  }
 
   render() {
     const {

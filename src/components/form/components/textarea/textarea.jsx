@@ -30,21 +30,8 @@ export default class Textarea extends Component {
 
   constructor(props, context) {
     super(props, context);
-    this.state = {
-      text: ''
-    };
-  }
-
-  componentWillMount() {
-    const { name, value, error } = this.props;
-    const { registerComponent, passBackError } = this.context;
-    if (registerComponent) {
-      registerComponent(name, value);
-    }
-    if (value) {
-      this.setState({ text: value });
-    }
-    if (passBackError) passBackError(name, !!error, error);
+    const initialState = this.initialiseComponent();
+    this.state = initialState;
   }
 
   componentDidUpdate() {
@@ -63,6 +50,18 @@ export default class Textarea extends Component {
       }
     });
   };
+
+  initialiseComponent() {
+    const { name, value, error } = this.props;
+    const { registerComponent, passBackError } = this.context;
+    if (registerComponent) {
+      registerComponent(name, value);
+    }
+    if (passBackError) passBackError(name, !!error, error);
+    return {
+      text: value || ''
+    };
+  }
 
   render() {
     const {

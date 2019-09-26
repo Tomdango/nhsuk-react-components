@@ -71,37 +71,7 @@ export default class DateInput extends Component {
     };
     this.monthRef = React.createRef();
     this.yearRef = React.createRef();
-  }
-
-  componentWillMount() {
-    const { children } = this.props;
-    let multiComponentMode = false;
-    const defaultValue = {};
-    const defaultError = {};
-    React.Children.forEach(children, async child => {
-      if (child === null) return;
-      const { type } = child;
-      const { value, error } = child.props;
-      if (type === DateInput.Day) {
-        defaultValue.day = value;
-        defaultError.day = error;
-        multiComponentMode = true;
-      } else if (type === DateInput.Month) {
-        defaultValue.month = value;
-        defaultError.year = error;
-        multiComponentMode = true;
-      } else if (type === DateInput.Year) {
-        defaultValue.year = value;
-        defaultError.year = error;
-        multiComponentMode = true;
-      }
-    });
-
-    if (multiComponentMode) {
-      this.registerMultiComponent(defaultValue, defaultError);
-    } else {
-      this.registerSingleComponent();
-    }
+    this.initialiseComponent();
   }
 
   componentDidUpdate = () => {
@@ -196,6 +166,37 @@ export default class DateInput extends Component {
       }
     });
   };
+
+  initialiseComponent() {
+    const { children } = this.props;
+    let multiComponentMode = false;
+    const defaultValue = {};
+    const defaultError = {};
+    React.Children.forEach(children, child => {
+      if (child === null) return;
+      const { type } = child;
+      const { value, error } = child.props;
+      if (type === DateInput.Day) {
+        defaultValue.day = value;
+        defaultError.day = error;
+        multiComponentMode = true;
+      } else if (type === DateInput.Month) {
+        defaultValue.month = value;
+        defaultError.year = error;
+        multiComponentMode = true;
+      } else if (type === DateInput.Year) {
+        defaultValue.year = value;
+        defaultError.year = error;
+        multiComponentMode = true;
+      }
+    });
+
+    if (multiComponentMode) {
+      this.registerMultiComponent(defaultValue, defaultError);
+    } else {
+      this.registerSingleComponent();
+    }
+  }
 
   render() {
     const {
