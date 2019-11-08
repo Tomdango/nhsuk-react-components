@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import stylePropType from 'react-style-proptype';
 import FormContext from '../../FormContext';
@@ -16,7 +16,7 @@ const valuePropType = {
   year: PropTypes.string
 };
 
-export default class DateInput extends Component {
+export default class DateInput extends PureComponent {
   static contextType = FormContext;
 
   static Day = Day;
@@ -66,7 +66,9 @@ export default class DateInput extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      data: {},
+      data: {
+        value: props.value
+      },
       multiErrors: {}
     };
     this.monthRef = React.createRef();
@@ -170,8 +172,8 @@ export default class DateInput extends Component {
   initialiseComponent() {
     const { children } = this.props;
     let multiComponentMode = false;
-    const defaultValue = {};
     const defaultError = {};
+    const defaultValue = {};
     React.Children.forEach(children, child => {
       if (child === null) return;
       const { type } = child;
@@ -209,7 +211,8 @@ export default class DateInput extends Component {
       error,
       labelHtmlFor,
       name,
-      value, // Not used, but prevents it falling into ...rest for D/M/Y inputs
+      value,
+      autoSelectNext,
       ...rest
     } = this.props;
     const { data, multiErrors } = this.state;
@@ -232,9 +235,9 @@ export default class DateInput extends Component {
           <DateContext.Provider value={contextValue}>
             {children || (
               <>
-                <Day {...rest} />
-                <Month {...rest} />
-                <Year {...rest} />
+                <Day {...rest} value={value && value.day || ''} />
+                <Month {...rest} value={value && value.month || ''} />
+                <Year {...rest} value={value && value.year || ''} />
               </>
             )}
           </DateContext.Provider>
