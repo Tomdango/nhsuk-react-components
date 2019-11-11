@@ -67,7 +67,7 @@ export default class DateInput extends PureComponent {
     super(props, context);
     this.state = {
       data: {
-        value: props.value
+        value: props.value,
       },
       multiErrors: {}
     };
@@ -86,16 +86,14 @@ export default class DateInput extends PureComponent {
 
   registerSingleComponent = () => {
     const { passBackError, registerComponent } = this.context;
-    const { name, value, error } = this.props;
-    this.setState({ data: { day: '', month: '', year: '', ...value } }, () => {
-      if (passBackError) {
-        passBackError(name, !!error, error);
-      }
-      if (registerComponent) {
-        const { data } = this.state;
-        registerComponent(name, data);
-      }
-    });
+    const { name, error } = this.props;
+    if (passBackError) {
+      passBackError(name, !!error, error);
+    }
+    if (registerComponent) {
+      const { data } = this.state;
+      registerComponent(name, data);
+    }
   };
 
   registerMultiComponent = (defaultValue, defaultError) => {
