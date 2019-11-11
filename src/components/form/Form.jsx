@@ -72,7 +72,9 @@ class Form extends Component {
   errorCallback = () => {
     const { errorState } = this.state;
     const { onErrorChange } = this.props;
-    onErrorChange(errorState);
+    if (onErrorChange) {
+      onErrorChange(errorState);
+    }
   };
 
   render() {

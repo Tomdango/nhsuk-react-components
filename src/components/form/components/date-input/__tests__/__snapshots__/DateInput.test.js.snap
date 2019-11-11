@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateInput Displays initial value when passed in via props 1`] = `
+<DateInput
+  autoComplete="off"
+  autoSelectNext={false}
+  autoselectnext="true"
+  className=""
+  error=""
+  hint=""
+  id="date-from"
+  label="Date From Field"
+  labelHtmlFor="date-from"
+  name="dateFrom"
+  style={Object {}}
+  type="tel"
+  value={
+    Object {
+      "day": "10",
+      "month": "06",
+      "year": "1999",
+    }
+  }
+>
+  <Label
+    className=""
+    htmlFor="date-from"
+    type=""
+  >
+    <label
+      className="nhsuk-label"
+      htmlFor="date-from"
+      id="date-from__label"
+    >
+      Date From Field
+    </label>
+  </Label>
+  <div
+    className=""
+    id="date-from"
+    style={Object {}}
+  >
+    <Day
+      autoComplete="off"
+      autoselectnext="true"
+      className=""
+      error={false}
+      label="Day"
+      type="tel"
+      value="10"
+    >
+      <div
+        className="nhsuk-date-input__item"
+      >
+        <Label
+          className=""
+          htmlFor="dateFrom-day"
+          type=""
+        >
+          <label
+            className="nhsuk-label"
+            htmlFor="dateFrom-day"
+            id="dateFrom-day__label"
+          >
+            Day
+          </label>
+        </Label>
+        <input
+          aria-label="dateFrom-day input"
+          autoComplete="off"
+          autoselectnext="true"
+          className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+          id="dateFrom-day"
+          name="dateFrom-day"
+          onChange={[Function]}
+          type="tel"
+          value="10"
+        />
+      </div>
+    </Day>
+    <Month
+      autoComplete="off"
+      autoselectnext="true"
+      className=""
+      error={false}
+      label="Month"
+      type="tel"
+      value="06"
+    >
+      <div
+        className="nhsuk-date-input__item"
+      >
+        <Label
+          className=""
+          htmlFor="dateFrom-month"
+          type=""
+        >
+          <label
+            className="nhsuk-label"
+            htmlFor="dateFrom-month"
+            id="dateFrom-month__label"
+          >
+            Month
+          </label>
+        </Label>
+        <input
+          aria-label="dateFrom-month input"
+          autoComplete="off"
+          autoselectnext="true"
+          className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+          id="dateFrom-month"
+          name="dateFrom-month"
+          onChange={[Function]}
+          type="tel"
+          value="06"
+        />
+      </div>
+    </Month>
+    <Year
+      autoComplete="off"
+      autoselectnext="true"
+      className=""
+      error={false}
+      label="Year"
+      type="tel"
+      value="1999"
+    >
+      <div
+        className="nhsuk-date-input__item"
+      >
+        <Label
+          className=""
+          htmlFor="dateFrom-year"
+          type=""
+        >
+          <label
+            className="nhsuk-label"
+            htmlFor="dateFrom-year"
+            id="dateFrom-year__label"
+          >
+            Year
+          </label>
+        </Label>
+        <input
+          aria-label="dateFrom-year input"
+          autoComplete="off"
+          autoselectnext="true"
+          className="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+          id="dateFrom-year"
+          name="dateFrom-year"
+          onChange={[Function]}
+          type="tel"
+          value="1999"
+        />
+      </div>
+    </Year>
+  </div>
+</DateInput>
+`;
+
+exports[`DateInput matches snapshot 1`] = `
+<Fragment>
+  <div
+    className=""
+    id=""
+    style={Object {}}
+  >
+    <ContextProvider
+      value={
+        Object {
+          "handleInput": [Function],
+          "name": undefined,
+          "parentError": false,
+          "passBackError": [Function],
+          "registerRef": [Function],
+          "value": Object {
+            "day": "",
+            "month": "",
+            "year": "",
+          },
+        }
+      }
+    >
+      <Day
+        className=""
+        error={false}
+        label="Day"
+        value=""
+      />
+      <Month
+        className=""
+        error={false}
+        label="Month"
+        value=""
+      />
+      <Year
+        className=""
+        error={false}
+        label="Year"
+        value=""
+      />
+    </ContextProvider>
+  </div>
+</Fragment>
+`;
