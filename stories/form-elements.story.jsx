@@ -220,6 +220,17 @@ storiesOf('Form Elements', module)
           <Radios.Radio value={3}>Option 3</Radios.Radio>
         </Radios>
       </FormWrapper>
+
+      <FormWrapper>
+        <Radios name="radios" label="Conditional Rendering" id="disabled">
+          <Radios.Radio conditional={<p>Hello</p>} value="1">
+            Option 1
+          </Radios.Radio>
+          <Radios.Radio value="2">Option 2</Radios.Radio>
+          <Radios.Divider>Or</Radios.Divider>
+          <Radios.Radio value={3}>Option 3</Radios.Radio>
+        </Radios>
+      </FormWrapper>
     </>
   ))
   .add('Input', () => (
