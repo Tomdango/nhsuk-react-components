@@ -17,7 +17,9 @@ const Radio = ({
   ...rest
 }) => {
   const { name, radioSelected, handleClick } = useContext(RadioContext);
-  const [showConditional, setShowConditional] = useState(radioSelected);
+  const [showConditional, setShowConditional] = useState(
+    radioSelected === value.toString()
+  );
   useEffect(() => {
     if (
       conditional !== null &&
