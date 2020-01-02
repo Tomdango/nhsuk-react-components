@@ -98,7 +98,7 @@ class Input extends Component {
               className
             }
           )}
-          name={`${name}-hint`}
+          name={name}
           type="text"
           value={value}
           onChange={this.handleInput}
