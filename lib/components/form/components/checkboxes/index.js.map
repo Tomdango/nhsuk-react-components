@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../src/components/form/components/checkboxes/index.js"],"names":["Checkboxes"],"mappings":"aAAA,gE,sKAEeA,sB","sourcesContent":["import Checkboxes from './checkboxes';\n\nexport default Checkboxes;\n"],"file":"index.js"}

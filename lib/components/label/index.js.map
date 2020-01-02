@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/components/label/index.js"],"names":["Label"],"mappings":"aAAA,sD,sKAEeA,iB","sourcesContent":["import Label from './label';\n\nexport default Label;\n"],"file":"index.js"}

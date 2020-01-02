@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../src/components/form/components/textarea/index.js"],"names":["Textarea"],"mappings":"aAAA,4D,sKAEeA,oB","sourcesContent":["import Textarea from './textarea';\n\nexport default Textarea;\n"],"file":"index.js"}

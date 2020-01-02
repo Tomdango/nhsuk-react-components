@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/components/promo/index.js"],"names":["Promo"],"mappings":"aAAA,sD,sKAEeA,iB","sourcesContent":["import Promo from './promo';\n\nexport default Promo;\n"],"file":"index.js"}

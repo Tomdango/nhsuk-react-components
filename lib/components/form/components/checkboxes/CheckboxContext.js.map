@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../src/components/form/components/checkboxes/CheckboxContext.js"],"names":["CheckboxContext"],"mappings":"0HAEMA,eAAe,CAAG,yBAAc,EAAd,C,UAETA,e","sourcesContent":["import { createContext } from 'react';\n\nconst CheckboxContext = createContext({});\n\nexport default CheckboxContext;\n"],"file":"CheckboxContext.js"}

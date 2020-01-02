@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/components/back-link/index.js"],"names":["BackLink"],"mappings":"aAAA,6D,sKAEeA,oB","sourcesContent":["import BackLink from './back-link';\n\nexport default BackLink;\n"],"file":"index.js"}

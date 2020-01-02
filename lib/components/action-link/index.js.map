@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/components/action-link/index.js"],"names":["ActionLink"],"mappings":"aAAA,iE,sKAEeA,sB","sourcesContent":["import ActionLink from './action-link';\n\nexport default ActionLink;\n"],"file":"index.js"}

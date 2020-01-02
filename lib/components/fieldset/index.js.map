@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/components/fieldset/index.js"],"names":["Fieldset"],"mappings":"aAAA,4D,sKAEeA,oB","sourcesContent":["import Fieldset from './fieldset';\n\nexport default Fieldset;\n"],"file":"index.js"}

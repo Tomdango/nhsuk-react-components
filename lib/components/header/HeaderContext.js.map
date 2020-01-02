@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/components/header/HeaderContext.js"],"names":["HeaderContext"],"mappings":"0HAEMA,aAAa,CAAG,0B,UAEPA,a","sourcesContent":["import { createContext } from 'react';\n\nconst HeaderContext = createContext();\n\nexport default HeaderContext;\n"],"file":"HeaderContext.js"}

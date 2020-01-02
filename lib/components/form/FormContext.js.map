@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/components/form/FormContext.js"],"names":["FormContext","React","createContext"],"mappings":"aAAA,oD,4JAEMA,CAAAA,WAAW,CAAGC,kBAAMC,aAAN,CAAoB,EAApB,C,UAELF,W","sourcesContent":["import React from 'react';\n\nconst FormContext = React.createContext({});\n\nexport default FormContext;\n"],"file":"FormContext.js"}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/components/list-panel/index.js"],"names":["ListPanel"],"mappings":"aAAA,+D,sKAEeA,qB","sourcesContent":["import ListPanel from './list-panel';\n\nexport default ListPanel;\n"],"file":"index.js"}

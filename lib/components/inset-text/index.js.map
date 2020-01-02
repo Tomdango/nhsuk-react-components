@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/components/inset-text/index.js"],"names":["InsetText"],"mappings":"aAAA,+D,sKAEeA,qB","sourcesContent":["import InsetText from './inset-text';\n\nexport default InsetText;\n"],"file":"index.js"}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/components/contents-list/index.js"],"names":["ContentsList"],"mappings":"aAAA,qE,sKAEeA,wB","sourcesContent":["import ContentsList from './contents-list';\n\nexport default ContentsList;\n"],"file":"index.js"}

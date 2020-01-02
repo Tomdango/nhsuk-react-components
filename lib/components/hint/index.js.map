@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/components/hint/index.js"],"names":["Hint"],"mappings":"aAAA,oD,sKAEeA,gB","sourcesContent":["import Hint from './hint';\n\nexport default Hint;\n"],"file":"index.js"}

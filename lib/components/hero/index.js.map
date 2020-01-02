@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/components/hero/index.js"],"names":["Hero"],"mappings":"aAAA,oD,sKAEeA,gB","sourcesContent":["import Hero from './hero';\n\nexport default Hero;\n"],"file":"index.js"}

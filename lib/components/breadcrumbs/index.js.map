@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/components/breadcrumbs/index.js"],"names":["Breadcrumbs"],"mappings":"aAAA,kE,sKAEeA,uB","sourcesContent":["import Breadcrumbs from './breadcrumbs';\n\nexport default Breadcrumbs;\n"],"file":"index.js"}

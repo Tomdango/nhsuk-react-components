@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/components/pagination/index.js"],"names":["Pagination"],"mappings":"aAAA,gE,sKAEeA,sB","sourcesContent":["import Pagination from './pagination';\n\nexport default Pagination;\n"],"file":"index.js"}
