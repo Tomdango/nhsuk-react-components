@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../src/components/details/index.js"],"names":["Details"],"mappings":"aAAA,0D,sKAEeA,mB","sourcesContent":["import Details from './details';\n\nexport default Details;\n"],"file":"index.js"}

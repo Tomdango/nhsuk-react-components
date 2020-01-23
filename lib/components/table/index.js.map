@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../src/components/table/index.js"],"names":["Table"],"mappings":"aAAA,sD,sKAEeA,iB","sourcesContent":["import Table from './table';\n\nexport default Table;\n"],"file":"index.js"}

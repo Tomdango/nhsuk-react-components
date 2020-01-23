@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../src/components/do-dont-list/index.js"],"names":["DoDontList"],"mappings":"aAAA,kE,sKAEeA,sB","sourcesContent":["import DoDontList from './do-dont-list';\n\nexport default DoDontList;\n"],"file":"index.js"}

@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../src/components/skip-link/index.js"],"names":["SkipLink"],"mappings":"aAAA,6D,sKAEeA,oB","sourcesContent":["import SkipLink from './skip-link';\n\nexport default SkipLink;\n"],"file":"index.js"}

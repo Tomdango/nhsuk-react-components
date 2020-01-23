@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../src/components/emergency-alert/index.js"],"names":["EmergencyAlert"],"mappings":"aAAA,yE,sKAEeA,0B","sourcesContent":["import EmergencyAlert from './emergency-alert';\n\nexport default EmergencyAlert;\n"],"file":"index.js"}

@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../src/components/button/index.js"],"names":["Button"],"mappings":"aAAA,wD,sKAEeA,kB","sourcesContent":["import Button from './button';\n\nexport default Button;\n"],"file":"index.js"}

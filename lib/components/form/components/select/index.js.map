@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../../src/components/form/components/select/index.js"],"names":["Select"],"mappings":"aAAA,wD,sKAEeA,kB","sourcesContent":["import Select from './select';\n\nexport default Select;\n"],"file":"index.js"}

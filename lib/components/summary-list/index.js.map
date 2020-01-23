@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../src/components/summary-list/index.js"],"names":["SummaryList"],"mappings":"aAAA,mE,sKAEeA,uB","sourcesContent":["import SummaryList from './summary-list';\n\nexport default SummaryList;\n"],"file":"index.js"}

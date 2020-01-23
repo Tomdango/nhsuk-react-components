@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../src/components/error-message/index.js"],"names":["ErrorMessage"],"mappings":"aAAA,qE,sKAEeA,wB","sourcesContent":["import ErrorMessage from './error-message';\n\nexport default ErrorMessage;\n"],"file":"index.js"}

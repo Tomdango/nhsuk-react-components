@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../src/components/header/index.js"],"names":["Header"],"mappings":"aAAA,wD,sKAEeA,kB","sourcesContent":["import Header from './header';\n\nexport default Header;\n"],"file":"index.js"}

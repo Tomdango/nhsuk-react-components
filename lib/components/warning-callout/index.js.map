@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../src/components/warning-callout/index.js"],"names":["WarningCallout"],"mappings":"aAAA,yE,sKAEeA,0B","sourcesContent":["import WarningCallout from './warning-callout';\n\nexport default WarningCallout;\n"],"file":"index.js"}

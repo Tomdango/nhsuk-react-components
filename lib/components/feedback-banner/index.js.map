@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../src/components/feedback-banner/index.js"],"names":["FeedbackBanner"],"mappings":"aAAA,yE,sKAEeA,0B","sourcesContent":["import FeedbackBanner from './feedback-banner';\n\nexport default FeedbackBanner;\n"],"file":"index.js"}
