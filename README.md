@@ -4,6 +4,10 @@
 
 [![Build](https://travis-ci.org/Tomdango/nhsuk-react-components.svg?branch=master)](https://travis-ci.org/Tomdango/nhsuk-react-components) [![NPM](https://img.shields.io/npm/v/nhsuk-react-components.svg)](https://www.npmjs.com/package/nhsuk-react-components) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-airbnb-brightgreen.svg)](https://github.com/airbnb/javascript) [![Bundle Size](https://img.shields.io/bundlephobia/minzip/nhsuk-react-components.svg)](https://bundlephobia.com/result?p=nhsuk-react-components@latest) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c0721cb48f794fc3b5f3080e078a4628)](https://www.codacy.com/app/Tomdango/nhsuk-react-components?utm_source=github.com&utm_medium=referral&utm_content=Tomdango/nhsuk-react-components&utm_campaign=Badge_Grade) [![Code Coverage](https://img.shields.io/codacy/coverage/c0721cb48f794fc3b5f3080e078a4628/master.svg)](https://app.codacy.com/project/Tomdango/nhsuk-react-components/dashboard)
 
+## Deprecation Notice
+
+**This version (latest 0.8.15) of the `nhsuk-react-components` library is deprecated in favour of the newer version of the library, available [here](https://github.com/NHSDigital/nhsuk-react-components).** You can install the newer version of the library by using `npm i nhsuk-react-components@next` or `yarn add nhsuk-react-components@next`. 
+
 ## Notes
 
 This package is developed by NHS Digital, but it is not from the NHS.UK redesign team. Some things may differ between the standard NHS.UK frontend library and this library, however we will try our best to keep this package maintained and up-to-date.
